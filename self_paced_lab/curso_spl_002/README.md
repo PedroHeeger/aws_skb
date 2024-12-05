@@ -1,11 +1,11 @@
 # Lab - Configuring Internet Access from Lambda in a VPC   <img src="./0-aux/logo_course.png" alt="curso_spl_002" width="auto" height="45">
 
-### AWS Skill Builder <a href="../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
-### Training Category: <a href="./self_paced_lab">self_paced_lab</a>
+### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
+### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_spl_002 (Lab - Configuring Internet Access from Lambda in a VPC)   <img src="./0-aux/logo_course.png" alt="curso_spl_002" width="auto" height="25"></a>
 
-#### Parceria da AWS com a <a href="../../">edn   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25"></a> 
+#### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
 ---
 
