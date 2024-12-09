@@ -83,7 +83,7 @@ Alguns conceitos importantes sobre espelhamento de tráfego são apresentados ab
 Feito essas considerações, a primeira tarefa consistiu em identificar as interfaces de rede elásticas (ENI) a serem usadas para o espelhamento do tráfego. A ENI de origem seria do servidor (instância 2) cujo Id era `eni-0c6e9c95aacf0a769`. Já a ENI de destino era da instância target (alvo), cujo Id era `eni-090322ab9b5f47e68`. A imagem 01 mostra os Ids da ENI dessas duas instâncias.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img01.png" alt="img01"><br>
+    <img src="./0-aux/img01.jpg" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
@@ -98,7 +98,7 @@ Com os Ids das interfaces de rede elástica obtidos, o próximo passo foi config
 A imagem 02 mostra a configuração do Id da ENI da insância target como um destino que seria usado no espelhamento de tráfego.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img02.png" alt="img02"><br>
+    <img src="./0-aux/img02.jpg" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
@@ -118,7 +118,7 @@ Nesta tarefa, a proposta foi criar um filtro do espelhamento de tráfego para se
 A imagem 03 ilustra a criação do filtro do espelhamento de tráfego.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img03.png" alt="img03"><br>
+    <img src="./0-aux/img03.jpg" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
@@ -137,7 +137,7 @@ O próximo passo foi configurar uma sessão de espelhamento de tráfego. As sess
 A imagem 04 evidencia a sessão criada para o espelhamento de tráfego, onde foi indicado o destino e o filtro, criado nas tarefas anteriores, além da origem.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img04.png" alt="img04"><br>
+    <img src="./0-aux/img04.jpg" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
 
@@ -150,21 +150,21 @@ Como as duas instâncias eram sistemas operacionais **Linux**, um shell foi disp
 A imagem 05 mostra o output do comando executado na instância destino (target), ou seja, ela já estava ouvindo tráfego espelhado, porém nenhum tráfego ainda tinha gerado. Quando o tráfego determinado no filtro do espelhamento fosse gerado devido a comunicação da instância cliente com a instância servidor, os pacotes do tráfego seriam encpasulados e enviados para instância de destino (target) utilizando a porta `UDP 4789`. Ao receber os pacotes, o **Tcpdump** se encerregaria de capturar esse tráfego e exibir no shell como output do comando.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img05.png" alt="img05"><br>
+    <img src="./0-aux/img05.jpg" alt="img05"><br>
     <figcaption>Imagem 05.</figcaption>
 </figure></div><br>
 
 Sendo assim, era preciso começar a gerar tráfego que correspondia ao filtro de espelhamento que foi configurado anteriormente. Isso foi feito na outra sessão aberta no **AWS SSM** com a instância cliente em outra aba do navegador. Nela, o comando `ping 10.0.0.20 -c 1` foi executado. Esse comando enviava um único pacote ICMP do Cliente para o Servidor, ou seja, gerava o tráfego definido no filtro. O grupo de segurança da instância servidor já possuía uma regra de entrada permitindo comunicação ICMP, que é o protocolo utilizado pelo **Ping**, vinda do grupo de segurança ou IP da instância cliente. A imagem 06 exibe o output desse comando, comprovando que o ping foi realizado.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img06.png" alt="img06"><br>
+    <img src="./0-aux/img06.jpg" alt="img06"><br>
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
 
 De volta para a outra sessão do SSM na instância target na outra aba do navegador, o **Tcpdump** estava em execução e capturou o tráfego enviado da instância cliente para a instância servidor que foi espelhado para instância target. A imagem 07 evidencia essa captura. As duas primeiras linhas da saída do comando contêm informações sobre o tráfego capturado. Mostra que o tráfego capturado foi enviado da origem do espelhamento de `10.0.0.20` (servidor) para o destino do espelhamento de `10.0.0.30` (destino) usando a porta `4789`. Também mostra o ID de VNI `100` que foi configurado na sessão de espelhamento de tráfego. As duas segundas linhas mostram o pacote ICMP que foi enviado de `10.0.0.10` (Cliente) para `10.0.0.20` (Servidor) usando a solicitação de eco ICMP.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img07.png" alt="img07"><br>
+    <img src="./0-aux/img07.jpg" alt="img07"><br>
     <figcaption>Imagem 07.</figcaption>
 </figure></div><br>
 
@@ -173,7 +173,7 @@ De volta para a outra sessão do SSM na instância target na outra aba do navega
 O próximo passo foi alterar o filtro do espelhamento de tráfego, para filtrar um tráfego diferente. Neste caso, o tráfego a ser filtrado seria referente ao protocolo **HTTP**, que utiliza a porta `80`. Mas antes, foi executado no shell da instância cliente o comando `curl http://10.0.0.20` para gerar uma requisição do cliente para o servidor no protocolo **HTTP** para mostrar no shell da instância target que o tráfego não era espelhado, pois o filtro do espelhamento não possuía uma regra que filtrava tráfego do protocolo **HTTP**. A imagem 08 mostra os dois shells lado a lado, evidenciando que o tráfego foi gerado, porém ele não foi espelhado.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img08.png" alt="img08"><br>
+    <img src="./0-aux/img08.jpg" alt="img08"><br>
     <figcaption>Imagem 08.</figcaption>
 </figure></div><br>
 
@@ -189,14 +189,14 @@ Comprovado que esse tráfego ainda não era espelhado, o filtro criado anteriorm
 A imagem 09 exibe essa segunda regra criada no filtro do espelhamento de tráfego, permitindo espelhamento do tráfego do protocolo **HTTP**.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img09.png" alt="img09"><br>
+    <img src="./0-aux/img09.jpg" alt="img09"><br>
     <figcaption>Imagem 09.</figcaption>
 </figure></div><br>
 
 Após isso, foi aberto novamente na aba que possuía a sessão do **AWS SSM** na instância cliente e executado novamente o comando `curl http://10.0.0.20` para gerar uma requisição do cliente para o servidor no protocolo **HTTP**. Em seguida, a outra aba com a sessão SSM na instância de destino (target) foi aberta. Nela, o **Tcpdump** estava em execução e já tinha capturado o tráfego. A imagem 10 mostra os shells das sessões SSM em cada instância comprovando que a requisição foi feita e que agora, devido a regra adicionada no filtro do espelhamento, o tráfego foi espelhado.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img10.png" alt="img10"><br>
+    <img src="./0-aux/img10.jpg" alt="img10"><br>
     <figcaption>Imagem 10.</figcaption>
 </figure></div><br>
 
@@ -207,7 +207,7 @@ Nesta última tarefa deste laboratório, o objetivo consistiu em ao invés de vi
 Para isso, o **Tcpdump** foi encerrado no shell da instância target com Ctrl + C e então o comando `sudo tcpdump -nni eth0 -vvv udp dst port 4789 -w capture.pcap` foi executado, gravando as informações no arquivo `capture.pcap` dentro do diretório do usuário do SSM (`/home/ssm-user`). A imagem 11 evidencia que o **Tcpdump** já estava escutando as requisições.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img11.png" alt="img11"><br>
+    <img src="./0-aux/img11.jpg" alt="img11"><br>
     <figcaption>Imagem 11.</figcaption>
 </figure></div><br>
 
@@ -216,7 +216,7 @@ Agora foi preciso gerar novamente as requisições do cliente para o servidor, e
 Para acessar o arquivo e visualizar os dados armazenados, primeiro era preciso encerrar o comando **Tcpdump** que estava em execução, e então executar o comando `tcpdump -r capture.pcap` na instância de destino (target), conforme mostrado na imagem 12.
 
 <div align="Center"><figure>
-    <img src="./0-aux/img12.png" alt="img12"><br>
+    <img src="./0-aux/img12.jpg" alt="img12"><br>
     <figcaption>Imagem 12.</figcaption>
 </figure></div><br>
 
