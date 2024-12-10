@@ -59,6 +59,7 @@
 </details>
 <details><summary>Integração de Aplicativos</summary>
     <ul>
+        <li>curso_spl_004: <a href="./curso_spl_004/">Lab - Integrating Amazon Simple Queue Service (Amazon SQS)   <img src="./curso_spl_004/logo_course.png" alt="curso_spl_004" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Interação com os Clientes</summary>
@@ -83,6 +84,8 @@
 </details>
 <details><summary>Redes e Entrega de Conteúdo</summary>
     <ul>
+        <li>curso_spl_003: <a href="./curso_spl_003/">Lab - AWS Security Traffic Monitoring and Packet Analysis   <img src="./curso_spl_003/logo_course.png" alt="curso_spl_003" width="auto" height="25"></a></li>
+        <li>curso_spl_005: <a href="./curso_spl_005/">Lab - Troubleshooting Website Reachability behind a Load Balancer   <img src="./curso_spl_005/logo_course.png" alt="curso_spl_005" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Robótica</summary>
