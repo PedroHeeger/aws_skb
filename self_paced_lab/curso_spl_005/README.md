@@ -6,7 +6,7 @@
 ### Course: <a href="./">curso_spl_005 (Lab - Troubleshooting Website Reachability behind a Load Balancer)   <img src="./0-aux/logo_course.png" alt="curso_spl_005" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
-#6985c0
+
 ---
 
 ### Theme:
