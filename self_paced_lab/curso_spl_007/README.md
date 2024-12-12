@@ -69,7 +69,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 A arquitetura inicial é composta pelos seguintes elementos:
 - Duas VPCs emparalhedas, nomedas de `VPC-ALB` e `VPC-Target`.
 - `VPC-ALB`:
-  - Duas sub-redes públicas (`PublicSubnet1_VPC-ALB` e `PublicSubnet2_VPC-ALB`) contendo um nó do load balancer ALB em cada uma delas (`).
+  - Duas sub-redes públicas (`PublicSubnet1_VPC-ALB` e `PublicSubnet2_VPC-ALB`) contendo um nó do load balancer ALB em cada uma delas.
   - Um Internet Gateway para comunicação com a Internet.
   - Um *Application Load Balancer* para distribuição do tráfego entre as duas instâncias EC2 da `VPC-Target`.
   - Uma instância do **Amazon EC2** de nome `WorkStation` que possuíam ferramentas já instaladas para resolver problemas de comunicação.
