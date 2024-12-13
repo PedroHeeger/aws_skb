@@ -51,10 +51,10 @@
 1.2 <a href="#item01.2">Tarefa 2: Criar buckets S3 para armazenamento de compartilhamento de arquivos</a><br>
 1.3 <a href="#item01.3">Tarefa 3: Implantar o dispositivo S3 File Gateway</a><br>
 1.4 <a href="#item01.4">Tarefa 4: Criar um compartilhamento de arquivo NFS</a><br>
-1.4 <a href="#item01.5">Tarefa 5: Examine o grupo de segurança, monte o compartilhamento de arquivos na instância do Linux e migre os dados</a><br>
-1.4 <a href="#item01.6">Tarefa 6: Criar um compartilhamento de arquivo SMB</a><br>
-1.4 <a href="#item01.7">Tarefa 7: Examine o grupo de segurança, monte o compartilhamento de arquivos na instância do Windows e migre os dados</a><br>
-1.4 <a href="#item01.8">Tarefa 8: Monitoramento do S3 File Gateway com o Amazon CloudWatch</a><br>
+1.5 <a href="#item01.5">Tarefa 5: Examine o grupo de segurança, monte o compartilhamento de arquivos na instância do Linux e migre os dados</a><br>
+1.6 <a href="#item01.6">Tarefa 6: Criar um compartilhamento de arquivo SMB</a><br>
+1.7 <a href="#item01.7">Tarefa 7: Examine o grupo de segurança, monte o compartilhamento de arquivos na instância do Windows e migre os dados</a><br>
+1.8 <a href="#item01.8">Tarefa 8: Monitoramento do S3 File Gateway com o Amazon CloudWatch</a><br>
 
 ---
 
