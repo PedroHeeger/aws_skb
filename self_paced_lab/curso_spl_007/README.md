@@ -99,7 +99,7 @@ A imagem 02 evidencia o funcionamento dos pings para as duas instâncias da apli
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-<a name="item01.2"><h4>Tarefa 2: Solução de problemas e correção de problemas de acessibilidade do site</h4></a>[Back to summary](#item0)
+<a name="item01.2"><h4>Tarefa 2: Investigar por que os alvos não estão processando as solicitações recebidas</h4></a>[Back to summary](#item0)
 
 Com a confirmação da conectividade entre as VPCs `VPC-ALB` e `VPC-Target`, o próximo passo foi investigar o status dos destinos ALB. Nesse momento, o status estava não saudável (`unhealthy`), conforme mostrado na imagem 03. Para verificar o problema, foi utilizada a mesma sessão remota aberta na instância `WorkStation`. Nela, foram executados os comandos `curl -Iv http://10.0.63.43` e `curl -Iv http://10.0.77.99`, conforme imagem 04. O **Curl** executa uma solicitação no protocolo `HTTP`, que opera na porta `80`. A imagem 04 mostra que não foi possível obter conectividade com solicitações `HTTP`.
 
@@ -133,7 +133,7 @@ A imagem 05 evidenciava que agora os comandos `curl -Iv http://10.0.63.43` e `cu
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
 
-<a name="item01.3"><h4>Tarefa 3: Garantir que a solução esteja altamente disponível</h4></a>[Back to summary](#item0)
+<a name="item01.3"><h4>Tarefa 3: Investigar por que o nome DNS do ALB está falhando intermitentemente</h4></a>[Back to summary](#item0)
 
 Na tarefa 3, o objetivo consistiu em acessar a aplicação web, que era executada nas instâncias da `VPC-Target`, através do DNS do load balancer ALB que atuava na frente da aplicação web em outra VPC (`VPC-ALB`) distribuindo o tráfego. Para tentar se comunicar com a aplicação web através do DNS do load balancer foi executado o comando `curl -Iv ApplicationLoadBalancer-1977751156.us-west-2.elb.amazonaws.com` na sessão do *Session Manager* aberta na instância de apoio `WorkStation`. O output do comando exibia uma mensagem indicando que houve falha na conexão devido ao tempo limite ter atingido, conforme visualizado na imagem 07. Pode ser que ao executar esse comando de primeira, nenhum erro seja gerado e a aplicação seja acessada perfeitamente. 
 
