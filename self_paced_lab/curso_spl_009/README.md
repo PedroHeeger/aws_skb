@@ -144,15 +144,16 @@ Resumidamente:
 
 
 
+
+
+
+
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
-<div align="Center"><figure>
-    <img src="./0-aux/img04.png" alt="img04"><br>
-    <figcaption>Imagem 04.</figcaption>
-</figure></div><br>
+
 
 <a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
 
@@ -160,6 +161,10 @@ Resumidamente:
 
 
 
+<div align="Center"><figure>
+    <img src="./0-aux/img04.png" alt="img04"><br>
+    <figcaption>Imagem 04.</figcaption>
+</figure></div><br>
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
