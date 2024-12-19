@@ -185,6 +185,12 @@ Resumidamente:
 
 
 
+
+
+<a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
+
+
+
 <div align="Center"><figure>
     <img src="./0-aux/img07.png" alt="img07"><br>
     <figcaption>Imagem 07.</figcaption>
@@ -202,12 +208,6 @@ Resumidamente:
     <img src="./0-aux/img09.png" alt="img09"><br>
     <figcaption>Imagem 09.</figcaption>
 </figure></div><br>
-
-<a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
-
-
-
-
 
 <div align="Center"><figure>
     <img src="./0-aux/img10.png" alt="img10"><br>
