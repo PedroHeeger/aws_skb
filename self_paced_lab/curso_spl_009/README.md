@@ -184,6 +184,10 @@ Resumidamente:
 </figure></div><br>
 
 
+<div align="Center"><figure>
+    <img src="./0-aux/img07.png" alt="img07"><br>
+    <figcaption>Imagem 07.</figcaption>
+</figure></div><br>
 
 
 
@@ -191,10 +195,6 @@ Resumidamente:
 
 
 
-<div align="Center"><figure>
-    <img src="./0-aux/img07.png" alt="img07"><br>
-    <figcaption>Imagem 07.</figcaption>
-</figure></div><br>
 
 
 
