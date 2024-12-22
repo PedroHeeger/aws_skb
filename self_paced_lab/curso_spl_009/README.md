@@ -213,3 +213,8 @@ Resumidamente:
     <img src="./0-aux/img10.png" alt="img10"><br>
     <figcaption>Imagem 10.</figcaption>
 </figure></div><br>
+
+<div align="Center"><figure>
+    <img src="./0-aux/img11.png" alt="img11"><br>
+    <figcaption>Imagem 11.</figcaption>
+</figure></div><br>
