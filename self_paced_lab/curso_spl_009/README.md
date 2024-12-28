@@ -140,7 +140,7 @@ Resumidamente:
 
 <a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
 
-Nesta terceira tarefa 
+Nesta terceira tarefa, o objetivo foi 
 
 
 
