@@ -79,10 +79,10 @@ Na primeira tarefa, o objetivo foi provisionar o bucket do **Amazon S3** para ar
 
 <a name="item01.2"><h4>Tarefa 2: iniciar um cluster do Amazon EMR</h4></a>[Back to summary](#item0)
 
-A tarefa seguinte foi iniciar o cluster **Apache Hadoop** no serviço **Amazon Elastic MapReduce (EMR)** para processar os dados. Antes de iniciar a criação, foi necessário garantir que a região selecionada no console era igual a indicada nas informações do lab (`us-east-1`). O cluster foi definido com as seguintes configurações:
+A tarefa seguinte foi iniciar o cluster **Apache Hadoop** no serviço **Amazon Elastic MapReduce (EMR)** para processar os dados. Antes de iniciar a criação, foi necessário garantir que a região selecionada no console era igual a indicada nas informações do lab (`us-east-1` (Norte Virgínia)). O cluster foi definido com as seguintes configurações:
 - Nome: `Meu cluster`.
 - Versão Amazon EMR: `emr-5.36.1`.
-- Pacote de aplicativos: foi escolha `Personalizado` e selecionados os seguintes aplicativos, caso ainda não tenham sido selecionados:
+- Pacote de aplicativos: foi escolha `Personalizado` e selecionados os seguintes aplicativos, caso ainda não tivesse sido selecionados:
   - **Hue**
   - **Hadoop**
   - **Hive**
@@ -92,28 +92,28 @@ A tarefa seguinte foi iniciar o cluster **Apache Hadoop** no serviço **Amazon E
   - Para `Primary`, `Core` e `Task 1 de 1`: foi selecionado `m4.large` no menu suspenso `Escolher tipo de instância EC2`.
 - Na seção `Rede - necessária`, foi configurado o seguinte:
   - Para `Nuvem privada virtual (VPC)`: foi escolhida a opção `Procurar`.
-  - Na janela pop-up `Escolher VPC`: foi selecionado a VPC `Lab VPC` e escolhida a o
+  - Na janela pop-up `Escolher VPC`: foi selecionado a VPC `Lab VPC`.
   - A seção `Grupos de segurança do EC2 (firewall)` foi expandida e, para o `grupo de segurança gerenciado pelo EMR`, foi selecionado o grupo de segurança que continha o nome `xxxx-EmrSecurityGroup-xxxx` para o nó `Primary` e os nós `Core` e de `Task`.
 - Na seção `Encerramento do cluster e substituição do nó`, foi desmarcado `Use proteção de terminação`.
-- Foi expandida a seção `Logs do cluster` e configure o seguinte:
+- Foi expandida a seção `Logs do cluster` e configurado o seguinte:
   - Foi selecionado `Publique logs específicos do cluster no Amazon S3`.
   - Para localização do Amazon S3: foi escolhida `Procurar S3`.
   - Na janela pop-up `Escolher local do Amazon S3`: foi selecionado o bucket do Hadoop que foi criado anteriormente (`edn-dpcn-aws-hadoop`).
 - Na seção `Configuração de segurança e par de chaves EC2`: foi configurado o seguinte:
   - Para o par de chaves Amazon EC2 para SSH no cluster: foi escolhido `Procurar`.
-  - Na janela pop-up Escolher par de chaves do Amazon EC2 para SSH no cluster: foi selecionado o par de chaves chamado `EMRKey-lab` que já veio criado pelas pilhas do CloudFormation.
+  - Na janela pop-up `Escolher par de chaves do Amazon EC2 para SSH no cluster`: foi selecionado o par de chaves chamado `EMRKey-lab` que já veio criado pelas pilhas do CloudFormation.
 -  Na seção `Funções de gerenciamento de identidade e acesso (IAM) - obrigatórias`, foi configurado o seguinte:
   - Para a função de serviço do Amazon EMR: foi selecionada a role `EMR_DefaultRole` que também já tinha sido criada.
   - Para o perfil de instância do EC2 para Amazon EMR: foi selecionado o perfil de instância `EMR_EC2_DefaultRole` que também já tinha sido construído.
 
-A imagem 02 evidencia o cluster provisionado com sucesso. Pode ser que o cluster levasse aproximadamente cinco minutos para ser iniciado.
+A imagem 02 evidencia o cluster provisionado com sucesso. Poderia ser que o cluster levasse aproximadamente cinco minutos para ser iniciado.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-A configuração padrão instalou automaticamente vários aplicativos padrões no cluster:
+A configuração padrão instalou automaticamente vários aplicativos padrões no cluster. Alguns deles componentes nativos do próprio **Apache Hadoop**, como **Apache Hive** e **Apache Pig**:
 - **Apache Hadoop**: é um projeto de software de código aberto que pode ser usado para processar grandes conjuntos de dados de forma eficiente. Em vez de usar um computador grande para processar e armazenar os dados, o Hadoop usa clusters de hardware de commodity para analisar conjuntos de dados massivos em paralelo (MPP).
 - **Ganglia**: O projeto de código aberto **Ganglia** é um sistema escalável e distribuído, projetado para monitorar clusters e grades, minimizando o impacto em seu desempenho. O **Ganglia** pode gerar relatórios e visualizar o desempenho do cluster como um todo, bem como inspecionar o desempenho de nós individuais.
 - **Apache Tez**: é uma estrutura para criar um grafo acíclico direcionado (DAG) complexo de tarefas para processamento de dados. Em alguns casos, ele é usado como uma alternativa ao **Apache Hadoop MapReduce**. Por exemplo, os fluxos de trabalho Pig e Hive podem ser executados usando o Hadoop MapReduce ou podem usar o Tez como um mecanismo de execução.
@@ -122,21 +122,21 @@ A configuração padrão instalou automaticamente vários aplicativos padrões n
 - **Apache Pig**: é uma biblioteca Apache de código aberto que roda em cima do Hadoop. A biblioteca pega comandos do tipo SQL escritos em uma linguagem chamada **Pig Latin** e converte esses comandos em trabalhos Tez baseados em gráficos acíclicos direcionados (DAGs) ou programas MapReduce. Não é preciso escrever código complexo usando uma linguagem de computador de nível inferior, como **Java**.
 
 Resumidamente:
-- **Apache Hadoop**: é um projeto de software de código aberto que pode ser usado para processar grandes conjuntos de dados de forma eficiente. Em vez de usar um computador grande para processar e armazenar os dados, o Hadoop usa clusters de hardware de commodity para analisar conjuntos de dados massivos em paralelo (MPP).
-- **Ganglia**: Monitoramento.
-- **Apache Tez**: processamento com DAGs.
-- **Apache Hive**: Data Warehouse e processamento com linguagem HiveQL.
-- **Hadoop User Experience (Hue)**: Interface Gráfica de Usuário (GUI) para MapReduce.
-- **Apache Pig**: biblioteca que converte comandos escritos em linguagem **Pig Latin** em trabalhos do Tez, ou seja, DAGs, ou em programas MapReduce.
+- **Apache Hadoop**: Framework de processamento distribuído de grandes volumes de dados em clusters de hardware commodity.
+- **Ganglia**: Sistema de monitoramento escalável e distribuído para clusters e grades de computadores.
+- **Apache Tez**: Framework para processamento de dados com gráficos acíclicos direcionados (DAGs), utilizado como alternativa ao MapReduce.
+- **Apache Hive**: Data warehouse para Hadoop, com suporte a consultas SQL-like através da linguagem **HiveQL**.
+- **Hadoop User Experience (Hue)**: Interface web para facilitar o gerenciamento e uso de ferramentas Hadoop, como Hive e Pig, no Amazon EMR.
+- **Apache Pig**: Linguagem de alto nível (**Pig Latin**) que transforma scripts em tarefas executadas por Tez ou MapReduce.
 
-
-
-
-
-
-
-
-
+Nativamente, o **Apache Hadoop** é composto por diversos componentes, sendo os dois primeiros os principais e muitas vezes os mais lembrados:
+- **Apache Hadoop MapReduce**: É um mecanismo de processamento de dados que divide tarefas em duas fases: Map (processamento paralelo) e Reduce (agregação dos resultados). Ele permite o processamento distribuído de grandes volumes de dados de forma eficiente. O **MapReduce** é também conhecido como um modelo de programação.
+- **Hadoop Distributed File System (HDFS)**: É o sistema de arquivos distribuído do Hadoop, projetado para armazenar grandes volumes de dados de maneira escalável e redundante em clusters de máquinas. Ele divide os dados em blocos grandes e os distribui por vários nós, garantindo tolerância a falhas por meio de replicação.
+- **Yet Another Resource Negotiator (YARN)**: É o gerenciador de recursos do Hadoop, responsável por alocar e monitorar os recursos do cluster, como CPU e memória, garantindo que as tarefas sejam executadas de forma eficiente e equilibrada entre os nós.
+- **Apache Hive**: É uma infraestrutura de data warehouse sobre o Hadoop que permite consultas SQL-like usando a linguagem **HiveQL**. Ele facilita a interação com grandes volumes de dados através de uma interface semelhante ao SQL, sem a necessidade de escrever código complexo.
+- **Apache HBase**: É um banco de dados NoSQL distribuído e de baixo nível, projetado para armazenar dados estruturados em grande escala, oferecendo acesso em tempo real a dados, como leitura e escrita rápidas, ideal para sistemas que exigem baixa latência.
+- **Apache Pig**: É uma plataforma de processamento de dados que utiliza a linguagem de alto nível **Pig Latin** para transformar e processar dados. Pig facilita o processamento de dados complexos e não estruturados, convertendo scripts em tarefas MapReduce ou Tez.
+- **Apache ZooKeeper**: É um serviço centralizado para coordenação e sincronização de processos em clusters distribuídos. O ZooKeeper é usado para gerenciar configurações e fornecer mecanismos de bloqueio e notificações entre os nós do cluster, garantindo que todas as partes do sistema funcionem de maneira sincronizada.
 
 <a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
 
