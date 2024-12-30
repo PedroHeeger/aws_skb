@@ -10,6 +10,7 @@
 ---
 
 ### Theme:
+- Big Data
 - Cloud Computing
 
 ### Used Tools:
@@ -21,10 +22,10 @@
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
+  - Amazon CloudFront   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_cloudfront.svg" alt="aws_cloudfront" width="auto" height="25">
   - Amazon Elastic Compute Cloud (EC2)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ec2.svg" alt="aws_ec2" width="auto" height="25">
   - Amazon Elastic MapReduce (EMR)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_emr.svg" alt="aws_emr" width="auto" height="25">
   - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
-  - Amazon Virtual Private Cloud (VPC)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_vpc.svg" alt="aws_vpc" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
   - Apache Hive Query Language (Apache HiveQL)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hiveql" width="auto" height="25">
@@ -38,7 +39,9 @@
   - GitHub   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="auto" height="25">
 - Big Data:
   - Apache Hadoop   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="apache_hadoop" width="auto" height="25">
+  - Apache Hadoop MapReduce   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hadoop_mapreduce.png" alt="apache_hadoop_mapreduce" width="auto" height="25">
   - Apache Hive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hive" width="auto" height="25">
+  - Hadoop Distributed File System (HDFS)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/hdfs.png" alt="hdfs" width="auto" height="25">
 
 ---
 
@@ -54,7 +57,7 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi implantar um cluster **Hadoop** totalmente funcional no serviço **Amazon EMR** e com um script **HiveQL** processar os dados de log de amostra armazenados em um bucket do **Amazon Simple Storage Service (S3)**. **HiveQL** é uma linguagem de script semelhante a SQL para armazenamento e análise de dados. O **Amazon EMR** é um serviço gerenciado que torna rápido, fácil e econômico executar o **Apache Hadoop** e o **Apache Spark** para processar grandes quantidades de dados. O **Amazon EMR** também oferece suporte a ferramentas Hadoop poderosas e comprovadas, como **Presto**, **Hive**, **Pig**, **HBase** e muito mais.
+O objetivo deste laboratório prático foi implantar um cluster **Hadoop** totalmente funcional no serviço **Amazon EMR** e com um script **HiveQL** processar os dados de log de uma distribuição do **Amazon CloudFront** armazenados em um bucket do **Amazon Simple Storage Service (S3)**. **HiveQL** é uma linguagem de script semelhante a SQL para armazenamento e análise de dados. O **Amazon EMR** é um serviço gerenciado que torna rápido, fácil e econômico executar o **Apache Hadoop** e o **Apache Spark** para processar grandes quantidades de dados. O **Amazon EMR** também oferece suporte a ferramentas Hadoop poderosas e comprovadas, como **Presto**, **Hive**, **Pig**, **HBase** e muito mais.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -71,6 +74,8 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 <a name="item01.1"><h4>Tarefa 1: Criar um bucket do Amazon S3</h4></a>[Back to summary](#item0)
 
 Na primeira tarefa, o objetivo foi provisionar o bucket do **Amazon S3** para armazenar os arquivos de log e dados de saída. Na configuração desse bucket apenas o seguinte nome foi definido: `edn-dpcn-aws-hadoop`. A imagem 01 exibe o bucket criado.
+
+Infelizmente, a role utilizada pelo laboratório não possuía permissões para criar buckets no **Amazon S3**, conforme mostrado na imagem 01. Dessa forma, o laboratório ficou comprometido e foi necessário fazer alguns ajustes para conseguir executá-lo. Sendo assim, é possível que algumas imagens não esteam disponíveis ou mostrem outra execução da que deveria ser realizada.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
@@ -93,12 +98,12 @@ A tarefa seguinte foi iniciar o cluster **Apache Hadoop** no serviço **Amazon E
 - Na seção `Rede - necessária`, foi configurado o seguinte:
   - Para `Nuvem privada virtual (VPC)`: foi escolhida a opção `Procurar`.
   - Na janela pop-up `Escolher VPC`: foi selecionado a VPC `Lab VPC`.
-  - A seção `Grupos de segurança do EC2 (firewall)` foi expandida e, para o `grupo de segurança gerenciado pelo EMR`, foi selecionado o grupo de segurança que continha o nome `xxxx-EmrSecurityGroup-xxxx` para o nó `Primary` e os nós `Core` e de `Task`.
+  - A seção `Grupos de segurança do EC2 (firewall)` foi expandida e, para o `grupo de segurança gerenciado pelo EMR`, foi selecionado o grupo de segurança que continha o nome `xxxx-EmrSecurityGroup-xxxx` (`ElasticMapReduce-master-SSH`) para o nó `Primary` e os nós `Core` e de `Task`.
 - Na seção `Encerramento do cluster e substituição do nó`, foi desmarcado `Use proteção de terminação`.
 - Foi expandida a seção `Logs do cluster` e configurado o seguinte:
   - Foi selecionado `Publique logs específicos do cluster no Amazon S3`.
   - Para localização do Amazon S3: foi escolhida `Procurar S3`.
-  - Na janela pop-up `Escolher local do Amazon S3`: foi selecionado o bucket do Hadoop que foi criado anteriormente (`edn-dpcn-aws-hadoop`).
+  - Na janela pop-up `Escolher local do Amazon S3`: foi selecionado o bucket do Hadoop que foi criado anteriormente (`edn-dpcn-aws-hadoop`). (`s3://aws-logs-729452871114-us-east-1/elasticmapreduce`)
 - Na seção `Configuração de segurança e par de chaves EC2`: foi configurado o seguinte:
   - Para o par de chaves Amazon EC2 para SSH no cluster: foi escolhido `Procurar`.
   - Na janela pop-up `Escolher par de chaves do Amazon EC2 para SSH no cluster`: foi selecionado o par de chaves chamado `EMRKey-lab` que já veio criado pelas pilhas do CloudFormation.
@@ -140,81 +145,96 @@ Nativamente, o **Apache Hadoop** é composto por diversos componentes, sendo os 
 
 <a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
 
-Nesta terceira tarefa, o objetivo foi 
+Nesta terceira tarefa, o objetivo foi processar os dados oriundos do **Amazon CloudFront**. O CloudFront é um serviço da Web que acelera a distribuição de conteúdo da Web estático e dinâmico, como **HTML**, **CSS**, **PHP** e arquivos de imagem. O CloudFront entrega conteúdo por meio de uma rede mundial de data centers chamados edge locations. Quando um usuário solicita conteúdo por meio do CloudFront, ele é roteado para o edge location que fornece a menor latência (atraso de tempo), para que o conteúdo seja entregue com o melhor desempenho possível. Se o conteúdo já estiver no edge location com a menor latência, o CloudFront o entrega imediatamente. Se o conteúdo não estiver nesse edge location, o CloudFront o recupera de um bucket do **Amazon S3** ou de um servidor HTTP (por exemplo, um servidor da Web) que foi identificado como a origem da versão definitiva do conteúdo. O **Amazon CloudFront** pode produzir logs de acesso que mostram todos os dados solicitados pelos usuários. Os arquivos de log podem crescer muito, então o Hadoop é uma maneira ideal de processar e analisar os arquivos de log. Abaixo é apresentado um exemplo de log do CloudFront.
 
+```
+2017-07-05 20:05:47 SEA4 4261 10.0.0.15 eabcd12345678.cloudfront.net /test-image-2.jpeg Mozilla/5.0%20(MacOS;%20U;%20Windows%20NT%205.1;%20en-US;%20rv:1.9.0.9)%20Gecko/2009040821%20Chrome/3.0.9
+```
 
+Esse exemplo de log mostra as seguintes informações:
+- Data:	A data em que o evento ocorreu. (`2017-07-05`)
+- Tempo: O horário em que o servidor CloudFront terminou de responder à solicitação (em UTC). (`20:05:47`)
+- Localização de Borda (Edge Locations): O local de borda que atendeu à solicitação. Cada local de borda é identificado por um código de três letras e um número atribuído arbitrariamente, por exemplo, DFW3. O código de três letras normalmente corresponde ao código de aeroporto da International Air Transport Association para um aeroporto próximo ao local de borda. (`SEA4`)
+- Bytes: O número total de bytes que o CloudFront forneceu ao visualizador em resposta à solicitação, incluindo cabeçalhos. (`4261`)
+- Propriedade Intelectual: O endereço IP do visualizador que fez a solicitação. (`10.0.0.15`)
+- Método: O método de acesso HTTP: DELETE, GET, HEAD, OPTIONS, PATCH, POST ou PUT. (`GET`)
+- Hospedar:	O nome de domínio da distribuição do CloudFront. (`abcd.cloudfront.net`)
+- URI: A parte do URI que identifica o caminho e o objeto. (`/imagem-de-teste-2.jpeg`)
+- Status: Um código de status HTTP (por exemplo, 200 = sucesso). (`200`)
+- Referenciador: O nome do domínio que originou a solicitação. (`-`)
+- Agente do usuário: O cabeçalho User-Agent identifica a origem da solicitação, como o tipo de dispositivo e navegador que enviou a solicitação e, se a solicitação veio de um mecanismo de busca, qual mecanismo de busca. (`Mozilla/5.0…`)
 
+Com o cluster Hadoop em execução, um script Hive foi executado como uma etapa no console do **Amazon Elastic MapReduce (EMR)** para processar os dados de amostra. No Amazon EMR, uma etapa é uma unidade de trabalho que contém um ou mais trabalhos do Hadoop. É possível enviar etapas ao criar o cluster ou quando o cluster estiver em execução, se for um cluster de execução longa. A etapa adicionada foi configurada da seguinte maneira:
+- `Tipo`: foi escolhido `Programa Hive`.
+- `Nome`: `Registros de processo`.
+- Para o local do script Hive: foi passado o bucket do **Amazon S3** que ele se encontrava (`s3://us-east-1.elasticmapreduce.samples/cloudfront/code/Hive_CloudFront.qna`). Tanto este bucket como o arquivo foram gerados pelo próprio laboratório ao iniciar.
+- Para inserir o local do Amazon S3 - opcional: foi inserido `s3://us-east-1.elasticmapreduce.samplesna`.
+- Para saída Amazon S3 local - opcional: foi navegado até o S3 e escolhido o bucket criado na tarefa 1 (`edn-dpcn-aws-hadoop`).
+- Para argumentos - opcional: foi inserido `hiveconf hive.support.sql11.reserved.keywords=false`. Isso permitia nomes de colunas que eram iguais às palavras reservadas.
 
-
+Após adicionar a etapa, o status dela iniciava em pendente, em seguida entrava em execução até ser concluída. A imagem 03 evidencia a adição desta etapa no cluster **Apache Hadoop** no serviço **Amazon EMR**. O conjunto de dados de amostra que eram os logs gerados pelo **Amazon CloudFront**, continham aproximadamente 5000 linhas de dados. Esse mesmo processo, no entanto, poderia ser usado para processar milhões de linhas de dados em paralelo em vários nós.
 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
+Com relação ao script Hive, ele realizava as seguintes ações:
+- Criava uma tabela Hive chamada `cloudfront_logs` dentro do cluster. ([create_table.hql](/resource/create_table.hql))
+- Lia os arquivos de log do CloudFront do **Amazon S3** e analisava os arquivos usando o Serializador/Desserializador de Expressões Regulares (RegEx SerDe). ([log_analyze.hql](/resource/log_analyze.hql))
+- Gravava os resultados analisados ​​na tabela Hive `cloudfront_logs`.
+- Enviava uma consulta HiveQL aos dados para recuperar o total de solicitações por sistema operacional em um determinado período. ([query.hql](/resource/query.hql))
+- Gravava os resultados da consulta no bucket de saída do **Amazon S3**.
+
+<a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
+
+Após a conclusão bem-sucedida da etapa, a saída da consulta produzida pelo script do Hive era armazenada no bucket do **Amazon S3** que foi provisionado e especificado nas configurações da etapa. O objetivo nesta tarefa foi visualizar os resultados da saída da consulta produzida pelo script Hive. Dessa forma, foi preciso acessar o bucket `edn-dpcn-aws-hadoop` no **Amazon S3** que agora possuía o prefixo `os_requests`. Ao acessar esse prefixo, alguns arquivos de texto eram listado, conforme imagem 04. Para visualizar o conteúdo dos arquivos foi necessário baixá-los e abrí-los com um editor de texto ou ambiente de desenvolvimento integrado (IDE). Neste caso, foi utilizado o **Visual Studio Code (VS Code)**. A imagem 05 mostra o output da consulta HiveQL realizada pelo script Hive para recuperar o total de solicitações por sistema operacional a distribuição do CloudFront em um determinado período.
+
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
-
-<a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
-
-
-Na tarefa 4, o objetivo 
-
-
-
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
     <figcaption>Imagem 05.</figcaption>
 </figure></div><br>
 
+Devido aos problemas do laboratório, as tarefas 3 e 4 foram executadas interativamente após conectar remotamente na tarefa 5. Contudo, os logs da distribuição do CloudFront também não vieram armazenadas no bucket correspondente, o que significava que não haveria logs para ser processados.
+
 <a name="item01.5"><h4>Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</h4></a>[Back to summary](#item0)
 
+Na tarefa 5, o objetivo foi executar a consulta HiveQL diretamente ao cluster EMR utilizando a interface de linha de comando da **AWS** (**AWS CLI**). Para isso, o primeiro passo era se conectar ao cluster através de uma conexão SSH. Contudo, primeiro foi utilizado o recurso *Session Manager* do **AWS System Manager (SSM)** para abrir uma sessão com uma instância de tag de nome `CommandHost`, sendo facilitado pelo link fornecido pelo laboratório que já levava direto a sessão abrindo o terminal. Mas esse mesmo processo poderia ser feito manualmente no console do SSM. Lembrando que esse cluster era formado por três instâncias, sendo uma a `Primary`, a outra a `Core` e a última a `Task 1 de 1`.
 
-
-
-
+Dentro da sessão, alguns comandos foram executados. O primeiro comando executado foi `export ID=$(aws emr list-clusters | jq '.Clusters[0].Id' | tr -d '"')` para recuperar o ID do cluster EMR, que no caso era `j-UNXVSD07WBOO`. Com o comando `export HOST=$(aws emr describe-cluster --cluster-id $ID | jq '.Cluster.MasterPublicDnsName' | tr -d '"')` era extraído o DNS público da instância primária do cluster, que era `ec2-54-234-168-174.compute-1.amazonaws.com`. Pode ser que seja necessário executar esses dois comandos antes `export LANG=en_US.UTF-8` e `export LC_ALL=en_US.UTF-8`, para forçar a codificação para `UTF-8` ao invés de utilizar o padrão do terminal que é `ASCII`. Já com o comando `ssh -i ~/EMRKey-lab.pem hadoop@$HOST` uma conexão SSH da própria instância mestre com o cluster ao qual essa instância pertencia era executada, passando o arquivo de chave privada para autenticação, que já estava na instância, o nome de usuário que estava acessando, que era `hadoop` e o dns público da instância que tinha sido extraído antes e armazenado na variável `HOST`. A imagem 06 evidencia a abertura de sessão remota SSH da instância mestre com o cluster **Apache Hadoop** no **Amazon EMR**. Basicamente foi realizado um acesso remoto dentro de outro.
 
 <div align="Center"><figure>
     <img src="./0-aux/img06.png" alt="img06"><br>
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
 
+De dentro dessa sessão SSH foi executado o comando `Hive` para abrir o **Apache Hive** e poder executar a consulta **HiveQL** abaixo. Essa mesma consulta foi executada no script Hive na tarefa 3. Ela calculava o total de solicitações por sistema operacional a distribuição do **Amazon CloudFront** em um determinado período. Essas informações já tinha sido extraídas do CloudFront e armazenadas na tabela Hive criada anteriormente também pelo mesmo script. A imagem 07 mostra o output da consulta realizada.
+
+```hql
+SELECT
+  os,
+  COUNT(*) count
+FROM cloudfront_logs
+WHERE dateobject
+BETWEEN '2014-07-05' AND '2014-08-05'
+GROUP BY os;
+```
 
 <div align="Center"><figure>
     <img src="./0-aux/img07.png" alt="img07"><br>
     <figcaption>Imagem 07.</figcaption>
 </figure></div><br>
 
-
-
 <a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
 
-
-
-
-
+Nas tarefas anteriores duas formas de processamento de dados no cluster do EMR foram vistas. A primeira através envios de trabalhos pré-criados, onde foi utilizado um script Hive, e a segunda interativamente, no qual o cluster foi acessado remotamente por conexão SSH. Para finalizar o laboratório, o cluster foi encerrado pelo console do EMR, conforme comprovado na imagem 08.
 
 <div align="Center"><figure>
     <img src="./0-aux/img08.png" alt="img08"><br>
     <figcaption>Imagem 08.</figcaption>
-</figure></div><br>
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img09.png" alt="img09"><br>
-    <figcaption>Imagem 09.</figcaption>
-</figure></div><br>
-
-<div align="Center"><figure>
-    <img src="./0-aux/img10.png" alt="img10"><br>
-    <figcaption>Imagem 10.</figcaption>
-</figure></div><br>
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img11.png" alt="img11"><br>
-    <figcaption>Imagem 11.</figcaption>
 </figure></div><br>
