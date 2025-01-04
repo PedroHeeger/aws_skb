@@ -232,9 +232,3 @@ GROUP BY os;
 
 <a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
 
-Nas tarefas anteriores duas formas de processamento de dados no cluster do EMR foram vistas. A primeira através envios de trabalhos pré-criados, onde foi utilizado um script Hive, e a segunda interativamente, no qual o cluster foi acessado remotamente por conexão SSH. Para finalizar o laboratório, o cluster foi encerrado pelo console do EMR, conforme comprovado na imagem 08.
-
-<div align="Center"><figure>
-    <img src="./0-aux/img08.png" alt="img08"><br>
-    <figcaption>Imagem 08.</figcaption>
-</figure></div><br>
