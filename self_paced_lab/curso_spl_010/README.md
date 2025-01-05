@@ -204,31 +204,7 @@ Devido aos problemas do laboratório, as tarefas 3 e 4 foram executadas interati
 
 <a name="item01.5"><h4>Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</h4></a>[Back to summary](#item0)
 
-Na tarefa 5, o objetivo foi executar a consulta HiveQL diretamente ao cluster EMR utilizando a interface de linha de comando da **AWS** (**AWS CLI**). Para isso, o primeiro passo era se conectar ao cluster através de uma conexão SSH. Contudo, primeiro foi utilizado o recurso *Session Manager* do **AWS System Manager (SSM)** para abrir uma sessão com uma instância de tag de nome `CommandHost`, sendo facilitado pelo link fornecido pelo laboratório que já levava direto a sessão abrindo o terminal. Mas esse mesmo processo poderia ser feito manualmente no console do SSM. Lembrando que esse cluster era formado por três instâncias, sendo uma a `Primary`, a outra a `Core` e a última a `Task 1 de 1`.
 
-Dentro da sessão, alguns comandos foram executados. O primeiro comando executado foi `export ID=$(aws emr list-clusters | jq '.Clusters[0].Id' | tr -d '"')` para recuperar o ID do cluster EMR, que no caso era `j-UNXVSD07WBOO`. Com o comando `export HOST=$(aws emr describe-cluster --cluster-id $ID | jq '.Cluster.MasterPublicDnsName' | tr -d '"')` era extraído o DNS público da instância primária do cluster, que era `ec2-54-234-168-174.compute-1.amazonaws.com`. Pode ser que seja necessário executar esses dois comandos antes `export LANG=en_US.UTF-8` e `export LC_ALL=en_US.UTF-8`, para forçar a codificação para `UTF-8` ao invés de utilizar o padrão do terminal que é `ASCII`. Já com o comando `ssh -i ~/EMRKey-lab.pem hadoop@$HOST` uma conexão SSH da própria instância mestre com o cluster ao qual essa instância pertencia era executada, passando o arquivo de chave privada para autenticação, que já estava na instância, o nome de usuário que estava acessando, que era `hadoop` e o dns público da instância que tinha sido extraído antes e armazenado na variável `HOST`. A imagem 06 evidencia a abertura de sessão remota SSH da instância mestre com o cluster **Apache Hadoop** no **Amazon EMR**. Basicamente foi realizado um acesso remoto dentro de outro.
-
-<div align="Center"><figure>
-    <img src="./0-aux/img06.png" alt="img06"><br>
-    <figcaption>Imagem 06.</figcaption>
-</figure></div><br>
-
-De dentro dessa sessão SSH foi executado o comando `Hive` para abrir o **Apache Hive** e poder executar a consulta **HiveQL** abaixo. Essa mesma consulta foi executada no script Hive na tarefa 3. Ela calculava o total de solicitações por sistema operacional a distribuição do **Amazon CloudFront** em um determinado período. Essas informações já tinha sido extraídas do CloudFront e armazenadas na tabela Hive criada anteriormente também pelo mesmo script. A imagem 07 mostra o output da consulta realizada.
-
-```hql
-SELECT
-  os,
-  COUNT(*) count
-FROM cloudfront_logs
-WHERE dateobject
-BETWEEN '2014-07-05' AND '2014-08-05'
-GROUP BY os;
-```
-
-<div align="Center"><figure>
-    <img src="./0-aux/img07.png" alt="img07"><br>
-    <figcaption>Imagem 07.</figcaption>
-</figure></div><br>
 
 <a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
 
