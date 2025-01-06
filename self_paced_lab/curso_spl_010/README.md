@@ -188,19 +188,6 @@ Com relação ao script Hive, ele realizava as seguintes ações:
 
 <a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
 
-Após a conclusão bem-sucedida da etapa, a saída da consulta produzida pelo script do Hive era armazenada no bucket do **Amazon S3** que foi provisionado e especificado nas configurações da etapa. O objetivo nesta tarefa foi visualizar os resultados da saída da consulta produzida pelo script Hive. Dessa forma, foi preciso acessar o bucket `edn-dpcn-aws-hadoop` no **Amazon S3** que agora possuía o prefixo `os_requests`. Ao acessar esse prefixo, alguns arquivos de texto eram listado, conforme imagem 04. Para visualizar o conteúdo dos arquivos foi necessário baixá-los e abrí-los com um editor de texto ou ambiente de desenvolvimento integrado (IDE). Neste caso, foi utilizado o **Visual Studio Code (VS Code)**. A imagem 05 mostra o output da consulta HiveQL realizada pelo script Hive para recuperar o total de solicitações por sistema operacional a distribuição do CloudFront em um determinado período.
-
-<div align="Center"><figure>
-    <img src="./0-aux/img04.png" alt="img04"><br>
-    <figcaption>Imagem 04.</figcaption>
-</figure></div><br>
-
-<div align="Center"><figure>
-    <img src="./0-aux/img05.png" alt="img05"><br>
-    <figcaption>Imagem 05.</figcaption>
-</figure></div><br>
-
-Devido aos problemas do laboratório, as tarefas 3 e 4 foram executadas interativamente após conectar remotamente na tarefa 5. Contudo, os logs da distribuição do CloudFront também não vieram armazenadas no bucket correspondente, o que significava que não haveria logs para ser processados.
 
 <a name="item01.5"><h4>Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</h4></a>[Back to summary](#item0)
 
