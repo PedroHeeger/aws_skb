@@ -145,46 +145,7 @@ Nativamente, o **Apache Hadoop** é composto por diversos componentes, sendo os 
 
 <a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
 
-Nesta terceira tarefa, o objetivo foi processar os dados oriundos do **Amazon CloudFront**. O CloudFront é um serviço da Web que acelera a distribuição de conteúdo da Web estático e dinâmico, como **HTML**, **CSS**, **PHP** e arquivos de imagem. O CloudFront entrega conteúdo por meio de uma rede mundial de data centers chamados edge locations. Quando um usuário solicita conteúdo por meio do CloudFront, ele é roteado para o edge location que fornece a menor latência (atraso de tempo), para que o conteúdo seja entregue com o melhor desempenho possível. Se o conteúdo já estiver no edge location com a menor latência, o CloudFront o entrega imediatamente. Se o conteúdo não estiver nesse edge location, o CloudFront o recupera de um bucket do **Amazon S3** ou de um servidor HTTP (por exemplo, um servidor da Web) que foi identificado como a origem da versão definitiva do conteúdo. O **Amazon CloudFront** pode produzir logs de acesso que mostram todos os dados solicitados pelos usuários. Os arquivos de log podem crescer muito, então o Hadoop é uma maneira ideal de processar e analisar os arquivos de log. Abaixo é apresentado um exemplo de log do CloudFront.
 
-```
-2017-07-05 20:05:47 SEA4 4261 10.0.0.15 eabcd12345678.cloudfront.net /test-image-2.jpeg Mozilla/5.0%20(MacOS;%20U;%20Windows%20NT%205.1;%20en-US;%20rv:1.9.0.9)%20Gecko/2009040821%20Chrome/3.0.9
-```
-
-Esse exemplo de log mostra as seguintes informações:
-- Data:	A data em que o evento ocorreu. (`2017-07-05`)
-- Tempo: O horário em que o servidor CloudFront terminou de responder à solicitação (em UTC). (`20:05:47`)
-- Localização de Borda (Edge Locations): O local de borda que atendeu à solicitação. Cada local de borda é identificado por um código de três letras e um número atribuído arbitrariamente, por exemplo, DFW3. O código de três letras normalmente corresponde ao código de aeroporto da International Air Transport Association para um aeroporto próximo ao local de borda. (`SEA4`)
-- Bytes: O número total de bytes que o CloudFront forneceu ao visualizador em resposta à solicitação, incluindo cabeçalhos. (`4261`)
-- Propriedade Intelectual: O endereço IP do visualizador que fez a solicitação. (`10.0.0.15`)
-- Método: O método de acesso HTTP: DELETE, GET, HEAD, OPTIONS, PATCH, POST ou PUT. (`GET`)
-- Hospedar:	O nome de domínio da distribuição do CloudFront. (`abcd.cloudfront.net`)
-- URI: A parte do URI que identifica o caminho e o objeto. (`/imagem-de-teste-2.jpeg`)
-- Status: Um código de status HTTP (por exemplo, 200 = sucesso). (`200`)
-- Referenciador: O nome do domínio que originou a solicitação. (`-`)
-- Agente do usuário: O cabeçalho User-Agent identifica a origem da solicitação, como o tipo de dispositivo e navegador que enviou a solicitação e, se a solicitação veio de um mecanismo de busca, qual mecanismo de busca. (`Mozilla/5.0…`)
-
-Com o cluster Hadoop em execução, um script Hive foi executado como uma etapa no console do **Amazon Elastic MapReduce (EMR)** para processar os dados de amostra. No Amazon EMR, uma etapa é uma unidade de trabalho que contém um ou mais trabalhos do Hadoop. É possível enviar etapas ao criar o cluster ou quando o cluster estiver em execução, se for um cluster de execução longa. A etapa adicionada foi configurada da seguinte maneira:
-- `Tipo`: foi escolhido `Programa Hive`.
-- `Nome`: `Registros de processo`.
-- Para o local do script Hive: foi passado o bucket do **Amazon S3** que ele se encontrava (`s3://us-east-1.elasticmapreduce.samples/cloudfront/code/Hive_CloudFront.qna`). Tanto este bucket como o arquivo foram gerados pelo próprio laboratório ao iniciar.
-- Para inserir o local do Amazon S3 - opcional: foi inserido `s3://us-east-1.elasticmapreduce.samplesna`.
-- Para saída Amazon S3 local - opcional: foi navegado até o S3 e escolhido o bucket criado na tarefa 1 (`edn-dpcn-aws-hadoop`).
-- Para argumentos - opcional: foi inserido `hiveconf hive.support.sql11.reserved.keywords=false`. Isso permitia nomes de colunas que eram iguais às palavras reservadas.
-
-Após adicionar a etapa, o status dela iniciava em pendente, em seguida entrava em execução até ser concluída. A imagem 03 evidencia a adição desta etapa no cluster **Apache Hadoop** no serviço **Amazon EMR**. O conjunto de dados de amostra que eram os logs gerados pelo **Amazon CloudFront**, continham aproximadamente 5000 linhas de dados. Esse mesmo processo, no entanto, poderia ser usado para processar milhões de linhas de dados em paralelo em vários nós.
-
-<div align="Center"><figure>
-    <img src="./0-aux/img03.png" alt="img03"><br>
-    <figcaption>Imagem 03.</figcaption>
-</figure></div><br>
-
-Com relação ao script Hive, ele realizava as seguintes ações:
-- Criava uma tabela Hive chamada `cloudfront_logs` dentro do cluster. ([create_table.hql](/resource/create_table.hql))
-- Lia os arquivos de log do CloudFront do **Amazon S3** e analisava os arquivos usando o Serializador/Desserializador de Expressões Regulares (RegEx SerDe). ([log_analyze.hql](/resource/log_analyze.hql))
-- Gravava os resultados analisados ​​na tabela Hive `cloudfront_logs`.
-- Enviava uma consulta HiveQL aos dados para recuperar o total de solicitações por sistema operacional em um determinado período. ([query.hql](/resource/query.hql))
-- Gravava os resultados da consulta no bucket de saída do **Amazon S3**.
 
 <a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
 
