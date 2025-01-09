@@ -73,9 +73,10 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Criar um bucket do Amazon S3</h4></a>[Back to summary](#item0)
 
-Na primeira tarefa, o objetivo foi provisionar o bucket do **Amazon S3** para armazenar os arquivos de log e dados de saída. Na configuração desse bucket apenas o seguinte nome foi definido: `edn-dpcn-aws-hadoop`. A imagem 01 exibe o bucket criado.
 
-Infelizmente, a role utilizada pelo laboratório não possuía permissões para criar buckets no **Amazon S3**, conforme mostrado na imagem 01. Dessa forma, o laboratório ficou comprometido e foi necessário fazer alguns ajustes para conseguir executá-lo. Sendo assim, é possível que algumas imagens não esteam disponíveis ou mostrem outra execução da que deveria ser realizada.
+
+
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
