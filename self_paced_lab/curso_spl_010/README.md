@@ -83,6 +83,9 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
+
+
+
 <a name="item01.2"><h4>Tarefa 2: iniciar um cluster do Amazon EMR</h4></a>[Back to summary](#item0)
 
 <div align="Center"><figure>
@@ -91,14 +94,38 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 </figure></div><br>
 
 
+
+
+
+
 <a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
+
+
+
+
+
+
 
 
 
 <a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
 
 
+
+
+
+
+
+
+
+
+
 <a name="item01.5"><h4>Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</h4></a>[Back to summary](#item0)
+
+
+
+
+
 
 
 
