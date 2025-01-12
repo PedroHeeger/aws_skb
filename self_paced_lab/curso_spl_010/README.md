@@ -1,9 +1,9 @@
-# Lab - Analyze Big Data with Hadoop   <img src="./0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="45">
+# Lab - Introduction to Amazon Redshift   <img src="./0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_spl_010 (Lab - Analyze Big Data with Hadoop)   <img src="./0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="25"></a>
+### Course: <a href="./">curso_spl_010 (Lab - Introduction to Amazon Redshift)   <img src="./0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
@@ -22,13 +22,11 @@
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
-  - Amazon CloudFront   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_cloudfront.svg" alt="aws_cloudfront" width="auto" height="25">
+  - Amazon Redshift   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_redshift.svg" alt="aws_redshift" width="auto" height="25">
   - Amazon Elastic Compute Cloud (EC2)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ec2.svg" alt="aws_ec2" width="auto" height="25">
-  - Amazon Elastic MapReduce (EMR)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_emr.svg" alt="aws_emr" width="auto" height="25">
   - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
-  - Apache Hive Query Language (Apache HiveQL)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hiveql" width="auto" height="25">
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
 - Integrated Development Environment (IDE) and Text Editor:
@@ -46,13 +44,12 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. Lab - Analyze Big Data with Hadoop<br>
-1.1 <a href="#item01.1">Tarefa 1: Criar um bucket do Amazon S3</a><br>
-1.2 <a href="#item01.2">Tarefa 2: iniciar um cluster do Amazon EMR</a><br>
-1.3 <a href="#item01.3">Tarefa 3: Processe seus dados de amostra executando um script Hive</a><br>
-1.4 <a href="#item01.4">Tarefa 4: Visualizar os resultados</a><br>
-1.5 <a href="#item01.5">Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</a><br>
-1.6 <a href="#item01.6">Tarefa 6: Encerre seu cluster Amazon EMR</a><br>
+1. Lab - Introduction to Amazon Redshift<br>
+1.1 <a href="#item01.1">Tarefa 1: iniciar um cluster do Amazon Redshift</a><br>
+1.2 <a href="#item01.2">Tarefa 2: Use o Redshift Query Editor para se comunicar com seu Redshift Cluster</a><br>
+1.3 <a href="#item01.3">Tarefa 3: Criar uma tabela</a><br>
+1.4 <a href="#item01.4">Tarefa 4: Carregar dados de amostra do Amazon S3</a><br>
+1.5 <a href="#item01.5">Tarefa 5: Consultar dados</a><br>
 
 ---
 
@@ -71,7 +68,7 @@ O laboratório do **AWS Skill Builder** tem o foco em executar apenas o que é o
 
 O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de uma identidade federada. O Skill Builder funciona como um provedor de identidade (IdP), autenticando o usuário e vinculando-o a uma role do **AWS IAM** provisionada automaticamente por uma das pilhas do CloudFormation. Essa role concede permissões temporárias e mínimas necessárias para a execução do laboratório, garantindo segurança e controle sobre os recursos utilizados. O laboratório, por padrão, determina a região a ser utilizada e ela não deve ser alterada, somente se o próprio laboratório indicar. As configurações não informadas no laboratório devem ser sempre mantidas como padrão que estão.
 
-<a name="item01.1"><h4>Tarefa 1: Criar um bucket do Amazon S3</h4></a>[Back to summary](#item0)
+<a name="item01.1"><h4>Tarefa 1: iniciar um cluster do Amazon Redshift</h4></a>[Back to summary](#item0)
 
 
 
@@ -86,7 +83,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.2"><h4>Tarefa 2: iniciar um cluster do Amazon EMR</h4></a>[Back to summary](#item0)
+<a name="item01.2"><h4>Tarefa 2: Use o Redshift Query Editor para se comunicar com seu Redshift Cluster</h4></a>[Back to summary](#item0)
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
@@ -98,7 +95,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.3"><h4>Tarefa 3: Processe seus dados de amostra executando um script Hive</h4></a>[Back to summary](#item0)
+<a name="item01.3"><h4>Tarefa 3: Criar uma tabela</h4></a>[Back to summary](#item0)
 
 
 
@@ -108,7 +105,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.4"><h4>Tarefa 4: Visualizar os resultados</h4></a>[Back to summary](#item0)
+<a name="item01.4"><h4>Tarefa 4: Carregar dados de amostra do Amazon S3</h4></a>[Back to summary](#item0)
 
 
 
@@ -120,7 +117,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.5"><h4>Tarefa 5: conectar-se à CLI do cluster EMR e executar a consulta usando HiveQL</h4></a>[Back to summary](#item0)
+<a name="item01.5"><h4>Tarefa 5: Consultar dados</h4></a>[Back to summary](#item0)
 
 
 
@@ -129,5 +126,4 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.6"><h4>Tarefa 6: Encerre seu cluster Amazon EMR</h4></a>[Back to summary](#item0)
 
