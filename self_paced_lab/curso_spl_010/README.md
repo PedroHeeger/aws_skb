@@ -15,15 +15,11 @@
 
 ### Used Tools:
 - Operating System (OS): 
-  - Linux   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="auto" height="25">
   - Windows 11   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/windows11.png" alt="windows11" width="auto" height="25">
-- Linux Distribution:
-  - Amazon Linux   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/amazon_linux.png" alt="amazon_linux" width="auto" height="25">
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
   - Amazon Redshift   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_redshift.svg" alt="aws_redshift" width="auto" height="25">
-  - Amazon Elastic Compute Cloud (EC2)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ec2.svg" alt="aws_ec2" width="auto" height="25">
   - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
@@ -35,11 +31,6 @@
   - Git   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="auto" height="25">
 - Repository:
   - GitHub   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="auto" height="25">
-- Big Data:
-  - Apache Hadoop   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="apache_hadoop" width="auto" height="25">
-  - Apache Hadoop MapReduce   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hadoop_mapreduce.png" alt="apache_hadoop_mapreduce" width="auto" height="25">
-  - Apache Hive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hive" width="auto" height="25">
-  - Hadoop Distributed File System (HDFS)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/hdfs.png" alt="hdfs" width="auto" height="25">
 
 ---
 
@@ -54,7 +45,7 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi implantar um cluster **Hadoop** totalmente funcional no serviço **Amazon EMR** e com um script **HiveQL** processar os dados de log de uma distribuição do **Amazon CloudFront** armazenados em um bucket do **Amazon Simple Storage Service (S3)**. **HiveQL** é uma linguagem de script semelhante a SQL para armazenamento e análise de dados. O **Amazon EMR** é um serviço gerenciado que torna rápido, fácil e econômico executar o **Apache Hadoop** e o **Apache Spark** para processar grandes quantidades de dados. O **Amazon EMR** também oferece suporte a ferramentas Hadoop poderosas e comprovadas, como **Presto**, **Hive**, **Pig**, **HBase** e muito mais.
+O objetivo deste laboratório prático foi implementar um cluster do **Amazon Redshift**, carregar os dados de um bucket do **Amazon S3** no cluster, e então efetuar consultas nos dados armazenados no cluster.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -70,60 +61,115 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: iniciar um cluster do Amazon Redshift</h4></a>[Back to summary](#item0)
 
+O **Amazon Redshift** é um serviço de data warehouse da cloud **AWS**. Ele é rápido e totalmente gerenciado que torna simples e econômico analisar todos os dados usando SQL padrão e ferramentas de Business Intelligence (BI) existentes. Nesta primeira tarefa do laboratório, foi provisionado um cluster que consiste em um conjunto de nós de computação, que juntos executavam um mecanismo do Redshift e continham um banco de dados. Ao iniciar um cluster, uma das opções que era especificada era o tipo de nó. O tipo de nó determina a CPU, a RAM, a capacidade de armazenamento e o tipo de unidade de armazenamento para cada nó. Os tipos de nó estão disponíveis em tamanhos diferentes. O tamanho do nó e o número de nós determinam o armazenamento total para um cluster. O cluster do Redshift provisionado ficou com a seguinte configuração:
+- Identificador de cluster: `lab`.
+- Tipo de nó: `dc2.large`.
+- Número de nós: `2`.
+- Na seção Configurações do banco de dados, foi configurado:
+- Nome de usuário do administrador: `master`
+- Para Senha do administrador, foi selecionado `Adicionar manualmente a senha do administrador e configurar a senha do usuário administrador`: nele foi colado o valor do item `DBPassword`, fornecido pelo próprio laboratório, sendo neste caso `SZ51Hmo4jYNm`.
+- Foi selecionado `Desativar criptografia de cluster`.
+- Para funções IAM associadas, foi escolhida a IAM Role `Redshift-Role`, que já tinha sido provisionada pela pilha do **AWS CloudFormation** ao iniciar o laboratório. Essa função concedia permissões para o **Amazon Redshift** ler dados do **Amazon S3** já que ele precisaria importar dados do bucket.
+- Na seção Configurações adicionais foi desmarcado a opção `Usar padrões`.
+  - Em Rede e segurança, foi configurado:
+    - Virtual private cloud: `Lab VPC`.
+    - Em `VPC security groups` foi deselecionado o default e escolhido o grupo de segurança `Redshift Security Group`.
+  - Em `Configurações do banco de dados` foi configurado:
+    - Nome do banco de dados: `labdb`.
 
-
-
-
+A imagem 01 ilustra o cluster do Redshift criado com sucesso e com status de disponível. Esse provisionamento poderia levar alguns minutos para ser concluído.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
-
-
-
 <a name="item01.2"><h4>Tarefa 2: Use o Redshift Query Editor para se comunicar com seu Redshift Cluster</h4></a>[Back to summary](#item0)
+
+O **Amazon Redshift** pode ser usado via SQL padrão do setor. Para usar o Redshift, é necessário ter um SQL Client que forneça uma interface de usuário para digitar SQL. Qualquer cliente SQL que suporte JDBC ou ODBC pode ser usado com o Redshift, sendo necessário configurar o acesso de rede através do grupo de segurança liberando a porta `5439`. Contudo, como neste laboratório não era possível adicionar uma regra ao grupo de segurança do Redshift para liberar a comunicação de um SQL Client da máquina física, foi utilizado o editor de consultas do próprio Redshift. Para utilizá-lo foi necessário selecionar o editor de consultas e conectá-lo ao banco de dados informando as credenciais configuradas:
+- Conjunto: `lab (Available)`.
+- Nome do banco de dados: `labdb`.
+- Usuário do banco de dados: `master`.
+
+A imagem 02 evidencia a conexão estabelecida do editor de consultas com o cluster do Redshift. Perceba que não foi necessário informar a senha do banco de dados, pois a conexão era realizada dentro da **AWS**.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-
-
-
-
-
 <a name="item01.3"><h4>Tarefa 3: Criar uma tabela</h4></a>[Back to summary](#item0)
 
+O próximo passo foi criar uma tabela no Redshift executando comandos SQL no editor de consultas. O arquivo [create_table.sql](./resource/create_table.sql) foi utilizado para criar a tabela `users` com diversos atributos. Em seguida, foi executado o comando `Select * from users;` para selecionar todas as linhas da tabela criada, que neste momento era zero. A imagem 03 mostra a consulta que criou a tabela.
 
-
-
-
-
-
-
+<div align="Center"><figure>
+    <img src="./0-aux/img03.png" alt="img03"><br>
+    <figcaption>Imagem 03.</figcaption>
+</figure></div><br>
 
 <a name="item01.4"><h4>Tarefa 4: Carregar dados de amostra do Amazon S3</h4></a>[Back to summary](#item0)
 
+O **Amazon Redshift** pode importar dados do **Amazon S3**. Vários formatos de arquivo são suportados, campos de comprimento fixo, valores separados por vírgula (CSV) e delimitadores personalizados. Os dados para este laboratório eram separados por barras verticais (|). Sendo assim, uma nova consulta foi criada e foi executado o comando SQL abaixo. Esse comando copiava os dados do bucket do S3 do path determinado para a tabela `users`, informando como credencial a ARN de uma role do **AWS IAM**, que no caso era a role configurada no cluster cujo nome era `Redshift-Role`. Também foi passado a barra vertical como delimitador.
 
+```sql
+COPY users FROM 's3://awssampledbuswest2/tickit/allusers_pipe.txt'
+CREDENTIALS 'aws_iam_role=arn:aws:iam::035003144066:role/Redshift-Role'
+DELIMITER '|';
+```
 
+O comando levou aproximadamente 10 segundos para carregar 49.990 linhas de dados. A imagem 04 exibe a inserção dos dados no Redshift. 
 
-
-
-
-
-
-
+<div align="Center"><figure>
+    <img src="./0-aux/img04.png" alt="img04"><br>
+    <figcaption>Imagem 04.</figcaption>
+</figure></div><br>
 
 <a name="item01.5"><h4>Tarefa 5: Consultar dados</h4></a>[Back to summary](#item0)
 
+Com os dados armazenados no banco de dados do **Amazon Redshift**, a última tarefa foi realizar consultas SQL Select na tabela `users` desse banco de dados. A primeira consulta realizada foi `SELECT COUNT(*) FROM users;`, que contabilizou quantas linhas a tabela tinha. Outras duas consultas foram realizadas conforme comandos abaixo. A primeira exibia os usuários em Ohio (OH) que gostavam de esportes, mas não gostavam de ópera, classificando a lista pelo primeiro nome. A segunda consulta mostrava as 10 principais cidades onde vivem usuários amantes do jazz. As imagens 05, 06 e 07 exibem o resultado dessas três consultas.
 
+```sql
+SELECT userid, firstname, lastname, city, state
+FROM users
+WHERE likesports AND NOT likeopera AND state = 'OH'
+ORDER BY firstname;
+```
 
+```sql
+SELECT
+  city,
+  COUNT(*) AS count
+FROM users
+WHERE likejazz
+GROUP BY city
+ORDER BY count DESC
+LIMIT 10;
+```
 
+<div align="Center"><figure>
+    <img src="./0-aux/img05.png" alt="img05"><br>
+    <figcaption>Imagem 05.</figcaption>
+</figure></div><br>
 
+<div align="Center"><figure>
+    <img src="./0-aux/img06.png" alt="img06"><br>
+    <figcaption>Imagem 06.</figcaption>
+</figure></div><br>
 
+<div align="Center"><figure>
+    <img src="./0-aux/img07.png" alt="img07"><br>
+    <figcaption>Imagem 07.</figcaption>
+</figure></div><br>
 
+Por fim, houve um desafio que foi escrever uma consulta que exibisse apenas o nome e sobrenome dos usuários que gostavam tanto de teatro quanto de Música Clássica cujo sobrenome era Smith. O comando executado foi o abaixo e a imagem 08 evidencia a execução da consulta.
 
+```sql
+SELECT firstname, lastname
+FROM users
+WHERE lastname = 'Smith' and liketheatre and likeclassical;
+```
 
+<div align="Center"><figure>
+    <img src="./0-aux/img08.png" alt="img08"><br>
+    <figcaption>Imagem 08.</figcaption>
+</figure></div><br>
