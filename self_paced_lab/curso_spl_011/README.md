@@ -109,15 +109,10 @@ O próximo passo foi criar uma tabela no Redshift executando comandos SQL no edi
 
 <a name="item01.4"><h4>Tarefa 4: Carregar dados de amostra do Amazon S3</h4></a>[Back to summary](#item0)
 
-O **Amazon Redshift** pode importar dados do **Amazon S3**. Vários formatos de arquivo são suportados, campos de comprimento fixo, valores separados por vírgula (CSV) e delimitadores personalizados. Os dados para este laboratório eram separados por barras verticais (|). Sendo assim, uma nova consulta foi criada e foi executado o comando SQL abaixo. Esse comando copiava os dados do bucket do S3 do path determinado para a tabela `users`, informando como credencial a ARN de uma role do **AWS IAM**, que no caso era a role configurada no cluster cujo nome era `Redshift-Role`. Também foi passado a barra vertical como delimitador.
 
-```sql
-COPY users FROM 's3://awssampledbuswest2/tickit/allusers_pipe.txt'
-CREDENTIALS 'aws_iam_role=arn:aws:iam::035003144066:role/Redshift-Role'
-DELIMITER '|';
-```
 
-O comando levou aproximadamente 10 segundos para carregar 49.990 linhas de dados. A imagem 04 exibe a inserção dos dados no Redshift. 
+
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
