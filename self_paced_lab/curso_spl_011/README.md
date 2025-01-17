@@ -100,7 +100,6 @@ A imagem 02 evidencia a conexão estabelecida do editor de consultas com o clust
 
 <a name="item01.3"><h4>Tarefa 3: Criar uma tabela</h4></a>[Back to summary](#item0)
 
-O próximo passo foi criar uma tabela no Redshift executando comandos SQL no editor de consultas. O arquivo [create_table.sql](./resource/create_table.sql) foi utilizado para criar a tabela `users` com diversos atributos. Em seguida, foi executado o comando `Select * from users;` para selecionar todas as linhas da tabela criada, que neste momento era zero. A imagem 03 mostra a consulta que criou a tabela.
 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
