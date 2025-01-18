@@ -86,12 +86,7 @@ A imagem 01 ilustra o cluster do Redshift criado com sucesso e com status de dis
 
 <a name="item01.2"><h4>Tarefa 2: Use o Redshift Query Editor para se comunicar com seu Redshift Cluster</h4></a>[Back to summary](#item0)
 
-O **Amazon Redshift** pode ser usado via SQL padrão do setor. Para usar o Redshift, é necessário ter um SQL Client que forneça uma interface de usuário para digitar SQL. Qualquer cliente SQL que suporte JDBC ou ODBC pode ser usado com o Redshift, sendo necessário configurar o acesso de rede através do grupo de segurança liberando a porta `5439`. Contudo, como neste laboratório não era possível adicionar uma regra ao grupo de segurança do Redshift para liberar a comunicação de um SQL Client da máquina física, foi utilizado o editor de consultas do próprio Redshift. Para utilizá-lo foi necessário selecionar o editor de consultas e conectá-lo ao banco de dados informando as credenciais configuradas:
-- Conjunto: `lab (Available)`.
-- Nome do banco de dados: `labdb`.
-- Usuário do banco de dados: `master`.
 
-A imagem 02 evidencia a conexão estabelecida do editor de consultas com o cluster do Redshift. Perceba que não foi necessário informar a senha do banco de dados, pois a conexão era realizada dentro da **AWS**.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
