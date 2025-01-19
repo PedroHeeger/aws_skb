@@ -61,23 +61,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: iniciar um cluster do Amazon Redshift</h4></a>[Back to summary](#item0)
 
-O **Amazon Redshift** é um serviço de data warehouse da cloud **AWS**. Ele é rápido e totalmente gerenciado que torna simples e econômico analisar todos os dados usando SQL padrão e ferramentas de Business Intelligence (BI) existentes. Nesta primeira tarefa do laboratório, foi provisionado um cluster que consiste em um conjunto de nós de computação, que juntos executavam um mecanismo do Redshift e continham um banco de dados. Ao iniciar um cluster, uma das opções que era especificada era o tipo de nó. O tipo de nó determina a CPU, a RAM, a capacidade de armazenamento e o tipo de unidade de armazenamento para cada nó. Os tipos de nó estão disponíveis em tamanhos diferentes. O tamanho do nó e o número de nós determinam o armazenamento total para um cluster. O cluster do Redshift provisionado ficou com a seguinte configuração:
-- Identificador de cluster: `lab`.
-- Tipo de nó: `dc2.large`.
-- Número de nós: `2`.
-- Na seção Configurações do banco de dados, foi configurado:
-- Nome de usuário do administrador: `master`
-- Para Senha do administrador, foi selecionado `Adicionar manualmente a senha do administrador e configurar a senha do usuário administrador`: nele foi colado o valor do item `DBPassword`, fornecido pelo próprio laboratório, sendo neste caso `SZ51Hmo4jYNm`.
-- Foi selecionado `Desativar criptografia de cluster`.
-- Para funções IAM associadas, foi escolhida a IAM Role `Redshift-Role`, que já tinha sido provisionada pela pilha do **AWS CloudFormation** ao iniciar o laboratório. Essa função concedia permissões para o **Amazon Redshift** ler dados do **Amazon S3** já que ele precisaria importar dados do bucket.
-- Na seção Configurações adicionais foi desmarcado a opção `Usar padrões`.
-  - Em Rede e segurança, foi configurado:
-    - Virtual private cloud: `Lab VPC`.
-    - Em `VPC security groups` foi deselecionado o default e escolhido o grupo de segurança `Redshift Security Group`.
-  - Em `Configurações do banco de dados` foi configurado:
-    - Nome do banco de dados: `labdb`.
 
-A imagem 01 ilustra o cluster do Redshift criado com sucesso e com status de disponível. Esse provisionamento poderia levar alguns minutos para ser concluído.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
