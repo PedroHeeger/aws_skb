@@ -6,6 +6,8 @@
 <details><summary>Analytics</summary>
     <ul>
         <li>curso_spl_009: <a href="./curso_spl_009/">Lab - Analyze Big Data with Hadoop   <img src="./curso_spl_009/0-aux/logo_course.png" alt="curso_spl_009" width="auto" height="25"></a></li>
+        <li>curso_spl_010: <a href="./curso_spl_010/">Lab - Introduction to Amazon Redshift   <img src="./curso_spl_010/0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="25"></a></li>
+        <li>curso_spl_011: <a href="./curso_spl_011/">Lab - Exploring the Generative Business Intelligence Features in Amazon QuickSight   <img src="./curso_spl_011/0-aux/logo_course.png" alt="curso_spl_011" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>AR e VR</summary>

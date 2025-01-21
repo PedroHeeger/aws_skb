@@ -45,12 +45,13 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi utilizar o **Amazon QuickSight** para ingestão de dados e construção de um dashboard com visualizações e recursos de BI generativo para fornecer insights relevantes a respeito desses dados. O conjunto de dados utilizado para análise foi fornecido pelo laboratório e tratava-se de um portfólio de empréstimos de uma grande instituição financeira.
+O objetivo deste laboratório prático foi utilizar o **Amazon QuickSight** para ingestão de dados e construção de um dashboard com visualizações e recursos de BI generativo para fornecer insights relevantes a respeito desses dados. O conjunto de dados utilizado para análise foi fornecido pelo laboratório e tratava-se de um portfólio de empréstimos de uma grande instituição financeira. Os recursos de Bussiness Inteligence (BI) generativo foram utilizados através do **Amazon QuickSight Q** com a criação de um tópico.
 
 ### Structure:
 A estrutura do curso é formada por:
 - Este arquivo de README.
-- A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
+- A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
+- A pasta `resource` com os arquivos utilizados.
 
 ### Development:
 Este curso foi um laboratório prático realizado na plataforma **AWS Skill Builder**, cuja subscrição foi devida a uma parceria entre a **AWS** e a **Escola da Nuvem**. A infraestrutura de cloud utilizada foi fornecida através de um sandbox do **AWS Skill Builder** que possibilitava acesso ao console da **AWS**. Contudo foi necessário seguir estritamente as orientações determinadas no laboratório. Dessa maneira, a forma de interação com os recursos da cloud foram sempre através do console fornecido pelo sandbox, a não ser em casos em que o próprio laboratório instruiu para utilização de outras ferramentas de interação como **AWS CLI** ou **AWS SDK**.
