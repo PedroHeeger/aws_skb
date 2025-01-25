@@ -165,23 +165,20 @@ No caso deste laboratório a análise inicial contemplou apenas as primeiras dua
 
 <a name="item01.4"><h4>Tarefa 4: visualizar um relatório de etapa</h4></a>[Back to summary](#item0)
 
-O **AWS Well-Architected Framework** possui vários recursos adicionais, incluindo o ajuste de prioridades do pilar para a arquitetura da aplicação, o registro do status das análises da aplicação e a geração de relatórios de etapa. É possível gerar um relatório de etapa contendo as respostas para as perguntas da carga de trabalho, as anotações e quaisquer riscos altos e médios que estavam presentes quando a etapa foi salva.
 
-Nesta última tarefa, o objetivo foi ajustar as prioridades do pilar, definir o status da melhoria e visualizar o relatório da etapa. Dessa forma, a carga de trabalho de nome `Workload for AnyCompany` foi selecionada para primeiro ajustar a prioridade do pilar. Um pilar pode ter maior importância dependendo do tipo de aplicação que está sendo criado. Na carga de trabalho desse laboratório, aplicação desenvolvida precisava da implementação de várias camadas de segurança. Sendo assim, o pilar de segurança foi ajustado definindo ele com a maior prioridade. Para fazer isso, foi só mover o pilar para o topo da lista de prioridade do pilar no plano de melhoria, conforme evidenciado na imagem 08.
 
 <div align="Center"><figure>
     <img src="./0-aux/img08.png" alt="img08"><br>
     <figcaption>Imagem 08.</figcaption>
 </figure></div><br>
 
-Também foi definido o status de melhoria como `Não Iniciado` na seção Status da carga de trabalho na guia Propriedades dessa mesma carga de trabalho. A imagem 09 mostra essa configuração.
 
 <div align="Center"><figure>
     <img src="./0-aux/img09.png" alt="img09"><br>
     <figcaption>Imagem 09.</figcaption>
 </figure></div><br>
 
-Por fim, o relatório da etapa criada foi gerado para visualização. Um relatório permite compartilhar detalhes sobre a etapa com outros membros da equipe que possam não ter acesso à ferramenta do AWS Well-Architected. Dessa forma, a carga de trabalho construída no Well-Architected foi selecionada e na guia Visão geral, na seção lente foi escolhida a opção `Gerar relatório` selecionado o Well-Architected. Em seguida, o relatório foi exibido em uma nova guia do navegador da máquina física **Windows**. Um ponto de observação era que dependendo do navegador utilizado, em vez de uma nova guia com o relatório fosse aberta, era exibida uma janela de mensagem com o nome `Save As` (`Salvar como`), onde era possível salvar e analisar o relatório localmente. O relatório era salvo em formato PDF e o arquivo foi nomeado de [relatorio_well_architected.pdf](./resource/relatorio_well_architected.pdf)
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img10.png" alt="img10"><br>
