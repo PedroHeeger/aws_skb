@@ -154,9 +154,6 @@ Ao analisar uma aplicação usando a ferramenta do AWS Well-Architected, era pos
 
 <a name="item01.3"><h4>Tarefa 3: salvar uma etapa</h4></a>[Back to summary](#item0)
 
-Apesar de ter 57 perguntas totais e 55 para responder, a análise neste laboratório foi concluída. A análise podia ser interrompida e retomada sempre que necessário, desde que fosse salvo as alterações realizadas. A análise também podia ser salva em uma etapa. Uma etapa registra o estado da carga de trabalho em um momento específico. Em um ambiente de produção, a primeira etapa geralmente é criada após fornecer respostas a todas as perguntas iniciais nos seis pilares, ou seja, as 57. Após a criação da etapa inicial, sempre que for feito aprimoramentos em uma carga de trabalho, ou seja, alterações nas respostas, ela deve ser salva como outra etapa para documentação do progresso. Isto funciona como uma forma de versionamento da análise. 
-
-No caso deste laboratório a análise inicial contemplou apenas as primeiras duas perguntas e a etapa foi salva selecionando a carga de trabalho em questão e definindo o seguinte nome para a etapa: `AnyCompany Application - First Draft`. Na imagem 07, a etapa salva era exibida mostrando: o número de perguntas que foi respondido, o número de altos riscos, o número de riscos médios e a data em que a etapa foi salva.
 
 <div align="Center"><figure>
     <img src="./0-aux/img07.png" alt="img07"><br>
