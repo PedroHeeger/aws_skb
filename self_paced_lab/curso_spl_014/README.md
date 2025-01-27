@@ -85,53 +85,20 @@ A imagem 01 mostra a carga de trabalho criada no Well Architected. Um alerta tam
 
 <a name="item01.2"><h4>Tarefa 2: realizar uma análise</h4></a>[Back to summary](#item0)
 
-Com a carga de trabalho definida, agora foi possível realizar uma análise sobre a arquitetura dela. A ferramenta do AWS Well-Architected usa os seis pilares descritos no **AWS Well-Architected Framework**, que são eles:
-- Excelência operacional
-- Segurança
-- Confiabilidade
-- Eficiência de desempenho
-- Otimização de custos
-- Sustentabilidade
 
-Ao realizar uma análise, perguntas eram feitas que ajudavam a determinar se a aplicação estava seguindo as práticas recomendadas. Dessa forma, a análise foi iniciada ou continuada, pois muitas vezes ao definir uma carga de trabalho já é indicado que a análise iniciou, mesmo ainda não tendo respondido nenhuma pergunta. A ferramenta do AWS Well-Architected começava com o primeiro pilar: excelência operacional. Cada pilar tinha um conjunto de perguntas. Para excelência operacional, a primeira pergunta foi `OPS 1. Como determinar quais são suas prioridades?`. Quando aparecia uma pergunta, havia um conjunto de respostas que podiam ser selecionadas com base no entendimento sobre a arquitetura da aplicação. Se a pergunta não fosse aplicável, era possível escolher a opção `A pergunta não se aplica a esta carga de trabalho` e ir para a próxima pergunta.
-
-A aplicação avaliada atendia aos seguintes critérios:
-- Avaliar as necessidades do cliente
-- Avaliar as necessidades dos clientes internos
-- Avaliar o cenário de ameaças
-- Avaliar as concessões enquanto gerencia benefícios e riscos (Avalie as vantagens e desvantagens enquanto gerencia benefícios e riscos)
-
-Contudo, a mesma não atendia ao critérios:
-- Avaliar os requisitos de governança
-- Avaliar os requisitos de conformidade
-
-Na página do **AWS Well-Architected Framework**, nesta primeira pergunta `OPS 1. Como determinar quais são suas prioridades?` foram selecionadas para avaliação as respostas que eram atendidas pela aplicação, conforme mostrado na imagem 02.
-- Avaliar as necessidades do cliente
-- Avaliar as necessidades dos clientes internos
-- Avaliar o cenário de ameaças
-- Avaliar as concessões enquanto gerencia benefícios e riscos (Avalie as vantagens e desvantagens enquanto gerencia benefícios e riscos)
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-Durante a análise era possível escolher a opção `Informações` próximo a qualquer uma das respostas para saber mais sobre os critérios da resposta. A análise também podia ser salva e retornada posteriormente. Entretanto mais uma pergunta foi respondida antes de salvar a análise como uma etapa. A segunda pergunta realizada foi `OPS 2. How do you structure your organization to support your business outcomes?` (`OPS 2. Como você estrutura sua organização para dar suporte aos seus resultados comerciais?`), onde as seguintes alternativas foram selecionadas, conforme exibido na imagem 03:
-- `Resources have identified owners` (`Recursos com identificação de proprietários`).
-- `Processes and procedures have identified owners` (`Processos e procedimentos com identificação de proprietários`).
-- `Operations activities have identified owners responsible for their performance` (`Atividades de operações com identificação de proprietários responsáveis pela performance`).
-- `Responsibilities between teams are predefined or negotiated` (`As responsabilidades entre as equipes são predefinidas ou negociadas`).
 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
-Após salvar essa análise, na seção de Lentes, dois itens de alto risco estavam identificados, conforme imagem 04. Esses itens foram abertos e visualizados, verificando seu `Improvement plan` (`Plano de melhoria`). A ferramenta do AWS Well-Architected identificou os quatro itens que foram omitidos (não marcados) nas respostas das perguntas 1 e 2 do pilar de excelência operacional e marcou como alto risco, recomendado maneiras de melhorar a aplicação. Esses itens, evidenciados pela imagem 05, eram respectivamente:
-- `Avaliar os requisitos de governança`
-- `Avaliar os requisitos de conformidade`
-- `Existem mecanismos para gerenciar responsabilidades e propriedade`
-- `Existem mecanismos para solicitar adições, alterações e exceções`
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
@@ -143,14 +110,14 @@ Após salvar essa análise, na seção de Lentes, dois itens de alto risco estav
     <figcaption>Imagem 05.</figcaption>
 </figure></div><br>
 
-Dessa forma, as recomendações das duas perguntas foram expandidas e podiam ser selecionadas. Prontamente, a documentação do AWS Well-Architected Framework para essa resposta era exibida, descrevendo os requisitos de governança e as recomendações para a aplicação. A imagem 06 mostra a documentação para o item o item de melhoria recomendado `Evaluate governance requirements` (`Avaliar os requisitos de governança`) da pergunta 1, `OPS 1. How do you determine what your priorities are?` (`OPS 1. Como determinar quais são suas prioridades?`).
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img06.png" alt="img06"><br>
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
 
-Ao analisar uma aplicação usando a ferramenta do AWS Well-Architected, era possível acompanhar problemas, ver recomendações, ler as práticas recomendadas e aplicar as mudanças na aplicação antes de finalizar a análise completa da arquitetura da aplicação.
+
 
 <a name="item01.3"><h4>Tarefa 3: salvar uma etapa</h4></a>[Back to summary](#item0)
 
