@@ -61,22 +61,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: criar uma carga de trabalho</h4></a>[Back to summary](#item0)
 
-O **AWS Well Architected Framework** é um serviço na nuvem que fornece um processo consistente para medir a arquitetura usando as práticas recomendadas da **AWS**. A ferramenta do AWS Well-Architected contribui durante todo o ciclo de vida do produto, desempenhando os seguintes papeis:
-- Ajudando a documentar as decisões que são tomadas.
-- Fornecendo recomendações para melhorar a carga de trabalho com base em práticas recomendadas.
-- Orientando sobre como tornar as cargas de trabalho mais confiáveis, seguras, eficientes e econômicas.
 
-Nesta primeira tarefa, o objetivo consistiu em criar uma carga de trabalho dentro do **AWS Well Architected Framework** de uma empresa fictícia de nome `AnyCompany`, configurando da seguinte forma:
-- Na página Especificar propriedades, na seção Propriedades da carga de trabalho, foram feitas as definições abaixo:
-  - Nome: `Workload for AnyCompany`.
-  - Descrição: `This is an example for AnyCompany`.
-  - Proprietário da revisão: foi inserido meu nome (`Pedro Heeger`).
-  - Ambiente: foi escolhido `Pré-produção`.
-  - Regiões: foi escolhido `Regiões da AWS`.
-  - Escolher regiões: foi selecionada a Região AWS que correspondia ao valor `AWSRegion` listado à esquerda nas instruções do laboratório, sendo a região `us-east-1` (Norte Virginia).
-- Foi escolhida *AWS Well-Architected Framework Lens* se ela ainda não estivesse selecionada. As lentes fornecem uma maneira de medir de modo consistente as arquiteturas em relação às práticas recomendadas e identificar áreas para melhorias. A lente do AWS Well-Architected Framework é aplicada automaticamente quando uma carga de trabalho é definida. Entretanto, também é possível utilizar outros tipos de lentes presentes no catálogo de lentes ou criar lentes personalizadas.
-
-A imagem 01 mostra a carga de trabalho criada no Well Architected. Um alerta também era exibindo informando que a role utilizada neste laboratório não havia permissões para configurações globais, mas isso não impedia a execução do laboratório.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
