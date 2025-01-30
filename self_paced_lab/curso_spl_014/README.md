@@ -1,9 +1,9 @@
-# Lab - Walkthrough of the AWS Well-Architected Tool   <img src="./0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="45">
+# Lab - Analyze and Prepare Data with Amazon SageMaker Data Wrangler and Amazon EMR   <img src="./0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_spl_014 (Lab - Walkthrough of the AWS Well-Architected Tool)   <img src="./0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="25"></a>
+### Course: <a href="./">curso_spl_014 (Lab - Analyze and Prepare Data with Amazon SageMaker Data Wrangler and Amazon EMR)   <img src="./0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
@@ -18,10 +18,11 @@
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
-  - Amazon QuickSight   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_quicksight.svg" alt="aws_quicksight" width="auto" height="25">
-  - Amazon QuickSight Q   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_quicksight_q.jpg" alt="aws_quicksight_q" width="auto" height="25">
+  - Amazon Elastic MapReduce (EMR)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_emr.svg" alt="aws_emr" width="auto" height="25">
+  - Amazon SageMaker   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker.png" alt="aws_sage_maker" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
+  - Python   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="auto" height="25">
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
 - Integrated Development Environment (IDE) and Text Editor:
@@ -30,21 +31,26 @@
   - Git   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="auto" height="25">
 - Repository:
   - GitHub   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="auto" height="25">
+- Big Data:
+  - Apache Hadoop   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="apache_hadoop" width="auto" height="25">
+  - Apache Hive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hive" width="auto" height="25">
+  - Apache Spark   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_spark.png" alt="apache_spark" width="auto" height="25">
 
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. Lab - Walkthrough of the AWS Well-Architected Tool<br>
-1.1 <a href="#item01.1">Tarefa 1: criar uma carga de trabalho</a><br>
-1.2 <a href="#item01.2">Tarefa 2: realizar uma análise</a><br>
-1.3 <a href="#item01.3">Tarefa 3: salvar uma etapa</a><br>
-1.4 <a href="#item01.4">Tarefa 4: visualizar um relatório de etapa</a><br>
+1. Lab - Analyze and Prepare Data with Amazon SageMaker Data Wrangler and Amazon EMR<br>
+1.1 <a href="#item01.1">Tarefa 1: Importar, visualizar e executar uma análise preliminar dos dados com o SageMaker Data Wrangler</a><br>
+1.2 <a href="#item01.2">Tarefa 2: Analisar e visualizar os dados</a><br>
+1.3 <a href="#item01.3">Tarefa 3: Executar transformações de dados e exportar os conjuntos de dados</a><br>
+1.4 <a href="#item01.4">Tarefa 4: Configurar o ambiente</a><br>
+1.4 <a href="#item01.5">Tarefa 5: Conectar a um cluster EMR</a><br>
+1.4 <a href="#item01.6">Tarefa 6: Explorar e consultar dados do kernel SparkMagic PySpark</a><br>
 
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi utilizar o **AWS Well Architected Framework** para criar uma carga de trabalho, realizar uma análise da arquitetura, salvar uma etapa e visualizar um relatório da etapa salva.
-
+O objetivo deste laboratório prático foi importar dados de duas fontes diferentes para o **Amazon SageMaker Wrangler**, visualizar, analisar e transformar esses dados para obter insights necessário para resolução de um cenário hipotético proposto pelo laboratório. A primeira importação foi do ... e após realizar toda análise ela foi exportada para o **Amazon S3**. A segunda importação foi de dados trazidos de uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)** utilizando o **Apache Spark** para consultar esses dados. 
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -59,7 +65,7 @@ O laboratório do **AWS Skill Builder** tem o foco em executar apenas o que é o
 
 O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de uma identidade federada. O Skill Builder funciona como um provedor de identidade (IdP), autenticando o usuário e vinculando-o a uma role do **AWS IAM** provisionada automaticamente por uma das pilhas do CloudFormation. Essa role concede permissões temporárias e mínimas necessárias para a execução do laboratório, garantindo segurança e controle sobre os recursos utilizados. O laboratório, por padrão, determina a região a ser utilizada e ela não deve ser alterada, somente se o próprio laboratório indicar. As configurações não informadas no laboratório devem ser sempre mantidas como padrão que estão.
 
-<a name="item01.1"><h4>Tarefa 1: criar uma carga de trabalho</h4></a>[Back to summary](#item0)
+<a name="item01.1"><h4>Tarefa 1: Importar, visualizar e executar uma análise preliminar dos dados com o SageMaker Data Wrangler</h4></a>[Back to summary](#item0)
 
 
 
@@ -68,7 +74,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
-<a name="item01.2"><h4>Tarefa 2: realizar uma análise</h4></a>[Back to summary](#item0)
+<a name="item01.2"><h4>Tarefa 2: Analisar e visualizar os dados</h4></a>[Back to summary](#item0)
 
 
 
@@ -104,7 +110,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.3"><h4>Tarefa 3: salvar uma etapa</h4></a>[Back to summary](#item0)
+<a name="item01.3"><h4>Tarefa 3: Executar transformações de dados e exportar os conjuntos de dados</h4></a>[Back to summary](#item0)
 
 
 <div align="Center"><figure>
@@ -112,7 +118,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <figcaption>Imagem 07.</figcaption>
 </figure></div><br>
 
-<a name="item01.4"><h4>Tarefa 4: visualizar um relatório de etapa</h4></a>[Back to summary](#item0)
+<a name="item01.4"><h4>Tarefa 4: Configurar o ambiente</h4></a>[Back to summary](#item0)
 
 
 
@@ -133,3 +139,11 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <img src="./0-aux/img10.png" alt="img10"><br>
     <figcaption>Imagem 10.</figcaption>
 </figure></div><br>
+
+
+
+<a name="item01.5"><h4>Tarefa 5: Conectar a um cluster EMR</h4></a>[Back to summary](#item0)
+
+
+
+<a name="item01.6"><h4>Tarefa 6: Explorar e consultar dados do kernel SparkMagic PySpark</h4></a>[Back to summary](#item0)
