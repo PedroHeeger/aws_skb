@@ -22,6 +22,8 @@
   - Amazon SageMaker   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker.png" alt="aws_sage_maker" width="auto" height="25">
   - Amazon SageMaker Canvas   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker_canvas.png" alt="aws_sagemaker_canvas" width="auto" height="25">
   - Amazon SageMaker Studio; Amazon SageMaker Studio Lab   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker_studio.png" alt="aws_sagemaker_studio" width="auto" height="25">
+  - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
+  - AWS CodeCommit  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_codecommit.svg" alt="aws_codecommit" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
   - Python   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="auto" height="25">
@@ -30,6 +32,7 @@
 - Integrated Development Environment (IDE) and Text Editor:
   - Visual Studio Code (VS Code)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="auto" height="25">
 - Notebook Interface:
+  - JupyterLab   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/jupyterlab.png" alt="jupyterlab" width="auto" height="25">
   - Jupyter Notebook   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/jupyter_notebook.png" alt="jupyter_notebook" width="auto" height="25">
 - Versioning: 
   - Git   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="auto" height="25">
@@ -39,6 +42,9 @@
   - Apache Hadoop   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="apache_hadoop" width="auto" height="25">
   - Apache Hive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hive" width="auto" height="25">
   - Apache Spark   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_spark.png" alt="apache_spark" width="auto" height="25">
+- Library:
+  - Pandas   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="pandas" width="auto" height="25">
+  - PySpark   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/frame_library/pyspark.webp" alt="pyspark" width="auto" height="25">
 
 ---
 
@@ -54,7 +60,11 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi importar dados de duas fontes diferentes para o **Amazon SageMaker Wrangler**, visualizar, analisar e transformar esses dados para obter insights necessário para resolução de um cenário hipotético proposto pelo laboratório. A primeira importação foi do ... e após realizar toda análise ela foi exportada para o **Amazon S3**. A segunda importação foi de dados trazidos de uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)** utilizando o **Apache Spark** para consultar esses dados. O cenário proposto em questão foi de uma empresa de nome AnyCompany Consulting que para atender seu cliente precisva fornecer uma solução de machine learning (ML) que pudesse prever se um indivíduo ganharia menos de 50.000 USD com base em dados demográficos, tendo como objetivo indentificar se esse indivíduo estaria apto a receber um serviço de assistência governamental.
+O objetivo deste laboratório prático foi utilizar o recurso **Amazon SageMaker Data Wrangler** no **Amazon SageMaker Canvas** para criar um data flow, importando um conjunto de dados de um bucket do **Amazon S3**. A partir desse data flow, foram geradas três análises diferentes e realizadas diversas transformações nos dados, preparando-os para as etapas de treinamento e inferência de um modelo de machine learning (ML) em um cenário hipotético proposto pelo laboratório. Ao final do processo de transformação, o conjunto de dados foi dividido em três datasets e armazenados em prefixos específicos do mesmo bucket do **Amazon S3**, cada um com sua respectiva finalidade: treinamento, validação e teste.  
+
+O cenário proposto envolveu a empresa fictícia **AnyCompany Consulting**, que precisava fornecer uma solução de ML para prever se um indivíduo ganharia menos de **50.000 USD** com base em dados demográficos. O objetivo era identificar se esse indivíduo estaria apto a receber um serviço de assistência governamental.  
+
+Além disso, neste laboratório, foi utilizado o **JupyterLab** no **Amazon SageMaker Studio** para clonar um repositório do **AWS CodeCommit** e executar um arquivo de código em **PySpark**, que foi utilizado para consultar dados em uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)**.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -287,26 +297,24 @@ A imagem 16 mostra as seis transformações realizadas nessa segunda parte da ta
     <figcaption>Imagem 16.</figcaption>
 </figure></div><br>
 
-Cada transformação realizada até agora era apenas uma etapa adicionada ao data flow do SageMaker Data Wrangler `DataWranglerLab.flow`. Para que essas etapas fossem executadas e as transformações fossem realizadas de fato era preciso exportá-las ou exportar todo o fluxo para os pipelines de processamento de dados, determinando o local onde os dados processados seriam armazenados. É no pipeline que o processamento dos dados realmente ocorre. O SageMaker Data Wrangler oferece a capacidade de exportar os dados para um local dentro de um bucket do **Amazon S3** ou especificar o destino usando um dos seguintes métodos:
+Cada transformação realizada até agora era apenas uma etapa adicionada ao data flow do SageMaker Data Wrangler `DataWranglerLab.flow`. Para que essas etapas fossem executadas e as transformações fossem realizadas de fato era preciso exportá-las ou exportar todo o fluxo para os pipelines de processamento de dados, determinando o local onde os dados processados seriam armazenados. É no pipeline que o processamento dos dados realmente ocorre. O SageMaker Data Wrangler oferece a capacidade de exportar os dados para um local dentro de um bucket do **Amazon S3** ou especificar o destino (local) usando um dos seguintes métodos de exportação:
 - `Destination node` (Nó de destino): Onde o SageMaker Data Wrangler armazena os dados depois de processá-los.
-- Exportar para: Exporta os dados resultantes de uma transformação para o **Amazon S3**.
-- Exportar dados: Para pequenos conjuntos de dados, exporte rapidamente os dados que foi transformado.
+- `Export to` (Exportar para): Exporta os dados resultantes de uma transformação para o **Amazon S3**.
+- `Data export` (Exportar dados): Para pequenos conjuntos de dados, exporte rapidamente os dados que foi transformado.
 
-A forma como os dados poderiam ser exportados eram três:
+O local para onde os dados são exportados são listados abaixo:
 - `Add destination` (Adicionar destino): Adiciona um local fixo onde os dados processados são salvos automaticamente, como: **Amazon S3** ou **Amazon SageMaker Feature Store**.
 - `Export via Jupyter Notebook`: Os dados transformados são salvos diretamente no **Amazon S3**, **Amazon SageMaker Pipelines**, **Amazon SageMaker Feature Store** ou **Amazon SageMaker Inference Pipeline** usando código gerado automaticamente no **Jupyter Notebook**.
 - `Export via Jupyter Notebook` com `Python Code`: Em vez de exportar os dados já processados, essa opção gera um script **Python** que contém todas as transformações que foram configuradas no Data Wrangler. Esse código pode ser usado para processar os dados posteriormente em outro ambiente.
-- `Export data to Canvas dataset`: 
-- `Export data to Amazon S3`: 
+- `Export data to Canvas dataset`: Exporta os dados transformados para um conjunto de dados do **Amazon SageMaker Canvas**, permitindo que sejam utilizados para criação de modelos de machine learning sem necessidade de programação.
+- `Export data to Amazon S3`: Salva os dados processados diretamente em um bucket do **Amazon S3**, possibilitando seu uso posterior em outras aplicações, pipelines ou análises.
 
-No caso deste laboratório, foi utilizado o `Destination node` para especificar o local. Um nó de destino informa ao SageMaker Data Wrangler onde armazenar os dados depois de processá-los. Depois de criar um nó de destino, um trabalho de processamento do **Amazon SageMaker** foi construído para gerar os dados. Quando um nó de destino é utilizado, ele executa os recursos computacionais necessários para gerar os dados a partir de algumas ou todas as transformações adicionadas no data flow para o **Amazon S3**. É possível utilizar vários nós de destino para exportar diferentes transformações ou conjuntos de transformações.
-
-Entretanto, antes de utilizar o nó de destino foi preciso criar uma transformação `Split data` para dividir conjuntos de dados dentro do SageMaker Data Wrangler. Essa transformação dividia o conjunto de dados em conjuntos de dados de treinamento, teste e, opcionalmente, validação sem que fosse necessário escrever nenhum código. Abaixo é explicado essas três divisões dos dados:
+Como em um processo de machine learning ocorre em três estágios (Treinamento, Validação e Teste), o data flow com todas as transformações adicionadas precisou ser dividido em três datasets para exportar cada conjunto de dados separadamente. Esses três estágios de ML são explicados abaixo:
 - Treinamento: Usado para treinar um algoritmo ou modelo de ML. O modelo usa iterativamente os dados e aprende a fornecer o resultado desejado.
 - Validação: Introduz novos dados ao modelo treinado. É possível usar um conjunto de validação para medir periodicamente o desempenho do modelo enquanto o treinamento está acontecendo, e também ajustar quaisquer hiperparâmetros do modelo. Conjuntos de dados de validação são opcionais.
 - Teste: Usado no modelo final treinado para avaliar seu desempenho em dados não vistos. Isso ajuda a determinar o quão bem o modelo generaliza.
 
-Na página do fluxo de dado provisionado `DataWranglerLab.flow`, a guia Dados foi aberta e no painel de Etapas, uma nova transformação foi adicionada, sendo ela do tipo `Split data` (`Dividir dados`) e contendo as seguintes configurações:
+Para isso, uma última transformação foi adicionada no data flow `DataWranglerLab.flow`, sendo ela do tipo `Split data` (Dividir dados) e com as seguintes configurações: 
 - `Transform` (Transformar): foi selecionado `Randomized split` (Divisão aleatória). A divisão aleatória particiona os dados aleatoriamente em conjuntos de dados de treinamento, teste e, opcionalmente, validação usando a porcentagem especificada para cada conjunto de dados. Ela garante que a distribuição dos dados seja semelhante em todos os conjuntos de dados. Escolha esta opção quando não precisar preservar a ordem dos seus dados de entrada. Por exemplo, considere um conjunto de dados de filmes em que o conjunto de dados é classificado por gênero e está sendo previsto o gênero do filme. Uma divisão aleatória neste conjunto de dados garante que a distribuição dos dados inclua todos os gêneros em todos os três conjuntos de dados.
 - Na seção `Splits`(Divisões) foram definidas as seguintes configurações:
   - `Split name` (Nome da divisão): `Train` (Treinamento).
@@ -317,14 +325,16 @@ Na página do fluxo de dado provisionado `DataWranglerLab.flow`, a guia Dados fo
   - `Split percentage` (Porcentagem da divisão): `0.1`.
   - Observação: A porcentagem de divisão pode ser qualquer valor que seja desejado, desde que todas as três divisões somem 1 (100%). Também é possível especificar campos opcionais como `Error threshold` (Limite de erro) e `Random seed` (Semente aleatória). É possível obter uma divisão exata definindo o limite de erro como 0. Um limite de erro menor pode levar a mais tempo de processamento para dividir os dados. Isso permite que seja controlada a compensação entre tempo e precisão na operação. A opção `Semente aleatória` é para reprodutibilidade. Se isso não for especificado, o SageMaker Data Wrangler usará um valor de semente aleatória padrão. Para o propósito desta tarefa este valor foi deixado em branco e o `Error threshold` foi mantido `0.0005`.
 
-Após isso, foi necessário executar o `Preview` para visualizar a divisão de dados, alterar entre as três divisões (Treinamento, Teste e Validação) para revisar os detalhes de cada divisão, e por fim adicionar essa transformação no arquivo de fluxo de dados. A página fluxo de dados mostrava agora um novo nó de divisão aleatória com três conjuntos de dados, conforme exibido na imagem 17.
+Após isso, foi necessário executar o `Preview` para visualizar os datasets, alternar entre eles, revisando os detalhes de cada um, e por fim adicionar essa transformação no arquivo de fluxo de dados. A página fluxo de dados mostrava agora um novo nó de divisão aleatória com três conjuntos de dados, conforme exibido na imagem 17.
 
 <div align="Center"><figure>
     <img src="./0-aux/img17.png" alt="img17"><br>
     <figcaption>Imagem 17.</figcaption>
 </figure></div><br>
 
-Em seguida, o ícone de reticências verticais ao lado do primeiro conjunto de dados (`adult_data.csv (Train)`) foi escolhido, selecionando na sequência `Export` e a opção de `Add destination` e configurando o seguinte:
+Cada um desses três datasets foram exportados para seu respectivo prefixo no mesmo bucket do **Amazon S3** criando um `Destination node` para especificar o local. Um nó de destino informa ao SageMaker Data Wrangler onde armazenar os dados depois de processá-los. Depois de criar um nó de destino para cada dataset, um trabalho de processamento do **Amazon SageMaker** era automaticamente construído para processar os dados. Quando um nó de destino é utilizado, ele executa os recursos computacionais necessários para processar os dados do data flow para o **Amazon S3**. É possível utilizar vários nós de destino para exportar diferentes transformações ou conjuntos de transformações. Neste caso, três nós de destinos foram provisionados, cada um para um dataset, sendo que todos os datasets continham todas as transformações.
+
+Para isso, o ícone de reticências verticais ao lado do primeiro conjunto de dados (`adult_data.csv (Train)`) foi escolhido, selecionando na sequência `Export` e a opção de `Add destination` e configurando o seguinte:
 - Para localização do **Amazon S3** foi navegado pelos buckets:
   - Na lista de buckets, foi aberto o bucket do **Amazon S3** que correspondia ao valor do parâmetro `LabDataBucket` informado pelas instruções desse laboratório, que no caso era `labstack-5df51f9e-117e-44db-8f21-dd9-labdatabucket-rgm32dv6iweu`.
     - Foi navegado até a subpasta `scripts/data` e selecionada a subpasta `train`.
@@ -393,7 +403,7 @@ Para executar a última exportação, que era o dataset de validação, foi prec
 
 A URL de monitoramento de tarefa (`https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/processing-jobs/canvas-data-prep-adult-data-validation-job`) foi fornecida para monitorar o progresso da criação da tarefa. Perceba que o status também mudou de `InProgress` para `Completed`, indicando que a criação do trabalho foi concluída. Poderia levar até 10 minutos para que o processamento fosse concluído.
 
-A imagem 21 evidencia os três trabalhos de processamento no **Amazon SageMaker Canvas** completados com sucesso. Para cada trabalho desse, uma instância com especificações definidas era provisionada por baixo dos panos para processar os dados.
+A imagem 21 evidencia os três trabalhos de processamento no **Amazon SageMaker Canvas** completados com sucesso. Para cada trabalho desse, uma instância com especificações definidas era provisionada por baixo dos panos para processar os dados. Cada dataset foi armazenado no seu respectivo prefixo no bucket do S3 e no futuro poderiam ser utilizados para treinar o modelo de machine learning.
 
 <div align="Center"><figure>
     <img src="./0-aux/img21.png" alt="img21"><br>
@@ -402,14 +412,14 @@ A imagem 21 evidencia os três trabalhos de processamento no **Amazon SageMaker 
 
 <a name="item01.4"><h4>Tarefa 4: Configurar o ambiente</h4></a>[Back to summary](#item0)
 
-Nesta tarefa de número 4, o **Amazon SageMaker Studio** foi iniciado para acessar os recursos do laboratório, conforme imagem 22. Para isso, o valor do parâmetro `SageMakerStudioUrl` nas instruções desse lab foi copiado e utilizado para abrir direto no SageMaker Studio já no perfil do usuário `SageMakerStudioUser` em uma nova aba do navegador da máquina física (`https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/studio/open/d-9fcbnvo7556z/SageMakerStudioUser/LabSpace/JupyterLab`). Ao acessar, uma aplicação do **JupyterLab** já estava disponível para uso, bastava só selecioná-la. Podia ser que levesse de 1 a 2 minutos para que a interface dos espaços de trabalho do **JupyterLab** fosse carregada pela primeira vez.
+Nesta tarefa de número 4, o **Amazon SageMaker Studio** foi iniciado, conforme imagem 22, para acessar os recursos do laboratório disponíveis em um repositório do **AWS CodeCommit**. Para isso, o valor do parâmetro `SageMakerStudioUrl` nas instruções desse lab foi copiado e utilizado para abrir direto no SageMaker Studio já no perfil do usuário `SageMakerStudioUser` em uma nova aba do navegador da máquina física (`https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/studio/open/d-9fcbnvo7556z/SageMakerStudioUser/LabSpace/JupyterLab`). Ao acessar, o **JupyterLab** foi iniciado e o ambiente foi aberto. Contudo poderia levar de 1 a 2 minutos para que a interface dos espaços de trabalho do **JupyterLab** fosse carregada pela primeira vez.
 
 <div align="Center"><figure>
     <img src="./0-aux/img22.png" alt="img22"><br>
     <figcaption>Imagem 22.</figcaption>
 </figure></div><br>
 
-Com o **JupyterLab** aberto, um repositório **Git** foi clonado utilizando o valor do parâmetro `CloneUrlForRepo` nas instruções do laboratório (`https://git-codecommit.us-west-2.amazonaws.com/v1/repos/labxrepo`). Este era uma URL para um repositório do **AWS CodeCommit**. Ao concluir a clonagem, o **JupyterLab** abriu a pasta `labxrepo` desse repositório, conforme imagem 23.
+Com o **JupyterLab** aberto, um repositório **Git** do **AWS CodeCommit** foi clonado utilizando o valor do parâmetro `CloneUrlForRepo` nas instruções do laboratório (`https://git-codecommit.us-west-2.amazonaws.com/v1/repos/labxrepo`). Ao concluir a clonagem, o **JupyterLab** abriu a pasta `labxrepo` desse repositório que tinham vários arquivos de notebook, conforme imagem 23.
 
 <div align="Center"><figure>
     <img src="./0-aux/img23.png" alt="img23"><br>
@@ -420,7 +430,7 @@ Com o **JupyterLab** aberto, um repositório **Git** foi clonado utilizando o va
 
 O objetivo desta tarefa consistiu em utilizar o **JupyterLab** do SageMaker Studio para descobrir visualmente, autenticar e conectar-se a um cluster do serviço **Amazon Elastic MapReduce (EMR)**. Em seguida, interagir com os dados em uma tabela do **Apache Hive** utilizando **Apache Spark** para consultas. Dessa forma, dentro da pasta do repositório `labxrepo` existiam cinco arquivos iguais, o que mudava era apenas a linguagem natural. O arquivo de nome `labnotebook.ipynb`, cuja língua era inglês, foi aberto. Nele, a linguagem de programação utilizada pelo kernel foi alterada de `Python 3 (ipykernel)` para `SparkMagic PySpark` para poder utilizar o **PySpark**. 
 
-Para abrir a janela `Conectar ao cluster` foi selecionado a opção `Cluster` e então escolhida a guia `EMR CLUSTERS`. O cluster de nome `EMR-Cluster-LabX` foi selecionado e o tipo de credencial foi selecionada a opção `No credential` (`Sem credencial`). Levou cerca de 1 a 2 minutos para conectar-se ao cluster. Caso um erro de conexão aconteça, é porque o tempo esperado não foi o suficiente, sendo necessário executar novamente. Um bloco de código à célula ativa no notebook foi adicionado e executado para estabelecer a conexão, conforme mostrado na imagem 24. Após o aplicativo Spark ser iniciado, uma mensagem SparkSession disponível como 'spark' foi exibida no notebook.
+Para abrir a janela `Conectar ao cluster` foi selecionado a opção `Cluster` e então escolhida a guia `EMR CLUSTERS`. O cluster de nome `EMR-Cluster-LabX` foi selecionado e o tipo de credencial foi selecionada a opção `No credential` (`Sem credencial`). Levou cerca de 1 a 2 minutos para conectar-se ao cluster. Caso um erro de conexão aconteça, é porque o tempo esperado não foi o suficiente, sendo necessário executar novamente. Sempre que há uma tentativa de conexão, um bloco de código à célula ativa no notebook era adicionado e executado para estabelecer a conexão, conforme mostrado na imagem 24. Quando a conexão era bem sucedida, o aplicativo Spark era iniciado com êxito, apresentando uma mensagem SparkSession disponível como 'spark' no notebook.
 
 <div align="Center"><figure>
     <img src="./0-aux/img24.png" alt="img24"><br>
