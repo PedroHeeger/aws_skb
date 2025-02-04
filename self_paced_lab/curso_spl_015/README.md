@@ -18,33 +18,20 @@
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
-  - Amazon Elastic MapReduce (EMR)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_emr.svg" alt="aws_emr" width="auto" height="25">
-  - Amazon SageMaker   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker.png" alt="aws_sage_maker" width="auto" height="25">
-  - Amazon SageMaker Canvas   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker_canvas.png" alt="aws_sagemaker_canvas" width="auto" height="25">
-  - Amazon SageMaker Studio; Amazon SageMaker Studio Lab   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sagemaker_studio.png" alt="aws_sagemaker_studio" width="auto" height="25">
-  - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
-  - AWS CodeCommit  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_codecommit.svg" alt="aws_codecommit" width="auto" height="25">
+  - AWS Identity and Access Management (IAM)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_iam.svg" alt="aws_iam" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
-  - Python   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="auto" height="25">
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
 - Integrated Development Environment (IDE) and Text Editor:
   - Visual Studio Code (VS Code)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="auto" height="25">
-- Notebook Interface:
-  - JupyterLab   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/jupyterlab.png" alt="jupyterlab" width="auto" height="25">
-  - Jupyter Notebook   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/jupyter_notebook.png" alt="jupyter_notebook" width="auto" height="25">
 - Versioning: 
   - Git   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="git" width="auto" height="25">
 - Repository:
   - GitHub   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="auto" height="25">
-- Big Data:
-  - Apache Hadoop   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" alt="apache_hadoop" width="auto" height="25">
-  - Apache Hive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_hive.png" alt="apache_hive" width="auto" height="25">
-  - Apache Spark   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_spark.png" alt="apache_spark" width="auto" height="25">
-- Library:
-  - Pandas   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="pandas" width="auto" height="25">
-  - PySpark   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/frame_library/pyspark.webp" alt="pyspark" width="auto" height="25">
+- Network:
+  - Google Chrome   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg" alt="google_chrome" width="auto" height="25">
+  - Microsoft Edge   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/microsoft_edge.png" alt="microsoft_edge" width="auto" height="25">
 
 ---
 
@@ -56,11 +43,7 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi utilizar o recurso **Amazon SageMaker Data Wrangler** no **Amazon SageMaker Canvas** para criar um data flow, importando um conjunto de dados de um bucket do **Amazon S3**. A partir desse data flow, foram geradas três análises diferentes e realizadas diversas transformações nos dados, preparando-os para as etapas de treinamento e inferência de um modelo de machine learning (ML) em um cenário hipotético proposto pelo laboratório. Ao final do processo de transformação, o conjunto de dados foi dividido em três datasets e armazenados em prefixos específicos do mesmo bucket do **Amazon S3**, cada um com sua respectiva finalidade: treinamento, validação e teste.  
-
-O cenário proposto envolveu a empresa fictícia **AnyCompany Consulting**, que precisava fornecer uma solução de ML para prever se um indivíduo ganharia menos de **50.000 USD** com base em dados demográficos. O objetivo era identificar se esse indivíduo estaria apto a receber um serviço de assistência governamental.  
-
-Além disso, neste laboratório, foi utilizado o **JupyterLab** no **Amazon SageMaker Studio** para clonar um repositório do **AWS CodeCommit** e executar um arquivo de código em **PySpark**, que foi utilizado para consultar dados em uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)**.
+O objetivo deste laboratório prático foi visualizar e atualizar as permissões do **AWS Identity and Access Management (IAM)** de uma política baseada em identidade de um usuário do IAM para que ele assumisse uma função do IAM. Também foi visualizado e atualizado a política de confiança dessa role para permitir que o usuário do IAM assumisse a mesma. Em todo o processo foi aplicado o conceito de privilégio mínimo.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -77,30 +60,103 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Acessando o laboratório</h4></a>[Back to summary](#item0)
 
-
-
-
-
+Para ilustrar o cenário desse laboratório, a imagem 01 mostra o diagrama, onde um usuário do IAM deveria assumir uma função chamada `Operator-Role` ao logar no **AWS Management Console** com suas credenciais fornecidas pelo lab. Contudo, o usuário conseguia apenas logar na **AWS** e ter acesso ao console, mas não conseguia assumir a função do IAM atribuída, sendo impedido de executar suas tarefas. A lista a seguir descreve cada parte do diagrama:
+- Um usuário do IAM chamado `Operator-User`.
+- Uma função do IAM chamada `Operator-Role` que precisava ser assumida pelo `Operator-User`.
+- Um usuário do IAM `AWSLabsUser`, utilizado para solucionar e corrigir o problema.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
+Na primeira tarefa, o objetivo foi acessar o laboratório utilizando o usuário do IAM `Operator-User` e tentar alterar funções para assumir a IAM role `Operator-Role`. Ao iniciar o laboratório, clicando na opção `Iniciar laboratório`, o console da **AWS** era aberto já logado no usuário `AWSLabUser`. Esse usuário representava um membro da equipe de nuvem que solucionaria e corrigiria o problema. Neste caso, era preciso acessar o **AWS Management Console** com o usuário que precisva assumir a função. Para isso, uma nova janela privada foi aberta no navegador da máquina física **Windows**, se já tivesse utilizando uma janela anônima, a solução era abrir um outro tipo de navegador. No meu caso, estava utilizando o **Google Chrome** com a janela anônima e abri o **Microsoft Edge**. Em seguida, o site da **AWS** na página de login e inserido o ID da conta raíz da **AWS**, que podia ser visualizada no console conectado com o outro usuário no outro navegador. Neste caso, o login estava sendo realizado com um usuário do IAM. Para facilitar o laboratório forneceu em seu parâmetro `ConsoleAccessURL` nas instruções uma URL que já direciona para o site de login com usuário raíz identificado e indicava que o login era com usuário do IAM (`a`). Em ambos os casos, o nome do usuário foi preenchido com `Operator-User` e o password (senha) também tinha sido fornecido nos parâmetros da instrução desse lab, cujo parâmetro era `OperatorUserPassword` e seu valor `a`. A imagem 02 comprova que o login no console da **AWS** foi realizado com o usuário do IAM `Operator-User`.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-
+Após login bem sucedido, a conexão no console foi alternada para a função do IAM `Operator-Role` no canto superior direito da tela onde as informações de login e conta eram mostradas. Caso uma página de função do Switch fosse exibida com uma seção `Comece em 3 etapas simples`, a opção `Trocar função` seria selecionada, conforme imagem 03. Na página `Trocar função`, as seguintes configurações foram feitas:
+- `Account ID`: foi copiado e colado o valor do parâmetro `AWSAccountID` listado à esquerda das instruções do lab.
+- `IAM Role Name`: `Operator-Role`.
+- `Nome de exibição - opcional`: foi mantido em branco, pois este era apenas um nome descritivo.
+ 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
+Concluída a troca, o conteúdo da aba do navegador não mudava e uma mensagem era exibida com a seguinte informação: "Informações inválidas em um ou mais campos. Verifique suas informações ou entre em contato com seu administrador". Isso indicava que a troca de função não estava funcionando e confirmava o problema relatado no cenário do laboratório.
 
+<div align="Center"><figure>
+    <img src="./0-aux/img04.png" alt="img04"><br>
+    <figcaption>Imagem 04.</figcaption>
+</figure></div><br>
 
 <a name="item01.2"><h4>Tarefa 2: Solução de problemas e correção do problema e verificação da solução</h4></a>[Back to summary](#item0)
 
+Na tarefa 2 e última, o próposito foi identificar e corrigir os problemas que estavam impedindo o usuário `Operator-User` de assumir a função `Operator-Role`. Para esta tarefa foi necessário retornar ao console da **AWS** logado com o usuário `AWSLabsUser` que era no navegador Chrome. Este usuário tinha as permissões necessárias para resolver o problema. A solução devia permitir que o `Operator-User` de assumisse a `Operator-Role` com sucesso, aderindo rigorosamente às seguintes diretrizes de privilégios mínimos:
+- O `Operator-User` tinha permissão para assumir apenas a `Operator-Role`.
+- A `Operator-Role` só podia ser assumida pelo `Operator-User`.
 
+Algumas considerações importantes:
+- O usuário `AWSLabsUser` não tinha permissão para criar novas políticas baseadas em identidade. No entanto, ele podia utilizar algumas políticas gerenciadas pelo cliente pré-configuradas. Os nomes das políticas pré-configuradas que ele tinha permissão para usar começava com `IAM-User-Policy`.
+- Se o acesso fosse negado ao tentar resolver o problema, isso significava que o usuário `AWSLabsUser` não tinha permissões suficientes e precisava resolver o problema de outra maneira.
+- Ao navegar pelas páginas do console do IAM com o usuário `AWSLabsUser`, era possível receber uma mensagem na parte inferior de algumas páginas do console do IAM indicando que "You need permissions for some access-analyzers actions". Esse erro poderia ser ignorado com segurança, pois ele não era necessário para concluir o laboratório.
+
+Existem duas coisas envolvidas ao assumir uma função do IAM que precisvam ser verificadas e corrigidas:
+- A entidade IAM (`Operator-User` neste exemplo) devia ter permissões para assumir a função em sua política baseada em identidade (`Identity-based Policies`).
+- A política de confiança (`Trusted Policy`) da função do IAM (`Operator-Role` neste exemplo) deveia permitir que o `Operator-User` assumisse a função.
+
+Dessa forma, o console do IAM foi aberto no recurso de usuários. Na página de usuários, o usuário `Operator-User` foi escolhido. Neste usuário, a aba `Permissions` foi aberta para verificar as políticas de permissões disponíveis. Como mostrado na imagem 05 abaixo, não haviam políticas anexadas ao usuário `Operator-User`. Para corrigir esse primeiro problema uma das três seguintes políticas pré-configuradas baseadas em identidade podiam ser adicionadas ao usuário:
+- `IAM-Usuário-Política-1`: Esta política não permitia que o usuário assumisse a `Operator-Role`, pois o recurso estava configurado incorretamente (o nome da função diferenciava maiúsculas de minúsculas).
+- `Política de usuário do IAM-2`: Esta política permitia que o usuário assumisse a `Operator-Role`. No entanto, ele permitia que o usuário assumisse qualquer função porque ele usava um curinga na seção de recursos da política. Isso não estava em conformidade com os conceitos de privilégio mínimo.
+- `Política de usuário do IAM-3`: Esta política permitia que o usuário assumisse a `Operator-Role` e era a única função permitida. Isso estava em conformidade com os conceitos de privilégio mínimo.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img05.png" alt="img05"><br>
+    <figcaption>Imagem 05.</figcaption>
+</figure></div><br>
+
+Com base nas explicações de cada política, ficou óbvio que a política necessária para que o usuário assumisse a função seguindo os conceitos de menor privilégio era a `Política de usuário do IAM-3`. A imagem 06 mostra essa política anexada ao usuário.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img06.png" alt="img06"><br>
+    <figcaption>Imagem 06.</figcaption>
+</figure></div><br>
+
+O segundo problema era na política de confiança (`Trust Policy`) da função do IAM `Operator-Role` que definia quem podia assumir a função. Dessa forma, o recurso de roles foi aberto no console do IAM e a role mencionada foi selecionada. Na página da role `Operator-Role`, a guia de relacionamento de confiança foi aberta. Nela, as entidades confiáveis (`Trusted entities`) são as entidades em uma política de confiança do IAM que define quem pode assumir a função, sendo essas entidades especificadas através do `Principal`. Na imagem 07, note que o `Principal` definido na política de confiança era `ec2.amazonaws.com`, que era o serviço **Amazon EC2**. Isso funcionava bem se fosse necessário permitir que uma instância EC2 assumisse a função. No entanto, esse era claramente outro fator que causava o problema que estava sendo solucionado.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img07.png" alt="img07"><br>
+    <figcaption>Imagem 07.</figcaption>
+</figure></div><br>
+
+Para corrigir o problema, a política de confiança (`Trust Policy`) foi editada alterando o JSON antigo para o abaixo, conforme evidenciado na imagem 08. No JSON atual, o ID da conta raíz da **AWS** teve que ser inserido. Perceba que o `Princpal`, ou seja a entidade, era o usuário do IAM `Operator-User` e a ação que ele executava era `AssumeRole`, ou seja, assumiria a role `Operator-Role`. O efeito era `Allow`, ou seja, de permissão.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+            "AWS": "arn:aws:iam::INSERT_ACCOUNT_ID:user/Operator-User"},
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+```
+
+<div align="Center"><figure>
+    <img src="./0-aux/img08.png" alt="img08"><br>
+    <figcaption>Imagem 08.</figcaption>
+</figure></div><br>
+
+Por fim, a última etapa foi conferir novamente se o usuário `Operator-User` podia assumir a função `Operator-Role`. Portanto, foi necessário voltar para o navegador do **Microsoft Edge**, pois era ele que tinha o acesso a **AWS** conectada no usuário `Operator-User`. O processo foi o mesmo realizado no início do laboratório para alterar o usuário já conectado para a role `Operator-Role`. Caso tivesse fechado a janela, teria que repetir todo processo de login com o usuário. A imagem 09 mostra que foi alternado com sucesso do usuário para role determinada.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img09.png" alt="img09"><br>
+    <figcaption>Imagem 09.</figcaption>
+</figure></div><br>
