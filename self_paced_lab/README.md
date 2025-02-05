@@ -55,6 +55,7 @@
 </details>
 <details><summary>Gerenciamento e Governança</summary>
     <ul>
+        <li>curso_spl_013: <a href="./curso_spl_013/">Lab - Walkthrough of the AWS Well-Architected Tool   <img src="./curso_spl_013/0-aux/logo_course.png" alt="curso_spl_013" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Infraestrutura</summary>
@@ -76,6 +77,7 @@
 </details>
 <details><summary>Machine Learning</summary>
     <ul>
+        <li>curso_spl_014: <a href="./curso_spl_014/">Lab - Analyze and Prepare Data with Amazon SageMaker Data Wrangler and Amazon EMR   <img src="./curso_spl_014/0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Migração e Transferência</summary>
@@ -91,6 +93,7 @@
         <li>curso_spl_003: <a href="./curso_spl_003/">Lab - AWS Security Traffic Monitoring and Packet Analysis   <img src="./curso_spl_003/0-aux/logo_course.png" alt="curso_spl_003" width="auto" height="25"></a></li>
         <li>curso_spl_005: <a href="./curso_spl_005/">Lab - Troubleshooting Website Reachability behind a Load Balancer   <img src="./curso_spl_005/0-aux/logo_course.png" alt="curso_spl_005" width="auto" height="25"></a></li>
         <li>curso_spl_007: <a href="./curso_spl_007/">Lab - Resolve VPC Routing Conflicts   <img src="./curso_spl_007/0-aux/logo_course.png" alt="curso_spl_007" width="auto" height="25"></a></li>
+        <li>curso_spl_012: <a href="./curso_spl_012/">Lab - Troubleshooting Network Connectivity in a Peered VPC   <img src="./curso_spl_012/0-aux/logo_course.png" alt="curso_spl_012" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Robótica</summary>
@@ -104,6 +107,7 @@
 <details><summary>Segurança, Identidade e Conformidade</summary>
     <ul>
         <li>curso_spl_006: <a href="./curso_spl_006/">Lab - Filtering and blocking web incursions with AWS WAF   <img src="./curso_spl_006/0-aux/logo_course.png" alt="curso_spl_006" width="auto" height="25"></a></li>
+        <li>curso_spl_015: <a href="./curso_spl_015/">Lab - Troubleshooting IAM Access Issues   <img src="./curso_spl_015/0-aux/logo_course.png" alt="curso_spl_015" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Serviços de Mídia</summary>
