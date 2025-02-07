@@ -54,8 +54,8 @@
 1.2 <a href="#item01.2">Tarefa 2: Analisar e visualizar os dados</a><br>
 1.3 <a href="#item01.3">Tarefa 3: Executar transformações de dados e exportar os conjuntos de dados</a><br>
 1.4 <a href="#item01.4">Tarefa 4: Configurar o ambiente</a><br>
-1.4 <a href="#item01.5">Tarefa 5: Conectar a um cluster EMR</a><br>
-1.4 <a href="#item01.6">Tarefa 6: Explorar e consultar dados do kernel SparkMagic PySpark</a><br>
+1.5 <a href="#item01.5">Tarefa 5: Conectar a um cluster EMR</a><br>
+1.6 <a href="#item01.6">Tarefa 6: Explorar e consultar dados do kernel SparkMagic PySpark</a><br>
 
 ---
 
