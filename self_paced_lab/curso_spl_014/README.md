@@ -64,7 +64,7 @@ O objetivo deste laboratório prático foi utilizar o recurso **Amazon SageMaker
 
 O cenário proposto envolveu a empresa fictícia **AnyCompany Consulting**, que precisava fornecer uma solução de ML para prever se um indivíduo ganharia menos de **50.000 USD** com base em dados demográficos. O objetivo era identificar se esse indivíduo estaria apto a receber um serviço de assistência governamental.  
 
-Além disso, neste laboratório, foi utilizado o **JupyterLab** no **Amazon SageMaker Studio** para clonar um repositório do **AWS CodeCommit** e executar um arquivo de código em **PySpark**, que foi utilizado para consultar dados em uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)**.
+Além disso, neste laboratório, foi utilizado o **JupyterLab** no **Amazon SageMaker Studio** para clonar um repositório do **AWS CodeCommit** e executar um arquivo de código em **PySpark**. Este arquivo foi utilizado para consultar os mesmos dados importados do bucket do S3, só que agora em uma tabela do **Apache Hive** em um cluster do **Amazon Elastic MapReduce (EMR)**, e realizar algumas das transformações feitas no Canvas, mas dessa vez com o **PySpark**.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -136,61 +136,56 @@ Após um tempo, o resultado da primeira análise dos dados foi exibido. Outros t
 - `Feature details` (Detalhes do recurso): Esta seção mostra tabelas de métricas e gráficos de cada recurso. Observe que essas métricas e histogramas são semelhantes aos gráficos que são visualizado em uma interface de notebook. Imagem 10.
 - `Definitions` (Definições): Esta seção inclui definições da maioria dos termos de ML usados ​​no Relatório de Insights e Qualidade de Dados. Imagem 11.
 
-<div align="center">
-    <figure style="display: inline-block; margin-right: 5px; text-align: center;">
-        <img src="./0-aux/img04.png" alt="img04" width="430">
-        <figcaption style="display: block;">Imagem 04.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px; text-align: center;">
-        <img src="./0-aux/img05.png" alt="img05" width="430">
-        <figcaption style="display: block;">Imagem 05.</figcaption>
-    </figure>
-</div>
-
-
-<div align="center">
-    <figure style="display: inline-block; margin-right: 5px;">
-        <img src="./0-aux/img04.png" alt="img04" width="430">
-        <figcaption>Imagem 04.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px;">
-        <img src="./0-aux/img05.png" alt="img05" width="430">
-        <figcaption>Imagem 05.</figcaption>
-    </figure>
-</div>
-
-<div align="center">
-    <figure style="display: inline-block; margin-right: 5px;">
-        <img src="./0-aux/img06.png" alt="img06" width="430">
-        <figcaption>Imagem 06.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px;">
-        <img src="./0-aux/img07.png" alt="img07" width="430">
-        <figcaption>Imagem 07.</figcaption>
-    </figure>
-</div>
-
-<div align="center">
-    <figure style="display: inline-block; margin-right: 5px;">
-        <img src="./0-aux/img08.png" alt="img08" width="430">
-        <figcaption>Imagem 08.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px;">
-        <img src="./0-aux/img09.png" alt="img09" width="430">
-        <figcaption>Imagem 09.</figcaption>
-    </figure>
-</div>
-
-<div align="center">
-    <figure style="display: inline-block; margin-right: 5px;">
-        <img src="./0-aux/img10.png" alt="img10" width="430">
-        <figcaption>Imagem 10.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px;">
-        <img src="./0-aux/img11.png" alt="img11" width="430">
-        <figcaption>Imagem 11.</figcaption>
-    </figure>
-</div>
+<table align="center">
+    <tr>
+        <td align="center">
+            <img src="./0-aux/img04.png" alt="img04" width="430">
+            <br>
+            <figcaption>Imagem 04</figcaption>
+        </td>
+        <td align="center">
+            <img src="./0-aux/img05.png" alt="img05" width="430">
+            <br>
+            <figcaption>Imagem 05</figcaption>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="./0-aux/img06.png" alt="img06" width="430">
+            <br>
+            <figcaption>Imagem 06</figcaption>
+        </td>
+        <td align="center">
+            <img src="./0-aux/img07.png" alt="img07" width="430">
+            <br>
+            <figcaption>Imagem 07</figcaption>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="./0-aux/img08.png" alt="img08" width="430">
+            <br>
+            <figcaption>Imagem 08</figcaption>
+        </td>
+        <td align="center">
+            <img src="./0-aux/img09.png" alt="img09" width="430">
+            <br>
+            <figcaption>Imagem 09</figcaption>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <img src="./0-aux/img10.png" alt="img10" width="430">
+            <br>
+            <figcaption>Imagem 10</figcaption>
+        </td>
+        <td align="center">
+            <img src="./0-aux/img11.png" alt="img11" width="430">
+            <br>
+            <figcaption>Imagem 11</figcaption>
+        </td>
+    </tr>
+</table>
 
 <a name="item01.2"><h4>Tarefa 2: Analisar e visualizar os dados</h4></a>[Back to summary](#item0)
 
@@ -517,12 +512,18 @@ Por fim, dois últimos blocos de código foram executados. O comando `adult_df.s
 </figure></div><br>
 
 <div align="center">
-    <figure style="display: inline-block; margin-right: 5px;">
-        <img src="./0-aux/img31.png" alt="img31" width="430">
-        <figcaption>Imagem 31.</figcaption>
-    </figure>
-    <figure style="display: inline-block; margin-left: 5px;">
-        <img src="./0-aux/img32.png" alt="img32" width="430">
-        <figcaption>Imagem 32.</figcaption>
-    </figure>
+    <table>
+        <tr>
+            <td align="center">
+                <img src="./0-aux/img31.png" alt="img31" width="430">
+                <br>
+                <figcaption>Imagem 31</figcaption>
+            </td>
+            <td align="center">
+                <img src="./0-aux/img32.png" alt="img32" width="430">
+                <br>
+                <figcaption>Imagem 32</figcaption>
+            </td>
+        </tr>
+    </table>
 </div>
