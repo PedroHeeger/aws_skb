@@ -81,15 +81,28 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Importar, visualizar e executar uma análise preliminar dos dados com o SageMaker Data Wrangler</h4></a>[Back to summary](#item0)
 
-Na primeira tarefa do laboratório, o objetivo consistiu em importar um conjunto de dados de um bucket do **Amazon S3** para o recurso *Amazon SageMaker Data Wrangler*. O SageMaker Data Wrangler é um recurso do **Amazon SageMaker Studio** do serviço **Amazon SageMaker** para exploração e transformação de dados de imagem e dados tabulares para casos de uso de machine learning (ML) sem codificação. Ele inclui recursos de análise de dados integrados para gráficos e recursos de análise de modelo que economizam tempo, como importância do recurso, vazamento de destino e explicabilidade do modelo. Além da importação, os dados foram visualizados e uma primeira análise foi realizada para obter insights sobre a estrutura e qualidade dos dados.
+Na primeira tarefa do laboratório, o objetivo consistiu em importar um conjunto de dados de um bucket do **Amazon S3** para o recurso *Amazon SageMaker Data Wrangler*. O SageMaker Data Wrangler é um recurso do **Amazon SageMaker Studio** do serviço **Amazon SageMaker AI** para exploração e transformação de dados de imagem e dados tabulares para casos de uso de machine learning (ML) sem codificação. Ele inclui recursos de análise de dados integrados para gráficos e recursos de análise de modelo que economizam tempo, como importância do recurso, vazamento de destino e explicabilidade do modelo. Além da importação, os dados foram visualizados e uma primeira análise foi realizada para obter insights sobre a estrutura e qualidade dos dados.
 
-No *SageMaker Data Wrangler*, um fluxo de dados (`Data flow`) é uma série de etapas de preparação de dados que é executada nos dados. Cada transformação é feita usando uma etapa de transformação. O fluxo tem uma série de nós que representam a importação dos dados, a análise dos dados e a transformação dos dados. O **Amazon SageMaker Canvas** é uma ferramenta de aprendizado de máquina da **AWS** que permite que usuários não técnicos criem e implementem modelos de machine learning sem necessidade de codificação. Ela oferece uma interface visual intuitiva para preparar dados, treinar modelos e fazer previsões, facilitando a democratização do acesso à inteligência artificial nas organizações. Apesar do Data Wrangler não ser nativamente do Canvas, ele consegue integrar-se com o Canvas, fornecendo algumas transformações básicas sem precisar sair do ambiente do Canvas. O ambiente do Canvas é visualizado na imagem 01.
+No *SageMaker Data Wrangler*, um fluxo de dados (`Data flow`) é uma série de etapas de preparação de dados que é executada nos dados. Cada transformação é feita usando uma etapa de transformação. O fluxo tem uma série de nós que representam a importação dos dados, a análise dos dados e a transformação dos dados, de modo que permite visualizar todo o data flow graficamente.
+
+O **Amazon SageMaker Canvas** é uma outra ferramenta de aprendizado de máquina da **AWS** que permite que usuários não técnicos criem e implementem modelos de machine learning sem necessidade de codificação. Ela oferece uma interface visual intuitiva para preparar dados, treinar modelos e fazer previsões, facilitando a democratização do acesso à inteligência artificial nas organizações. Apesar do Data Wrangler não ser nativamente do Canvas, ele consegue integrar-se com o Canvas, fornecendo algumas transformações básicas sem precisar sair do ambiente do Canvas. O ambiente do Canvas é visualizado na imagem 01.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
-Portanto, um novo data flow do *SageMaker Data Wrangler* foi provisionado no *SageMaker Canvas*.
+
+Antes de continuar, para melhor compreensão, abaixo é explicado todos os sub-serviços do **Amazon SageMaker** e alguns de seus recursos:
+- **Amazon SageMaker**: Serviço gerenciado da AWS que facilita a gestão de domínios e ambientes para machine learning (ML).
+  - **Amazon SageMaker AI**: Conjunto de ferramentas e serviços de IA integrados ao SageMaker para desenvolvimento de modelos.
+    - **Amazon SageMaker Canvas**: Plataforma sem código para criação e implantação de modelos de machine learning.
+    - **Amazon SageMaker Studio**: Ambiente integrado para desenvolvimento, treinamento e implantação de modelos de ML.
+      - *JupyterLab*: Interface interativa baseada no **Jupyter Notebook** dentro do SageMaker Studio para desenvolvimento em **Python**.
+      - *Amazon SageMaker Data Wrangler*: Ferramenta para preparação e transformação de dados antes do treinamento de modelos de ML.
+    - **Amazon SageMaker Pipelines**: Serviço para automação de pipelines de ML, facilitando a implementação de workflows de machine learning.
+      - *Amazon SageMaker Inference Pipeline*: Pipeline para automação do processo de inferência e deployment de modelos de ML.
+    - **Amazon SageMaker Feature Store**: Armazenamento e gerenciamento de features para treinamento de modelos de ML.
+    - **Amazon SageMaker Ground Truth**: Serviço para criação de datasets rotulados por meio de rotulagem manual ou automática, auxiliando no treinamento de modelos.
 
 O parâmetro `SageMakerCanvasUrl` fornecido pelo laboratório possuía em seu valor uma URL direcionada para o **Amazon SageMaker Canvas** já com o perfil de usuário `SageMakerStudioUser` configurado (`https://us-west-2.console.aws.amazon.com/sagemaker/home?region=us-west-2#/studio/canvas/open/d-9fcbnvo7556z/SageMakerStudioUser`). Ao abrir o SageMaker Canvas, o recurso Data Wrangler foi selecionado para criar um novo data flow. Portanto, foi clicado em `Import and prepare`, a opção `Tabular` foi escolhida, a fonte de dados (`Data Source`) foi determinada como **Amazon S3** e o bucket de nome defino no valor do parâmetro `LabDataBucket` das instruções do lab foi escolhido (`labstack-5df51f9e-117e-44db-8f21-dd9-labdatabucket-rgm32dv6iweu`). Dentro do bucket, as pastas (prefixos) de `scripts` e em seguida `dados` foram escolhidos e o arquivo (objeto) **CSV** `adult_data.csv` foi selecionado. Imediatamente esse arquivo era aberto em uma visualização prévia e então ele foi confirmado como dataset. Assim foi concluída com sucesso a importação do conjunto de dados do bucket do S3 para o Data Wrangler. No Data Wrangler, o data flow criado era mostrado visualmente na aba `Data flow`, mas ela podia ser alterada para `Data` ou  `Analyses`, conforme imagem 02.
 
@@ -122,6 +135,18 @@ Após um tempo, o resultado da primeira análise dos dados foi exibido. Outros t
   - Observação: Não constatei que a coluna `fnlwgt` tinha o menor poder de previsão, pelo contrário, ela tinha o maior poder. A coluna que tinha o menor poder de previsão era `sex` seguido por `native_country`.
 - `Feature details` (Detalhes do recurso): Esta seção mostra tabelas de métricas e gráficos de cada recurso. Observe que essas métricas e histogramas são semelhantes aos gráficos que são visualizado em uma interface de notebook. Imagem 10.
 - `Definitions` (Definições): Esta seção inclui definições da maioria dos termos de ML usados ​​no Relatório de Insights e Qualidade de Dados. Imagem 11.
+
+<div align="center">
+    <figure style="display: inline-block; margin-right: 5px; text-align: center;">
+        <img src="./0-aux/img04.png" alt="img04" width="430">
+        <figcaption style="display: block;">Imagem 04.</figcaption>
+    </figure>
+    <figure style="display: inline-block; margin-left: 5px; text-align: center;">
+        <img src="./0-aux/img05.png" alt="img05" width="430">
+        <figcaption style="display: block;">Imagem 05.</figcaption>
+    </figure>
+</div>
+
 
 <div align="center">
     <figure style="display: inline-block; margin-right: 5px;">
@@ -428,9 +453,9 @@ Com o **JupyterLab** aberto, um repositório **Git** do **AWS CodeCommit** foi c
 
 <a name="item01.5"><h4>Tarefa 5: Conectar a um cluster EMR</h4></a>[Back to summary](#item0)
 
-O objetivo desta tarefa consistiu em utilizar o **JupyterLab** do SageMaker Studio para descobrir visualmente, autenticar e conectar-se a um cluster do serviço **Amazon Elastic MapReduce (EMR)**. Em seguida, interagir com os dados em uma tabela do **Apache Hive** utilizando **Apache Spark** para consultas. Dessa forma, dentro da pasta do repositório `labxrepo` existiam cinco arquivos iguais, o que mudava era apenas a linguagem natural. O arquivo de nome `labnotebook.ipynb`, cuja língua era inglês, foi aberto. Nele, a linguagem de programação utilizada pelo kernel foi alterada de `Python 3 (ipykernel)` para `SparkMagic PySpark` para poder utilizar o **PySpark**. 
+O objetivo desta tarefa consistiu em utilizar o **JupyterLab** do SageMaker Studio para descobrir visualmente, autenticar e conectar-se a um cluster do serviço **Amazon Elastic MapReduce (EMR)**. Em seguida, interagir com os dados em uma tabela do **Apache Hive** utilizando **Apache Spark** para consultas. Dessa forma, dentro da pasta do repositório `labxrepo` existiam cinco arquivos iguais, o que mudava era apenas a linguagem natural. O arquivo de nome [labnotebook.ipynb](./resource/labnotebook.ipynb), cuja língua era inglês, foi aberto. Nele, a linguagem de programação utilizada pelo kernel foi alterada de `Python 3 (ipykernel)` para `SparkMagic PySpark` para poder utilizar o **PySpark**, já que nesse arquivo tinha comandos **PySpark**. O **PySpark** é a application programming interface (API) em **Python** para o **Apache Spark**, uma plataforma de processamento de dados em larga escala. Ele permite que seja escrito programas para processar grandes volumes de dados distribuídos, utilizando a potência de clusters de computação.
 
-Para abrir a janela `Conectar ao cluster` foi selecionado a opção `Cluster` e então escolhida a guia `EMR CLUSTERS`. O cluster de nome `EMR-Cluster-LabX` foi selecionado e o tipo de credencial foi selecionada a opção `No credential` (`Sem credencial`). Levou cerca de 1 a 2 minutos para conectar-se ao cluster. Caso um erro de conexão aconteça, é porque o tempo esperado não foi o suficiente, sendo necessário executar novamente. Sempre que há uma tentativa de conexão, um bloco de código à célula ativa no notebook era adicionado e executado para estabelecer a conexão, conforme mostrado na imagem 24. Quando a conexão era bem sucedida, o aplicativo Spark era iniciado com êxito, apresentando uma mensagem SparkSession disponível como 'spark' no notebook.
+Para abrir a janela `Conectar ao cluster` foi selecionado a opção `Cluster` e então escolhida a guia `EMR CLUSTERS`. O cluster de nome `EMR-Cluster-LabX` foi selecionado e o tipo de credencial foi selecionada a opção `No credential` (`Sem credencial`). Levou cerca de 1 a 2 minutos para conectar-se ao cluster. Caso um erro de conexão acontecesse, era porque o tempo esperado não foi o suficiente, sendo necessário executar novamente. Sempre que há uma tentativa de conexão, um bloco de código à célula ativa no notebook era adicionado e executado para estabelecer a conexão, conforme mostrado na imagem 24. Quando a conexão era bem sucedida, o aplicativo Spark era iniciado com êxito, apresentando uma mensagem SparkSession disponível como 'spark' no notebook. Observe que no segundo comando de conexão `%sm_analytics emr connect --verify-certificate False --cluster-id j-JQOLMVUFF0OM --auth-type None --language python`, o ID do cluster do EMR foi passado (`j-JQOLMVUFF0OM`), a linguagem foi definida como `python` e o certificado de verificação foi determinado como `False`, já que nenhuma credencial foi passada.
 
 <div align="Center"><figure>
     <img src="./0-aux/img24.png" alt="img24"><br>
@@ -439,9 +464,65 @@ Para abrir a janela `Conectar ao cluster` foi selecionado a opção `Cluster` e 
 
 <a name="item01.6"><h4>Tarefa 6: Explorar e consultar dados do kernel SparkMagic PySpark</h4></a>[Back to summary](#item0)
 
-Na última tarefa deste laboratório foi executada uma análise exploratória de dados usando o **PySpark**. Cada célula do arquivo de notebook `labnotebook.ipynb` foi executada exibindo sua respectiva saída. Para executar uma célula era só selecionar dentro da célula e pressione Shift + Enter ou, no topo da página, escolher o botão `Run`. A imagem 25 mostra alguns outputs das células executadas. Basicamente o código fazia várias consultas a uma tabela do **Apache Hive** no EMR usando o **PySpark**.
+Na última tarefa deste laboratório os dados da tabela do **Apache Hive** no **Amazon EMR** foram consultados e manipulados. Esses dados eram o mesmo arquivo **CSV** `adult_data.csv` utilizado no início do laboratório. O objetivo foi executar algumas das transformações realizadas no SageMaker Canvas, mas agora utilizando o **PySpark** no **JupyterLab**.
+
+Ao iniciar a análise exploratória dos dados, embora o kernel **PySpark** do **JupyterLab** já adicionasse um *SQLContext*, um subconjunto do *SQLContext* chamado *HiveContext* era utilizado, pois a tabela consultada seria do **Apache Hive**. Portanto o comando `sqlContext = HiveContext(sqlContext)` foi executado. O *SQLContext* é uma interface de uso mais geral para trabalhar com dados estruturados, enquanto o *HiveContext* é específico para o Hive e seu ecossistema. O *SQLContext* oferece suporte a uma variedade maior de fontes de dados, enquanto o *HiveContext* se concentra em tabelas e metastores do Hive e fornece recursos adicionais, como suporte para UDFs, indexação e estatísticas do Hive. Quando o kernel **PySpark** é usado, um *SparkContext* e um *HiveContext* são criados automaticamente após a conexão com um cluster do EMR. Dessa forma, foi possível utilizar o *HiveContext* para consultar dados na tabela Hive e disponibilizá-los em um dataframe do Spark.
+
+O primeiro passo foi consultar o banco de dados e suas tabelas com os comandos `dbs = sqlContext.sql("show databases")` e `tables = sqlContext.sql("show tables")` respectivamente. A imagem 25 mostra o output dos comandos, evidenciando a existência de um banco de dados de nome `default` com a tabela `adult_data`. Essa tabela `adult_data` tinha os mesmos dados do arquivo `adult_data.csv` utilizado no início desse laboratório.
 
 <div align="Center"><figure>
     <img src="./0-aux/img25.png" alt="img25"><br>
     <figcaption>Imagem 25.</figcaption>
 </figure></div><br>
+
+Em seguida, os dados da tabela `adult_data` foram extraídos e inseridos em um dataframe do Spark com o comando `adult_df = sqlContext.sql("select * from adult_data").cache()`. Os dados do dataframe foram printados na tela. Como a formatação não era muito boa, foi utilizado a biblioteca *Pandas* do **Python** para exibir os dados do dataframe, conforme mostrado na imagem 26.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img26.png" alt="img26"><br>
+    <figcaption>Imagem 26.</figcaption>
+</figure></div><br>
+
+Como foi visto no SageMaker Canvas, alguns recursos (colunas) eram categóricas como `workclass`, `education`, `occupation`, `marital status`, `relationship`, `race` e `sex`. No canvas, o SageMaker Data Wrangler foi utilizado para realizar transformações nessas colunas, transformando algumas delas em colunas numéricas, ou criando colunas auxiliares numéricas. O objetivo era contabilizar os dados dessas colunas, pois alguns algoritmos de machine learning (ML), como regressão linear, exigem recursos numéricos. Sendo assim, alguns blocos de códigos foram executados nesse arquivo do **JupyterLab**, utilizando as funções `StringIndexer` e `OneHotEncoderEstimator` do **PySpark** para converter variáveis categóricas em um conjunto de variáveis numéricas que usava os valores 0 e 1.
+- [StringIndexer](https://spark.apache.org/docs/latest/ml-features.html#stringindexer): converte uma coluna de valores de string em uma coluna de índices de rótulo.
+- [OneHotEncoderEstimator](https://spark.apache.org/docs/latest/ml-features.html#onehotencoder): mapeia uma coluna de índices de categoria para uma coluna de vetores binários, com no máximo um "1" em cada linha que indica o índice de categoria dessa linha. A codificação one-hot no Spark é um processo de duas etapas, onde primeiro é utilizado o `StringIndexer`, depois o `OneHotEncoder`.
+
+O bloco de código a seguir importou das bibliotecas do **PySpark**, o `StringIndexer` e o `OneHotEncoderEstimator`. As colunas categóricas foram adicionadas em uma lista que foi utilizada na função `StringIndexer` para criar uma segunda lista com os mesmos nomes das colunas acrescido de `-index` no final. Já a função `OneHotEncoderEstimator` utilizou a lista com os nomes das colunas indexadas como coluna de entrada e criou uma nova lista com o mesmo nome das colunas de entrada acrescido de `-encoded`. A imagem 27 exibe o output desses comandos.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img27.png" alt="img27"><br>
+    <figcaption>Imagem 27.</figcaption>
+</figure></div><br>
+
+Até o momento os dados não foram modificados, apenas as transformações foram preparadas indicando quais funções seria utilizadas e onde os dados transformados seriam inseridos, que no caso foi sempre nas novas colunas.
+
+O bloco em seguida utilizou a classe [VectorAssembler](https://spark.apache.org/docs/latest/ml-features.html#vectorassembler), conforme imagem 28. Essa classe usava várias colunas como entrada e gerava uma só coluna que continha uma matriz de valores. As colunas de entrada eram as da lista de novas colunas do `encoder`.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img28.png" alt="img28"><br>
+    <figcaption>Imagem 28.</figcaption>
+</figure></div><br>
+
+Um pipeline é uma lista ordenada de transformadores e estimadores. É possível definir um pipeline para automatizar e garantir a repetição das transformações a serem aplicadas a um conjunto de dados. Portanto, um pipeline foi definido para aplicar essas transformações no conjunto de dados. Para isso a classe `Pipeline` foi importada, o pipeline foi definido com o comando `pipeline = Pipeline(stages=indexers + [encoder, assembler])`, onde foi passado as transformações feitas em `indexers`, `encoder` e `assembler`. Em seguida, o modelo de pipeline foi definido com o comando `pipelineModel = pipeline.fit(adult_df)`, onde as transformações eram passadas assim como ou dataframe `adult_df`. Então as transformações eram aplicadas com o comando `adult_df = pipelineModel.transform(adult_df)`. O comando `adult_df.printSchema()` foi utilizado para exibir o esquema do dataframe pós transformações mostrando todas as colunas e seu respectivo tipo. A imagem 29 evidenciado a execução desse comando. Observe que após a coluna `income`, que era a última coluna do dataset original da tabela do **Apache Hive**, apareciam as colunas com final `-index`, fruto da transformação da função `StringIndexer` onde o tipo de dados era `double`, na sequeência as colunas com terminação `-encoded`, devido a transformação da função `OneHotEncoderEstimator` onde o tipo de dados era `vector`, e por último uma única coluna de nome `categorical-features` que foi originada da transformação da classe `VectorAssembler`, também do tipo `vector.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img29.png" alt="img29"><br>
+    <figcaption>Imagem 29.</figcaption>
+</figure></div><br>
+
+Por fim, dois últimos blocos de código foram executados. O comando `adult_df.select('categorical-features').show(truncate=False)` mostrava os dados da coluna `categorical-features` que eram todos numéricos agora (imagem 30). Enquanto o último bloco executava mais uma transformação com a função `StringIndexer` na coluna `income`. Observe nas imagens 31 e 32 as diferenças do dataframe antes e depois das transformações.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img30.png" alt="img30"><br>
+    <figcaption>Imagem 30.</figcaption>
+</figure></div><br>
+
+<div align="center">
+    <figure style="display: inline-block; margin-right: 5px;">
+        <img src="./0-aux/img31.png" alt="img31" width="430">
+        <figcaption>Imagem 31.</figcaption>
+    </figure>
+    <figure style="display: inline-block; margin-left: 5px;">
+        <img src="./0-aux/img32.png" alt="img32" width="430">
+        <figcaption>Imagem 32.</figcaption>
+    </figure>
+</div>
