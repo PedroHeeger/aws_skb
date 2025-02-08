@@ -49,7 +49,7 @@
 1.2 <a href="#item01.2">Tarefa 2: Criar um serviço</a><br>
 1.3 <a href="#item01.3">Tarefa 3: Implantar uma nova versão do aplicativo no serviço</a><br>
 1.4 <a href="#item01.4">Tarefa 4: Atualizar um serviço em execução</a><br>
-1.5 <a href="#item01.5">Tarefa 4: Atualizar um serviço em execução</a><br>
+1.5 <a href="#item01.5">Tarefa 5: Analisar o modelo do AWS Cloudformation (opcional)</a><br>
 
 ---
 
