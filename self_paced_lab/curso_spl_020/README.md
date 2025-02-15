@@ -65,7 +65,6 @@ O arquivo para a criação do banco de dados foi disponibilizado pelo laboratór
 A estrutura do curso é formada por:
 - Este arquivo de README.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
-- A pasta `resource` com os arquivos utilizados.
 
 ### Development:
 Este curso foi um laboratório prático realizado na plataforma **AWS Skill Builder**, cuja subscrição foi devida a uma parceria entre a **AWS** e a **Escola da Nuvem**. A infraestrutura de cloud utilizada foi fornecida através de um sandbox do **AWS Skill Builder** que possibilitava acesso ao console da **AWS**. Contudo foi necessário seguir estritamente as orientações determinadas no laboratório. Dessa maneira, a forma de interação com os recursos da cloud foram sempre através do console fornecido pelo sandbox, a não ser em casos em que o próprio laboratório instruiu para utilização de outras ferramentas de interação como **AWS CLI** ou **AWS SDK**.
@@ -160,7 +159,7 @@ A imagem 03 ilustra as duas conexões em cada banco de dados realizadas com suce
 
 <a name="item01.4"><h4>Tarefa 4: Importe um arquivo de despejo SQL para seus bancos de dados</h4></a>[Back to summary](#item0)
 
-Nesta tarefa, o arquivo SQL [world.sql](./resource/world.sql) foi importado para os dois bancos de dados. Para isso, na instância do **Amazon EC2** acessada remotamente foi aberto o **Windows PowerShell** e executado o seguinte comando `Invoke-WebRequest https://s3-us-west-2.amazonaws.com/aws-tc-largeobjects/SPLs/sharedDatabases/world.sql -OutFile c:\\Users\\Administrator\\Desktop\\world.sql`. Esse comando enviava o arquivo SQL de um bucket do **Amazon S3** para a instância **Windows Server**, armazenando o arquivo na área de trabalho, conforme imagem 04.
+Nesta tarefa, o arquivo SQL `world.sql` foi importado para os dois bancos de dados. Para isso, na instância do **Amazon EC2** acessada remotamente foi aberto o **Windows PowerShell** e executado o seguinte comando `Invoke-WebRequest https://s3-us-west-2.amazonaws.com/aws-tc-largeobjects/SPLs/sharedDatabases/world.sql -OutFile c:\\Users\\Administrator\\Desktop\\world.sql`. Esse comando enviava o arquivo SQL de um bucket do **Amazon S3** para a instância **Windows Server**, armazenando o arquivo na área de trabalho, conforme imagem 04.
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
