@@ -36,6 +36,8 @@
   - GitHub   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="github" width="auto" height="25">
 - Command Line Interpreter (CLI):
   - Bash e Sh   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash_sh" width="auto" height="25">
+- Server and Databases:
+  - Apache HTTP Server (httpd)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/apache_http_server.png" alt="apache_httpd" width="auto" height="25">
 
 ---
 
@@ -50,7 +52,7 @@
 ---
 
 ### Objective:
-Este laboratório teve como objetivo proporcionar uma visão geral do serviço **Amazon EC2**. Durante a prática, foi provisionada uma instância EC2 com um servidor web e com a proteção contra encerramento ativada. O monitoramento da instância foi realizado e uma regra de entrada no grupo de segurança foi configurada para permitir o acesso HTTP. A instância foi redimensionada verticalmente, ajustando sua capacidade. Por fim, a funcionalidade de proteção contra encerramento foi verificada e desativada, permitindo o encerramento bem-sucedido da instância.
+Este laboratório teve como objetivo proporcionar uma visão geral do serviço **Amazon EC2**. Durante a prática, foi provisionada uma instância EC2 com o servidor web **Apache HTTP (Httpd)** e a proteção contra encerramento ativada. Foram realizadas ações de monitoramento na instância, além da configuração de uma regra de entrada no grupo de segurança para permitir o acesso HTTP. A instância foi redimensionada verticalmente para ajuste de capacidade. Por fim, a proteção contra encerramento foi testada e desativada, permitindo o encerramento bem-sucedido da instância.
 
 ### Structure:
 A estrutura do curso é formada por:
