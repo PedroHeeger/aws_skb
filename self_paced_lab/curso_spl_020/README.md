@@ -77,29 +77,29 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 <a name="item01.1"><h4>Tarefa 1: Criar uma instância do Amazon Aurora</h4></a>[Back to summary](#item0)
 
 Na primeira tarefa desse laboratório, o objetivo consistiu em provisionar uma instância do **Amazon Aurora** no serviços **Amazon Relational Database Service (RDS)**. O **Amazon Aurora** é um mecanismo de banco de dados relacional totalmente gerenciado e compatível com **MySQL** que combina o desempenho e a confiabilidade de bancos de dados comerciais de ponta com a simplicidade e a relação custo-benefício de bancos de dados de código aberto. Ele oferece até cinco vezes o desempenho do **MySQL** sem exigir alterações na maioria dos aplicativos existentes que usam bancos de dados **MySQL**. O **Amazon RDS** facilita a configuração, operação e dimensionamento de um banco de dados relacional na nuvem. Ele fornece capacidade redimensionável e com boa relação custo-benefício, ao mesmo tempo em que gerencia tarefas demoradas de administração de banco de dados, liberando o usuário para se concentrar em seus aplicativos e negócios. O **Amazon RDS** fornece seis mecanismos de banco de dados para escolher, incluindo **Amazon Aurora**, **Oracle**, **Microsoft SQL Server**, **PostgreSQL**, **MySQL** e **MariaDB**. O banco de dados Aurora foi provisionado no RDS com as seguintes configurações:
-- Escolha um método de criação de banco de dados: `Criação Padrão`.
-- Opções de mecanismo: `Aurora (compatível com MySQL)`.
-- Versão do motor: `Aurora 3.05.X`.
+- Escolha um método de criação de banco de dados: `Standard create` (Criação Padrão).
+- Opções de mecanismo: `Aurora (MySQL Compatible)`.
+- Versão do motor: `Aurora 3.05.X`. Usei essa `Aurora MySQL 3.05.2 (compatible with MySQL 8.0.32) - default for major version 8.0`
 - Modelos: `Dev/Teste`.
 - Na seção Configurações foi definido o seguinte:
-    - Identificador de cluster do BD: `aurora`.
-    - Nome de usuário mestre: `admin`.
-    - Gerenciamento de credenciais: `autogerenciado`.
-    - Senha mestra: `admin123`.
-    - Confirme sua senha: `admin123`.
-- Na seção Configuração da instância foi definido:
-    - Classe de instância de BD: classes Burstable (inclui classes t), `db.t3.medium`.
-- Na seção Disponibilidade e durabilidade, para Implantação Multi-AZ, foi selecione `Não criar uma réplica do Aurora`. As implantações Multi-AZ do **Amazon RDS** fornecem disponibilidade e durabilidade aprimoradas para instâncias de banco de dados (DB), tornando-as um ajuste natural para cargas de trabalho de banco de dados de produção. Quando uma instância de banco de dados Multi-AZ é provisionada, o **Amazon RDS** cria automaticamente uma instância de banco de dados primária e replica os dados de forma síncrona para uma instância de espera em uma zona de disponibilidade (AZ) diferente.
-- Na seção Conectividade foi configurado:
-    - Nuvem Privada Virtual (VPC): `Lab VPC`. O **Amazon Virtual Private Cloud (VPC)** permite que sejam iniciados recursos da **AWS** em uma rede virtual que foi definida pelo usuário. Essa rede virtual se assemelha muito a uma rede tradicional que seria operada em um próprio data center, com os benefícios de usar a infraestrutura escalável da **AWS**.
-    - Grupo de sub-rede do banco de dados: `aurora`. Sub-redes são segmentos do intervalo de endereços IP de uma VPC que é designada para agrupar os recursos com base em necessidades operacionais e de segurança. Um grupo de sub-redes de banco de dados (BD) é uma coleção de sub-redes (normalmente privadas) que é criada em uma VPC e designada para as instâncias de banco de dados. Um grupo de sub-redes de BD permite que seja definida uma VPC específica ao criar instâncias de BD usando a CLI ou API; se for utilizado o console, é possível simplesmente selecionar a VPC e as sub-redes que deseja-se usar. O grupo de sub-rede `aurora` tinha sido provisionado pelas pilhas do **AWS CloudFormation** quando foi iniciado o laboratório.
-    - Acesso público: `Não`.
-    - Grupo de segurança VPC (firewall): foi escolhido o security group `DBSecurityGroup`.
-- Na seção Monitoramento: foi desmarcado `Habilitar monitoramento aprimorado`.
-- A seção de Configuração adicional foi expandida para seguinte configuração:
-    - Nome inicial do banco de dados: `mydb`.
-- Na seção Criptografia: foi desmarcada a opção `Habilitar criptografia`. É possível criptografar as instâncias e snapshots do **Amazon RDS** em repouso habilitando a opção de criptografia para a instância de banco de dados do **Amazon RDS**. Os dados criptografados em repouso incluem o armazenamento subjacente para uma instância de banco de dados, seus backups automatizados, réplicas de leitura e snapshots.
-- Na seção Manutenção: foi desmarcada a opção `Habilitar atualização automática de versão secundária`.
+    - `DB cluster identifie` (Identificador de cluster do BD): `aurora`.
+    - `Master username` (Nome de usuário mestre): `admin`.
+    - `Credentials management` (Gerenciamento de credenciais): `Self managed` (autogerenciado).
+    - `Master password` (Senha mestra): `admin123`.
+    - `Confirm master password` (Confirme sua senha): `admin123`.
+- Na seção `Instance configuration` (Configuração da instância) foi definido:
+    - Classe de instância de BD: `Burstable classes (includes t classes)` (classes Burstable (inclui classes t)) -> `db.t3.medium`.
+- Na seção `Availability & durability` (Disponibilidade e durabilidade), para Implantação Multi-AZ, foi selecione `Don't create an Aurora Replica` (Não criar uma réplica do Aurora). As implantações Multi-AZ do **Amazon RDS** fornecem disponibilidade e durabilidade aprimoradas para instâncias de banco de dados (DB), tornando-as um ajuste natural para cargas de trabalho de banco de dados de produção. Quando uma instância de banco de dados Multi-AZ é provisionada, o **Amazon RDS** cria automaticamente uma instância de banco de dados primária e replica os dados de forma síncrona para uma instância de espera em uma zona de disponibilidade (AZ) diferente.
+- Na seção `Connectivity` (Conectividade) foi configurado:
+    - `Virtual private cloud (VPC)` (Nuvem Privada Virtual (VPC)): `LabVPC`. O **Amazon Virtual Private Cloud (VPC)** permite que sejam iniciados recursos da **AWS** em uma rede virtual que foi definida pelo usuário. Essa rede virtual se assemelha muito a uma rede tradicional que seria operada em um próprio data center, com os benefícios de usar a infraestrutura escalável da **AWS**.
+    - `DB subnet group` (Grupo de sub-rede do banco de dados): `aurora`. Sub-redes são segmentos do intervalo de endereços IP de uma VPC que é designada para agrupar os recursos com base em necessidades operacionais e de segurança. Um grupo de sub-redes de banco de dados (BD) é uma coleção de sub-redes (normalmente privadas) que é criada em uma VPC e designada para as instâncias de banco de dados. Um grupo de sub-redes de BD permite que seja definida uma VPC específica ao criar instâncias de BD usando a CLI ou API; se for utilizado o console, é possível simplesmente selecionar a VPC e as sub-redes que deseja-se usar. O grupo de sub-rede `aurora` tinha sido provisionado pelas pilhas do **AWS CloudFormation** quando foi iniciado o laboratório.
+    - `Public access` (Acesso público): `No` (Não).
+    - `VPC security group (firewall)` (Grupo de segurança VPC (firewall)): foi escolhido o security group `DBSecurityGroup` e removido o `default`.
+- Na seção `Monitoring` (Monitoramento): foi desabilitado o `Enhanced Monitoring` (Monitoramento aprimorado).
+- A seção de `Additional configuration` (Configuração adicional) foi expandida para seguinte configuração:
+    - Nome `Initial database name` (inicial do banco de dados): `mydb`.
+- Na seção `Encryption` (Criptografia): foi desmarcada a opção `Enable encryption` (Habilitar criptografia). É possível criptografar as instâncias e snapshots do **Amazon RDS** em repouso habilitando a opção de criptografia para a instância de banco de dados do **Amazon RDS**. Os dados criptografados em repouso incluem o armazenamento subjacente para uma instância de banco de dados, seus backups automatizados, réplicas de leitura e snapshots.
+- Na seção `Maintenance` (Manutenção): foi desmarcada a opção `Enable auto minor version upgrade` (Habilitar atualização automática de versão secundária).
 
 Se uma janela de pop-up sugerisse complementos para o Aurora, esta podia ser fechada. A instância do RDS poderia levar até 5 minutos para ser inicializada. A imagem 01 evidencia o provisionamento da instância de banco de dados **Amazon RDS** cujo mecanismo era o **Amazon Aurora** para **MySQL**.
 
@@ -112,7 +112,7 @@ Se uma janela de pop-up sugerisse complementos para o Aurora, esta podia ser fec
 
 Na segunda tarefa, o objetivo foi se conectar remotamente a uma instância do **Amazon EC2** cujo sistema operacional era **Windows Server** e possuía o software **MySQL Workbench** instalado. Essa instância, que tinha sido provisionada pelo próprio laboratório ao iniciá-lo, também pela pilha do CloudFormation, era gerenciada pelo recurso *Fleet Manager* do **AWS System Manager (SSM)**. O **MySQL Workbench** é a ferramenta gráfica oficial do **MySQL** usada para modelagem de dados, administração de bancos e execução de consultas SQL. Após executar o login na instância, o **MySQL Workbench** foi utilizado para se conectar aos bancos de dados.
 
-Como a conexão seria via protocolo `RDP`, já que o ambiente gráfico dessa instância **Windows Server** seria acessado remotamente, foi importante utilizar como navegador da máquina física **Windows** o **Google Chrome**, pois o Chrome suportava cópia e colagem bidirecional entre sessões RDP e a máquina local. O grupo de segurança vinculado a instância já possuía uma regra de entrada liberando a porta `3389`, que é onde o protocolo `RDP` atua. Para autenticação do usuário que faria login na instância foi necessário baixar o arquivo de chave privada no formato `.pem` do par de chaves criado e vinculado a essa instância, que era o `keypair`. O recurso `EC2 Instance Connect` do **Amazon EC2** foi utilizado para conectar-se a instância pelo próprio console. Na configuração da sessão remota, o usuário que acessaria foi mantido o padrão do SO da instância, que era `administrator`, e o arquivo de chave privada baixado foi informado. Após conectar, uma janela de pop-up perguntando se desejava permitir que o PC fosse descoberto por outros PCs e dispositivos nesta rede aparecia e a opção `Não` foi a escolhida. A imagem 02 confirma o acesso remoto gráfico executado pelo console. O mesmo acesso poderia ter sido executado direto pela máquina física **Windows** utilizando o software **Remote Desktop Connection (RDC)**, também chamado de **Conexão de Área de Trabalho Remota**.
+Como a conexão seria via protocolo `RDP`, já que o ambiente gráfico dessa instância **Windows Server** seria acessado remotamente, foi importante utilizar como navegador da máquina física **Windows** o **Google Chrome**, pois o Chrome suportava cópia e colagem bidirecional entre sessões RDP e a máquina local. O grupo de segurança vinculado a instância já possuía uma regra de entrada liberando a porta `3389`, que é onde o protocolo `RDP` atua. Para autenticação do usuário que faria login na instância foi necessário baixar o arquivo de chave privada no formato `.pem` do par de chaves criado e vinculado a essa instância, que era o `keypair`, caso a conexão fosse pelo recurso `EC2 Instance Connect` do **Amazon EC2** ou pelo software **Remote Desktop Connection (RDC)**, também chamado de **Conexão de Área de Trabalho Remota**, direto da máquina física **Windows**. Contudo, como essa instância era gerenciada pelo **AWS SSM** foi utilizado o recurso *Fleet Manager*, sendo necessário apenas fornecer o nome de usuário que estaria fazendo login na instância, que no caso o usuário padrão do SO da instância (`Administrator`), e arquivo de chave privada do par de chaves que a instância utilizava. Esse arquivo tinha sido fornecido pelo laboratório nas suas instruções, tanto no formato `.pem` como `.ppk`. Após conectar, uma janela de pop-up perguntando se desejava permitir que o PC fosse descoberto por outros PCs e dispositivos nesta rede aparecia e a opção `Não` foi a escolhida. A imagem 02 confirma o acesso remoto gráfico executado pelo console. 
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
@@ -138,20 +138,20 @@ Um endpoint é representado como uma URL específica do Aurora que contém um en
     - O exemplo a seguir ilustra um ponto de extremidade do leitor para um cluster de banco de dados Aurora MySQ: `mydbcluster.cluster-ro-123456789012.us-east-1.rds.amazonaws.com:3306`
 
 Ao abrir o Workbench, uma mensagem avisando "Sistema operacional não suportado" aparecia. Nessa mensagem, foi marcada `Don't show this message again` e confirmada com `OK`. Isso não afetaria o uso do Workbench. Dentro dele, na opção `MySQL Connections`, uma nova conexão de banco de dados foi criada com a seguinte configuração:
-- Nome da conexão: `aurora`.
-- Nome do host: foi utilizado o endpoint copiado do **Amazon Aurora**.
-- Nome de usuário: `admin`.
-- Foi selecionado `Armazenar no Vault` e informado:
-    - Senha: `admin123`.
+- `Connection Name` (Nome da conexão): `aurora`.
+- `Hostname` (Nome do host): foi utilizado o endpoint copiado do **Amazon Aurora**: `aurora-instance-1.cq0rxbxbxwyq.us-east-1.rds.amazonaws.com`.
+- `Username` (Nome de usuário): `admin`.
+- Foi selecionado `Store in Vault` (Armazenar no cofre) e informado:
+    - `Password` (Senha): `admin123`.
 
 Em seguida, também foi criada uma conexão com o banco de dados **MySQL** no **Amazon RDS**. As configurações foram as seguintes:
-- Nome da conexão: `MySQL`.
-- Nome do host: foi utilizado o endpoint copiado do **Amazon RDS**.
-- Nome de usuário: `admin`.
-- Foi selecionado `Armazenar no Vault` e informado:
-    - Senha: `admin123`. Essa senha foi fornecida pelo parâmetro `DBUserPasswd` nas instruções desse lab, já que esse tinha sido um banco de dados provisionado pelo próprio laboratório.
+- `Connection Name` (Nome da conexão): `mysql`.
+- `Hostname` (Nome do host): foi utilizado o endpoint copiado do **Amazon RDS**: `mysql.cq0rxbxbxwyq.us-east-1.rds.amazonaws.com`.
+- `Username` (Nome de usuário): `admin`.
+- Foi selecionado `Store in Vault` (Armazenar no cofre) e informado:
+    - `Password` (Senha): `xnzaFH8DV8`. Essa senha foi fornecida pelo parâmetro `DBUserPasswd` nas instruções desse lab, já que esse tinha sido um banco de dados provisionado pelo próprio laboratório.
 
-A imagem 03 ilustra as duas conexões em cada banco de dados realizadas com sucesso. Uma observação importante era que para que essa conexão fosse efetuada, o grupo de segurança vinculado as instâncias dos dois bancos de dados **Amazon Aurora** e **Amazon RDS**, ambos com sistema de gerenciamento **MySQL**, precisva ter uma regra de entrada liberando a porta `3306` (porta padrão do **MySQL**) para todos os usuários (IP `0.0.0.0/0`) ou para o IP público da minha máquina física **Windows**.
+A imagem 03 ilustra as duas conexões em cada banco de dados realizadas com sucesso. Uma observação importante era que para que essa conexão fosse efetuada, o grupo de segurança vinculado as instâncias dos dois bancos de dados **Amazon Aurora** e **Amazon RDS**, ambos com sistema de gerenciamento **MySQL**, precisva ter uma regra de entrada liberando a porta `3306` (porta padrão do **MySQL**) para o security group vinculado a instância do **Amazon EC2** que tinha o Workbench instalado.
 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
@@ -160,21 +160,21 @@ A imagem 03 ilustra as duas conexões em cada banco de dados realizadas com suce
 
 <a name="item01.4"><h4>Tarefa 4: Importe um arquivo de despejo SQL para seus bancos de dados</h4></a>[Back to summary](#item0)
 
-Nesta tarefa, o arquivo SQL [sql.sql](./) foi importado para os dois bancos de dados. Para isso, na instância do **Amazon EC2** acessada remotamente foi aberto o **Windows PowerShell** e executado o seguinte comando `Invoke-WebRequest https://s3-us-west-2.amazonaws.com/aws-tc-largeobjects/SPLs/sharedDatabases/world.sql -OutFile c:\\Users\\Administrator\\Desktop\\world.sql`. Esse comando enviava o arquivo SQL de um bucket do **Amazon S3** para a instância **Windows Server**, armazenando o arquivo na área de trabalho, conforme imagem 04.
+Nesta tarefa, o arquivo SQL [world.sql](./resource/world.sql) foi importado para os dois bancos de dados. Para isso, na instância do **Amazon EC2** acessada remotamente foi aberto o **Windows PowerShell** e executado o seguinte comando `Invoke-WebRequest https://s3-us-west-2.amazonaws.com/aws-tc-largeobjects/SPLs/sharedDatabases/world.sql -OutFile c:\\Users\\Administrator\\Desktop\\world.sql`. Esse comando enviava o arquivo SQL de um bucket do **Amazon S3** para a instância **Windows Server**, armazenando o arquivo na área de trabalho, conforme imagem 04.
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
 
-De volta ao Workbench aberto nessa instância, a janela de consulta para o banco de dados foi exibida. Na opção `Gerenciamento` foi escolhido `Importação/Restauração de Dados`. Em seguida, em `Opções de importação` foi selecionado `Importar de arquivo independente`, o botão de reticências foi clicado e o arquivo SQL na área de trabalho foi selecionado. Após término da importação, no painel esquerdo do Workbench a aba `Esquemas` foi escolhida e realizada uma atualização. A imagem 05 mostra que agora existia um banco de dados de nome `world`.
+De volta ao Workbench aberto nessa instância, a conexão com o banco de dados do **Amazon Aurora** foi aberta e em `Management` (Gerenciamento) foi escolhido `Data Import/Restore` (Importação/Restauração de Dados). Em seguida, a guia de importação e restauração de dados foi aberta. Em `Import Options` (Opções de importação) foi selecionado `Import from Dump Project Folder` (Importar de arquivo independente), o botão de reticências foi clicado e o arquivo SQL na área de trabalho foi selecionado. Após término da importação, no painel esquerdo do Workbench a aba `Esquemas` foi escolhida e realizada uma atualização. A imagem 05 mostra que agora existia um banco de dados de nome `world`.
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
     <figcaption>Imagem 05.</figcaption>
 </figure></div><br>
 
-Isso tinha sido feito para a conexão com o banco de dados **Amazon RDS**. Agora, o mesmo processo foi realizado, utilizando o mesmo arquivo, para o **Amazon Aurora**. A imagem 06 evidencia a existência do banco de nome `world` no Aurora.
+Isso tinha sido feito para a conexão com o banco de dados **Amazon Aurora**. Agora, o mesmo processo foi realizado, utilizando o mesmo arquivo, para o **Amazon RDS**. A imagem 06 evidencia a existência do banco de nome `world` no Aurora.
 
 <div align="Center"><figure>
     <img src="./0-aux/img06.png" alt="img06"><br>
@@ -183,7 +183,7 @@ Isso tinha sido feito para a conexão com o banco de dados **Amazon RDS**. Agora
 
 <a name="item01.5"><h4>Tarefa 5: Consultar os bancos de dados</h4></a>[Back to summary](#item0)
 
-Em cada um dos serviços de bancos de dados **Amazon RDS** e **Amazon Aurora**, a mesma abaixo foi criada e executada para exibir da tabela `city` todas as cidades com população maior que 10 mil ordenado por código do país. A imagem 07 e 08 mostra o resultado desse comando nos dois serviços da **AWS**.
+Em cada um dos serviços de bancos de dados **Amazon Aurora** e **Amazon RDS**, a mesma consulta abaixo foi criada e executada para exibir da tabela `city` todas as cidades com população maior que 10 mil ordenado por código do país. A imagem 07 e 08 mostra o resultado desse comando nos dois serviços da **AWS**.
 
 ```sql
 select * from world.city where Population > 10000
