@@ -25,6 +25,9 @@
 </details>
 <details><summary>Banco de Dados</summary>
     <ul>
+        <li>curso_spl_020: <a href="./curso_spl_020/">Lab - Introduction to Amazon Aurora   <img src="./curso_spl_020/0-aux/logo_course.png" alt="curso_spl_020" width="auto" height="25"></a></li>
+        <li>curso_spl_021: <a href="./curso_spl_021/">Lab - Introduction to Amazon ElastiCache   <img src="./curso_spl_021/0-aux/logo_course.png" alt="curso_spl_021" width="auto" height="25"></a></li>
+        <li>curso_spl_022: <a href="./curso_spl_022/">Lab - Introduction to Amazon DynamoDB   <img src="./curso_spl_022/0-aux/logo_course.png" alt="curso_spl_022" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Blockchain</summary>
@@ -35,6 +38,7 @@
     <ul>
         <li>curso_spl_001: <a href="./curso_spl_001/">Lab - Introduction to Amazon EC2 Auto Scaling   <img src="./curso_spl_001/0-aux/logo_course.png" alt="curso_spl_001" width="auto" height="25"></a></li>
         <li>curso_spl_002: <a href="./curso_spl_002/">Lab - Configuring Internet Access from Lambda in a VPC   <img src="./curso_spl_002/0-aux/logo_course.png" alt="curso_spl_002" width="auto" height="25"></a></li>
+        <li>curso_spl_019: <a href="./curso_spl_019/">Lab - Introduction to Amazon EC2   <img src="./curso_spl_019/0-aux/logo_course.png" alt="curso_spl_019" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Computação de Usuário Final</summary>
@@ -43,6 +47,7 @@
 </details>
 <details><summary>Contêineres</summary>
     <ul>
+        <li>curso_spl_016: <a href="./curso_spl_016/">Lab - Working with Amazon Elastic Container Service   <img src="./curso_spl_016/0-aux/logo_course.png" alt="curso_spl_016" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Ferramentas do Desenvolvedor</summary>
@@ -65,6 +70,7 @@
 <details><summary>Integração de Aplicativos</summary>
     <ul>
         <li>curso_spl_004: <a href="./curso_spl_004/">Lab - Integrating Amazon Simple Queue Service (Amazon SQS)   <img src="./curso_spl_004/0-aux/logo_course.png" alt="curso_spl_004" width="auto" height="25"></a></li>
+        <li>curso_spl_018: <a href="./curso_spl_018/">Lab - Capital Guessing Game   <img src="./curso_spl_018/0-aux/logo_course.png" alt="curso_spl_018" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Interação com os Clientes</summary>
@@ -78,6 +84,7 @@
 <details><summary>Machine Learning</summary>
     <ul>
         <li>curso_spl_014: <a href="./curso_spl_014/">Lab - Analyze and Prepare Data with Amazon SageMaker Data Wrangler and Amazon EMR   <img src="./curso_spl_014/0-aux/logo_course.png" alt="curso_spl_014" width="auto" height="25"></a></li>
+        <li>curso_spl_017: <a href="./curso_spl_017/">Lab - Train a model with Amazon SageMaker   <img src="./curso_spl_017/0-aux/logo_course.png" alt="curso_spl_017" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Migração e Transferência</summary>

@@ -1,6 +1,6 @@
 # AWS Skill Builder  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="45"></a>
 
-This repository is a special repository for all activities carried out on the AWS Skill Builder platform whose objective is to intensify learning in cloud computing on AWS. In Skill Builder, activities are separated into 8 training categories. In order to organize, the structure of the folders in this repository followed this division at the first level. In each folder corresponding to one of the 8 training categories, the activities were divided based on the classification of the main service used.
+This repository is a special repository for all activities carried out on the AWS Skill Builder platform whose objective is to intensify learning in cloud computing on AWS. In Skill Builder, activities are separated into 8 training categories. In order to organize, the structure of the folders in this repository followed this division at the first level. In each folder corresponding to one of the 8 training categories, the activities were divided based on the classification of the main service used. Additionally, a ninth folder was created containing study materials for the AWS exams, including a spreadsheet with a summary explanation of approximately 600 AWS cloud services and resources, and diagrams of architectural examples.
 
 ### Training Category:
 - <a href="./aws_cloud_institue">aws_cloud_institue</a>
@@ -11,3 +11,4 @@ This repository is a special repository for all activities carried out on the AW
 - <a href="./examp_preparation">examp_preparation</a>
 - <a href="./game_based_learning">game_based_learning</a>
 - <a href="./self_paced_lab">self_paced_lab</a>
+- <a href="./study_material">study_material</a>
