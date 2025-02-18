@@ -76,7 +76,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Criar um cluster do Amazon ElastiCache</h4></a>[Back to summary](#item0)
 
-A tarefa inicial foi provisionar um cluster do **Amazon ElastiCache** para **Remote Dictionary Server (Redis)** na **AWS**. No ElastiCache para Redis, existem dois principais tipos de implementação:
+A tarefa inicial foi provisionar um cluster do **Amazon ElastiCache** para **Remote Dictionary Server (Redis)** na **AWS**. O **Redis** é um banco de dados em memória, de código aberto, usado como cache, message broker e armazenamento de estrutura de dados chave-valor, oferecendo alta performance e baixa latência. Ele suporta diversos tipos de dados, persistência opcional e replicação para escalabilidade. No ElastiCache para Redis, existem dois principais tipos de implementação:
 - Redis OSS: Baseado na versão de código aberto do **Redis**, sem otimizações adicionais da **AWS**.
 - Redis com memória gerenciada: Uma versão aprimorada pela **AWS**, com melhor desempenho e resiliência.
 
