@@ -28,6 +28,8 @@
         <li>curso_spl_020: <a href="./curso_spl_020/">Lab - Introduction to Amazon Aurora   <img src="./curso_spl_020/0-aux/logo_course.png" alt="curso_spl_020" width="auto" height="25"></a></li>
         <li>curso_spl_021: <a href="./curso_spl_021/">Lab - Introduction to Amazon ElastiCache   <img src="./curso_spl_021/0-aux/logo_course.png" alt="curso_spl_021" width="auto" height="25"></a></li>
         <li>curso_spl_022: <a href="./curso_spl_022/">Lab - Introduction to Amazon DynamoDB   <img src="./curso_spl_022/0-aux/logo_course.png" alt="curso_spl_022" width="auto" height="25"></a></li>
+        <li>curso_spl_023: <a href="./curso_spl_023/">Lab - Migrating RDS MySQL to Aurora with Read Replica   <img src="./curso_spl_023/0-aux/logo_course.png" alt="curso_spl_023" width="auto" height="25"></a></li>
+        <li>curso_spl_024: <a href="./curso_spl_024/">Lab - Introduction to Amazon ElastiCache with Windows Server   <img src="./curso_spl_024/0-aux/logo_course.png" alt="curso_spl_024" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Blockchain</summary>
