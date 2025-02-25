@@ -1,0 +1,78 @@
+{
+    "schemaVersion": "2021-11-01",
+    "name": "AnyCompany DynamoDB custom lens",
+    "description": "This is a custom lens addressing an AnyCompany DynamoDB deployment",
+    "pillars": [
+      {
+        "id": "AnyCompanyDDBReliability",
+        "name": "Reliability",
+        "questions": [
+          {
+            "id": "DDBREL1",
+            "title": "How will you manage database backups?",
+            "description": "How will you manage database backups?",
+            "choices": [
+              {
+                "id": "DDBREL1_1",
+                "title": "Use PITR",
+                "helpfulResource": {
+                  "displayText": "Amazon DynamoDB point-in-time recovery (PITR) provides automatic backups of your DynamoDB table data.",
+                  "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/PointInTimeRecovery_Howitworks.html"
+                },
+                "improvementPlan": {
+                  "displayText": "After you enable point-in-time recovery, you can restore to any point in time within EarliestRestorableDateTime and LatestRestorableDateTime."
+                }
+              },
+              {
+                "id": "DDBREL1_2",
+                "title": "Use On-demand backups",
+                "helpfulResource": {
+                  "displayText": "You can use the DynamoDB on-demand backup capability to create full backups of your tables for long-term retention, and archiving for regulatory compliance needs.",
+                  "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/BackupRestore.html"
+                },
+                "improvementPlan": {
+                  "displayText": "You can back up and restore your table data anytime with a single click on the AWS Management Console or with a single API call. Backup and restore actions run with no impact on table performance or availability."
+                }
+            },
+            {
+              "id": "DDBREL1_3",
+              "title": "Use AWS Backup as centralized hub",
+              "helpfulResource": {
+                "displayText": "AWS Backup is a fully managed data protection service that makes it easy to centralize and automate backups across AWS services.",
+                "url": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/backuprestore_HowItWorksAWS.html"
+              },
+              "improvementPlan": {
+                "displayText": "You can create backup policies and plans, you tag them, you can use these plans to define your backup requirements."
+              }
+            },
+            {
+              "id": "DDBREL1_4",
+              "title": "Use AWS Backup Audit Manager to audit the compliance of your AWS Backup policies",
+              "helpfulResource": {
+                "displayText": "You can use AWS Backup Audit Manager to audit the compliance of your AWS Backup policies against controls that you define.",
+                "url": "https://docs.aws.amazon.com/aws-backup/latest/devguide/aws-backup-audit-manager.html"
+              },
+              "improvementPlan": {
+                "displayText": "You can use AWS Backup Audit Manager to find backup activity and resources that are not yet compliant with the controls that you defined."
+              }
+            }
+            ],
+            "riskRules": [
+              {
+                "condition": "DDBREL1_1 && DDBREL1_2 && DDBREL1_3 && DDBREL1_4",
+                "risk": "NO_RISK"
+              },
+              {
+                "condition": "(!DDBREL1_1)",
+                "risk": "MEDIUM_RISK"
+              },
+              {
+                "condition": "default",
+                "risk": "HIGH_RISK"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
