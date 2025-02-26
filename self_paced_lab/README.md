@@ -32,6 +32,8 @@
         <li>curso_spl_023: <a href="./curso_spl_023/">Lab - Migrating RDS MySQL to Aurora with Read Replica   <img src="./curso_spl_023/0-aux/logo_course.png" alt="curso_spl_023" width="auto" height="25"></a></li>
         <li>curso_spl_024: <a href="./curso_spl_024/">Lab - Introduction to Amazon ElastiCache with Windows Server   <img src="./curso_spl_024/0-aux/logo_course.png" alt="curso_spl_024" width="auto" height="25"></a></li>
         <li>curso_spl_026: <a href="./curso_spl_026/">Lab - Integrating Amazon DynamoDB   <img src="./curso_spl_026/0-aux/logo_course.png" alt="curso_spl_026" width="auto" height="25"></a></li>
+        <li>curso_spl_027: <a href="./curso_spl_027/">Lab - Introduction to Amazon Relational Database Service (RDS) (Linux)   <img src="./curso_spl_027/0-aux/logo_course.png" alt="curso_spl_027" width="auto" height="25"></a></li>
+        <li>curso_spl_028: <a href="./curso_spl_028/">Lab - Introduction to Amazon Relational Database Service (RDS) (Windows)   <img src="./curso_spl_028/0-aux/logo_course.png" alt="curso_spl_028" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Blockchain</summary>
@@ -56,6 +58,7 @@
 </details>
 <details><summary>Ferramentas do Desenvolvedor</summary>
     <ul>
+        <li>curso_spl_029: <a href="./curso_spl_029/">Lab - AWS CodeBuild Hello World   <img src="./curso_spl_029/0-aux/logo_course.png" alt="curso_spl_029" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Gerenciamento de Custos</summary>
@@ -65,6 +68,7 @@
 <details><summary>Gerenciamento e Governança</summary>
     <ul>
         <li>curso_spl_013: <a href="./curso_spl_013/">Lab - Walkthrough of the AWS Well-Architected Tool   <img src="./curso_spl_013/0-aux/logo_course.png" alt="curso_spl_013" width="auto" height="25"></a></li>
+        <li>curso_spl_030: <a href="./curso_spl_030/">Lab - Custom Lenses using the AWS Well-Architected Tool   <img src="./curso_spl_030/0-aux/logo_course.png" alt="curso_spl_030" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Infraestrutura</summary>
