@@ -264,7 +264,7 @@ A seção `Artifacts` segue a seção `Environment` e informava o bucket de arte
     <figcaption>Imagem 12.</figcaption>
 </figure></div><br>
 
-<a name="item01.4"><h4>Tarefa 5: Copie o arquivo Hello.jar para o AWS Cloud9 IDE e execute-o localmente</h4></a>[Back to summary](#item0)
+<a name="item01.5"><h4>Tarefa 5: Copie o arquivo Hello.jar para o AWS Cloud9 IDE e execute-o localmente</h4></a>[Back to summary](#item0)
 
 Na última tarefa do lab, o arquivo de artefato `Hello.jar` enviado para o bucket do **Amazon S3** foi copiado para IDE **AWS Cloud9** para ser executado novamente. Para isso, alguns comandos **AWS CLI** foram executados no terminal do Cloud9. O primeiro deles foi `source_bucket=$(aws s3api list-buckets --query "Buckets[?contains(Name, 'artifactsbucket')].Name | [0]" --output text); echo -e "\n\nThe source_bucket value is set to: $source_bucket\n\n"`, que armazenava em uma variável o caminho de onde o arquivo de artefato estava no bucket do S3. Em seguida, com o comando `aws s3 cp s3://$source_bucket/JavaCMDBuild/Hello.jar ./Hello.jar`, esse arquivo foi copiado do S3 para a pasta aberta na IDE, que era a pasta raiz do repositório clonado do CodeCommit, cujo nome era `JavaApp`. Por fim, com o comando `java -cp Hello.jar sample.Hello`, o aplicativo **Java** foi executado, onde o novo texto era impresso no comando print, conforme evidenciado na imagem 13.
 
