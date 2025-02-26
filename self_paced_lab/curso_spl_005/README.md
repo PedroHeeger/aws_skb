@@ -47,7 +47,7 @@
 ---
 
 ### Objective:
-O objetivo deste laboratório prático foi solucionar e corrigir todos os problemas de configuração incorreta para permitir o acesso à página de um site usando o nome DNS do balanceador de carga, garantindo ao mesmo tempo que a solução ainda possa funcionar se uma das instâncias do servidor web estiver inativa. O site era hospedado em instâncias do **Amazon Elastic Compute Cloud (EC2)** atrás de um load balancer do tipo *Application Load Balancer (ALB)*.
+O objetivo deste laboratório prático foi solucionar e corrigir todos os problemas de configuração incorreta para permitir o acesso à página de um site usando o nome DNS do balanceador de carga, garantindo ao mesmo tempo que a solução ainda pudesse funcionar se uma das instâncias do servidor web estivesse inativa. O site era hospedado em instâncias do **Amazon Elastic Compute Cloud (EC2)** atrás de um load balancer do tipo *Application Load Balancer (ALB)*.
 
 ### Structure:
 A estrutura do curso é formada por:
