@@ -45,6 +45,8 @@
 
 
 
+
+
 Este laboratório teve como objetivo criar uma lente personalizada no **AWS Well-Architected Tool (WA Tool)** para um cenário hipotético de implementação do **Amazon DynamoDB**. A lente foi definida em um arquivo JSON, contendo um pilar, uma pergunta, quatro opções de resposta e três condições de risco. Por fim, a lente personalizada foi aplicada na criação de uma carga de trabalho.
 
 ### Structure:
@@ -94,6 +96,10 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 </figure></div><br>
 
 <a name="item01.3"><h4>Tarefa 3: Criar uma carga de trabalho usando a lente personalizada</h4></a>[Back to summary](#item0)
+
+
+
+
 
 
 
