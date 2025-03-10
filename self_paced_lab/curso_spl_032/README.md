@@ -61,6 +61,11 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
+
+
+
+
+
 <a name="item01.2"><h4>Tarefa 2: Crie uma lente personalizada usando o arquivo json concluído</h4></a>[Back to summary](#item0)
 
 
@@ -68,6 +73,8 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
+
+
 
 <a name="item01.3"><h4>Tarefa 3: Criar uma carga de trabalho usando a lente personalizada</h4></a>[Back to summary](#item0)
 
