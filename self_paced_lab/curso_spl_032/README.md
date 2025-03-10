@@ -1,9 +1,9 @@
-# Lab - Troubleshooting connectivity using EC2 Serial Console   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="45">
+# Lab - Deploy Applications on Amazon Elastic Kubernetes Service (EKS)   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_spl_032 (Lab - Troubleshooting connectivity using EC2 Serial Console)   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="25"></a>
+### Course: <a href="./">curso_spl_032 (Lab - Deploy Applications on Amazon Elastic Kubernetes Service (EKS))   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
@@ -34,14 +34,20 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. Lab - Troubleshooting connectivity using EC2 Serial Console<br>
-1.1 <a href="#item01.1">Tarefa 1: Baixe e edite o arquivo de modelo de lente personalizado</a><br>
-1.2 <a href="#item01.2">Tarefa 2: Crie uma lente personalizada usando o arquivo json concluído</a><br>
-1.3 <a href="#item01.3">Tarefa 3: Criar uma carga de trabalho usando a lente personalizada</a><br>
+1. Lab - Deploy Applications on Amazon Elastic Kubernetes Service (EKS)<br>
+1.1 <a href="#item01.1">Tarefa 1: Configurar o ambiente de laboratório</a><br>
+1.2 <a href="#item01.2">Tarefa 2: Criar um cluster Amazon EKS</a><br>
+1.3 <a href="#item01.3">Tarefa 3: Implantar um aplicativo em contêiner de amostra</a><br>
+1.4 <a href="#item01.4">Tarefa 4: Verificar o aplicativo implantado</a><br>
 
 ---
 
 ### Objective:
+O objetivo desse laboratório 
+
+
+
+
 Este laboratório teve como objetivo criar uma lente personalizada no **AWS Well-Architected Tool (WA Tool)** para um cenário hipotético de implementação do **Amazon DynamoDB**. A lente foi definida em um arquivo JSON, contendo um pilar, uma pergunta, quatro opções de resposta e três condições de risco. Por fim, a lente personalizada foi aplicada na criação de uma carga de trabalho.
 
 ### Structure:
@@ -57,7 +63,7 @@ O laboratório do **AWS Skill Builder** tem o foco em executar apenas o que é o
 
 O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de uma identidade federada. O Skill Builder funciona como um provedor de identidade (IdP), autenticando o usuário e vinculando-o a uma role do **AWS IAM** provisionada automaticamente por uma das pilhas do CloudFormation. Essa role concede permissões temporárias e mínimas necessárias para a execução do laboratório, garantindo segurança e controle sobre os recursos utilizados. O laboratório, por padrão, determina a região a ser utilizada e ela não deve ser alterada, somente se o próprio laboratório indicar. As configurações não informadas no laboratório devem ser sempre mantidas como padrão que estão.
 
-<a name="item01.1"><h4>Tarefa 1: Baixe e edite o arquivo de modelo de lente personalizado</h4></a>[Back to summary](#item0)
+<a name="item01.1"><h4>Tarefa 1: Configurar o ambiente de laboratório</h4></a>[Back to summary](#item0)
 
 
 
@@ -66,7 +72,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.2"><h4>Tarefa 2: Crie uma lente personalizada usando o arquivo json concluído</h4></a>[Back to summary](#item0)
+<a name="item01.2"><h4>Tarefa 2: Criar um cluster Amazon EKS</h4></a>[Back to summary](#item0)
 
 
 <div align="Center"><figure>
@@ -76,7 +82,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 
 
-<a name="item01.3"><h4>Tarefa 3: Criar uma carga de trabalho usando a lente personalizada</h4></a>[Back to summary](#item0)
+<a name="item01.3"><h4>Tarefa 3: Implantar um aplicativo em contêiner de amostra</h4></a>[Back to summary](#item0)
 
 
 
@@ -89,3 +95,13 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
+
+
+
+<a name="item01.4"><h4>Tarefa 4: Verificar o aplicativo implantado</h4></a>[Back to summary](#item0)
+
+
+
+
+
+
