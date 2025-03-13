@@ -43,7 +43,7 @@
 ---
 
 ### Objective:
-O objetivo desse laboratório foi desenvolver
+O objetivo desse laboratório foi implanar
 
         
 
