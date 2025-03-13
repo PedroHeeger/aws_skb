@@ -43,12 +43,12 @@
 ---
 
 ### Objective:
-O objetivo desse laboratório 
+O objetivo desse laboratório foi desenvolver
 
         
 
 
-        
+
 
 
 Este laboratório teve como objetivo criar uma lente personalizada no **AWS Well-Architected Tool (WA Tool)** para um cenário hipotético de implementação do **Amazon DynamoDB**. A lente foi definida em um arquivo JSON, contendo um pilar, uma pergunta, quatro opções de resposta e três condições de risco. Por fim, a lente personalizada foi aplicada na criação de uma carga de trabalho.
