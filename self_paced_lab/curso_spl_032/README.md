@@ -11,6 +11,7 @@
 
 ### Theme:
 - Cloud Computing
+- Container
 
 ### Used Tools:
 - Operating System (OS): 
@@ -41,7 +42,6 @@
 - Command Line Interpreter (CLI):
   - AWS Command Line Interface (CLI)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_cli.svg" alt="aws_cli" width="auto" height="25">
   - Bash e Sh   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash_sh" width="auto" height="25">
-  - Docker Client   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="docker" width="auto" height="25">
   - Eksctl   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/eksctl.png" alt="eksctl" width="auto" height="25">
   - Kubectl   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="auto" height="25">
 
@@ -57,7 +57,13 @@
 ---
 
 ### Objective:
-O objetivo desse laboratório foi provisionar um cluster do **Amazon Elastic Kubernetes Service(EKS)** e construir uma aplicação conteinerizada de amostra dentro dele. Esse processo . Um cluster EKS é formado por dois componentes principais: envolveu a configuração do plano de controle, nós de trabalho e rede VPC essenciais para operações do **Kubernetes**. O utilitário de linha de comando **Eksctl** foi utilizado para configurar o cluster. Já o **Kubectl**, ferramenta de linha de comando do **Kubernetes**, foi utilizada para interagir com o cluster para implantar o aplicativo. Por último, o aplicativo implantado no cluster foi visualizado ao ser acessado por meio de uma interface da web.
+O objetivo deste laboratório foi provisionar um cluster no **Amazon Elastic Kubernetes Service (EKS)** e implantar uma aplicação conteinerizada de amostra. A aplicação, um diretório de funcionários, era composta por um frontend, um backend e uma tabela no **Amazon DynamoDB**.
+
+Os arquivos de código da aplicação foram fornecidos pelo laboratório por meio de um bucket do **Amazon S3** e utilizados na criação dos manifestos do **Kubernetes**. Foram desenvolvidos quatro arquivos de manifesto: dois para o frontend e dois para o backend. Em cada caso, um arquivo definia o Service, enquanto o outro configurava um Deployment com duas réplicas, cada uma contendo um único pod.
+
+Para configurar o cluster, foi utilizado o **eksctl**. A interação com o cluster e a implantação dos recursos do **Kubernetes** foram realizadas com o **kubectl**, enquanto o **AWS CLI** foi empregado para criar a tabela no DynamoDB.
+
+Por fim, a aplicação foi acessada via interface web por meio do DNS do Service do load balancer do frontend, e sua funcionalidade foi validada com testes.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -74,7 +80,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Configurar o ambiente de laboratório</h4></a>[Back to summary](#item0)
 
-Na primeira tarefa, o objetivo consistiu em verificar todo o ambiente de trabalho. Para este laboratório foi utilizado o ambiente de desenvolvimento integrado (IDE) **Visual Studio Code (VS Code)** instalado na versão para servidor, **Code-Server**, em uma instância do **Amazon Elastic Compute Cloud (EC2)**. Na frente dessa instância, estava uma distribuição do **Amazon CloudFront** que apontava exatamente para o **Code-Server**. O parâmetro `LabWorkspaceURL` fornecido nas instruções do lab, continha um link direto para distribuição do CloudFront, que consequentemente apontava para a IDE na instância EC2, já indicando no path da URL qual pasta da instância o **Code-Server** devia abrir e utilizar como local de trabalho. Entretanto, antes de conseguir acessar o **Code-Server**, uma senha era exigida para autenticação. Essa senha era informada no parâmetro `LabWorkspacePassword` nas instruções do laboratório. Após obter acesso a IDE, caso notificações aparecessem, era só clicar no ícone de notificações no canto inferior direito (ícone de sino) para limpar as notificações. O painel inferior do **Code-Server** incluía as respectivas cinco guias: PROBLEMAS, SAÍDA, CONSOLE DE DEBUG, TERMINAL e PORTOS. Neste laboratório foi utilizado o terminal com o **Bash**. A imagem 01 comprova o acesso ao **Code-Server** por meio da distribuição do **Amazon CloudFront**.
+Na primeira tarefa, o objetivo consistiu em verificar todo o ambiente de trabalho. Para este laboratório foi utilizado o ambiente de desenvolvimento integrado (IDE) **Visual Studio Code (VS Code)** instalado na versão para servidor, **Code-Server**, em uma instância do **Amazon Elastic Compute Cloud (EC2)**. Na frente dessa instância, estava uma distribuição do **Amazon CloudFront** que apontava exatamente para o **Code-Server**. O parâmetro `LabWorkspaceURL` fornecido nas instruções do lab, continha um link direto (`https://dr0fjnzt1fevv.cloudfront.net/?folder=/home/ec2-user/environment`) para distribuição do CloudFront, que consequentemente apontava para a IDE na instância EC2, já indicando no path da URL qual pasta da instância o **Code-Server** devia abrir e utilizar como local de trabalho. Entretanto, antes de conseguir acessar o **Code-Server**, uma senha era exigida para autenticação. Essa senha era informada no parâmetro `LabWorkspacePassword` nas instruções do laboratório (`zcsojkCdDM1C`). Após obter acesso a IDE, caso notificações aparecessem, era só clicar no ícone de notificações no canto inferior direito (ícone de sino) para limpar as notificações. O painel inferior do **Code-Server** incluía as respectivas cinco guias: PROBLEMAS, SAÍDA, CONSOLE DE DEBUG, TERMINAL e PORTOS. Neste laboratório foi utilizado o terminal com o **Bash**. A imagem 01 comprova o acesso ao **Code-Server** por meio da distribuição do **Amazon CloudFront**.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
@@ -90,9 +96,9 @@ No terminal do **Code-Server** foi verificado se as ferramentas de linha de coma
   - Essa CLI é similar a **AWS CLI** para construção e configuração da infraestrutura na **AWS**, mas voltada apenas ao **Amazon EKS**.
 - **kubectl**
   - Gerencia aplicativos e recursos dentro de um cluster.
-  - Lida com implantações, pods e serviços.
+  - Lida com deployments, pods e serviços.
   - Monitora a integridade e o desempenho do cluster.
-  - Executa comandos em clusters do Kubernetes.
+  - Executa comandos em clusters do **Kubernetes**.
   - Essa é uma CLI para gerenciamento dos recursos **Kubernetes** no cluster que pode ser utilizada fora da cloud, se conectando ao cluster.
 - **AWS Command Line Interface (CLI)**
   - CLI própria da **AWS**.
@@ -105,7 +111,7 @@ Para verificar a instalação da **AWS CLI** foi utilizado o comando `aws --vers
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
-A última etapa desta tarefa foi verificar as credenciais pré-configuradas da **AWS** e configurar as variáveis ​​de ambiente necessárias para trabalhar com o **Amazon EKS**. Com o comando **AWS CLI** `aws sts get-caller-identity` as credenciais configuradas eram exibidas, ou seja, as informações do usuário que interagia com a **AWS** pela CLI. Com os comandos abaixo foram configuradas as variáveis de ambiente `AWS_REGION` e `ACCOUNT_ID`.
+A última etapa desta tarefa foi verificar as credenciais pré-configuradas da **AWS** e configurar as variáveis ​​de ambiente necessárias para trabalhar com o **Amazon EKS**. Com o comando **AWS CLI** `aws sts get-caller-identity` as credenciais configuradas eram exibidas, ou seja, as informações da entidade do IAM que interagia com a **AWS** pela CLI. Com os comandos abaixo foram configuradas as variáveis de ambiente `AWS_REGION` e `ACCOUNT_ID`.
 
 ```bash
 TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
@@ -136,7 +142,7 @@ Ao criar um cluster EKS com o **eksctl**, o utilitário criava também:
 O comando a seguir foi o utilizado para provisionamento do cluster **Kubernetes** no **Amazon EKS** e cada parâmetro foi explicado logo abaixo:
 - Configuração do cluster:
   - `eksctl create cluster`: Inicia o processo de criação do cluster.
-  - `–name eks-lab-cluster`: Atribui um identificador exclusivo ao seu cluster.
+  - `–name eks-lab-cluster`: Atribui um identificador exclusivo ao cluster.
   - `–version 1.32`: Define a versão do **Kubernetes** para o cluster.
   - `–region ${AWS_REGION}`: Determina a região onde a **AWS** cria os recursos de cluster.
 - Configurações do grupo de nós:
@@ -152,14 +158,14 @@ O comando a seguir foi o utilizado para provisionamento do cluster **Kubernetes*
 eksctl create cluster --name eks-lab-cluster --nodegroup-name worknodes-1 --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 3 --managed --version 1.32 --region ${AWS_REGION}
 ```
 
-A imagem 04 evidencia o cluster **Kubernetes** provisionado no **Amazon EKS**. A criação de um cluster EKS requeria aproximadamente 10 à 15 minutos para configurar todos os componentes de infraestrutura. Para otimizar o tempo de laboratório, já existia um cluster pré-configurado para o uso. Portanto, o processo de criação do cluster foi cancelado com o atalho `Ctrl+C` e o cluster pré-construído pelo laboratório foi utilizado.
+A imagem 04 evidencia o cluster **Kubernetes** em provisionamento no **Amazon EKS**. A criação de um cluster EKS requeria aproximadamente 10 à 15 minutos para configurar todos os componentes de infraestrutura. Para otimizar o tempo de laboratório, já existia um cluster pré-configurado para o uso. Portanto, o processo de criação do cluster foi cancelado com o atalho `Ctrl+C` e o cluster pré-construído pelo laboratório foi utilizado.
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
 
-Quando a criação de um cluster EKS é concluída, o **eksctl** salva um arquivo de configuração em `~/.kube/config`. Esse arquivo, conhecido como `kubeconfig`, contém credenciais de autenticação de cluster e detalhes de conexão. Para este laboratório, foi utilizado um arquivo kubeconfig pré-configurado salvo no ambiente. Para visualizar o conteúdo do arquivo `kubeconfig` e examinar as configurações de acesso ao cluster pré-configuradas, foi executado o comando `cat /home/ec2-user/environment/scripts/config`. A imagem 05 exibe todo conteúdo do arquivo de configuração do **Kubernetes**.
+Quando a criação de um cluster EKS é concluída, o **eksctl** salva um arquivo de configuração em `~/.kube/config`. Esse arquivo, conhecido como `kubeconfig`, contém credenciais de autenticação de cluster e detalhes de conexão. Para este laboratório, foi utilizado um arquivo kubeconfig pré-configurado salvo no ambiente. Para visualizar o conteúdo do arquivo [kubeconfig](./resource/kubeconfig.yaml) e examinar as configurações de acesso ao cluster pré-configuradas, foi executado o comando `cat /home/ec2-user/environment/scripts/config`. A imagem 05 exibe todo conteúdo do arquivo de configuração do **Kubernetes**.
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
@@ -182,7 +188,7 @@ O arquivo `kubeconfig` organizava as informações de acesso ao cluster em três
 
 Os campos principais no arquivo são:
 - `apiVersion`: Este campo indica a versão da API do **Kubernetes** na qual o arquivo `kubeconfig` foi escrito.
-- `clusters`: Esta seção contém informações sobre os clusters do **Kubernetes** que o arquivo `kubeconfig` pode ser usado para acessar. Neste caso, há apenas um cluster, dev-cluster.us-west-2.eksctl.io .
+- `clusters`: Esta seção contém informações sobre os clusters do **Kubernetes** que o arquivo `kubeconfig` pode ser usado para acessar. Neste caso, há apenas um cluster, `dev-cluster.us-west-2.eksctl.io`.
 - `certificate-authority-data`: Este campo contém os dados da autoridade de certificação para o cluster, que são usados ​​para verificar o certificado do servidor.
 - `current-context`: Este campo indica o contexto atual, que é o contexto no qual os comandos serão executados por padrão.
 - `users`: Esta seção contém informações sobre os usuários que podem ser usados ​​para autenticar os clusters. Neste caso, há apenas um usuário, `i-0232a90564e2ab7d0@dev-cluster.us-west-2.eksctl.io`.
@@ -214,9 +220,9 @@ Neste caso, a saída mostrava nodegroup `dev-nodes` com uma capacidade desejada 
 </figure></div><br>
 
 Após verificar os recursos de gerenciamento de cluster do **eksctl**, a próxima etapa foi verificar como o **kubectl** se comunicava com os recursos do cluster. Para verificar a conectividade do cluster e visualizar seus principais componentes, foi executado o comando `kubectl cluster-info`, conforme imagem 09. A saída confirma:
-- O plano de controle está operacional.
-- O CoreDNS está em execução (lida com a resolução interna de DNS dentro do cluster).
-- A configuração do **kubectl** pode se comunicar com sucesso com o cluster.
+- O plano de controle estava operacional.
+- O CoreDNS estava em execução (lida com a resolução interna de DNS dentro do cluster).
+- A configuração do **kubectl** podia se comunicar com sucesso com o cluster.
 
 <div align="Center"><figure>
     <img src="./0-aux/img09.png" alt="img09"><br>
@@ -229,7 +235,7 @@ Por fim, foi verificado com o comando `kubectl get nodes` se os nós de trabalho
 - Dois nós de trabalho em status 'Pronto'.
 - Endereço IP interno e nome do host de cada nó.
 - A versão do **Kubernetes** em execução em cada nó.
-- Há quanto tempo cada nó faz parte do cluster.
+- Há quanto tempo cada nó fazia parte do cluster.
 
 <div align="Center"><figure>
     <img src="./0-aux/img10.png" alt="img10"><br>
@@ -246,7 +252,7 @@ Com o cluster EKS provisionado e conectado com o **kubectl**, a tarefa 3 teve co
 O aplicativo usava recursos nativos do **Kubernetes** para implantação e dimensionamento:
 - Implantações separadas para componentes de front-end e back-end.
 - ReplicaSets mantendo dois pods para cada componente.
-- Serviços Kubernetes para conectividade de rede.
+- Serviços **Kubernetes** para conectividade de rede.
 - Acesso externo por meio de serviços de balanceador de carga.
 
 A imagem 11 exibe o diagrama da arquitetura.
@@ -259,23 +265,23 @@ A imagem 11 exibe o diagrama da arquitetura.
 Como seria utilizado uma tabela do DynamoDB, o comando **AWS CLI** `aws dynamodb create-table --table-name Employees --attribute-definitions AttributeName=id,AttributeType=S --key-schema AttributeName=id,KeyType=HASH --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1` executado no terminal do **Code-Server** provisinou a tabela, conforme imagem 12. Abaixo é detalhado cada parâmetro dessa tabela:
 - Nome da tabela:
   - Comando: `aws dynamodb create-table --table-name Funcionários`.
-  - Objetivo: Cria uma nova tabela chamada `Funcionários`.
+  - Objetivo: Criava uma nova tabela chamada `Funcionários`.
 - Definição de Atributo:
   - Comando: `–attribute-definitions AttributeName=id,AttributeType=S`.
-  - Objetivo: Define id como um atributo String para identificação exclusiva de registro.
+  - Objetivo: Definia id como um atributo String para identificação exclusiva de registro.
 - Esquema de Chaves:
   - Comando: `–key-schema AttributeName=id,KeyType=HASH`.
-  - Objetivo: Define id como a chave primária usando o tipo HASH para acesso ideal aos dados.
+  - Objetivo: Definia id como a chave primária usando o tipo HASH para acesso ideal aos dados.
 - Capacidade de transferência:
   - Comando: `–provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1`.
-  - Objetivo: Determina o número máximo de operações de leitura e gravação que a tabela pode manipular por segundo, com uma unidade alocada para cada tipo de operação.
+  - Objetivo: Determinava o número máximo de operações de leitura e gravação que a tabela podia manipular por segundo, com uma unidade alocada para cada tipo de operação.
 
 <div align="Center"><figure>
     <img src="./0-aux/img12.png" alt="img12"><br>
     <figcaption>Imagem 12.</figcaption>
 </figure></div><br>
 
-Após o provisionamento da tabela, o estado atual do cluster **Kubernetes** do EKS foi verificado com o comando `kubectl get deployment,service,pod --all-namespaces`, conforme imagem 13. Observe que já havia vários elementos implantados. Os elementos em um cluster **Kubernetes**, bem como a estrutura de comando e outras observações são apresentadas abaixo:
+Após o provisionamento da tabela, o estado atual do cluster **Kubernetes** do EKS foi verificado com o comando `kubectl get deployment,service,pod --all-namespaces`, conforme imagem 13. Observe que já haviam vários elementos implantados. Entretanto, a maioria deles do namespace `kube-system`, que é um namespace especial do **Kubernetes** usado para armazenar componentes internos do cluster. Além deste, tinha outros dois namespaces: `amazon-guardduty` e `dafault`.  Os elementos de um cluster **Kubernetes**, bem como a estrutura de comando e outras observações são apresentadas abaixo:
 - Tipos de recursos:
   - `Deployments` (Implantações): projetos de aplicativos que definem o estado desejado.
   - `Pods`: unidades individuais de contêineres de execução de computação.
@@ -284,7 +290,7 @@ Após o provisionamento da tabela, o estado atual do cluster **Kubernetes** do E
 - Estrutura de comando:
   - Formato: `kubectl get [TIPO] [NOME] [ESPAÇO DE NOMES]`.
   - Vários tipos de recursos podem ser solicitados simultaneamente.
-  - `–all-namespaces` mostra recursos em todos os limites lógicos.
+  - `–all-namespaces` mostrava recursos em todos os limites lógicos.
 - Observação: na saída, foi visualizados os principais componentes do cluster:
   - Uma implantação de proxy DNS.
   - Serviços de sistema para comunicação de pod.
@@ -301,7 +307,7 @@ O **Kubernetes** utiliza manifestos para definição de recursos que segue um mo
 - O **Kubernetes** trabalha continuamente para manter esse estado desejado.
 - Os recursos são criados a partir dessas definições manifestas.
 
-Para implantar o front-end do aplicativo foi utilizado o comando `FRONTEND_S3=FRONT_END_SOURCE_CODE_URL`, passando o valor do parâmetro `FRONT_END_SOURCE_CODE_URL` das instruções desse lab. Este continha o link onde o arquivo de código da aplicação estava armazenado, que era em um bucket do **Amazon S3**. Em seguida, o arquivo de manifesto `deployment-frontend.yaml` foi elaborado com o comando abaixo. Este arquivo definia como o **Kubernetes** deveria implantar o aplicativo frontend. O manifesto especificava um contêiner que recuperava o código do aplicativo do **Amazon S3**, configurava o ambiente **Python** e executa o aplicativo.
+Para implantar o front-end do aplicativo foi utilizado o comando `FRONTEND_S3=s3://sourcecodebucket-us-east-1-929780252/DirectoryFrontend.zip`, passando o valor do parâmetro `FRONT_END_SOURCE_CODE_URL` das instruções desse lab (`s3://sourcecodebucket-us-east-1-929780252/DirectoryFrontend.zip`). Este continha o link onde o arquivo de código da aplicação estava armazenado, que era em um bucket do **Amazon S3**. Em seguida, o arquivo de manifesto [deployment-frontend.yaml](./resource/deployment-frontend.yaml) foi elaborado com o comando abaixo. Este arquivo definia como o **Kubernetes** deveria implantar o aplicativo frontend. O manifesto especificava um contêiner que recuperava o código do aplicativo do **Amazon S3**, configurava o ambiente **Python** e executa o aplicativo.
 
 ```yaml
 cat <<EOF > ~/environment/deployment-frontend.yaml
@@ -346,29 +352,29 @@ spec:
 EOF
 ```
 
-O manifesto de implantação contém estes campos principais:
+O manifesto de implantação continha estes campos principais:
 - Definição de Recurso:
-  - `apiVersion: apps/v1` e `kind: Deployment`: especifica a versão da API do **Kubernetes** e o tipo de recurso.
-  - `metadados`: define o nome da implantação e os rótulos para identificação.
-  - `spec`: contém a configuração completa de implantação.
+  - `apiVersion: apps/v1` e `kind: Deployment`: Especificava a versão da API do **Kubernetes** e o tipo de recurso.
+  - `metadados`: Definia o nome da implantação e os rótulos para identificação.
+  - `spec`: Continha a configuração completa de implantação.
 - Configuração de implantação:
-  - `replicas: 2`: Mantém dois pods idênticos para o aplicativo.
-  - `selector`: vincula a implantação aos seus pods gerenciados.
-  - `template`: define o padrão de configuração do pod.
+  - `replicas: 2`: Mantinha dois pods idênticos para o aplicativo.
+  - `selector`: Vinculava a implantação aos pods gerenciados.
+  - `template`: Definia o padrão de configuração do pod.
 - Configurações do contêiner:
-  - `containers`: lista os contêineres a serem executados em cada pod.
-  - `imagem: python:3.10-slim`: Especifica a imagem base do contêiner **Python**.
-  - `nome: frontend`: Atribui um nome ao contêiner.
-  - `env`: Configura variáveis ​​de ambiente para:
+  - `containers`: Listava os contêineres a serem executados em cada pod.
+  - `imagem: python:3.10-slim`: Especificava a imagem base do contêiner **Python**.
+  - `nome: frontend`: Atribuía um nome ao contêiner.
+  - `env`: Configurava variáveis ​​de ambiente para:
     - Ponto de extremidade da API de backend.
     - Configurações do aplicativo `Flask`.
-  - comando e argumentos: Defina a sequência de inicialização do contêiner:
+  - Comando e Argumentos: Definia a sequência de inicialização do contêiner:
     - Configuração do aplicativo.
     - Instalação de dependência.
     - Recuperação de código do S3.
     - Lançamento do aplicativo.
 
-Com o comando `kubectl apply -f ~/environment/deployment-frontend.yaml` o manifesto definido era aplicado para implantar o aplicativo de frontend no cluster do **Amazon EKS**. Embora os pods frontend estivessem em execução, eles ainda não estavam acessíveis de fora do cluster. Para habilitar o acesso externo, era precisa criar um serviço **Kubernetes**. Dessa forma, um segundo arquivo de manifesto (`service-frontend.yaml`) foi utilizado.
+Com o comando `kubectl apply -f ~/environment/deployment-frontend.yaml` o manifesto definido era aplicado para implantar o aplicativo de frontend no cluster do **Amazon EKS**. Embora os pods frontend estivessem em execução, eles ainda não estavam acessíveis de fora do cluster. Para habilitar o acesso externo, era precisa criar um serviço **Kubernetes**. Dessa forma, um segundo arquivo de manifesto, [`service-frontend.yaml`](./resource/service-frontend.yaml), foi utilizado.
 
 ```yaml
 cat <<EOF > ~/environment/service-frontend.yaml
@@ -389,20 +395,20 @@ spec:
 EOF
 ```
 
-Este manifesto criava um serviço chamado frontend que atuava como uma interface de rede para o aplicativo:
+Este manifesto criava um serviço chamado `frontend` que atuava como uma interface de rede para o aplicativo:
 - Identificação do serviço:
-  - `apiVersion: v1` e `kind: Service`: define um recurso de serviço do **Kubernetes**.
-  - `metadata.name: frontend`: Nomeia o serviço como 'frontend'.
-  - `metadata.labels`: Marca o serviço para identificação e seleção.
+  - `apiVersion: v1` e `kind: Service`: Especificava a versão da API do **Kubernetes** e definia um recurso de serviço do **Kubernetes**.
+  - `metadata.name: frontend`: Nomeava o serviço como `frontend`.
+  - `metadata.labels`: Marcava o serviço para identificação e seleção.
 - Roteamento de tráfego:
-  - `spec.selector`: direciona o tráfego para pods rotulados como 'app: frontend'.
-  - `spec.ports`: Configura a rede do serviço.
-  - `porta: 80`: O serviço escuta na porta 80.
-  - `targetPort: 80`: Encaminha para a porta 80 nos pods.
+  - `spec.selector`: Direcionava o tráfego para pods rotulados como `app: frontend`.
+  - `spec.ports`: Configurava a rede do serviço.
+  - `porta: 80`: O serviço escutava na porta 80.
+  - `targetPort: 80`: Encaminhava para a porta 80 nos pods.
 - Acessibilidade externa:
-  - `spec.type: LoadBalancer`: Provisiona um balanceador de carga da **AWS** para acesso à Internet.
+  - `spec.type: LoadBalancer`: Provisionava um balanceador de carga da **AWS** para acesso à Internet.
 
-Esta configuração estabeleceu um ponto de extremidade de rede que roteava o tráfego HTTP de entrada para os pods de front-end, tornando o aplicativo acessível de fora do cluster. O comando `kubectl apply -f ~/environment/service-frontend.yaml` foi utilizado para implantar o service. Para verificar a implantação dos pods do deployment e do service, ambos do frontend, foi utilizado o comando `kubectl get deployment,service,pod`, conforme mostrado na imagem 14.
+Esta configuração estabeleceu um ponto de extremidade de rede que roteava o tráfego HTTP de entrada para os pods de frontend, tornando o aplicativo acessível de fora do cluster. O comando `kubectl apply -f ~/environment/service-frontend.yaml` foi utilizado para implantar o service. Para verificar a implantação dos pods do deployment e do service, ambos do frontend, foi utilizado o comando `kubectl get deployment,service,pod`, conforme mostrado na imagem 14.
 
 <div align="Center"><figure>
     <img src="./0-aux/img14.png" alt="img14"><br>
@@ -414,19 +420,148 @@ Esta saída confirmava:
 -  O serviço frontend era exposto por meio de um LoadBalancer.
 -  O LoadBalancer recebeu um IP externo (nome DNS).
 
-Se o status não for `Em execução`, verifique se foi digitado os comandos anteriores corretamente e repita-os, se necessário. Após isso, o IP externo do load balancer do service foi copiado e utilizado em uma nova aba do navegador da máquina física **Windows** para acessar a aplicação web. Certifique-se de prefixar o URL do LoadBalancer com `http://`, pois a porta mapeada era apenas a `80`, onde a aplicação rodava. O URL do LoadBalancer deve ter este formato `aa342c97ec5f6499280c38cec2c5a4b0-111111111111.us-west-2.elb.amazonaws.com`. Se a página da web não carregar, o balanceador de carga de backend poderia não estar totalmente online ainda. Neste caso, era preciso aguardar alguns minutos e atualizar a página. Assim que o aplicativo carregou, uma mensagem de erro de API no frontend do aplicativo foi exibida, conforme imagem 15. Esse erro era esperado neste estágio, pois o aplicativo de backend ainda não tinha sido implantado ou não tinha sido estabelecido a conexão com o banco de dados.
+Se o status não for `Em execução`, verifique se foi digitado os comandos anteriores corretamente e repita-os, se necessário. Após isso, o IP externo do load balancer do service foi copiado e utilizado em uma nova aba do navegador da máquina física **Windows** para acessar a aplicação web. Certifique-se de prefixar o URL do LoadBalancer com `http://`, pois a porta mapeada era apenas a `80`, onde a aplicação rodava. O URL do LoadBalancer deve ter este formato `aa342c97ec5f6499280c38cec2c5a4b0-111111111111.us-west-2.elb.amazonaws.com`. Se a página da web não carregasse, o balanceador de carga de backend poderia não estar totalmente online ainda. Neste caso, era preciso aguardar alguns minutos e atualizar a página. Assim que o aplicativo carregou, uma mensagem de erro de API no frontend do aplicativo foi exibida, conforme imagem 15. Esse erro era esperado neste estágio, pois o aplicativo de backend ainda não tinha sido implantado ou não tinha sido estabelecido a conexão com o banco de dados.
 
 <div align="Center"><figure>
     <img src="./0-aux/img15.png" alt="img15"><br>
     <figcaption>Imagem 15.</figcaption>
 </figure></div><br>
 
+O processo de implantação do backend da aplicação foi similar ao de frontend. Primeiro, uma variável foi criada com a URL do bucket do S3 onde estava armazenado o arquivo de código (`BACKEND_S3=s3://sourcecodebucket-us-east-1-929780252/DirectoryBackend.zip`). O parâmetro `BACK_END_SOURCE_CODE_URL` nas instruções do laboratório fornecia essa URL (`s3://sourcecodebucket-us-east-1-929780252/DirectoryBackend.zip`). Em seguida, o arquivo de manifesto [deployment-backend.yaml](./resource/deployment-backend.yaml) abaixo foi construído direto pelo terminal. Neste arquivo, era passado a variável contendo o caminho para o arquivo de código no bucket do **Amazon S3**.
 
+```bash
+cat <<EOF > ~/environment/deployment-backend.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backend
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://+:80"
+        command: ["/bin/sh","-c"]
+        args: 
+         - mkdir /app ; 
+           cd /app ;
+           apt update ;
+           apt install wget -y curl unzip ;
+           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ;
+           unzip awscliv2.zip ;
+           ./aws/install ;
+           aws s3 cp $BACKEND_S3 . ;
+           unzip DirectoryBackend.zip ;
+           cd DirectoryBackend/ ;
+           dotnet run
+        name: backend
+        resources: {}
+EOF
+```
+
+Este manifesto criava uma implantação com duas réplicas, cada uma executando um aplicativo **.NET** em um contêiner. Os principais campos são:
+- Definição de Recurso:
+  - `apiVersion: apps/v1` e `kind: Deployment`: Especificava a versão da API do **Kubernetes** e o tipo de recurso.
+  - `metadados`: Definia o nome da implantação e os rótulos para identificação.
+  - `spec`: Continha a configuração completa de implantação.
+- Configuração de implantação:
+  - `replicas: 2`: Mantinha dois pods idênticos para o aplicativo.
+  - `selector`: Vinculava a implantação aos seus pods gerenciados.
+  - `template`: Definia o padrão de configuração do pod.
+- Configurações do contêiner:
+  - `containers`: Listava os contêineres a serem executados em cada pod.
+  - `imagem: mcr.microsoft.com/dotnet/sdk:6.0`: Especificava a imagem base do contêiner do **.NET SDK**.
+  - `nome: backend`: Atribuía um nome ao contêiner.
+  - `env`: Configurava variáveis ​​de ambiente para ASP.NET Core.
+  - `comando e argumentos`: Definia a sequência de inicialização do contêiner:
+    - Configuração do aplicativo.
+    - Instalação de dependência.
+    - Recuperação de código do S3.
+    - Lançamento do aplicativo.
+
+Embora o backend não tivesse uma interface voltada para o usuário, ele requeria um serviço para facilitar a comunicação com o frontend e o banco de dados **Amazon DynamoDB**. Portanto, o manifesto do service de backend [service-backend.yaml](./resource/service-backend.yaml) foi construído com o comando abaixo:
+
+```bash
+cat <<EOF > service-backend.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+   -  protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP
+EOF
+```
+
+Este manifesto implantava um serviço chamado `backend` que facilitava a comunicação interna, criando um ponto de extremidade interno para comunicação entre pods, permitindo que o frontend interagisse com o backend. Principais componentes:
+- Identificação do serviço:
+  - `apiVersion: v1` e `kind: Service`: Especificava a versão da API do **Kubernetes** e definia um recurso de serviço.
+  - `metadata.name: backend`: Nomeava o serviço como `backend`.
+- Roteamento de tráfego:
+  - `spec.selector`: Direcionava o tráfego para pods rotulados como `app: backend`.
+  - `spec.ports`: Configurava a rede do serviço.
+  - `porta: 80`: O serviço escutava na porta 80.
+  - `targetPort: 80`: Encaminhava para a porta 80 nos pods.
+Acessibilidade interna
+  - `spec.type: ClusterIP`: Tornava o serviço acessível apenas internamente no cluster.
+
+Ao executar o comando `kubectl apply -f service-backend.yaml,deployment-backend.yaml` os dois manifestos de backend, tanto o service como deployement, foram implantados no cluster **Kubernetes** do **Amazon EKS**. Com o comando `kubectl get all` todos os elementos desse cluster eram listados, conforme exibido na imagem 16. Note que o namespace utilizado é o namespace `default`, ou seja, apenas os elementos desse namespace eram mostrados. Caso fosse necessário visualizar os elementos em todos os namespaces, era só adicionar o parâmetro `--all namespaces`.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img16.png" alt="img16"><br>
+    <figcaption>Imagem 16.</figcaption>
+</figure></div><br>
+
+O output do comando confirmava:
+  - Tanto o frontend quanto o backend tinham dois pods em execução.
+  - O serviço frontend era exposto por meio de um LoadBalancer.
+  - O serviço de backend era acessível internamente (ClusterIP).
+  - Todos os deployments e replicasets estavam configuradas corretamente. Para que fique claro o fluxo dos elementos do **Kubernetes**, um deployment com duas réplicas, significa que ele tem dois replicasets, e em cada replicaset existe um pod. Dessa forma, se existe dois replicasets, tanto para o front como para o backend, existem 2 pods em cada.
 
 <a name="item01.4"><h4>Tarefa 4: Verificar o aplicativo implantado</h4></a>[Back to summary](#item0)
 
+A quarta e última tarefa consistiu em verificar se o aplicativo estava acessível e funcionando corretamente. Para acessar o aplicativo pelo navegador da web da máquina física **Windows**, foi utilizado o IP Externo (DNS) do service de frontend, que era do tipo load balancer, ou seja, esse service fazia o balanceamento de cargas entre os dois pods do frontend. Com o comando `kubectl get service frontend --output wide` foi obtido o DNS do load balancer do frontend. A imagem 17 mostra o resultado desse comando. Perceba que ao incluir o sinalizador `–output wide` fazia com que o **kubectl** fornecesse informações adicionais sobre o serviço. Isso poderia ser útil quando precisasse de um entendimento mais abrangente da configuração e do status do serviço.
 
+<div align="Center"><figure>
+    <img src="./0-aux/img17.png" alt="img17"><br>
+    <figcaption>Imagem 17.</figcaption>
+</figure></div><br>
 
+Ainda faltava conectar os pods de backend, onde a aplicação de backend rodava nos containers, à tabela do **Amazon DynamoDB**. Dessa forma, o comando `kubectl set serviceaccount deployment backend dynamo-sa` foi executado para permitir que o backend interagisse com o **Amazon DynamoDB**. As contas de serviço do **Kubernetes** fornecem identidades para processos de pod. Ao mapear uma conta de serviço para uma função do **AWS IAM**, é concedido aos pods acesso aos serviços da **AWS**. O comando `kubectl set [RESOURCE/IMAGE/SERVICEACCOUNT] [NAME]` permite que sejam modificados recursos existentes no cluster, incluindo atribuições de contas de serviço.
 
+A imagem 18 comprova o acesso ao frontend do aplicativo através da URL do load balancer, utilizando o protocolo HTTP, já que a porta onde a aplicação rodava era a `80`. A aplicação exibia a homepage do diretório de funcionários, que, inicialmente, era um diretório vazio, pois não havia nenhum dado no banco de dados ainda. Observe que no final da página, era mostrado o ID do pod de frontend conectado e o ID do pod de backend que o service de frontend estava se conectando naquele momento. Se a página fosse atualizada, os outros pod poderia assumir essa responsabilidade.
 
+<div align="Center"><figure>
+    <img src="./0-aux/img18.png" alt="img18"><br>
+    <figcaption>Imagem 18.</figcaption>
+</figure></div><br>
 
+Para finalizar o lab, foi verificado se os componentes do aplicativo estavam funcionando corretamente ao adicionar um novo registro de funcionário ao diretório. Este processo testava as interações de frontend, backend e banco de dados. No frontend da aplicação aberto no navegador foi clicado em `Add` para ir para a página de `Adicionar/Editar`. No formulário, os seguintes itens foram preenchidos:
+- `Nome Completo`: `John Doe`.
+- `Localização`: `San Francisco`.
+- `Cargo`: `Architect`.
+- Foi marcada a caixa de seleção ao lado de `Linux User` (Usuário Linux).
+- A página foi rolada para baixo e foi escolhido `Salvar`.
+
+Ao salvar o usuário, a requisição era enviada pelo seguinte fluxo: service frontend -> pod frontend -> service backend -> pod backend -> DynamoDB. O aplicativo exibiu uma mensagem confirmando que o usuário foi salvo e o usuário cadastrado agora aparecia no diretório de funcionários, conforme evidenciado na imagem 19.
+
+<div align="Center"><figure>
+    <img src="./0-aux/img19.png" alt="img19"><br>
+    <figcaption>Imagem 19.</figcaption>
+</figure></div><br>

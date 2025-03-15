@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: backend
+  name: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - image: mcr.microsoft.com/dotnet/sdk:6.0
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://+:80"
+        command: ["/bin/sh","-c"]
+        args: 
+         - mkdir /app ; 
+           cd /app ;
+           apt update ;
+           apt install wget -y curl unzip ;
+           curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ;
+           unzip awscliv2.zip ;
+           ./aws/install ;
+           aws s3 cp $BACKEND_S3 . ;
+           unzip DirectoryBackend.zip ;
+           cd DirectoryBackend/ ;
+           dotnet run
+        name: backend
+        resources: {}
