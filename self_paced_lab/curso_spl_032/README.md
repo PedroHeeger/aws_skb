@@ -48,7 +48,7 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. Lab - Deploy Applications on Amazon Elastic Kubernetes Service(EKS)<br>. Um cluster EKS é formado por dois componentes principais: 
+1. Lab - Deploy Applications on Amazon Elastic Kubernetes Service(EKS)<br>
 1.1 <a href="#item01.1">Tarefa 1: Configurar o ambiente de laboratório</a><br>
 1.2 <a href="#item01.2">Tarefa 2: Criar um cluster Amazon EKS</a><br>
 1.3 <a href="#item01.3">Tarefa 3: Implantar um aplicativo em contêiner de amostra</a><br>
