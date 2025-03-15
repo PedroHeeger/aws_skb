@@ -29,6 +29,7 @@
 - Cluster Management Software:
   - Kubernetes   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="auto" height="25">
 - Language:
+  - C Sharp (C#)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/c_sharp.png" alt="c_sharp" width="auto" height="25">
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
   - Python   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="python" width="auto" height="25">
@@ -44,6 +45,10 @@
   - Bash e Sh   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="bash_sh" width="auto" height="25">
   - Eksctl   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/eksctl.png" alt="eksctl" width="auto" height="25">
   - Kubectl   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="kubernetes" width="auto" height="25">
+- Frameworks:
+  - ASP.NET   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/aspdotnet.png" alt="aspdotnet" width="auto" height="25">
+  - Flask   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="flask" width="auto" height="25">
+  - Microsoft dotNet (.NET)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/microsoft_dotnet.png" alt="microsoft_dotnet" width="auto" height="25">
 
 ---
 
