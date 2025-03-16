@@ -1,6 +1,8 @@
 # Training Category: <a href="./self_paced_lab">self_paced_lab</a>
 
-### AWS Skill Builder <a href="../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
+### AWS <a href="../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
+
+Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram separadas por áreas da **AWS** com base no principal serviço utilizado na atividade.
 
 ### Activities:
 <details><summary>Analytics</summary>
@@ -9,6 +11,8 @@
         <li>curso_spl_010: <a href="./curso_spl_010/">Lab - Introduction to Amazon Redshift   <img src="./curso_spl_010/0-aux/logo_course.png" alt="curso_spl_010" width="auto" height="25"></a></li>
         <li>curso_spl_011: <a href="./curso_spl_011/">Lab - Exploring the Generative Business Intelligence Features in Amazon QuickSight   <img src="./curso_spl_011/0-aux/logo_course.png" alt="curso_spl_011" width="auto" height="25"></a></li>
         <li>curso_spl_025: <a href="./curso_spl_025/">Lab - Building BI Dashboards with Amazon QuickSight   <img src="./curso_spl_025/0-aux/logo_course.png" alt="curso_spl_026" width="auto" height="25"></a></li>
+        <li>curso_spl_031: <a href="./curso_spl_031/">Lab - A Day in the Life of a Data Engineer   <img src="./curso_spl_031/0-aux/logo_course.png" alt="curso_spl_031" width="auto" height="25"></a></li>
+        <li>curso_spl_033: <a href="./curso_spl_033/">Lab - Stream Real-Time Data with Amazon Kinesis   <img src="./curso_spl_033/0-aux/logo_course.png" alt="curso_spl_033" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>AR e VR</summary>
@@ -34,6 +38,7 @@
         <li>curso_spl_026: <a href="./curso_spl_026/">Lab - Integrating Amazon DynamoDB   <img src="./curso_spl_026/0-aux/logo_course.png" alt="curso_spl_026" width="auto" height="25"></a></li>
         <li>curso_spl_027: <a href="./curso_spl_027/">Lab - Introduction to Amazon Relational Database Service (RDS) (Linux)   <img src="./curso_spl_027/0-aux/logo_course.png" alt="curso_spl_027" width="auto" height="25"></a></li>
         <li>curso_spl_028: <a href="./curso_spl_028/">Lab - Introduction to Amazon Relational Database Service (RDS) (Windows)   <img src="./curso_spl_028/0-aux/logo_course.png" alt="curso_spl_028" width="auto" height="25"></a></li>
+        <li>curso_spl_034: <a href="./curso_spl_034/">Lab - Manage NoSQL Databases with Amazon DocumentDB   <img src="./curso_spl_034/0-aux/logo_course.png" alt="curso_spl_034" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Blockchain</summary>
@@ -45,6 +50,7 @@
         <li>curso_spl_001: <a href="./curso_spl_001/">Lab - Introduction to Amazon EC2 Auto Scaling   <img src="./curso_spl_001/0-aux/logo_course.png" alt="curso_spl_001" width="auto" height="25"></a></li>
         <li>curso_spl_002: <a href="./curso_spl_002/">Lab - Configuring Internet Access from Lambda in a VPC   <img src="./curso_spl_002/0-aux/logo_course.png" alt="curso_spl_002" width="auto" height="25"></a></li>
         <li>curso_spl_019: <a href="./curso_spl_019/">Lab - Introduction to Amazon EC2   <img src="./curso_spl_019/0-aux/logo_course.png" alt="curso_spl_019" width="auto" height="25"></a></li>
+        <li>curso_spl_035: <a href="./curso_spl_035/">Lab - Troubleshooting connectivity using EC2 Serial Console   <img src="./curso_spl_035/0-aux/logo_course.png" alt="curso_spl_035" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Computação de Usuário Final</summary>
@@ -54,6 +60,7 @@
 <details><summary>Contêineres</summary>
     <ul>
         <li>curso_spl_016: <a href="./curso_spl_016/">Lab - Working with Amazon Elastic Container Service   <img src="./curso_spl_016/0-aux/logo_course.png" alt="curso_spl_016" width="auto" height="25"></a></li>
+        <li>curso_spl_032: <a href="./curso_spl_032/">Lab - Deploy Applications on Amazon Elastic Kubernetes Service(EKS)   <img src="./curso_spl_032/0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Ferramentas do Desenvolvedor</summary>

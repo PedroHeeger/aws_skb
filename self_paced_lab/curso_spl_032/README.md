@@ -1,4 +1,4 @@
-# Lab - Deploy Applications on Amazon Elastic Kubernetes Service(EKS)   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="45">. Um cluster EKS é formado por dois componentes principais: 
+# Lab - Deploy Applications on Amazon Elastic Kubernetes Service(EKS)   <img src="./0-aux/logo_course.png" alt="curso_spl_032" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
