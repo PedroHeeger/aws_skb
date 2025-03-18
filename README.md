@@ -1,8 +1,8 @@
-# AWS  ![AWS Skill Builder](https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png)
+# Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 
 Este repositório é dedicado ao aprendizado da computação em nuvem na **AWS** e inclui atividades e cursos realizados em diversas plataformas, incluindo o **AWS Education Program**. Além disso, disponibiliza materiais de estudo para certificações, como uma planilha com mais de 600 serviços da **AWS**, diagramas de arquitetura e scripts para implantação de infraestrutura na **AWS** utilizando diferentes tecnologias, como **Windows PowerShell** e **Bash** com **AWS CLI**, **Python** com **AWS SDK (Boto3)**, **Terraform** e **AWS CloudFormation** para infraestrutura como código.
 
-## AWS Skill Builder  ![AWS Skill Builder](https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png)
+## AWS Skill Builder  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25">
 
 A principal plataforma utilizada é o **AWS Skill Builder**, que serve de referência para a organização deste repositório. No **Skill Builder**, as atividades são classificadas em oito categorias de treinamento, estrutura que também foi adotada aqui. As atividades dentro de cada categoria foram organizadas nas áreas da **AWS** com base no principal serviço utilizado.
 
@@ -17,7 +17,7 @@ A principal plataforma utilizada é o **AWS Skill Builder**, que serve de refer�
 - [self_paced_lab](./self_paced_lab)
 - [study_material](./study_material)
 
-## AWS Educate  ![AWS Educate](https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_educate.jpg)
+## AWS Educate   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_educate.jpg" alt="aws_educate" width="auto" height="25">
 
 O **AWS Educate** é outra plataforma utilizada para aprendizado em nuvem, oferecendo cursos introdutórios e laboratórios práticos para estudantes e profissionais em transição de carreira. Todos os conteúdos estudados nesta plataforma foram armazenados na pasta [aws_educate](./aws_educate/).
 
