@@ -147,7 +147,7 @@ gpgcheck=1
 enabled=1" | sudo tee /etc/yum.repos.d/mongodb-shell.repo
 ```
 
-A imagem 06 comprava que a conexão com o banco de dados do DocumentDB foi estabelecida. 
+A imagem 06 comprova que a conexão com o banco de dados do DocumentDB foi estabelecida. 
 
 <div align="Center"><figure>
     <img src="./0-aux/img06.png" alt="img06"><br>
