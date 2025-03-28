@@ -46,7 +46,7 @@
 
 ### Objective:
 
-Este laboratório teve como objetivo 
+Este laboratório teve como objetivo implantar
 
 
 
