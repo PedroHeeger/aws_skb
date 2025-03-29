@@ -46,8 +46,8 @@
 
 ### Objective:
 
-Este laboratório teve como objetivo implantar
-
+Este laboratório teve como objetivo implantar **Amazon Neptune**
+  
 
 
 O objetivo deste laboratório foi criar um workgroup no **Amazon Athena** para consultar e analisar dados de vendas armazenados no **Amazon Simple Storage Service (S3)**. O banco de dados utilizado foi provisionado no *AWS Glue Data Catalog*. As tabelas desse banco foram criadas de duas formas: manualmente, através do Athena, e automaticamente, utilizando um *crawler* do **AWS Glue**. Os esquemas dessas tabelas foram comparados para avaliar a semelhança entre ambos os métodos. A análise dos dados foi realizada no editor de consultas do Athena, por meio da execução de consultas SQL. Por fim, alguns recursos do editor de consultas foram explorados para entender como ele processava as consultas e como as consultas podiam ser salvas.
