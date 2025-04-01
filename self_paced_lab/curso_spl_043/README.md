@@ -66,7 +66,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Criar um cluster do Amazon MemoryDB</h4></a>[Back to summary](#item0)
 
-Na primeira tarefa deste laboratório foi configurado um cluster do **Amazon MemoryDB**
+Na primeira tarefa deste laboratório foi configurado um cluster do **Amazon MemoryDB** para atender
 
 
 <div align="Center"><figure>
