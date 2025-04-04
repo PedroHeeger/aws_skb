@@ -46,7 +46,6 @@
 1.2 <a href="#item01.2">Tarefa 2: Configurar e conectar ao seu banco de dados MySQL de origem</a><br>
 1.3 <a href="#item01.3">Tarefa 3: Use o MySQL Workbench para conectar-se à sua instância do RDS</a><br>
 1.4 <a href="#item01.4">Tarefa 4: migre seu banco de dados MySQL de origem para sua instância Aurora usando o AWS Database Migration Service</a><br>
-1.5 <a href="#item01.5">Tarefa 5: Configurar o cluster para alta disponibilidade</a><br>
 
 ---
 
