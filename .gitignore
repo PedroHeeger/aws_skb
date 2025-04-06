@@ -6,7 +6,8 @@ digital_course_with_lab
 exam_preparation
 game_based_learning
 
-study_material/*
+study_material/architecture_diagram
+study_material/aws_scripts_model
 
 self_paced_lab/curso_spl_1000
 zoutros/*
