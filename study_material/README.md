@@ -1,4 +1,4 @@
-# Study Material <a href="./study_material">study_material</a>
+# Study Material <a href="../study_material/">study_material</a>
 
 ### Amazon Web Services (AWS) <a href="../">aws_skb   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
 

@@ -1,7 +1,7 @@
 # AWS Elementos <a href="./aws_elementos.md">aws_elementos.md</a>
 
 ### Amazon Web Services (AWS) <a href="../">aws_skb   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
-### Study Material: <a href="./study_material">study_material</a>
+### Study Material: <a href="../study_material/">study_material</a>
 
 ---
 
@@ -9,12 +9,12 @@ A nuvem AWS é composta por diversos serviços e recursos com os quais interagim
 
 Este material reúne explicações sobre recursos de apoio e elementos complementares que, embora não integrem diretamente os serviços em nuvem, são fundamentais para orientar, capacitar e apoiar profissionais no uso eficiente da AWS.
 
-Os elementos aqui apresentados foram organizados em cinco grupos, com base em seus respectivos propósitos. Além disso, foi estruturada uma hierarquia que considera o contexto e a disposição desses elementos no site oficial da AWS, com o objetivo de facilitar a compreensão. A quinta categoria 
+Os elementos aqui apresentados foram organizados em quatro grupos, com base em seus respectivos propósitos. Além disso, foi estruturada uma hierarquia que considera o contexto e a disposição desses elementos no site oficial da AWS, com o objetivo de facilitar a compreensão.
 
 <details><summary>Documentação e Referência</summary>
   <ul>
     <li><a href="https://aws.amazon.com/pt/aup/"><strong>AWS Acceptable Use Policy (AUP)</strong></a>: É um conjunto de diretrizes que define o uso aceitável dos serviços da AWS, proibindo atividades ilegais, prejudiciais ou disruptivas. Ela busca proteger a integridade da plataforma, garantindo que os usuários cumpram as leis e padrões de segurança.</li>
-    <li><details><summary><a href="https://docs.aws.amazon.com/"><strong>AWS Documentation</strong></a>: É uma coleção abrangente de guias, tutoriais, artigos e referências técnicas fornecida pela <strong>Amazon Web Services (AWS)</strong>, projetada para ajudar desenvolvedores e administradores a entender e utilizar os serviços da AWS. Ela oferece recursos detalhados sobre como configurar, gerenciar e otimizar as soluções na plataforma.</summary>
+    <li><details><summary><a href="https://docs.aws.amazon.com/"><strong>AWS Documentation</strong></a>: É uma coleção abrangente de guias, tutoriais, artigos e referências técnicas fornecida pela Amazon Web Services (AWS), projetada para ajudar desenvolvedores e administradores a entender e utilizar os serviços da AWS. Ela oferece recursos detalhados sobre como configurar, gerenciar e otimizar as soluções na plataforma.</summary>
       <ul>
         <li><a href="https://docs.aws.amazon.com/glossary/latest/reference/glos-chap.html"><strong>AWS Glossary</strong></a>: É uma coleção de definições e explicações dos termos técnicos e conceitos utilizados na AWS, fornecendo uma referência para entender a terminologia e os serviços da plataforma. Ele serve como uma fonte útil para esclarecer o significado de termos usados em documentação, treinamentos e implementações na AWS.</li>
       </ul></details>
@@ -117,6 +117,7 @@ Os elementos aqui apresentados foram organizados em cinco grupos, com base em se
                     <li><a href="https://www.credly.com/users/sign_up">Credly</a>: Plataforma digital usada pela AWS para emissão e gerenciamento das badges. Permite que usuários compartilhem suas conquistas profissionais em redes sociais.</li>
                 </ul></details>
             </li>
+            <li><a href="https://profile.aws.amazon.com/#/profile/details">AWS Builder ID</a>: É uma identidade digital unificada que permite aos desenvolvedores e profissionais de TI acessar diversos recursos, programas e benefícios oferecidos pela AWS. Ele facilita o gerenciamento de credenciais e o acesso a conteúdos educativos, como treinamentos, certificações e recursos de suporte.</li>
             <li><a href="https://www.aws.training/Certification/">AWS Certification</a>: É o programa oficial de certificações da AWS que valida conhecimentos e habilidades técnicas em diferentes áreas da nuvem. Oferece exames em níveis Foundational, Associate, Professional e Specialty.</li>
             <li><a href="https://www.aws.training/">AWS Classroom Training</a>: Oferece cursos presenciais ou virtuais ministrados por instrutores especializados, proporcionando aprendizado prático e interativo sobre soluções da AWS.</li>
             <li><a href="https://aws.amazon.com/pt/training/aws-cloud-institute/?nc2=sb_aci">AWS Cloud Institute</a>: Programa de treinamento virtual da AWS que prepara pessoas, mesmo sem experiência técnica, para atuarem como desenvolvedores em nuvem. Inclui cursos, laboratórios práticos e preparação para certificações.</li>
@@ -143,21 +144,21 @@ Os elementos aqui apresentados foram organizados em cinco grupos, com base em se
                 <ul>
                     <li><strong>Training Category</strong>
                         <ul>
-                            <li><b>AWS Digital Training: É uma coleção de cursos digitais gratuitos e sob demanda oferecidos pela AWS para desenvolver habilidades em computação em nuvem. Esses treinamentos fazem parte do AWS Skill Builder e abrangem desde conceitos básicos até tópicos avançados.</b>
+                            <li><b>AWS Digital Training</b>: É uma coleção de cursos digitais gratuitos e sob demanda oferecidos pela AWS para desenvolver habilidades em computação em nuvem. Esses treinamentos fazem parte do AWS Skill Builder e abrangem desde conceitos básicos até tópicos avançados.
                                 <ul>
-                                    <li><b>AWS Digital Course:</b> Cursos digitais autoexplicativos que abordam conceitos teóricos e boas práticas sobre diferentes serviços e arquiteturas da AWS. Não possuem laboratório prático integrado.</li>
-                                    <li><b>AWS Digital Course with Lab:</b> Versão mais completa dos cursos digitais, combinando teoria com laboratórios práticos executáveis diretamente no navegador, para aplicação dos conceitos aprendidos.</li>
+                                    <li><b>AWS Digital Course</b>: Cursos digitais autoexplicativos que abordam conceitos teóricos e boas práticas sobre diferentes serviços e arquiteturas da AWS. Não possuem laboratório prático integrado.</li>
+                                    <li><b>AWS Digital Course with Lab</b>: Versão mais completa dos cursos digitais, combinando teoria com laboratórios práticos executáveis diretamente no navegador, para aplicação dos conceitos aprendidos.</li>
                                 </ul>
                             </li>
                             <li><a href="https://aws.amazon.com/training/digital/aws-builder-labs/">AWS Builder Labs (Self-Paced Lab)</a>: Laboratórios práticos auto-guiados onde o usuário segue instruções para executar tarefas reais em um ambiente provisionado, com foco total na prática de serviços e operações da AWS.</li>
-                            <li><b>AWS Exam Preparation:</b> Materiais focados na preparação para certificações AWS, como guias de estudo, simulados e vídeos com dicas sobre os exames e domínios cobrados.</li>
+                            <li><b>AWS Exam Preparation</b>: Materiais focados na preparação para certificações AWS, como guias de estudo, simulados e vídeos com dicas sobre os exames e domínios cobrados.</li>
                             <li><a href="https://aws.amazon.com/training/digital/aws-jam/">AWS Jam</a>: Desafios práticos baseados em cenários do mundo real. Os usuários devem resolver problemas dentro de um ambiente AWS provisionado, testando suas habilidades técnicas de forma aplicada.</li>
-                            <li><b>AWS Game-Based Learning:</b> Aprendizado com base em jogos e simulações interativas, onde o progresso é obtido resolvendo problemas e avançando em missões dentro de contextos gamificados.</li>
+                            <li><b>AWS Game-Based Learning</b>: Aprendizado com base em jogos e simulações interativas, onde o progresso é obtido resolvendo problemas e avançando em missões dentro de contextos gamificados.</li>
                                 <ul>
-                                    <li><b>AWS Card Clash:</b> Um jogo interativo baseado em cartas que ensina conceitos da AWS de forma gamificada. É voltado para aprendizado rápido e competitivo entre jogadores.</li>
-                                    <li><b>AWS Cloud Quest:</b> Uma experiência de aprendizado imersiva em formato de RPG 3D, onde o jogador completa missões práticas enquanto aprende habilidades de computação em nuvem na AWS.</li>
-                                    <li><b>AWS Industry Quest:</b> Versão do AWS Cloud Quest focada em setores específicos, como saúde, finanças ou manufatura. Ensina como aplicar soluções da AWS em cenários reais dessas indústrias.</li>
-                                    <li><b>AWS Simulearn:</b> Simulador de aprendizado baseado em cenários, que oferece experiências interativas e realistas para praticar decisões em ambientes da AWS. Foca em habilidades práticas e estratégicas.</li>
+                                    <li><b>AWS Card Clash</b>: Um jogo interativo baseado em cartas que ensina conceitos da AWS de forma gamificada. É voltado para aprendizado rápido e competitivo entre jogadores.</li>
+                                    <li><b>AWS Cloud Quest</b>: Uma experiência de aprendizado imersiva em formato de RPG 3D, onde o jogador completa missões práticas enquanto aprende habilidades de computação em nuvem na AWS.</li>
+                                    <li><b>AWS Industry Quest</b>: Versão do AWS Cloud Quest focada em setores específicos, como saúde, finanças ou manufatura. Ensina como aplicar soluções da AWS em cenários reais dessas indústrias.</li>
+                                    <li><b>AWS Simulearn</b>: Simulador de aprendizado baseado em cenários, que oferece experiências interativas e realistas para praticar decisões em ambientes da AWS. Foca em habilidades práticas e estratégicas.</li>
                                 </ul>
                             <li><a href="https://aws.amazon.com/training/digital/aws-digital-classroom/">AWS Digital Classroom</a>: Cursos digitais completos que simulam o conteúdo e a experiência de uma sala de aula presencial, incluindo vídeos explicativos, apresentações, exercícios e, às vezes, demonstrações.</li>
                             <li><a href="https://aws.amazon.com/pt/training/aws-cloud-institute/">AWS Cloud Institute</a>: Programas de aprendizado estruturados em formato de “trilhas educacionais” com foco em carreiras específicas na nuvem, como Cloud Engineer ou Data Analyst. São formações mais longas, com aulas, exercícios e avaliações.</li>
@@ -263,11 +264,65 @@ Os elementos aqui apresentados foram organizados em cinco grupos, com base em se
                     </li>
                 </ul></details>
             </li>
-            <li><a href="https://aws.amazon.com/webinars/partner-webinars/">AWS Partner Programs</a>: Conjunto de iniciativas e recursos oferecidos pela AWS para apoiar seus parceiros no desenvolvimento de soluções baseadas em nuvem.</li>
+            <li><details><summary><a href="https://aws.amazon.com/webinars/partner-webinars/">AWS Partner Programs</a>: Conjunto de iniciativas e recursos oferecidos pela AWS para apoiar seus parceiros no desenvolvimento de soluções baseadas em nuvem.</summary>
+                <ul>
+                    <li><details><summary><b>AWS Business Outcome Solutions Programs<b>: Programas voltados para parceiros que oferecem soluções orientadas a resultados de negócios específicos, ajudando os clientes a alcançar metas estratégicas usando serviços da AWS.</summary>
+                        <ul>
+                            <li><a href="https://aws.amazon.com/partners/business-outcomes/">AWS Business Outcomes Xcelerator Program</a>: Programa projetado para ajudar parceiros da AWS a alinhar suas soluções com os resultados de negócios desejados pelos clientes, oferecendo ferramentas e frameworks para acelerar a geração de valor.</li>
+                            <li><a href="https://awspartnermatchmakingevents2025.splashthat.com/">AWS Partner Matchmaking Events</a>: Eventos promovidos pela AWS que conectam parceiros entre si ou com clientes em potencial, promovendo networking estratégico e colaborações comerciais dentro do ecossistema da nuvem.</li>
+                        </ul></details>
+                    </li>
+                    <li><details><summary><b>AWS Managed Services Programs<b>: Iniciativas que reconhecem parceiros especializados em fornecer serviços gerenciados proativos e contínuos para workloads na AWS, garantindo eficiência operacional e otimização contínua.</summary>
+                        <ul>
+                            <li><a href="https://aws.amazon.com/pt/partners/programs/msp/">AWS Managed Services Build Workshop</a>: Workshop colaborativo que ajuda parceiros a desenvolverem e estruturarem sua própria prática de serviços gerenciados na AWS, com base nas melhores práticas operacionais da nuvem.</li>
+                            <li><a href="https://aws.amazon.com/pt/partners/programs/msp/">AWS Managed Service Provider Program (MSP Program)</a>: É um programa que certifica parceiros da AWS especializados em fornecer serviços gerenciados, como monitoramento, automação, segurança e otimização de ambientes em nuvem. Esses provedores ajudam clientes a modernizar suas operações, reduzindo custos e aumentando a eficiência na AWS.</li>
+                        </ul></details>
+                    </li>
+                    <li><details><summary><b>AWS Reseller Programs<b>: Programas destinados a parceiros autorizados a revender serviços da AWS, frequentemente combinando consultoria, suporte e faturamento consolidado aos clientes.</summary>
+                        <ul>
+                            <li><a href="https://aws.amazon.com/marketplace/features/cpprivateoffers">AWS Channel Partner Private Offers (CPPO)</a>: Permite que parceiros de canal ofereçam produtos de software com preços personalizados no AWS Marketplace, criando ofertas privadas específicas para seus clientes.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/solution-provider/">AWS Solution Provider Program</a>: Programa para parceiros que desejam revender serviços da AWS junto com serviços gerenciados, suporte e faturamento consolidado, permitindo entregar uma solução completa ao cliente.</li>
+                            <li><a href="https://aws.amazon.com/marketplace/features/cpprivateoffers">Resell with AWS Distributors</a>: Programa que permite a parceiros revenderem serviços da AWS por meio de distribuidores autorizados, facilitando o acesso ao ecossistema AWS mesmo para empresas que ainda não têm relacionamento direto com a Amazon.</li>
+                        </ul></details>
+                    </li>
+                    <li><details><summary><b>AWS Services Programs<b>: Conjunto de programas que destaca parceiros com expertise técnica comprovada em áreas específicas de serviços da AWS, como migração, dados, segurança e mais.</summary>
+                        <ul>
+                            <li><b>AWS Customer Engagement Incentive</b>: Incentivo financeiro oferecido aos parceiros que se envolvem ativamente no ciclo de vendas com clientes, ajudando na adoção de soluções AWS e impulsionando resultados comerciais.</li>
+                            <li><a href="https://aws.amazon.com/migration-acceleration-program/">AWS Migration Acceleration Program</a>: Programa que fornece ferramentas, treinamentos e incentivos financeiros para ajudar clientes e parceiros a migrarem workloads para a AWS de forma eficiente, segura e econômica.</li>
+                            <li><a href="https://partner-resources.awscloud.com/small-business-partner">AWS Small Business Acceleration Initiative</a>: Iniciativa voltada para apoiar pequenos parceiros de negócios, oferecendo recursos, capacitação e benefícios comerciais para acelerar seu crescimento no ecossistema AWS.</li>
+                        </ul></details>
+                    </li>
+                    <li><details><summary><b>AWS Technology Solutions Programs<b>: Programas que reconhecem e capacitam parceiros que desenvolvem soluções tecnológicas (como software e appliances) integradas à AWS, ajudando clientes a acelerar sua jornada na nuvem.</summary>
+                        <ul>
+                            <li><a href="https://aws.amazon.com/partners/programs/well-architected/">AWS Well-Architected Partner Program</a>: Reconhece parceiros que demonstram expertise na aplicação das práticas recomendadas do AWS Well-Architected Framework para criar soluções seguras, resilientes, eficientes e otimizadas na nuvem.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/saas-factory/">AWS SaaS Factory Program</a>: Oferece suporte técnico e comercial para ISVs (Independent Software Vendors) que desejam criar, migrar ou otimizar aplicações no modelo SaaS na AWS, incluindo orientação sobre arquitetura e go-to-market.</li>
+                            <li><b>AWS Marketplace List & Sell Program</b>: Permite que parceiros publiquem e vendam seus softwares e serviços diretamente no AWS Marketplace, alcançando clientes globalmente e simplificando o processo de compra e implantação.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/isv-workload-migration/">AWS ISV Workload Migration Program</a>: Ajuda ISVs a migrarem workloads de clientes para a AWS, fornecendo suporte técnico, ferramentas e incentivos para acelerar essa transição.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/isv-accelerate/">AWS ISV Accelerate</a>: Programa co-sell que conecta ISVs com a equipe de vendas da AWS para aumentar a visibilidade e impulsionar vendas conjuntas de soluções integradas.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/global-startup/">AWS Global Startup Program</a>: Iniciativa que apoia startups em estágio de crescimento com recursos técnicos, acesso a especialistas, oportunidades de co-sell e suporte para escalar suas soluções na AWS globalmente.</li>
+                            <li><a href="https://aws.amazon.com/partners/programs/dqp/">AWS Device Qualification Program (DQP)</a>: Programa que qualifica dispositivos IoT para garantir compatibilidade com a AWS.</li>
+                        </ul></details>
+                    </li>
+                </ul></details>
+            </li>
             <li><a href="https://aws.amazon.com/webinars/partner-webinars/">AWS Partner Webinars</a>: Webinars sobre produtos, serviços e soluções da AWS organizados em conjunto com parceiros.</li>
+            <li><details><summary><b>AWS Public Sector Programs</b>: É um conjunto de iniciativas voltadas para parceiros que atuam com clientes do setor público, como governo, educação e organizações sem fins lucrativos. Esses programas ajudam os parceiros a desenvolver soluções específicas para esse setor e a acessar oportunidades exclusivas de colaboração e crescimento com a AWS.</summary>
+                <ul>
+                    <li><a href="https://aws.amazon.com/partners/programs/gsca/">Global Security & Compliance Acceleration on AWS Program</a>: Programa criado para ajudar parceiros a acelerar o desenvolvimento de soluções seguras e em conformidade com padrões globais, como GDPR e HIPAA, utilizando os recursos da AWS. Ele fornece orientação especializada, ferramentas e suporte técnico para garantir segurança e conformidade desde o início dos projetos.</li>
+                    <li><a href="https://aws.amazon.com/partners/programs/partner-transformation/">AWS Partner Transformation Program</a>: Iniciativa que apoia parceiros na construção e aceleração de suas práticas em nuvem por meio de uma abordagem estruturada. O programa oferece recursos como planos de ação, workshops e suporte personalizado para transformar seus modelos de negócio com foco em AWS.</li>
+                    <li><a href="https://aws.amazon.com/partners/programs/small-business/">AWS Think Big for Small Business Program</a>: Programa voltado para pequenos e médios parceiros de tecnologia (PMEs) que participam do AWS Partner Network (APN), oferecendo acesso a suporte técnico, visibilidade de mercado e oportunidades de crescimento. Ele busca impulsionar a inovação e o sucesso dessas empresas na nuvem.</li>
+                </ul></details>
+            </li>
+            <li><details><summary><b>AWS Specializations</b>: É uma designação que reconhece parceiros da AWS com expertise comprovada em áreas técnicas específicas, setores da indústria ou casos de uso. Ele destaca os parceiros mais qualificados para ajudar clientes com necessidades especializadas na nuvem.</summary>
+                <ul>
+                    <li><a href="https://aws.amazon.com/partners/programs/competencies/">AWS Competency Program</a>: Reconhece parceiros da AWS que demonstram excelência técnica e sucesso comprovado com clientes em áreas específicas da indústria, soluções ou workloads. Ele ajuda os clientes a identificar parceiros altamente qualificados para suas necessidades.</li>
+                    <li><a href="https://aws.amazon.com/partners/programs/service-delivery/">AWS Service Delivery Program</a>: Destaca parceiros que entregam serviços específicos da AWS com competência validada, demonstrando proficiência na entrega de soluções conforme as melhores práticas da AWS.</li>
+                    <li><a href="https://aws.amazon.com/partners/programs/service-ready/">AWS Service Ready Program</a>: Identifica produtos e soluções de parceiros que já foram testados e estão prontos para uso com determinados serviços da AWS, facilitando a integração por parte dos clientes.</li>
+                </ul></details>
+            </li>
         </ul></details>
     </li>
-    <li><details><summary><a href="https://repost.aws/en/">AWS re:Post</a>: É uma plataforma de perguntas e respostas da AWS onde a comunidade — incluindo especialistas, clientes e funcionários da AWS — colabora para resolver dúvidas técnicas sobre os serviços da nuvem. É semelhante ao <strong>Stack Overflow</strong>, mas focado exclusivamente no ecossistema AWS.</summary>
+    <li><details><summary><a href="https://repost.aws/en/">AWS re:Post</a>: É uma plataforma de perguntas e respostas da AWS onde a comunidade — incluindo especialistas, clientes e funcionários da AWS — colabora para resolver dúvidas técnicas sobre os serviços da nuvem. É semelhante ao Stack Overflow, mas focado exclusivamente no ecossistema AWS.</summary>
         <ul>
             <li><a href="https://repost.aws/knowledge-center/">AWS Knowledge Center</a>: É uma central de recursos online que oferece respostas para perguntas frequentes (FAQs) e soluções para problemas comuns relacionados aos serviços da AWS. Ele serve como uma base de conhecimento para ajudar os usuários a resolverem questões sem precisar abrir um caso de suporte.</li>
             <li><a href="https://repost.aws/tags/community-group">Community Groups</a>: São espaços dedicados a grupos de usuários organizados por interesses em comum, setores ou localizações geográficas. Esses grupos promovem discussões colaborativas, troca de experiências e construção de redes dentro da comunidade técnica da AWS.</li>
@@ -277,39 +332,3 @@ Os elementos aqui apresentados foram organizados em cinco grupos, com base em se
     </li>
   </ul>
 </details>
-
-
-
-   
-
-
-<!-- 
-
-## AWS Skill Builder  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25">
-
-A principal plataforma utilizada é o **AWS Skill Builder**, que serve de referência para a organização deste repositório. No **Skill Builder**, as atividades são classificadas em oito categorias de treinamento, estrutura que também foi adotada aqui. As atividades dentro de cada categoria foram organizadas nas áreas da **AWS** com base no principal serviço utilizado.
-
-### Categorias de Treinamento:
-- [aws_cloud_institue](./aws_cloud_institue)
-- [aws_digital_classroom](./aws_digital_classroom)
-- [aws_jam](./aws_jam)
-- [digital_course](./digital_course)
-- [digital_course_with_lab](./digital_course_with_lab)
-- [examp_preparation](./examp_preparation)
-- [game_based_learning](./game_based_learning)
-- [self_paced_lab](./self_paced_lab)
-- [study_material](./study_material)
-
-## AWS Educate   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_educate.jpg" alt="aws_educate" width="auto" height="25">
-
-O **AWS Educate** é outra plataforma utilizada para aprendizado em nuvem, oferecendo cursos introdutórios e laboratórios práticos para estudantes e profissionais em transição de carreira. Todos os conteúdos estudados nesta plataforma foram armazenados na pasta [aws_educate](./aws_educate/).
-
-## Materiais de Estudo
-
-Além das plataformas de treinamento, foi criada a pasta [study_material](./study_material/), que centraliza materiais auxiliares utilizados para aprendizado e preparação para certificações. Dentro dela, destacam-se os seguintes recursos:
-- A planilha [aws_services.xlsx](./study_material/aws_services.xlsx), contendo mais de 600 serviços e componentes da **AWS**.
-- A pasta [architecture_diagram](./study_material/architecture_diagram/), que reúne diagramas de arquitetura em nuvem na **AWS**.
-
-
-
-  -->
