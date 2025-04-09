@@ -1,9 +1,9 @@
-# Lab - Serverless Web Apps using Amazon DynamoDB - Part 1   <img src="./0-aux/logo_course.png" alt="curso_spl_037" width="auto" height="45">
+# Lab - Serverless Web Apps using Amazon DynamoDB - Part 1   <img src="./0-aux/logo_course.png" alt="curso_spl_046" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_spl_037 (Lab - Serverless Web Apps using Amazon DynamoDB - Part 1)   <img src="./0-aux/logo_course.png" alt="curso_spl_037" width="auto" height="25"></a>
+### Course: <a href="./">curso_spl_046 (Lab - Serverless Web Apps using Amazon DynamoDB - Part 1)   <img src="./0-aux/logo_course.png" alt="curso_spl_046" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
@@ -24,11 +24,14 @@
   - Amazon DynamoDB   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_dynamodb.svg" alt="aws_dynamodb" width="auto" height="25">
   - AWS Identity and Access Management (IAM)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_iam.svg" alt="aws_iam" width="auto" height="25">
   - AWS Lambda   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_lambda.svg" alt="aws_lambda" width="auto" height="25">
-  - AWS Systems Manager (SSM)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ssm.png" alt="aws_ssm" width="auto" height="25">
+  - AWS Software Development Kit (SDK) - Node.js   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_sdk_nodejs.svg" alt="aws_sdk" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
+  - JavaScript   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
+- Runtime Environment:
+  - Node.js   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="nodejs" width="auto" height="25">
 - Integrated Development Environment (IDE) and Text Editor:
   - Visual Studio Code (VS Code)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="vscode" width="auto" height="25">
 - Versioning: 
@@ -50,8 +53,8 @@
 ### Objective:
 Este laboratório foi uma das partes de uma série de três laboratórios cujo objetivo foi criar um aplicativo de gerador de dossiê de missão de super-heróis, utilizando os serviços serverless da **AWS**. O objetivo de cada uma das três partes esta descrita abaixo:
 - [Lab - Serverless Web Apps using Amazon DynamoDB - Part 1](../curso_spl_046/): No primeiro lab, foi provisionado uma tabela do **Amazon DynamoDB**, realizado o carregamento de dados, e revisando as roles e policies do **AWS IAM** necessárias para conceder acesso seguro a esses dados.
-- [Lab - Serverless Web Apps using Amazon DynamoDB - Part 2](../curso_spl_047/): No laboratório 2, foi construída uma função do **AWS Lambda** que interagia com a tabela do **Amazon DynamoDB** e provisionada uma API no **Amazon API Gateway** para publicação do aplicativo na web.
-- [Lab - Serverless Web Apps using Amazon DynamoDB - Part 3](../curso_spl_048/): O último lab consistiu em testar a aplicação, acessando e intergaindo com ela.  e gerando dossiês de missão 
+- [Lab - Serverless Web Apps using Amazon DynamoDB - Part 2](../curso_spl_047/): No laboratório 2, foi construída e testada uma função do **AWS Lambda** que interagia com a tabela do **Amazon DynamoDB** recuperando dados de duas maneiras diferentes. Também foi provisionada uma API no **Amazon API Gateway** para publicação do aplicativo na web.
+- [Lab - Serverless Web Apps using Amazon DynamoDB - Part 3](../curso_spl_048/): O último lab consistiu em testar a aplicação, acessando e intergaindo com ela. 
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -67,89 +70,136 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
 
 <a name="item01.1"><h4>Tarefa 1: Crie sua tabela do DynamoDB</h4></a>[Back to summary](#item0)
 
+A primeira tarefa desse laboratório consistiu em provisionar uma tabela no **Amazon DynamoDB**, configurando-a da seguinte forma:
+- `Table Name` (Nome da tabela): `SuperMission`.
+- `Partition key` (Chave de partição): `SuperHero`; `Type` (Tipo): `String`.
 
+A imagem 01 evidencia o provisionamento da tabela.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
-
 <a name="item01.2"><h4>Tarefa 2: Adicionar itens por meio do método Form</h4></a>[Back to summary](#item0)
 
+Com a tabela construída, um item foi adicionado por meio do método de formulário (`Form`), sendo preenchido da seguinte maneira:
+- `Attribute name` (Nome do atributo): `SuperHero`; `Value` (Valor): `Batman`; `Type` (Tipo): `String`.
+- `Attribute name` (Nome do atributo): `MissionStatus`; `Value` (Valor): `In progress`; `Type` (Tipo): `String`.
+- `Attribute name` (Nome do atributo): `Villain1`; `Value` (Valor): `Joker`; `Type` (Tipo): `String`.
+- `Attribute name` (Nome do atributo): `Villain2`; `Value` (Valor): `Bane`; `Type` (Tipo): `String`.
+- `Attribute name` (Nome do atributo): `Villain3`; `Value` (Valor): `Ras Al Ghul`; `Type` (Tipo): `String`.
+- `Attribute name` (Nome do atributo): `SecretIdentity`; `Value` (Valor): `Bruce Wayne`; `Type` (Tipo): `String`.
 
-
-
+A imagem 02 confirma o primeiro e único item adicionado à tabela provisionada.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
     <figcaption>Imagem 02.</figcaption>
 </figure></div><br>
 
+<a name="item01.3"><h4>Tarefa 3: Adicionar itens via JSON</h4></a>[Back to summary](#item0)
+
+Outros três seguintes itens abaixo foram adicionados à mesma tabela, só que agora utilizando o método JSON. Para inserir os comandos abaixo, foi necessário desativar a opção `View DynamoDB JSON` (Exibir JSON do DynamoDB).
+
+```json
+{
+    "SuperHero": "Superman",
+    "Villain1": "Doomsday",
+    "Villain2": "General Zod",
+    "Villain3": "Lex Luthor",
+    "MissionStatus": "In progress",
+    "SecretIdentity": "Clark Kent"
+}
+```
+
+```json
+{
+    "SuperHero": "The Winchester Brothers",
+    "Villain1": "Vampires",
+    "Villain2": "Ghosts",
+    "Villain3": "Werewolves",
+    "MissionStatus": "Complete",
+    "SecretIdentity": "Sam and Dean"
+}
+```
+
+```json
+{
+    "SuperHero": "Iron Man",
+    "Villain1": "Apocalypse",
+    "Villain2": "Doctor Doom",
+    "Villain3": "Loki",
+    "MissionStatus": "In progress",
+    "SecretIdentity": "Tony Stark"
+}
+```
+
+A imagem 03 exibe a tabela do **Amazon DynamoDB** agora com quatro itens.
+
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
+<a name="item01.4"><h4>Tarefa 4: Revisar políticas e funções do IAM</h4></a>[Back to summary](#item0)
+
+O objetivo da última tarefa foi analisar duas IAM roles, cada uma com sua respectiva políticas que permitia o acesso aos dados no banco de dados do DynamoDB. Tanto as funções como as policies já tinham sido criadas pelas pilhas do **AWS CloudFormation** ao iniciar o laboratório. Dessa forma, a role de nome `SuperDynamoDBScanRole` foi selecionada e a sua política foi expandida. A política se chamava `SuperDynamoDBScanPolicy` e permitia acesso às APIs Scan e BatchWriteItem no DynamoDB, e GetObject e PutObject no **Amazon S3**. O JSON dessa política é apresentado abaixo, e a imagem 04 mostra essa role com sua política.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "dynamodb:Scan",
+                "s3:GetObject",
+                "s3:PutObject",
+                "dynamodb:BatchWriteItem"
+            ],
+            "Resource": [
+                "*"
+            ],
+            "Effect": "Allow"
+        }
+    ]
+}
+```
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
 
-<a name="item01.3"><h4>Tarefa 3: Adicionar itens via JSON</h4></a>[Back to summary](#item0)
+A segunda role, cujo nome era `SuperDynamoDBScanRole`, possuía a policy `SuperDynamoDBQueryPolicy` que permitia que o usuário ou entidade que assumisse a função executasse uma operação de consulta, mas apenas em relação aos atributos específicos da tabela. Este recurso poderoso permitia implementar segurança em nível de coluna nas tabelas do DynamoDB. O comando JSON dessa política é mostrada abaixo. A imagem 05 exibe no console essa role com sua política de permissão.
 
-
-
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Condition": {
+                "ForAllValues:StringEquals": {
+                    "dynamodb:Attributes": [
+                        "SuperHero",
+                        "MissionStatus",
+                        "Villain1",
+                        "Villain2",
+                        "Villain3"
+                    ]
+                }
+            },
+            "Action": [
+                "dynamodb:Query"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
+        }
+    ]
+}
+```
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
     <figcaption>Imagem 05.</figcaption>
-</figure></div><br>
-
-<div align="Center"><figure>
-    <img src="./0-aux/img06.png" alt="img06"><br>
-    <figcaption>Imagem 06.</figcaption>
-</figure></div><br>
-
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img07.png" alt="img07"><br>
-    <figcaption>Imagem 07.</figcaption>
-</figure></div><br>
-
-<a name="item01.4"><h4>Tarefa 4: Revisar políticas e funções do IAM</h4></a>[Back to summary](#item0)
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img08.png" alt="img08"><br>
-    <figcaption>Imagem 08.</figcaption>
-</figure></div><br>
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img09.png" alt="img09"><br>
-    <figcaption>Imagem 09.</figcaption>
-</figure></div><br>
-
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img10.png" alt="img10"><br>
-    <figcaption>Imagem 10.</figcaption>
-</figure></div><br>
-
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img11.png" alt="img11"><br>
-    <figcaption>Imagem 11.</figcaption>
-</figure></div><br>
-
-
-
-<div align="Center"><figure>
-    <img src="./0-aux/img12.png" alt="img12"><br>
-    <figcaption>Imagem 12.</figcaption>
 </figure></div><br>
