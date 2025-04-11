@@ -131,7 +131,7 @@ Com todos os recursos confirmados, nesta tarefa o objetivo foi provisionar e con
     - `Stage` (Estágio): `*New stage*` (\*Novo Estágio\*):
     - `Stage name` (Nome do estágio): `Demo1`.
 
-Cross-Origin Resource Sharing (CORS) é um mecanismo de segurança dos navegadores que define quais origens (sites ou domínios) estão autorizadas a fazer requisições para uma API. Em outras palavras, quando uma aplicação web hospedada em um domínio (como https://meusite.com) tenta acessar uma API em outro domínio (por exemplo, https://minhaapi.amazonaws.com), o navegador bloqueia essa comunicação por padrão, a menos que a API permita explicitamente o acesso, informando isso por meio de cabeçalhos específicos. A imagem 05 exibe o provisionamento do estágio dessa API.
+Cross-Origin Resource Sharing (CORS) é um mecanismo de segurança dos navegadores que define quais origens (sites ou domínios) estão autorizadas a fazer requisições para uma API. Em outras palavras, quando uma aplicação web hospedada em um domínio (como `https://meusite.com`) tenta acessar uma API em outro domínio (por exemplo, `https://minhaapi.amazonaws.com`), o navegador bloqueia essa comunicação por padrão, a menos que a API permita explicitamente o acesso, informando isso por meio de cabeçalhos específicos. A imagem 05 exibe o provisionamento do estágio dessa API.
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
