@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+  <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+  <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+  <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+  <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+  <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+  <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+  <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+  <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+  <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+  <script type="text/javascript" src="apigClient.js">
+</script>
+  </head>
+  <body>
+   <form id="callapigateway" name="callapigateway">
+    <br><br>
+    <label for="superHero">Today's Super Hero Mission</label><br>
+    <br><br>
+    <select id="superheroname">
+     <option selected="selected">What's your Super Hero name?</option>
+    </select> <!-- Will be populated later-->
+
+    <button type="button" value="inputsbutton" onclick="callapigw()">GO</button>
+    <br><br>
+    <label for="superHero">Mission Status</label>
+    <br><input type="text" length="50" name="missionstatus" id="missionstatus" placeholder="Current Mission status">
+    <br><br>
+    <label for="superHero">Mission Dossier</label>
+    <br><textarea style="font-size: 28pt" cols="20" rows="5" name="List for today" id="missiondossier"></textarea>
+
+  </form>
+  <script type="text/javascript">
+   var apigClient = apigClientFactory.newClient();
+
+    apigClient.getheroeslistPost({}, {})
+     .then(function(result){
+      var items = result.data;
+      console.log(items);
+      var x = document.getElementById("superheroname");
+      console.log(result.data)
+      for (var i = 0; i < items.length; i++){
+       var option = document.createElement("option");
+       option.text = items[i].SuperHero;
+       x.add(option);
+       //option.value = items[i].SuperHero.S;
+       //select.appendChild(option);
+      }
+     }).catch( function(result){
+     //This is where you would put an error callback
+     console.log(result)
+  });
+
+
+
+  function callapigw() {
+    var apigClient = apigClientFactory.newClient();
+    var x = document.getElementById("superheroname");
+    var iSuperHero = x.options[x.selectedIndex].value;
+
+    if (iSuperHero == null || iSuperHero == "") {return false;}
+
+    var body = "{\"superhero\":\"" + iSuperHero + "\"}";
+
+    apigClient.getmissiondetailsPost({}, body, {})
+        .then(function(result){          
+            var dataoutput = result.data[0];
+            console.log(dataoutput);
+            document.getElementById("missionstatus").value = dataoutput.MissionStatus
+            document.getElementById("missiondossier").value = dataoutput.Villain1 + "\n" + dataoutput.Villain2 + "\n" + dataoutput.Villain3 + "\n";
+        }).catch( function(result){
+          document.write(result);
+
+    });
+
+  }
+
+
+
+  </script>
+
+</body></html>
