@@ -18,6 +18,7 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>Amazon Kinesis</summary>
         <ul>
             <li>curso_spl_033: <a href="./curso_spl_033/">Lab - Stream Real-Time Data with Amazon Kinesis   <img src="./curso_spl_033/0-aux/logo_course.png" alt="curso_spl_033" width="auto" height="25"></a></li>
+            <li>curso_spl_044: <a href="./curso_spl_044/">Lab - Transform Data with Amazon Data Firehose   <img src="./curso_spl_044/0-aux/logo_course.png" alt="curso_spl_044" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon OpenSearch Service (AOSS)</summary>
         <ul>
@@ -69,6 +70,7 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <ul>
             <li>curso_spl_022: <a href="./curso_spl_022/">Lab - Introduction to Amazon DynamoDB   <img src="./curso_spl_022/0-aux/logo_course.png" alt="curso_spl_022" width="auto" height="25"></a></li>
             <li>curso_spl_026: <a href="./curso_spl_026/">Lab - Integrating Amazon DynamoDB   <img src="./curso_spl_026/0-aux/logo_course.png" alt="curso_spl_026" width="auto" height="25"></a></li>
+            <li>curso_spl_046: <a href="./curso_spl_046/">Lab - Serverless Web Apps using Amazon DynamoDB - Part 1   <img src="./curso_spl_046/0-aux/logo_course.png" alt="curso_spl_046" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon ElastiCache</summary>
         <ul>
@@ -77,11 +79,11 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         </ul></li>
         <li><details><summary>Amazon MemoryDB</summary>
         <ul>
-            <li>curso_spl_034: <a href="./curso_spl_034/">Lab - Manage NoSQL Databases with Amazon DocumentDB   <img src="./curso_spl_034/0-aux/logo_course.png" alt="curso_spl_034" width="auto" height="25"></a></li>
+            <li>curso_spl_043: <a href="./curso_spl_043/">Lab - Implement In-Memory Databases with Amazon MemoryDB   <img src="./curso_spl_043/0-aux/logo_course.png" alt="curso_spl_043" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon Neptune</summary>
         <ul>
-            <li>curso_spl_034: <a href="./curso_spl_034/">Lab - Manage NoSQL Databases with Amazon DocumentDB   <img src="./curso_spl_034/0-aux/logo_course.png" alt="curso_spl_034" width="auto" height="25"></a></li>
+            <li>curso_spl_045: <a href="./curso_spl_045/">Lab - Manage NoSQL Databases with Amazon DocumentDB   <img src="./curso_spl_045/0-aux/logo_course.png" alt="curso_spl_045" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon Relational Database Service (RDS)</summary>
         <ul>
@@ -101,15 +103,16 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>Amazon Elastic Compute Cloud (EC2)</summary>
         <ul>
             <li>curso_spl_019: <a href="./curso_spl_019/">Lab - Introduction to Amazon EC2   <img src="./curso_spl_019/0-aux/logo_course.png" alt="curso_spl_019" width="auto" height="25"></a></li>
+            <li>curso_spl_035: <a href="./curso_spl_035/">Lab - Troubleshooting connectivity using EC2 Serial Console   <img src="./curso_spl_035/0-aux/logo_course.png" alt="curso_spl_035" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon EC2 Auto Scaling</summary>
         <ul>
             <li>curso_spl_001: <a href="./curso_spl_001/">Lab - Introduction to Amazon EC2 Auto Scaling   <img src="./curso_spl_001/0-aux/logo_course.png" alt="curso_spl_001" width="auto" height="25"></a></li>
-            <li>curso_spl_035: <a href="./curso_spl_035/">Lab - Troubleshooting connectivity using EC2 Serial Console   <img src="./curso_spl_035/0-aux/logo_course.png" alt="curso_spl_035" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>AWS Lambda</summary>
         <ul>
             <li>curso_spl_002: <a href="./curso_spl_002/">Lab - Configuring Internet Access from Lambda in a VPC   <img src="./curso_spl_002/0-aux/logo_course.png" alt="curso_spl_002" width="auto" height="25"></a></li>
+            <li>curso_spl_047: <a href="./curso_spl_047/">Lab - Serverless Web Apps using Amazon DynamoDB - Part 2   <img src="./curso_spl_047/0-aux/logo_course.png" alt="curso_spl_047" width="auto" height="25"></a></li>
         </ul></li>
     </ul>
 </details>
@@ -189,6 +192,10 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
 </details>
 <details><summary>Migração e Transferência</summary>
     <ul>
+        <li><details><summary>AWS Database Migration Service (DMS)</summary>
+        <ul>
+            <li>curso_spl_037: <a href="./curso_spl_037/">Lab - Introduction to AWS Database Migration Service   <img src="./curso_spl_037/0-aux/logo_course.png" alt="curso_spl_037" width="auto" height="25"></a></li>
+        </ul></li>  
     </ul>
 </details>
 <details><summary>Produtividade Empresarial</summary>
@@ -197,6 +204,10 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
 </details>
 <details><summary>Redes e Entrega de Conteúdo</summary>
     <ul>
+        <li><details><summary>Amazon API Gateway</summary>
+        <ul>
+            <li>curso_spl_048: <a href="./curso_spl_048/">Lab - Serverless Web Apps using Amazon DynamoDB - Part 3   <img src="./curso_spl_048/0-aux/logo_course.png" alt="curso_spl_048" width="auto" height="25"></a></li>
+        </ul></li>  
         <li><details><summary>Amazon Elastic Load Balancer (ELB)</summary>
         <ul>
             <li>curso_spl_005: <a href="./curso_spl_005/">Lab - Troubleshooting Website Reachability behind a Load Balancer   <img src="./curso_spl_005/0-aux/logo_course.png" alt="curso_spl_005" width="auto" height="25"></a></li>
