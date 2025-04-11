@@ -27,7 +27,7 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>Amazon QuickSight</summary>
         <ul>
             <li>curso_spl_011: <a href="./curso_spl_011/">Lab - Exploring the Generative Business Intelligence Features in Amazon QuickSight   <img src="./curso_spl_011/0-aux/logo_course.png" alt="curso_spl_011" width="auto" height="25"></a></li>
-            <li>curso_spl_025: <a href="./curso_spl_025/">Lab - Building BI Dashboards with Amazon QuickSight   <img src="./curso_spl_025/0-aux/logo_course.png" alt="curso_spl_026" width="auto" height="25"></a></li>
+            <li>curso_spl_025: <a href="./curso_spl_025/">Lab - Building BI Dashboards with Amazon QuickSight   <img src="./curso_spl_025/0-aux/logo_course.png" alt="curso_spl_025" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon Redshift</summary>
         <ul>
