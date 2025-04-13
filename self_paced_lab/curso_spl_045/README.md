@@ -11,6 +11,7 @@
 
 ### Theme:
 - Cloud Computing
+- Data
 
 ### Used Tools:
 - Operating System (OS): 
@@ -42,6 +43,8 @@
 ---
 
 ### Objective:
+Este laboratório teve como objetivo
+
 O objetivo deste laboratório foi provisionar um delivery stream no **Amazon Data Firehose**, converter os dados recebidos em formato Parquet utilizando o **AWS Glue**, configurar a integração de armazenamento perfeito com o **Amazon S3**, e monitorar as métricas do Firehose em tempo real.
 
 ### Structure:
