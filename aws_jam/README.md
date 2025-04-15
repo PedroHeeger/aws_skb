@@ -17,4 +17,4 @@ Em alguns casos, parte da infraestrutura necessária já é provisionada automat
 Aqui as atividades desenvolvidas do **AWS Jam Journey** no **AWS Skill Builder** foram listadas abaixo na ordem que foram executadas. Não foi realizado uma classificação com relação à área ou aos serviços, pois em um mesmo Jam poderiam haver desafios relacionados a mais de uma área ou serviço.
 
 ### Activities:
-<li>curso_jam_001: <a href="./curso_jam_001/">Lab - Filtering and blocking web incursions with AWS WAF   <img src="./curso_jam_001/0-aux/logo_course.png" alt="curso_jam_001" width="auto" height="25"></a></li>
+<li>curso_jam_001: <a href="./curso_jam_001/">Analytics on AWS   <img src="./curso_jam_001/0-aux/logo_course.png" alt="curso_jam_001" width="auto" height="25"></a></li>
