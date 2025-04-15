@@ -1,11 +1,9 @@
-# Analytics on AWS   <img src="./0-aux/logo_course.png" alt="curso_spl_001" width="auto" height="45">
+# Analytics on AWS   <img src="./0-aux/logo_course.png" alt="curso_jam_001" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab/">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_jam_001 (Analytics on AWS)   <img src="./0-aux/logo_course.png" alt="curso_jam_001" width="auto" height="25"></a>
-
-#### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
 ---
 
@@ -14,15 +12,21 @@
 
 ### Used Tools:
 - Operating System (OS): 
-  - Linux   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="linux" width="auto" height="25">
   - Windows 11   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/windows11.png" alt="windows11" width="auto" height="25">
-- Linux Distribution:
-  - Amazon Linux   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/amazon_linux.png" alt="amazon_linux" width="auto" height="25">
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
-  - Amazon Elastic Compute Cloud (EC2)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ec2.svg" alt="aws_ec2" width="auto" height="25">
-  - Amazon EC2 Auto Scaling   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_ec2_auto_scaling.svg" alt="aws_ec2_auto_scaling" width="auto" height="25">
+  - Amazon Athena  <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_athena.svg" alt="aws_athena" width="auto" height="25">
+  - Amazon Comprehend   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_comprehend.svg" alt="aws_comprehend" width="auto" height="25">
+  - Amazon DynamoDB   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_dynamodb.svg" alt="aws_dynamodb" width="auto" height="25">
+  - Amazon Kinesis   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_kinesis.svg" alt="aws_kinesis" width="auto" height="25">
+  - Amazon Kinesis Data Streams (KDS)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_kds.jpeg" alt="aws_kds" width="auto" height="25">
+  - Amazon Redshift   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_redshift.svg" alt="aws_redshift" width="auto" height="25">
+  - Amazon Simple Storage Service (S3)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_s3.svg" alt="aws_s3" width="auto" height="25">
+  - AWS Command Line Interface (CLI)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_cli.svg" alt="aws_cli" width="auto" height="25">
+  - AWS Glue   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_glue.svg" alt="aws_glue" width="auto" height="25">
+  - AWS Identity and Access Management (IAM)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_iam.svg" alt="aws_iam" width="auto" height="25">
+  - AWS Lambda   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/cloud/aws_lambda.svg" alt="aws_lambda" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
@@ -37,27 +41,29 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. <a href="#item01.1">Desafio 1: Você consegue entender o sentimento do seu cliente?</a><br>
+1. <a href="#item01">Desafio 1: Você consegue entender o sentimento do seu cliente?</a><br>
   1.1 <a href="#item01.1">Tarefa 1: Analise o sentimento para cada avaliação</a><br>
-  1.2 <a href="#item01.2">Tarefa 2 : Prepare-se para carregar os dados no banco de dados com uma função do IAM</a><br>
+  1.2 <a href="#item01.2">Tarefa 2: Prepare-se para carregar os dados no banco de dados com uma função do IAM</a><br>
   1.3 <a href="#item01.3">Tarefa 3: Copiar a saída da análise de sentimento para o redshift</a><br>
-2. <a href="#item01.2">Desafio 2: Dimensionar corretamente!</a><br>
-  2.1 <a href="#item02.1">Tarefa 1 : Dividir em escala</a><br>
-  2.2 <a href="#item02.2">Tarefa 2 : Atualize a contagem de shards para dimensionar</a><br>
-  2.3 <a href="#item02.3">Tarefa 3 : Dimensionamento sem divisão</a><br>
-  2.4 <a href="#item02.4">Tarefa 4 : Evite streaming com baixa taxa de transferência</a><br>
-3. <a href="#item01.3">Desafio 3: Ajude-me a encontrar dados de clientes</a><br>
-  3.1 <a href="#item03.1">Tarefa 1 : Dividir em escala</a><br>
-  3.2 <a href="#item03.2">Tarefa 2 : Atualize a contagem de shards para dimensionar</a><br>
-  3.3 <a href="#item03.3">Tarefa 3 : Dimensionamento sem divisão</a><br>
+2. <a href="#item02">Desafio 2: Dimensionar corretamente!</a><br>
+  2.1 <a href="#item02.1">Tarefa 1: Dividir em escala</a><br>
+  2.2 <a href="#item02.2">Tarefa 2: Atualize a contagem de shards para dimensionar</a><br>
+  2.3 <a href="#item02.3">Tarefa 3: Dimensionamento sem divisão</a><br>
+  2.4 <a href="#item02.4">Tarefa 4: Evite streaming com baixa taxa de transferência</a><br>
+3. <a href="#item03">Desafio 3: Ajude-me a encontrar dados de clientes</a><br>
+  3.1 <a href="#item03.1">Tarefa 1 : Corrigir formato de arquivo</a><br>
+  3.2 <a href="#item03.2">Tarefa 2 : Encontre o esquema</a><br>
+  3.3 <a href="#item03.3">Tarefa 3 : O que é nome e contato do cliente?</a><br>
 
 ---
 
 ### Objective:
-Este Jam realizado foi sobre o tema análise na **AWS** e foi composto dos três seguintes desafios:
-- `Desafio 1: Você consegue entender o sentimento do seu cliente?`: o objetivo foi realizar uma análise de sentimento de um arquivo de texto contendo avaliações de produtos utilizando o **Amazon Comprehend**, exportando os dados da análise para um cluster no **Amazon Redshift**.
-- `Desafio 2: Dimensionar corretamente!`: o objetivo foi configurar várias opções de scaling disponíveis para o um fluxo de dados do **Amazon Kinesis Data Streams (KDS)** e o **AWS Lambda** do consumidor, como: divisão de um shard, aumento do número de shards, aumento do número de invocações simultâneas do Lambda para cada fragmento, e aumento do tamanho do lote.
-- `Desafio 3: Ajude-me a encontrar dados de clientes`: 
+Este **AWS Jam** teve como tema principal a análise de dados na **AWS** e foi composto pelos seguintes três desafios:
+- `Desafio 1: Você consegue entender o sentimento do seu cliente?`: O objetivo foi realizar uma análise de sentimento em um arquivo de texto contendo avaliações de produtos, utilizando o **Amazon Comprehend**. Após a análise, os resultados foram exportados para um cluster no **Amazon Redshift**.
+- `Desafio 2: Dimensionar corretamente!`: O desafio consistiu em configurar diferentes opções de escalabilidade para um fluxo de dados no **Amazon Kinesis Data Streams (KDS)** e para a função **AWS Lambda** consumidora. As ações incluíram: Divisão de um shard; Aumento do número de shards; Elevação do número de invocações simultâneas do Lambda por shard; Ampliação do tamanho do lote processado.
+- `Desafio 3: Ajude-me a encontrar dados de clientes`: O objetivo foi criar duas fontes de dados distintas no **Amazon Athena** para realizar consultas relacionando tabelas de ambas.  
+  - A primeira fonte foi criada por meio de um trabalho de ETL com **AWS Glue**, que converteu um arquivo CSV armazenado em um bucket do **Amazon S3** para o formato Parquet em outro bucket. Um crawler do Glue foi utilizado para catalogar o esquema dos dados e criar um banco de dados acessado pelo Athena.  
+  - A segunda fonte foi integrada via uma função **AWS Lambda**, que atuou como conector entre o Athena e uma tabela no **Amazon DynamoDB**.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -66,18 +72,6 @@ A estrutura do curso é formada por:
 - A pasta `resource` com os arquivos utilizados.
 
 ### Development:
-O **AWS Jam** é uma experiência prática e gamificada oferecida pela **AWS**, voltada para o aprendizado de seus serviços por meio da resolução de desafios do mundo real, em um ambiente seguro e controlado. Esses desafios simulam cenários técnicos que exigem investigação, conhecimento e habilidades práticas para serem resolvidos.
-
-O Jam é realizado em eventos da **AWS**, como o *re:Invent*, ou promovido por parceiros em contextos empresariais e educacionais. A participação pode ser individual ou em equipe, de forma presencial ou virtual. Existem edições públicas e outras restritas a determinados grupos. Para isso, a **AWS** disponibiliza uma plataforma específica, acessível por meio do site [https://beta.jam.aws.com/](https://beta.jam.aws.com/), onde o login pode ser feito com o **AWS Builder ID**, o mesmo utilizado no **AWS Skill Builder**. Esse login cria um perfil único para participar dos desafios da plataforma.
-
-Além disso, alguns desafios do **AWS Jam** foram adaptados para o Skill Builder, sob uma categoria específica chamada **AWS Jam Journey**. Esses desafios podem ser realizados individualmente, sem a necessidade de participar de um evento. Ao iniciar um Jam Journey pelo Skill Builder, o desafio é aberto na plataforma do **AWS Jam**, onde são exibidas as instruções e o ambiente de laboratório.
-
-Cada Jam é composto por diversos desafios, que por sua vez contêm tarefas práticas. Cada tarefa inclui uma descrição, critérios de validação (manuais ou automáticos), pontuação e pistas opcionais que, se utilizadas, reduzem a pontuação final. Ao iniciar um desafio, é provisionado automaticamente um sandbox no console da **AWS**, exclusivo para aquele desafio. Esse ambiente pode ser acessado de três formas: diretamente pelo console, via **AWS CLI** ou utilizando o **AWS SDK for Python** (**Boto3**). Também é possível acessar o ambiente via **AWS Cloud9**, especialmente ao optar pela integração com o **Amazon Q**.
-
-Diferente dos treinamentos do tipo `Self-Paced Lab` (laboratórios auto-guiados), onde todas as etapas são orientadas passo a passo, no **AWS Jam** o participante recebe apenas uma descrição geral do problema. Cabe ao usuário explorar e encontrar soluções por conta própria. Algumas tarefas podem ter múltiplas abordagens válidas, incentivando o raciocínio crítico e a autonomia. Ainda assim, o ambiente é limitado para garantir que apenas as ações previstas nos desafios sejam executadas.
-
-Em alguns casos, parte da infraestrutura necessária já é provisionada automaticamente por meio de pilhas do **AWS CloudFormation**, garantindo que o cenário inicial esteja pronto para uso. O acesso ao sandbox é feito por meio de uma identidade federada, onde o perfil do **AWS Jam** ou do Skill Builder funciona como um provedor de identidade (IdP). Esse IdP autentica o usuário e associa automaticamente uma IAM Role criada via CloudFormation. Essa role fornece credenciais temporárias e permissões mínimas, suficientes para a realização das atividades do laboratório, garantindo a segurança e o controle dos recursos provisionados.
-
 <a name="item01"><h4>Desafio 1: Você consegue entender o sentimento do seu cliente?</h4></a>[Back to summary](#item0)
 
 - Contexto:
@@ -98,18 +92,19 @@ Em alguns casos, parte da infraestrutura necessária já é provisionada automat
   - Processamento de linguagem natural (PNL) para detectar sentimentos de um arquivo de texto disponível no S3 usando o trabalho de análise do Amazon Comprehend.
   - Crie uma função do IAM com uma política para acessar o S3 e anexar a função do IAM ao cluster do Redshift.
   - Carregando a saída da análise de trabalho Comprehend que está no formato json na tabela Redshift.
-- Pré-requisitos de conhecimento técnico: Para concluir com êxito as tarefas, você deve ter algum conhecimento básico sobre os serviços da AWS mencionados anteriormente na seção “Tópicos abordados”.
-- Categoria Dificuldade: 100 - Introdutório
+- Pré-requisitos de conhecimento técnico: Para concluir com êxito as tarefas, você deve ter algum conhecimento básico sobre os serviços da AWS mencionados anteriormente na seção Tópicos abordados.
+- Categoria Dificuldade: 100 - Introdutório.
+- Pontuação: 80.
 
-<a name="item01.1"><h5>Tarefa 1: Analise o sentimento para cada avaliação</h5></a>[Back to summary](#item0)
+<a name="item01.1"><h4>Tarefa 1: Analise o sentimento para cada avaliação</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
-- Plano de fundo: A equipe de análise precisa consolidar as avaliações dos clientes e realizar análises de sentimentos. Como você foi encarregado de obter os insights de sentimento das avaliações do produto você precisa executar um trabalho de análise do Amazon Comprehend que cria uma saída arquivo com os dados da análise.
-- Sua tarefa: Um arquivo de texto contendo avaliações de clientes sobre um produto está disponível no nome do bucket do S3 prefixado com `s3productreview`. Use isso como um arquivo de entrada para criar o arquivo de saída com detalhes do sentimento para cada avaliação do produto usando o trabalho de análise do Amazon Comprehend. O arquivo de saída deve ser criado no mesmo bucket do S3. Depois que o arquivo de saída é criado, a tarefa é completo.
+- Cenário: A equipe de análise precisa consolidar as avaliações dos clientes e realizar análises de sentimentos. Como você foi encarregado de obter os insights de sentimento das avaliações do produto você precisa executar um trabalho de análise do Amazon Comprehend que cria uma saída arquivo com os dados da análise.
+- Sua tarefa: Um arquivo de texto contendo avaliações de clientes sobre um produto está disponível no nome do bucket do S3 prefixado com `s3productreview`. Use isso como um arquivo de entrada para criar o arquivo de saída com detalhes do sentimento para cada avaliação do produto usando o trabalho de análise do Amazon Comprehend. O arquivo de saída deve ser criado no mesmo bucket do S3. Depois que o arquivo de saída é criado, a tarefa é completa.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
   - Bucket S3 prefixado com: `s3productreview`.
   - Arquivo de avaliação do produto dentro do bucket do S3.
-  - Função do IAM `S3AccessRoleComprehend`.
+  - Função do IAM (`S3AccessRoleComprehend`).
   - Permissões mínimas necessárias para você concluir esta tarefa.
 - Começando: Navegue até o console do S3 e identifique o bucket e o arquivo necessários para essa tarefa. Copie o URI S3 do arquivo e siga em frente ao Amazon Comprehend Console para criar um trabalho de análise de sentimentos com o identificou o arquivo S3 como entrada. Para dados de saída, especifique o mesmo valor de bucket do S3 sem nenhum nome de objeto.
 - Serviços envolvidos: 
@@ -154,29 +149,27 @@ A imagem 02 exibe o trabalho de análise de sentimento provisionado e executado 
 <a name="item01.2"><h4>Tarefa 2 : Prepare-se para carregar os dados no banco de dados com uma função do IAM</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
-- Plano de fundo: Parabéns por criar com sucesso o trabalho de análise de sentimentos. A equipe está feliz porque estamos um passo mais perto de obter os resultados. O trabalho do Amazon Comprehend agora está concluído e a saída está disponível no mesmo bucket do S3. Os dados analisados precisam ser carregados em uma tabela do Amazon Reshift para ajudar a gerência da empresa a realizar análises e relatórios históricos. Antes de carregar os dados de saída no Redshift Cluster, as permissões necessárias para que o cluster acesse os dados no bucket do S3 precisam estar estabelecidas.
+- Cenário: Parabéns por criar com sucesso o trabalho de análise de sentimentos. A equipe está feliz porque estamos um passo mais perto de obter os resultados. O trabalho do Amazon Comprehend agora está concluído e a saída está disponível no mesmo bucket do S3. Os dados analisados precisam ser carregados em uma tabela do Amazon Reshift para ajudar a gerência da empresa a realizar análises e relatórios históricos. Antes de carregar os dados de saída no Redshift Cluster, as permissões necessárias para que o cluster acesse os dados no bucket do S3 precisam estar estabelecidas.
 - Sua tarefa: Associe a função IAM criada que permitirá o Redshift cluster para acessar objetos do S3. Ignore os erros no console do Amazon Redshift.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
   - Bucket S3 prefixado com: `s3productreview`.
   - Cluster Redshift.
-  - Função IAM `S3AccessRoleRedshift`.
+  - Função IAM (`S3AccessRoleRedshift`).
   - Permissões mínimas necessárias para você concluir esta tarefa.
 - Começando: Navegue até o console do IAM e crie uma função do IAM para o Redshift Service com os privilégios necessários para acessar seu bucket do S3.
 - Serviços envolvidos: 
   - Amazon Redshift;
   - AWS IAM.
-- Validação de tarefas: Depois da função do IAM associada ao cluster do Redshift, a tarefa será automaticamente validada para conclusão. Como alternativa, você pode clicar em `Check my Progress` para verificar o status.
+- Validação de tarefas: Depois da função do IAM associada ao cluster do Redshift, a tarefa será automaticamente validada para conclusão. Como alternativa, você pode clicar em `Check my Progress` (Verificar meu progresso) para verificar o status.
 - Pontos possíveis: 16.
 
 **Resolução da Tarefa:**
-Analisando o cluster do **Amazon Redshift** já provisionado pelo laboratório, foi identificado que ele não tinha nenhuma role anexada. Uma das roles sugeridas, ao adicionar ao cluster, foi a `AWSServiceRoleForRedshift`. Esta role tinha apenas a policy `AmazonRedshiftServiceLinkedRolePolicy`, que dava algumas permissões, mas não permitia o cluster acessar os objetos no bucket do **Amazon S3**. Contudo, o lab já tinha criado a role `S3AccessRoleRedshift` que possuía três políticas anexadas (`AmazonRDSReadOnlyAccess`, `AmazonSSMManagedInstanceCore` e `custompolicy`). A policy `custompolicy`, que era customizada, permitia acesso ao bucket em questão, bem como aos seus objetos, conforme mostrada na imagem 04.
+Analisando o cluster do **Amazon Redshift** já provisionado pelo laboratório, foi identificado que ele não tinha nenhuma role anexada. Uma das roles sugeridas, ao adicionar ao cluster, foi a `AWSServiceRoleForRedshift`. Esta role tinha apenas a policy `AmazonRedshiftServiceLinkedRolePolicy`, que dava algumas permissões, mas não permitia o cluster acessar os objetos no bucket do **Amazon S3**. Contudo, o lab já tinha criado a role `S3AccessRoleRedshift` que possuía três políticas anexadas (`AmazonRDSReadOnlyAccess`, `AmazonSSMManagedInstanceCore` e `custompolicy`). A policy `custompolicy`, que era customizada, permitia acesso ao bucket em questão, bem como aos seus objetos, conforme mostrada na imagem 04. Sendo assim, a role `S3AccessRoleRedshift` foi anexado ao cluster do **Amazon Redshift**, conforme imagem 05.
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
     <figcaption>Imagem 04.</figcaption>
 </figure></div><br>
-
-Sendo assim, foi anexado ao cluster do **Amazon Redshift** a role `S3AccessRoleRedshift`, conforme imagem 05.
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
@@ -186,16 +179,16 @@ Sendo assim, foi anexado ao cluster do **Amazon Redshift** a role `S3AccessRoleR
 <a name="item01.3"><h4>Tarefa 3: Copiar a saída da análise de sentimento para o redshift</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
-- Plano de fundo: Também é ótimo trabalhar na criação das permissões! Mais um passo mais perto da solução! Agora temos o arquivo de saída da análise de sentimentos do Amazon Comprehend, bem como o necessário para carregar o mesmo na tabela do Redshift. Tudo o que resta é copiar os dados para a tabela do Redshift.
+- Cenário: Também é ótimo trabalhar na criação das permissões! Mais um passo mais perto da solução! Agora temos o arquivo de saída da análise de sentimentos do Amazon Comprehend, bem como o necessário para carregar o mesmo na tabela do Redshift. Tudo o que resta é copiar os dados para a tabela do Redshift.
 - Sua tarefa: A saída do trabalho de análise de sentimentos é descompactada e disponível como um arquivo json na pasta de saída sob a pasta prefixada com -SENTIMENT-*** no mesmo bucket do S3. Use o comando COPY para carregar a saída json descompactada do arquivo Amazon Comprehend na tabela do Redshift feedback.product_feedback.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
-  - Cluster Redshift com `tabelafeedback.product_feedback`.
-  - Arquivo json de saída descompactado dentro do bucket S3 com o prefixo `s3productreview` (Navegue dentro das pastas do bucket s3 até chegar à pasta `output/`).
-  - Permissões mínimas possíveis para você concluir esta tarefa
+  - Cluster Redshift com a tabela: `feedback.product_feedback`.
+  - Arquivo json de saída descompactado dentro do bucket S3 com o prefixo: `s3productreview` (Navegue dentro das pastas do bucket s3 até chegar à pasta `output/`).
+  - Permissões mínimas possíveis para você concluir esta tarefa.
 - Começando: Navegue até o console Redshift e use o editor de consultas v1 (v1 é indicado apenas como “Editor de consulta”) para se conectar ao banco de dados usando o método Temporary credentials.
 - Serviços envolvidos: 
   - Amazon Redshift;
-- Validação de tarefas: Depois que o arquivo for carregado com sucesso com o comando COPY, a tarefa será automaticamente validada para conclusão. Como alternativa, você pode clicar em `Check my Progress` para verificar o status.
+- Validação de tarefas: Depois que o arquivo for carregado com sucesso com o comando COPY, a tarefa será automaticamente validada para conclusão. Como alternativa, você pode clicar em `Check my Progress` (Verificar meu progresso) para verificar o status.
 - Pontos possíveis: 32.
 
 **Resolução da Tarefa:**
@@ -206,7 +199,7 @@ A primeira ação a ser feita aqui, foi abrir o editor de consultas do **Amazon 
 - `Database name` (Nome do banco de dados): `myjamdb`. Essa informação foi obtida nas instruções dos desafios, em `Output properties` (Propriedades de saída).
 - `Database user` (Usuário do banco de dados): `admin`. Essa informação foi obtida nas instruções dos desafios, em `Output properties` (Propriedades de saída).
 
-Após conexão, em `Select schema` (Selecione o esquema), selecionei o esquema `feedback` e logo foi exibida informações da tabela `product_feedback`. Executei a consulta `SELECT * FROM feedback.product_feedback;` para exibir os dados dessa tabela. Contudo, nada foi retornado. Dessa forma, foi presumido que não haviam dados nessa tabela ainda, portanto executei a consulta `SELECT count(*) FROM feedback.product_feedback;` para informar a quantidade de linhas, que no caso foi 0, confirmando que não haviam dados nessa tabela, conforme mostrado na imagem 06.
+Após conexão, em `Select schema` (Selecione o esquema), o esquema `feedback` foi selecionado e logo foi exibida informações da tabela `product_feedback`. Assim, a consulta `SELECT * FROM feedback.product_feedback;` foi executada para exibir os dados dessa tabela. Contudo, nada foi retornado. Dessa forma, foi presumido que não haviam dados nessa tabela ainda, portanto executei a consulta `SELECT count(*) FROM feedback.product_feedback;` para informar a quantidade de linhas, que no caso foi `0`, confirmando que não haviam dados nessa tabela, conforme mostrado na imagem 06.
 
 <div align="Center"><figure>
     <img src="./0-aux/img06.png" alt="img06"><br>
@@ -236,9 +229,9 @@ A imagem 07 mostra que o comando foi executado com sucesso.
 
 - Visão geral: Enquanto trabalha nesse desafio, você aprende a configurar várias opções de scaling disponíveis para o Kinesis Data Streams e o Lambda do consumidor.
 - O que você vai aprender com este desafio:
-  - Como usar o Lambda como consumidor para o stream de dados do Kinesis
-  - Como expandir/diminuir o número de shards do Kinesis Data Streams
-  - Como evitar streaming de baixa taxa de transferência
+  - Como usar o Lambda como consumidor para o stream de dados do Kinesis;
+  - Como expandir/diminuir o número de shards do Kinesis Data Streams;
+  - Como evitar streaming de baixa taxa de transferência.
 - Você aprenderá mais sobre estes serviços da AWS:
   - Kinesis Data Streams;
   - Lambda como consumidor de stream.
@@ -247,14 +240,15 @@ A imagem 07 mostra que o comando foi executado com sucesso.
   - Dimensionar o Lambda;
   - Usar a AWS CLI.
 - Dificuldade da categoria: 200 – Intermediário.
+- Pontuação: 150.
 
-<a name="item02.1"><h5>Tarefa 1: Analise o sentimento para cada avaliação</h5></a>[Back to summary](#item0)
+<a name="item02.1"><h4>Tarefa 1: Analise o sentimento para cada avaliação</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: Um aplicativo administrativo que monitora as métricas de manipulação de dados de shards observou atraso no processamento de dados do último shard, pois há muitos dados direcionados a ele. Para reduzir o redirecionamento de dados para o último shard, é decidido dividi-lo.
 - Sua tarefa: Você tem que dividir o último shard do Kinesis Data Streams.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
-  - Kinesis Data Streams (nome: `KinesisStreamForJam`).
+  - Kinesis Data Streams (`KinesisStreamForJam`).
 - Serviço e ferramentas que você deve usar:
   - Amazon Kinesis Data Streams (KDS);
   - AWS CLI.
@@ -262,7 +256,7 @@ A imagem 07 mostra que o comando foi executado com sucesso.
 - Pontos possíveis: 38.
 
 **Resolução da Tarefa:**
-Para esta tarefa, a **AWS CLI** foi utilizada na máquina física **Windows**, sendo necessário configurar três variáveis de ambiente em uma sessão do **Windows PowerShell**, passando o ID e o segredo da chave de acesso, além do token de sessão para a autenticação temporária na **AWS**, conforme mostrado no comando abaixo. A entidade utilizada para acesso foi a IAM role `AWSLabsUser-fsi939KvdJkq95N391cscw`, assumida por meio de uma sessão temporária gerada pelo **AWS Security Token Service**, cujo nome era `team-credentials`. Com o comando `aws sts get-caller-identity` foi confirmada a identidade que estava configurada nesta sessão do PowerShell. Como esse acesso é temporário, ele expira após um tempo e tem que ser novamente configurado com novas credenciais informadas na instrução do lab.
+Para esta tarefa, a **AWS CLI** foi utilizada na máquina física **Windows**, sendo necessário configurar três variáveis de ambiente em uma sessão do **Windows PowerShell**, passando o ID e o segredo da chave de acesso, além do token de sessão para a autenticação temporária na **AWS**, conforme mostrado no comando abaixo. A entidade utilizada para acesso foi a IAM role `AWSLabsUser-fsi939KvdJkq95N391cscw`, assumida por meio de uma sessão temporária gerada pelo **AWS Security Token Service**, cujo nome era `team-credentials`. Com o comando `aws sts get-caller-identity` foi confirmada a identidade que estava configurada nesta sessão do PowerShell. Como esse acesso era temporário, ele expirava após um tempo e tinha que ser novamente configurado com novas credenciais informadas na instrução do lab.
 
 ```ps1
 $Env:AWS_ACCESS_KEY_ID="..."
@@ -282,13 +276,13 @@ A CLI da **AWS** foi utilizada, pois para dividir um shard no **Amazon Kinesis D
     <figcaption>Imagem 09.</figcaption>
 </figure></div><br>
 
-<a name="item02.2"><h5>Tarefa 2: Atualize a contagem de shards para dimensionar</h5></a>[Back to summary](#item0)
+<a name="item02.2"><h4>Tarefa 2: Atualize a contagem de shards para dimensionar</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: Um aplicativo administrativo que monitora as métricas de manipulação de dados de shards observou atraso no processamento de dados. Para se adaptar às mudanças na taxa de dados do fluxo, é decidido aumentar a contagem de shards.
 - Sua tarefa: Você tem que aumentar a contagem de shards do stream de dados para 8.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
-  - Kinesis Data Streams (nome: `KinesisStreamForJam`).
+  - Kinesis Data Streams (`KinesisStreamForJam`).
 - Serviço e ferramentas que você deve usar:
   - AWS Management Console;
   - Amazon Kinesis Data Streams (KDS);
@@ -304,14 +298,14 @@ Para aumentar a contagem dos shards, isso foi realizado pelo console, selecionan
     <figcaption>Imagem 10.</figcaption>
 </figure></div><br>
 
-<a name="item02.3"><h5>Tarefa 3: Dimensionamento sem divisão</h5></a>[Back to summary](#item0)
+<a name="item02.3"><h4>Tarefa 3: Dimensionamento sem divisão</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: Um aplicativo administrativo que monitora métricas compartilhadas de tratamento de dados observou que a idade do iterador em cada fragmento é alta. Para se adaptar às mudanças na taxa de dados fluindo pelo riacho, é decidido aumente as invocações do Lambda por fragmento.
 - Sua tarefa: Você precisa aumentar o número de invocações simultâneas do Lambda para cada fragmento até 2.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
-  - Kinesis Data Streams (nome: `KinesisStreamForJam`).
-  - Função Lambda (name: `LambdaFunctionForJam`).
+  - Kinesis Data Streams (`KinesisStreamForJam`).
+  - Função Lambda (`LambdaFunctionForJam`).
 - Serviço e ferramentas que você deve usar:
   - AWS Management Console;
   - Amazon Kinesis Data Streams (KDS);
@@ -337,14 +331,14 @@ A imagem 11 mostra a trigger criada na função Lambda, definindo 2 invocações
     <figcaption>Imagem 11.</figcaption>
 </figure></div><br>
 
-<a name="item02.4"><h5>Tarefa 4 : Evite streaming com baixa taxa de transferência</h5></a>[Back to summary](#item0)
+<a name="item02.4"><h4>Tarefa 4: Evite streaming com baixa taxa de transferência</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: Um aplicativo administrativo que monitora análises compartilhadas de tratamento de dados observados que, fora do horário de pico, existem apenas 100 registros por minuto. Para se adaptar às mudanças fora do horário de pico, é decidir esperar antes de invocar o Lambda.
 - Sua tarefa: Você precisa aumentar o tamanho do lote para 180.
 - Inventário: Sua conta da AWS é provisionada com o seguinte:
-  - Kinesis Data Streams (nome: `KinesisStreamForJam`).
-  - Função Lambda (name: `LambdaFunctionForJam`).
+  - Kinesis Data Streams (`KinesisStreamForJam`).
+  - Função Lambda (`LambdaFunctionForJam`).
 - Serviço e ferramentas que você deve usar:
   - AWS Management Console;
   - Amazon Kinesis Data Streams (KDS);
@@ -361,7 +355,7 @@ Nesta última tarefa, foi necessário apenas editar esse trigger que acabou de s
     <figcaption>Imagem 12.</figcaption>
 </figure></div><br>
 
-<a name="item02"><h4>Desafio 3: Ajude-me a encontrar dados de clientes</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>Desafio 3: Ajude-me a encontrar dados de clientes</h4></a>[Back to summary](#item0)
 
 - Contexto:
 > Uma equipe de marketing de uma seguradora que realiza uma campanha para aumentar as vendas está buscando dados de clientes da equipe de suporte técnico com critérios de filtragem vagos. O pessoal de suporte técnico tem acesso limitado ao ambiente hospedado na AWS, alguns dos pipelines estão quebrados e, portanto, eles estão buscando sua ajuda para corrigir o mesmo.
@@ -379,16 +373,17 @@ Nesta última tarefa, foi necessário apenas editar esse trigger que acabou de s
   - Executar consultas Adhoc usando o Athena unindo dados de diferentes fontes.
 - Pré-requisitos de conhecimento técnico: Para concluir esse desafio, os participantes devem estar familiarizados com o AWS Console, os formatos de arquivos de dados, a compreensão básica dos esquemas e as consultas SQL. Haverá referências a documentações on-line em tarefas que você pode usar para concluir o desafio. Uma explicação completa estará disponível nas pistas finais de cada tarefa.
 - Dificuldade da categoria: 200 – Intermediário.
+- Pontuação: 150.
 
-<a name="item03.1"><h5>Tarefa 1 : Corrigir formato de arquivo</h5></a>[Back to summary](#item0)
+<a name="item03.1"><h4>Tarefa 1 : Corrigir formato de arquivo</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: O formato dos dados da fonte original está em CSV, você precisa converter o formato em Parquet com a compactação Snappy.
 - Sua tarefa: A primeira tarefa é converter os dados no formato desejado, use a documentação abaixo para criar e executar um trabalho para converter o arquivo no formato desejado.
-- Começando: Crie o trabalho do AWS Glue, os parâmetros estão na guia “Propriedades de saída” do painel.
+- Começando: Crie o trabalho do AWS Glue, os parâmetros estão na guia `Output propeties` (Propriedades de saída) do painel.
 - Inventário: Trabalhe com os seguintes recursos -> Crie uma nova tarefa de cola com os recursos abaixo como parâmetros:
   - Nome do bucket de origem do S3 (`S3TargetBucketName`);
-  - Nome do `GlueJobrole`.
+  - Nome da função do IAM (`GlueJobrole`).
 - Serviços que você deve usar: Esta tarefa é Criar e executar com êxito o trabalho do Glue. Observe que você não poderá listar ou ler os objetos do S3. Além disso, haverá 3 nós por padrão, não estamos fazendo nenhuma transformação. Selecione o nó “aplicar mapeamento” e escolha “remover”.
 - Validação de tarefas: Depois que a tarefa do Glue for executada, forneça o nome da tarefa que você criou na caixa de texto para concluir a tarefa.
 - Pontos possíveis: 60.
@@ -430,7 +425,7 @@ Após configuração, o trabalho do **AWS Glue** foi salvo e executado, conforme
     <figcaption>Imagem 14.</figcaption>
 </figure></div><br>
 
-<a name="item03.2"><h5>Tarefa 2 : Encontre o esquema</h5></a>[Back to summary](#item0)
+<a name="item03.2"><h4>Tarefa 2 : Encontre o esquema</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: Ao contrário dos bancos de dados tradicionais, que precisavam que o esquema fosse predefinido, os dados podem ser armazenados no S3 e o esquema determinado dinamicamente.
@@ -439,7 +434,7 @@ Após configuração, o trabalho do **AWS Glue** foi salvo e executado, conforme
 - Inventário:
   - AWS Glue Crawler (`GlueCrawler`).
   - IAM Role (`GlueCrawlerRole`).
-- Serviços que você deve usar: Função do Glue Crawler e do IAM
+- Serviços que você deve usar: Função do Glue Crawler e do IAM.
 - Validação de tarefas: Depois que o Glue Crawler for executado com sucesso, a tarefa será validada automaticamente ou poderá ser acionada explicitamente usando o botão `Check my Progress` (Verificar meu progresso) no painel.
 - Pontos possíveis: 30.
 
@@ -451,15 +446,15 @@ Como o crawler do **AWS Glue** já existia e tinha na sua configuração de `Dat
     <figcaption>Imagem 15.</figcaption>
 </figure></div><br>
 
-<a name="item03.3"><h5>Tarefa 3 : O que é nome e contato do cliente?</h5></a>[Back to summary](#item0)
+<a name="item03.3"><h4>Tarefa 3 : O que é nome e contato do cliente?</h4></a>[Back to summary](#item0)
 
 **Informações da Tarefa:**
 - Cenário: O Amazon Athena é um serviço de consulta interativo que pode ser usado para consultar dados do S3. Você pode usar o recurso de consulta federada para também consultar dados do banco de dados relacional e NoSQL.
 - Sua tarefa: Nas Tarefas 1 e 2, você preparou os dados do veículo. Os dados do cliente estão no Amazon DynamoDB. Para consultar dados do DynamoDB, você precisará criar uma fonte de dados usando um conector.
-- Começando: Crie a fonte de dados para o DynamoDB, use o AWS Lambda `DynamoDBConnectorLambda`, que é pré-provisionado. A tarefa é descobrir o nome, sobrenome e número de telefone de contato do cliente cujo status do veículo é `veículo limpo`, o ano do modelo é `2007`, a marca é `chrysler` e o estado de `california`.
+- Começando: Crie a fonte de dados para o DynamoDB, use o AWS Lambda `DynamoDBConnectorLambda`, que é pré-provisionado. A tarefa é descobrir o nome, sobrenome e número de telefone de contato do cliente cujo status do veículo é `clean vehicle`, o ano do modelo é `2007`, a marca é `chrysler` e o estado de `california`.
 - Inventário:
   - Crie uma nova fonte de dados;
-  - Conector DynamoDB Lambda.
+  - Função Lambda (`DynamoDBConnectorLambda`).
 - Serviços que você deve usar: A solução para essa tarefa pode ser derivada dentro do Athena. Use o Athena Workgroup correto, crie uma fonte de dados para o DynamoDB e crie uma consulta para extrair o nome, o sobrenome e o número de telefone do cliente que correspondam às informações do veículo fornecidas com qualquer coluna de dados que vincule as informações do veículo e do cliente.
 - Validação de tarefas: Insira o nome, sobrenome e número de contato separados por vírgula na caixa de texto para concluir a tarefa. Abaixo está um exemplo: `João, Doe, 538-163-0994x179`.
 - Pontos possíveis: 60.
@@ -474,7 +469,7 @@ Para resolver essa tarefa foi necessário ir no console do **Amazon Athena** e c
   - `Connection details` (Detalhes de conexão):
     - `Lambda function` (Função lambda): `arn:aws:lambda:us-east-1:731181684828:function:DynamoDBConnectorLambda`. Essa função Lambda já tinha sido provisionado pelo próprio laboratório ao iniciá-lo.
 
-Após criar a segunda fonte de dados, conforme comprovado na imagem 16, o editor de consultas do Athena foi selecionado e agora havia duas fontes de dados. Uma fonte de dados era proveniente do banco de dados do **AWS Glue**, cujo nome da fonte de dados era `AwsDataCatalog`, o banco de dados `vehicles`, e o nome da tabela `findcustomertarget_731181684828` e a outra do conector do **AWS Lambda** que buscava os dados no **Amazon DynamoDB**, cujo nome da fonte de dados era `Athena-usvo9z6k`, o banco de dados `default`, e o nome da tabela `autocustomer`. 
+Após criar a segunda fonte de dados, conforme comprovado na imagem 16, o editor de consultas do Athena foi selecionado e agora haviam duas fontes de dados. Uma fonte de dados era proveniente do banco de dados do **AWS Glue**, cujo nome da fonte de dados era `AwsDataCatalog`, o banco de dados `vehicles` e o nome da tabela `findcustomertarget_731181684828`, e a outra do conector do **AWS Lambda** que buscava os dados no **Amazon DynamoDB**, cujo nome da fonte de dados era `Athena-usvo9z6k`, o banco de dados `default` e o nome da tabela `autocustomer`. 
 
 <div align="Center"><figure>
     <img src="./0-aux/img16.png" alt="img16"><br>

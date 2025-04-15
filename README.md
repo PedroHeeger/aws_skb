@@ -11,6 +11,7 @@ Com o tempo, no entanto, o repositório se expandiu para além do Skill Builder,
 A seguir, é apresentada a estrutura de pastas deste repositório, com a descrição do conteúdo presente em cada uma delas:
 - [digital_course](./digital_course): Cursos teóricos autoexplicativos. Os cursos dessa categoria foram inicialmente realizados em outro repositório e estão sendo migrados para este. A execução é feita por meio de arquivos de script em PowerShell com AWS CLI, criados a partir de modelos próprios.  
 - [self_paced_lab](./self_paced_lab): Laboratórios práticos auto-guiados. Esses laboratórios são executados diretamente no AWS Management Console.  
+- [aws_jam](./aws_jam): Desafios práticos baseados em cenários reais.
 - [study_material](./study_material): Materiais de estudo desenvolvidos ao longo da minha jornada de aprendizado na AWS, incluindo:  
   - [aws_services.xlsx](./study_material/aws_services.xlsx): Planilha com mais de 600 elementos (serviços e componentes) da AWS.  
   - [architecture_diagram](./study_material/architecture_diagram/): Diagramas de arquitetura em nuvem na AWS.  
@@ -18,7 +19,6 @@ A seguir, é apresentada a estrutura de pastas deste repositório, com a descri�
   - [aws_scripts_model](./study_material/aws_scripts_model/): Diretório que contempla diversos scripts voltados para o provisionamento e a construção de serviços e recursos na nuvem AWS. Cada script é desenvolvido em quatro versões distintas: utilizando comandos AWS CLI com PowerShell e Bash, o AWS SDK para Python (Boto3) e o Terraform.
 - [aws_cloud_institue](./aws_cloud_institue): Trilhas de aprendizado focadas em carreiras na nuvem. Pasta ainda indisponível, pois nenhuma trilha foi realizada até o momento.  
 - [aws_digital_classroom](./aws_digital_classroom): Cursos completos no formato de sala de aula digital. Pasta ainda indisponível, pois nenhum curso foi realizado.  
-- [aws_jam](./aws_jam): Desafios práticos baseados em cenários reais. Pasta ainda indisponível, pois nenhum desafio foi realizado.  
 - [digital_course_with_lab](./digital_course_with_lab): Cursos com teoria e prática integradas. Pasta ainda indisponível, pois nenhum curso foi realizado.  
 - [examp_preparation](./examp_preparation): Materiais voltados para preparação de certificações. Pasta ainda indisponível, pois nenhuma atividade foi adicionada.  
 - [game_based_learning](./game_based_learning): Conteúdos de aprendizado por meio de jogos e simulações. Pasta ainda indisponível, pois nenhuma atividade foi realizada.  
