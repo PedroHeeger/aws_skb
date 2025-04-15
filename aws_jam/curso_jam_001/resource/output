@@ -1,0 +1,7 @@
+{"File": "324526-product-reviews.txt", "Line": 2, "Sentiment": "MIXED", "SentimentScore": {"Mixed": 0.7963622212409973, "Negative": 0.19224892556667328, "Neutral": 0.004072132054716349, "Positive": 0.0073168049566447735}}
+{"File": "324526-product-reviews.txt", "Line": 1, "Sentiment": "NEGATIVE", "SentimentScore": {"Mixed": 0.01283326931297779, "Negative": 0.930604100227356, "Neutral": 0.02756323851644993, "Positive": 0.028999442234635353}}
+{"File": "324526-product-reviews.txt", "Line": 3, "Sentiment": "NEGATIVE", "SentimentScore": {"Mixed": 0.0009426085161976516, "Negative": 0.991334855556488, "Neutral": 0.0008411901071667671, "Positive": 0.006881358567625284}}
+{"File": "324526-product-reviews.txt", "Line": 4, "Sentiment": "POSITIVE", "SentimentScore": {"Mixed": 8.64282192196697e-05, "Negative": 0.0004967244458384812, "Neutral": 0.0037427793722599745, "Positive": 0.9956740736961365}}
+{"File": "324526-product-reviews.txt", "Line": 5, "Sentiment": "POSITIVE", "SentimentScore": {"Mixed": 0.004830502904951572, "Negative": 0.38973888754844666, "Neutral": 0.01119894441217184, "Positive": 0.5942317247390747}}
+{"File": "324526-product-reviews.txt", "Line": 0, "Sentiment": "POSITIVE", "SentimentScore": {"Mixed": 4.4432006689021364e-05, "Negative": 4.4461590732680634e-05, "Neutral": 9.74090289673768e-05, "Positive": 0.9998137354850769}}
+{"File": "324526-product-reviews.txt", "Line": 6, "Sentiment": "MIXED", "SentimentScore": {"Mixed": 0.9494261145591736, "Negative": 0.0037561324425041676, "Neutral": 0.002442791825160384, "Positive": 0.044374991208314896}}
