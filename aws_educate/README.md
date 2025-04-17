@@ -2,115 +2,59 @@
 
 ### AWS <a href="../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 
-Nesta pasta, assim como em cada categoria de treinamento do **AWS Skill Builder**, as atividades foram separadas por áreas da **AWS** com base no principal serviço utilizado na atividade.
+O **AWS Educate** é uma iniciativa da **Amazon Web Services (AWS)** que oferece recursos educacionais, como créditos na nuvem, cursos, laboratórios práticos e ferramentas, com o objetivo de ajudar estudantes e educadores a aprender e ensinar sobre computação em nuvem. A proposta é preparar a próxima geração de profissionais para atuar com as tecnologias da **AWS**. Ele funciona em uma plataforma separada, com cadastro próprio. Nessa plataforma, os cursos e laboratórios são organizados em habilidades (skills), que servem como categorias para as atividades. Nesta pasta do repositório, foi utilizada essa mesma organização por habilidades para categorizar os conteúdos.
+
+Alguns cursos oferecem badges (insígnias digitais), que podem ser conquistadas ao concluir o curso e realizar uma avaliação com aproveitamento mínimo de 70%. Essas badges específicas do **AWS Educate** são emitidas pela plataforma **Credly**, especializada em gerenciamento de certificações digitais. Todas as badges fornecidas pela **AWS** podem ser consultadas neste link: [https://www.credly.com/organizations/amazon-web-services/badges](https://www.credly.com/organizations/amazon-web-services/badges).
+
+Além disso, o **AWS Emerging Talent Community (ETC)** foi incorporado ao ambiente do **AWS Educate**. O ETC é uma iniciativa voltada para apoiar e desenvolver talentos emergentes interessados em carreiras em tecnologia e computação em nuvem. O programa oferece acesso a conteúdos educacionais, oportunidades de networking, eventos exclusivos e orientação profissional, permitindo também o acúmulo de pontos que podem ser trocados por benefícios disponibilizados periodicamente.
+
+Os cursos do **AWS Educate**, ao serem iniciados, são executados na plataforma **Instructure Canvas**, um sistema de gerenciamento de aprendizagem (LMS – Learning Management System) amplamente utilizado por instituições educacionais e empresas. O Canvas permite a criação de ambientes virtuais de ensino personalizados e interativos. O login é feito com as mesmas credenciais do **AWS Educate**, e, ao iniciar um curso, uma nova página no Canvas é aberta automaticamente com o perfil do usuário.
 
 ### Activities:
 <details><summary>Analytics</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>AR e VR</summary>
+<details><summary>Computação em nuvem</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>Armazenamento</summary>
+<details><summary>Desenvolvimento</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>AWS Geral</summary>
+<details><summary>ML/IA</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>Banco de Dados</summary>
+<details><summary>Redes</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>Blockchain</summary>
+<details><summary>Habilidades profissionais</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>Computação</summary>
+<details><summary>Segurança</summary>
     <ul>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
-<details><summary>Computação de Usuário Final</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Contêineres</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Ferramentas do Desenvolvedor</summary>
-    <ul>
 
-    </ul>
-</details>
-<details><summary>Gerenciamento de Custos</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Gerenciamento e Governança</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Infraestrutura</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Integração de Aplicativos</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Interação com os Clientes</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Internet das Coisas (IoT)</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Machine Learning</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Migração e Transferência</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Produtividade Empresarial</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Redes e Entrega de Conteúdo</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Robótica</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Satélite</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Segurança, Identidade e Conformidade</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Serviços de Mídia</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Tecnologia de Jogos</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Tecnologias Quânticas</summary>
-    <ul>
-    </ul>
-</details>
-<details><summary>Web e Dispositivos Móveis de Front-End</summary>
-    <ul>
-    </ul>
-</details>
+
+
+
+
+
+
+
+
+
+
+
