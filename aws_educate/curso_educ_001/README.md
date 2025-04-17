@@ -1,7 +1,7 @@
 # Introduction to Generative Artificial Intelligence   <img src="./0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
-### Training Category: <a href="../../self_paced_lab/">self_paced_lab</a>
+### Training Category: <a href="../../aws_educate/">aws_educate</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_educ_001 (Introduction to Generative Artificial Intelligence)   <img src="./0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a>
 
@@ -62,11 +62,6 @@
 
 ### Objective:
 O objetivo deste curso é introduzir o domínio da IA generativa, destacando as diferenças em relação à IA tradicional, apresentando os modelos fundamentais (modelos de fundação - FMs), explorando casos de uso e demonstrando serviços e recursos da **AWS** voltados à IA generativa, bem como seus benefícios.
-
-<div align="Center"><figure>
-    <img src="./0-aux/img01.png" alt="img01"><br>
-    <figcaption>Imagem 01.</figcaption>
-</figure></div><br>
 
 ### Structure:
 A estrutura do curso é formada por:

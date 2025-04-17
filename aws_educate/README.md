@@ -13,37 +13,37 @@ Os cursos do **AWS Educate**, ao serem iniciados, são executados na plataforma 
 ### Activities:
 <details><summary>Analytics</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Computação em nuvem</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Desenvolvimento</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>ML/IA</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Redes</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Habilidades profissionais</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Segurança</summary>
     <ul>
-        <li>curso_educ_001: <a href="./curso_educ_001/">Analytics on AWS   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
+        <li>curso_educ_001: <a href="./curso_educ_001/">Introduction to Generative Artificial Intelligence   <img src="./curso_educ_001/0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a></li>
     </ul>
 </details>
 
