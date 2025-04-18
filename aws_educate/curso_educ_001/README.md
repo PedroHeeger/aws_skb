@@ -75,6 +75,8 @@ Nos últimos tempos, o uso de machine learning tem transformado o cenário da in
 
 <a name="item04"><h4>O que é IA generativa?</h4></a>[Back to summary](#item0)
 
+A Inteligência Artificial Generativa é um tipo de inteligência artificial capaz
+
 IA generativa é um tipo de inteligência artificial capaz de criar novos conteúdos e ideias, incluindo conversas, histórias, imagens, vídeos e músicas. Os geradores de IA são alimentados por modelos de aprendizado de máquina. Esses modelos são capazes de produzir conteúdo, então você não precisa fazer isso. Esse conteúdo gerado pela IA pode ser editado, para que você possa fazer as modificações necessárias que atendam às suas necessidades.
 
 
