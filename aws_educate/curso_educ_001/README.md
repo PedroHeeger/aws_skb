@@ -5,7 +5,7 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_educ_001 (Introduction to Generative Artificial Intelligence)   <img src="./0-aux/logo_course.png" alt="curso_educ_001" width="auto" height="25"></a>
 
-#### <a href="https://github.com/PedroHeeger/main/blob/main/cert_ti/03-conclu/cloud/aws/(23-09-14)_Cert_Descubra...Nuvem_AWS-LocalizaLabs_PH_DIO.pdf">Certificate</a>
+#### <a href="https://www.credly.com/badges/2c755109-49e2-48b6-bde6-5b8f5df48616/public_url">Badge</a>
 
 ---
 
