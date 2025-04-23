@@ -1,9 +1,9 @@
-# Lab - Transform Data with Amazon Data Firehose   <img src="./0-aux/logo_course.png" alt="curso_spl_045" width="auto" height="45">
+# Lab - Explore Graph Databases with Amazon Neptune   <img src="./0-aux/logo_course.png" alt="curso_spl_045" width="auto" height="45">
 
 ### AWS Skill Builder <a href="../../">aws_skill_builder   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../self_paced_lab">self_paced_lab</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_spl_045 (Lab - Transform Data with Amazon Data Firehose)   <img src="./0-aux/logo_course.png" alt="curso_spl_045" width="auto" height="25"></a>
+### Course: <a href="./">curso_spl_045 (Lab - Explore Graph Databases with Amazon Neptune)   <img src="./0-aux/logo_course.png" alt="curso_spl_045" width="auto" height="25"></a>
 
 #### Parceria da AWS com a Escola da Nuvem (EDN)   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/edn.png" alt="edn" width="auto" height="25">
 
@@ -35,17 +35,21 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. Lab - Transform Data with Amazon Data Firehose<br>
-1.1 <a href="#item01.1">Tarefa 1: Criar um fluxo de entrega do Amazon Data Firehose</a><br>
-1.2 <a href="#item01.2">Tarefa 2: Testar o fluxo do Amazon Data Firehose</a><br>
-1.3 <a href="#item01.3">Tarefa 3: Navegue pelo bucket S3 e localize os dados transformados</a><br>
+1. Lab - Explore Graph Databases with Amazon Neptune<br>
+1.1 <a href="#item01.1">Tarefa 1: iniciar o Amazon Neptune e criar um cluster de banco de dados</a><br>
+1.2 <a href="#item01.2">Tarefa 2: Criar uma instância de notebook do Amazon SageMaker</a><br>
+1.3 <a href="#item01.3">Tarefa 3: Estabelecer conexão com a instância do banco de dados Neptune</a><br>
+1.4 <a href="#item01.4">Tarefa 4: Carregar dados no Amazon Neptune usando o recurso de carregamento em massa e executar operações básicas de inserção e consulta usando Gremlin</a><br>
+1.5 <a href="#item01.5">Tarefa 5: Explorar a CLI para gerenciar recursos do Neptune</a><br>
+1.6 <a href="#item01.6">Tarefa 6: Faça um backup</a><br>
 
 ---
 
 ### Objective:
-Este laboratório teve como objetivo
+Este laboratório teve como objetivo provisionar um cluster do **Amazon Neptune**, que é um banco de dados gráfico totalmente gerenciado pela **AWS**, conectar ao banco, carregar dados e executar tarefas básicas de gerenciamento.  
 
-O objetivo deste laboratório foi provisionar um delivery stream no **Amazon Data Firehose**, converter os dados recebidos em formato Parquet utilizando o **AWS Glue**, configurar a integração de armazenamento perfeito com o **Amazon S3**, e monitorar as métricas do Firehose em tempo real.
+
+
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -59,16 +63,42 @@ O laboratório do **AWS Skill Builder** tem o foco em executar apenas o que é o
 
 O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de uma identidade federada. O Skill Builder funciona como um provedor de identidade (IdP), autenticando o usuário e vinculando-o a uma role do **AWS IAM** provisionada automaticamente por uma das pilhas do CloudFormation. Essa role concede permissões temporárias e mínimas necessárias para a execução do laboratório, garantindo segurança e controle sobre os recursos utilizados. O laboratório, por padrão, determina a região a ser utilizada e ela não deve ser alterada, somente se o próprio laboratório indicar. As configurações não informadas no laboratório devem ser sempre mantidas como padrão que estão.
 
-<a name="item01.1"><h4>Tarefa 1: Criar um fluxo de entrega do Amazon Data Firehose</h4></a>[Back to summary](#item0)
+<a name="item01.1"><h4>Tarefa 1: iniciar o Amazon Neptune e criar um cluster de banco de dados</h4></a>[Back to summary](#item0)
 
+A tarefa inicial do laboratório foi provisionar o cluster com uma instância de banco de dados. As configurações foram estabelecidas da seguinte forma:
+- `a` (Especificações da instância):
+  - `Type` (Tipo): `Provisioned` (Provisionado).
+  - `Engine version` (Versão do mecanismo): `Neptune 1.3.0.0.R1`.
+- `Templates` (Modelos): 
+  - `Template` (Modelo): `a` (Desenvolvimento e teste).
+- `Names` (Nomes):
+  - `Database cluster name` (Nome do cluster do banco de dados): `neptune-db-lab`.
+  - `DB instance name` (Nome da instância do BD): `neptune-db-lab-instance-1`.
+- `a` (Configuração de armazenamento em cluster - novo):
+  - `Configuration options` (Opções de configuração): `Neptune Standard`.
+- `Instance options` (Opções de instância):
+  - `Instance class` (Classe de instância): `a` (Classes expansíveis (inclui classes t)):
+    - `Instance class` (Classe de instância): `db.t3.medium`:
+- `Availability and durability` (Disponibilidade e Durabilidade):
+  - `Deployment Multi-AZ` (Implantação Multi-AZ): `No` (Não).
+- `Network and security` (Rede e segurança):
+  - `Virtual Private Cloud (VPC)`: `Neptune Lab VPC`.
+  - `Subnet group` (Grupo de sub-rede): `lab-neptunedbsubnetgroup`. Esse grupo de sub-rede já tinha sido construído pelas pilhas do **AWS CloudFormation** ao iniciar o lab.
+  - `VPC security groups` (Grupos de segurança de VPC): `Choose existing` (Escolher existente):
+    - `Existing VPC security groups` (Grupos de segurança de VPC existentes): `NeptuneLabSG`, e o grupo de segurança padrão (`default`), caso ainda não esteja selecionado.
+- `Notebook configuration` (Configuração do notebook): a opção `Create notebook` (Criar notebook) foi desativada.
+- `Show more` (Mostrar mais):
+  - `a` (Atualização automática de versão secundária): `a` (Desativar atualização automática de versão secundária).
+  - `a` (Proteção contra exclusão): `a` (Desativar proteção contra exclusão).
 
+A imagem 01 mostra o cluster do **Amazon Neptune** provisionado com uma instância.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
     <figcaption>Imagem 01.</figcaption>
 </figure></div><br>
 
-<a name="item01.2"><h4>Tarefa 2: Testar o fluxo do Amazon Data Firehose</h4></a>[Back to summary](#item0)
+<a name="item01.2"><h4>Tarefa 2: Criar uma instância de notebook do Amazon SageMaker</h4></a>[Back to summary](#item0)
 
 
 
@@ -83,7 +113,7 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <figcaption>Imagem 03.</figcaption>
 </figure></div><br>
 
-<a name="item01.3"><h4>Tarefa 3: Navegue pelo bucket S3 e localize os dados transformados</h4></a>[Back to summary](#item0)
+<a name="item01.3"><h4>Tarefa 3: Estabelecer conexão com a instância do banco de dados Neptune</h4></a>[Back to summary](#item0)
 
 
 <div align="Center"><figure>
@@ -102,5 +132,13 @@ O acesso ao console no sandbox do **AWS Skill Builder** é realizado por meio de
     <img src="./0-aux/img06.png" alt="img06"><br>
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
+
+
+<a name="item01.4"><h4>Tarefa 4: Carregar dados no Amazon Neptune usando o recurso de carregamento em massa e executar operações básicas de inserção e consulta usando Gremlin</h4></a>[Back to summary](#item0)
+
+
+
+
+
 
 
