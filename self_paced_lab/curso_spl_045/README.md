@@ -55,7 +55,7 @@
 ---
 
 ### Objective:
-Este laboratório teve como objetivo provisionar um cluster do **Amazon Neptune**, que é um banco de dados gráfico totalmente gerenciado pela **AWS**, conectar ao banco, carregar dados e executar tarefas básicas de gerenciamento.  
+Este laboratório teve como objetivo provisionar um cluster do **Amazon Neptune**, que é um banco de dados gráfico totalmente gerenciado pela **AWS**, conectar ao banco utilizando um Notebook do **Amazon SageMaker**, carregar dados e executar tarefas básicas de gerenciamento.  
 
 ### Structure:
 A estrutura do curso é formada por:
