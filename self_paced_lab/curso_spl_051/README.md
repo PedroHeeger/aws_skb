@@ -147,20 +147,9 @@ $POLSpeech = Get-POLSpeech -Text $message -VoiceId Joanna -OutputFormat mp3 -Reg
 $POLSpeech.AudioStream.CopyTo($FileStream)
 ```
 
-Com os comandos `Start-Service "Windows Audio"` e `ii polly.mp3`, o arquivo era reproduzido no **Windows Media Player**. A imagem 08 mostra a execução desses comandos.
+Com os comandos `Start-Service "Windows Audio"` e `ii polly.mp3`, o arquivo [polly.mp3](./resource/polly.mp3) foi reproduzido no **Windows Media Player**. A imagem 08 mostra a execução desses comandos. 
 
 <div align="Center"><figure>
     <img src="./0-aux/img08.png" alt="img08"><br>
     <figcaption>Imagem 08.</figcaption>
 </figure></div><br>
-
-
-<div align="center">
-  <figure>
-    <audio controls>
-      <source src="./resource/polly.mp3" type="audio/mpeg">
-      Seu navegador não suporta o elemento de áudio.
-    </audio>
-    <figcaption>🔊 Áudio gerado com Amazon Polly</figcaption>
-  </figure>
-</div>
