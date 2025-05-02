@@ -59,6 +59,7 @@ O objetivo deste laboratório foi explorar o uso do **AWS Tools for Windows Powe
 A estrutura do curso é formada por:
 - Este arquivo de README.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
+- A pasta `resource` com os arquivos utilizados.
 
 ### Development:
 O **AWS Tools for Windows PowerShell** e o *AWS Tools for PowerShell Core* são módulos do PowerShell criados com base na funcionalidade exposta pelo **AWS SDK for .NET**. O AWS PowerShell Tools permite que seja criados scripts de operações nos recursos da **AWS** a partir da linha de comando do PowerShell. Embora os cmdlets sejam implementados usando os clientes de serviço e métodos do SDK, eles oferecem uma experiência idiomática do PowerShell para especificar parâmetros e manipular resultados. Por exemplo, os cmdlets do Tools for Windows PowerShell oferecem suporte ao pipeline do PowerShell, ou seja, é possível executar o pipeline de objetos do PowerShell para dentro e para fora dos cmdlets.
@@ -152,3 +153,14 @@ Com os comandos `Start-Service "Windows Audio"` e `ii polly.mp3`, o arquivo era 
     <img src="./0-aux/img08.png" alt="img08"><br>
     <figcaption>Imagem 08.</figcaption>
 </figure></div><br>
+
+
+<div align="center">
+  <figure>
+    <audio controls>
+      <source src="./resource/polly.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <figcaption>🔊 Áudio gerado com Amazon Polly</figcaption>
+  </figure>
+</div>
