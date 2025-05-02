@@ -58,7 +58,6 @@ Este laboratório teve como objetivo provisionar um repositório de código no *
 A estrutura do curso é formada por:
 - Este arquivo de README.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
-- A pasta `resource` com os arquivos utilizados.
 
 ### Development:
 <a name="item01.1"><h4>Tarefa 1: Criar um repositório do AWS CodeCommit</h4></a>[Back to summary](#item0)
