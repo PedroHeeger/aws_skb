@@ -2,7 +2,13 @@
 
 ### AWS <a href="../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 
-Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram separadas por áreas da **AWS** com base no principal serviço utilizado na atividade.
+A categoria `Self-Paced Lab` no **AWS Skill Builder** refere-se a laboratórios auto-guiados. Esses laboratórios são realizados em ambientes temporários (sandboxes) que concedem acesso ao console da **AWS**. Todas as instruções para a conclusão dos labs são fornecidas passo a passo, sendo essencial seguir cada etapa corretamente. Na maioria dos casos, o acesso à nuvem **AWS** é feito diretamente pelo console fornecido pelo sandbox. Quando é necessário realizar acessos programáticos, isso ocorre dentro do próprio console **AWS**, por meio do **AWS CLI**, **AWS SDK** utilizados no **AWS CloudShell**, **AWS Cloud9** ou em uma instância do **Amazon EC2**. Alguns recursos e serviços necessários para a execução do laboratório são automaticamente provisionados por pilhas do **AWS CloudFormation** assim que o laboratório é iniciado.
+
+A autenticação ao console da **AWS** é realizada por meio de uma identidade federada. O **Skill Builder** atua como provedor de identidade (IdP), autenticando o usuário e vinculando-o a uma role do **AWS IAM** que é automaticamente criada por uma das pilhas do **CloudFormation**. Essa role é assumida temporariamente com o auxílio do serviço **AWS Security Token Service (STS)**, que emite credenciais temporárias com permissões mínimas e específicas para a realização do laboratório, garantindo segurança e controle sobre os recursos utilizados.
+
+A região da **AWS** a ser utilizada no laboratório é geralmente pré-determinada, e só deve ser alterada se houver uma instrução explícita no conteúdo do laboratório. Todas as configurações não mencionadas nas instruções devem ser mantidas nos padrões estabelecidos pela plataforma.
+
+Nesta pasta, os laboratórios foram organizados por áreas da **AWS**, e em seguida, por serviço utilizado. Quando um laboratório envolve múltiplos serviços, foi adotado como critério o serviço mais relevante ou mais utilizado durante a atividade.
 
 ### Activities:
 <details><summary>Analytics</summary>
@@ -14,6 +20,7 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>Amazon Elastic MapReduce (EMR)</summary>
         <ul>
             <li>curso_spl_009: <a href="./curso_spl_009/">Lab - Analyze Big Data with Hadoop   <img src="./curso_spl_009/0-aux/logo_course.png" alt="curso_spl_009" width="auto" height="25"></a></li>
+            <li>curso_spl_053: <a href="./curso_spl_053/">Lab - Introduction to Amazon EMR Cluster Management and Job Processing   <img src="./curso_spl_053/0-aux/logo_course.png" alt="curso_spl_053" width="auto" height="25"></a></li>
         </ul></li>
         <li><details><summary>Amazon Kinesis</summary>
         <ul>
@@ -137,6 +144,14 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>AWS CodeBuild</summary>
         <ul>
             <li>curso_spl_029: <a href="./curso_spl_029/">Lab - AWS CodeBuild Hello World   <img src="./curso_spl_029/0-aux/logo_course.png" alt="curso_spl_029" width="auto" height="25"></a></li>
+        </ul></li>
+        <li><details><summary>AWS CodeCommit</summary>
+        <ul>
+            <li>curso_spl_052: <a href="./curso_spl_052/">Lab - Working with AWS CodeCommit   <img src="./curso_spl_052/0-aux/logo_course.png" alt="curso_spl_052" width="auto" height="25"></a></li>
+        </ul></li>
+        <li><details><summary>AWS Tools for Windows PowerShell</summary>
+        <ul>
+            <li>curso_spl_051: <a href="./curso_spl_051/">Lab - AWS Tools for Windows PowerShell: Getting Started   <img src="./curso_spl_051/0-aux/logo_course.png" alt="curso_spl_051" width="auto" height="25"></a></li>
         </ul></li>  
     </ul>
 </details>
@@ -150,6 +165,10 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <ul>
             <li>curso_spl_013: <a href="./curso_spl_013/">Lab - Walkthrough of the AWS Well-Architected Tool   <img src="./curso_spl_013/0-aux/logo_course.png" alt="curso_spl_013" width="auto" height="25"></a></li>
             <li>curso_spl_030: <a href="./curso_spl_030/">Lab - Custom Lenses using the AWS Well-Architected Tool   <img src="./curso_spl_030/0-aux/logo_course.png" alt="curso_spl_030" width="auto" height="25"></a></li>
+        </ul></li>  
+        <li><details><summary>AWS Command Line Interface (CLI)</summary>
+        <ul>
+            <li>curso_spl_049: <a href="./curso_spl_049/">Lab - Using the AWS CLI for Automation   <img src="./curso_spl_049/0-aux/logo_course.png" alt="curso_spl_049" width="auto" height="25"></a></li>
         </ul></li>  
     </ul>
 </details>
@@ -166,6 +185,7 @@ Para cada categoria de treinamento do **AWS Skill Builder**, as atividades foram
         <li><details><summary>Amazon Simple Queue Service (SQS)</summary>
         <ul>
             <li>curso_spl_004: <a href="./curso_spl_004/">Lab - Integrating Amazon Simple Queue Service (Amazon SQS)   <img src="./curso_spl_004/0-aux/logo_course.png" alt="curso_spl_004" width="auto" height="25"></a></li>
+            <li>curso_spl_050: <a href="./curso_spl_050/">Lab - Create Queues and Handle Messages using Amazon Simple Queue Service (Amazon SQS)   <img src="./curso_spl_050/0-aux/logo_course.png" alt="curso_spl_050" width="auto" height="25"></a></li>
         </ul></li>  
         <li><details><summary>AWS Step Functions</summary>
         <ul>
