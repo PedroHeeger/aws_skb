@@ -9,7 +9,8 @@ Atualmente, o Skill Builder é organizado por categorias de treinamento, e foi c
 Com o tempo, no entanto, o repositório se expandiu para além do Skill Builder, passando a armazenar também conteúdos de outras plataformas, como o AWS Educate, além de materiais próprios que desenvolvi ao longo da minha jornada de aprendizado na AWS.
 
 A seguir, é apresentada a estrutura de pastas deste repositório, com a descrição do conteúdo presente em cada uma delas:
-- [digital_course](./digital_course): Cursos teóricos autoexplicativos. Inicialmente realizados em outro repositório, estão sendo gradualmente migrados para este. A execução é feita por meio de scripts em PowerShell utilizando AWS CLI, baseados em modelos próprios e executados no console da AWS pessoal.  
+- [digital_course](./digital_course): Cursos teóricos autoexplicativos. Inicialmente realizados em outro repositório, estão sendo gradualmente migrados para este. A execução é feita por meio de scripts em PowerShell utilizando AWS CLI, baseados em modelos próprios e executados no console da AWS pessoal.
+- [aws_partner](./aws_partner): Cursos da categoria Digital Course do AWS Skill Builder, mas que são exibidos apenas para usuários com login ativo na AWS Partner Network (APN), por serem destinados exclusivamente a parceiros da AWS.
 - [self_paced_lab](./self_paced_lab): Laboratórios práticos auto-guiados, executados diretamente no console da AWS fornecido pela plataforma Skill Builder.  
 - [aws_jam](./aws_jam): Desafios práticos baseados em cenários reais. Consistem em laboratórios com múltiplas tarefas, nos quais é fornecida apenas uma instrução geral. A execução ocorre no console da AWS disponibilizado pela plataforma do Jam.  
 - [aws_educate](./aws_educate): Plataforma complementar voltada ao ensino de computação em nuvem, com foco em estudantes e profissionais em transição de carreira. As atividades são realizadas na plataforma Instructure Canvas.
