@@ -256,11 +256,10 @@ Essa transformação tornou os dados mais fáceis de serem analisados, pois:
 
 <a name="item01.6"><h4>Tarefa 6: Verificar a saída do trabalho no Amazon S3</h4></a>[Back to summary](#item0)
 
-Por fim, a última tarefa consistiu em examinar a saída do job Spark no **Amazon S3**. A pasta de saída agora continham os dados transformados no formato Parquet, proporcionando melhor compactação e desempenho de consulta mais rápido em comparação com o formato CSV original. A imagem 10 exibe os arquivos na pasta `output/` dentro do mesmo bucket do S3.
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img10.png" alt="img10"><br>
     <figcaption>Imagem 10.</figcaption>
 </figure></div><br>
 
-Embora os arquivos Parquet possam ser baixados, eles não podem ser visualizados diretamente como arquivos CSV ou de texto, pois o Parquet usa um formato de armazenamento em colunas binário otimizado para sistemas de processamento de big data. Esses arquivos exigem ferramentas ou bibliotecas especializadas, como **Apache Spark**, **Apache Hive** ou **Presto**, para ler seu conteúdo. No entanto, a presença do arquivo Parquet na pasta de saída confirma que a tarefa ETL transformou e salvou os dados com sucesso neste formato otimizado.
