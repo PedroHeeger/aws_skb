@@ -176,23 +176,7 @@ Ao adicionar a etapa, o trabalho (`job`) era iniciado e o status passava de `Pen
 
 <a name="item01.5"><h4>Tarefa 5: Monitoramento avançado de tarefas</h4></a>[Back to summary](#item0)
 
-A quinta tarefa teve como objetivo o monitoramento avançado do job (trabalho) do **Apache Spark** utilizando as ferramentas avançadas de monitoramento do EMR. Quando um job Spark é executado no EMR, o EMR executa o Spark dentro do próprio cluster (em um nó, instância), e esse job se torna uma aplicação Spark. Ou seja, o arquivo de código **PySpark** executado no cluster do EMR se tornou uma aplicação Spark. O *Spark History Server* é um servidor web hospedado dentro do cluster EMR, que mostra o histórico de todas as aplicações Spark que rodaram no cluster.
 
-Sendo assim, a página `Cluster info` (Informações do cluster) foi expandida e na seção `Cluster management` (Gerenciamento do Cluser) foi escolhido o link para o *Spark History Server* encontrado em `Persistent application UIs` (UIs de Aplicativos persistentes). No *Spark History Server* (imagem 05), foi localizado e selecionado o link para o aplicativo **Apache Spark** executado (`application_1746313433725_0001`). A interface do *Spark History Server* mostrava um menu superior com as seguintes opções, conforme exibida na imagem 06:
-- `Jobs` (Trabalhos): Exibia uma lista de todos os trabalhos no aplicativo com seu status e duração.
-- `Stages` (Estágios): Mostrava informações detalhadas sobre os estágios de cada trabalho.
-- `Storage` (Armazenamento): Fornecia informações sobre RDDs e DataFrames armazenados em cache.
-- `Environment` (Ambiente): Listava as propriedades do Spark e do sistema para este aplicativo.
-- `Executors` (Executores): Mostrava informações sobre os executores usados ​​neste aplicativo.
-- `SQL / DataFrame`: Exibia consultas SQL e operações DataFrame, se alguma foi usada no trabalho.
-
-Abaixo do menu, foi exibida uma visão geral do aplicativo que incluía:
-- ID do aplicativo.
-- Hora de início e duração.
-- Usuário que enviou o trabalho.
-- Número total de trabalhos, etapas e tarefas.
-
-Esta interface fornecia informações abrangentes sobre a execução e o desempenho do trabalho do Spark.
 
 <div align="Center"><figure>
     <img src="./0-aux/img05.png" alt="img05"><br>
@@ -204,26 +188,7 @@ Esta interface fornecia informações abrangentes sobre a execução e o desempe
     <figcaption>Imagem 06.</figcaption>
 </figure></div><br>
 
-Três das seis opções existentes no menu foram exploradas, conforme detalhes abaixo:
-- Aba Trabalhos:
-    - Usuário: hadoop.
-    - Tempo de atividade total: ~1-2 minutos.
-    - Modo de agendamento: FIFO.
-    - Seis trabalhos concluídos mostrando a progressão do processo ETL:
-        - Operações de leitura de CSV.
-        - Operação de exibição de dados.
-        - Operações de contagem.
-        - Operação de salvamento final no formato Parquet.
-- Aba Estágios:
-    - Status de cada estágio (todos apareciam como Bem-sucedidos).
-    - Número de tarefas por estágio.
-    - Métricas de entrada e saída para processamento de dados.
-- Aba Executores:
-    - Número de executores ativos.
-    - Consumo de recursos (memória e disco).
-    - Métricas de conclusão de tarefas.
 
-As imagens 07 e 08 mostraram as abas `Stages` e `Executors` respectivamente.
 
 <div align="Center"><figure>
     <img src="./0-aux/img07.png" alt="img07"><br>
@@ -235,24 +200,14 @@ As imagens 07 e 08 mostraram as abas `Stages` e `Executors` respectivamente.
     <figcaption>Imagem 08.</figcaption>
 </figure></div><br>
 
-Essas ferramentas de monitoramento forneciam insights sobre a execução do trabalho, ajudando a entender o progresso e desempenho. Após essa análise, foi retornado para o console do EMR e selecionado a guia de `Steps` (Etapas). Nos detalhes da etapa, foi escolhido o link `stdout` em `Log files` (Arquivos de log) para visualizar a saída do trabalho, conforme imagem 09. O trabalho Spark ETL processou com sucesso os dados da viagem de táxi em Nova York, realizando diversas transformações:
-- Definição do esquema: a saída mostrava 20 colunas, incluindo os campos de dados do táxi original (como VendorID, horários de embarque/desembarque, detalhes da tarifa) além de uma nova de registro de data e hora adicionada pela transformação (`current_date`).
-- Amostra de dados: as primeiras 20 linhas do conjunto de dados transformado eram exibidas, mostrando:
-    - Detalhes da viagem a partir de 1º de janeiro de 2017.
-    - Vários componentes da tarifa (tarifa base, impostos, gorjetas, pedágios).
-    - IDs de localização para pontos de embarque e desembarque.
-    - Um recém-adicionado campo mostrando o registro de data e hora do processamento (data e hora atuais) (`data_atual`).
-- Volume: O trabalho processou um total de 20.000 registros, todos os quais foram convertidos com sucesso do formato CSV para o formato Parquet, mais eficiente.
+
 
 <div align="Center"><figure>
     <img src="./0-aux/img09.png" alt="img09"><br>
     <figcaption>Imagem 09.</figcaption>
 </figure></div><br>
 
-Essa transformação tornou os dados mais fáceis de serem analisados, pois:
-    - Adicionou um registro de data e hora de processamento para fins de auditoria.
-    - Converteu para o formato Parquet para melhor compactação e desempenho de consulta.
-    - Efetuou a manutenção de tipos de dados (inteiros, duplos, strings) para armazenamento e análise ideais.
+
 
 <a name="item01.6"><h4>Tarefa 6: Verificar a saída do trabalho no Amazon S3</h4></a>[Back to summary](#item0)
 
