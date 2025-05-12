@@ -140,34 +140,6 @@ O provisionamento do cluster durava cerca de 10 minutos. A imagem 03 exibe o clu
 
 <a name="item01.4"><h4>Tarefa 4: Enviar uma tarefa Spark ETL usando as etapas EMR</h4></a>[Back to summary](#item0)
 
-As três primeiras tarefas do laboratório foram construção da infraestrutura. A partir dessa quarta tarefa, iniciou-se o processamento dos dados com o envio de um job **Apache Spark** ETL utilizando o *EMR Steps* (Etapas EMR). Um job (trabalho) no **Amazon EMR** é uma tarefa de processamento de dados (como rodar um script Spark, Hive, ou MapReduce) executada dentro do cluster EMR para transformar, analisar ou mover dados. ETL é o processo de extrair dados de uma ou mais fontes, transformá-los para atender a requisitos de análise ou armazenamento (como limpeza, formatação ou agregação) e, em seguida, carregá-los em um destino final, como um data lake ou data warehouse. Para este job (tarefa) foi executado um ETL (Extract, Transform, Load) para processar dados de viagens de táxi. Este exemplo foi escolhido porque:
-- Utilizava formatos de dados comuns (CSV e Parquet).
-- Executava transformações de dados simples.
-- Produzia resultados verificáveis.
-
-Dessa forma, a estrutura do bucket do **Amazon S3** que seria utilizado foi analisado. Este bucket continha a seguinte estrutura:
-- `files/`: Continha o arquivo de script [spark-etl.py](./resource/spark-etl.py), que possuía código em **Python** com uso do Spark (**PySpark**) para executar a transformação ETL. Esse script foi projetado para:
-    - Ler os dados da viagem de táxi da pasta de entrada (`input/`).
-    - Adicionar um registro de data e hora de processamento.
-    - Converter os dados do formato CSV para Parquet.
-    - Salvar os dados transformados na pasta de saída (`output/`).
-- `input/`: Continha o arquivo [tripdata.csv](./resource/tripdata.csv), que armazenava os registros de viagens de táxi em Nova York, incluindo horários de embarque/desembarque, tarifas e locais.
-- `data/`: Continha o arquivo [sales.csv](./resource/sales.csv), um conjunto de dados suplementar para análise adicional.
-- `output/`: Uma pasta vazia onde os dados transformados seriam armazenados em formato Parquet.
-
-No console do **Amazon EMR**, a aba `Steps` (Etapas) foi aberta e uma etapa foi adicionada com a seguinte configuração:
-- `Step settings` (Configurações de etapas):
-- `Type` (Tipo): `Custom JAR` (JAR personalizado).
-- `Name` (Nome): `Spark ETL Job`.
-- `JAR location` (Localização do JAR): `command-runner.jar`.
-- `Arguments - optional` (Argumentos - opcional): foi inserido o seguinte comando `spark-submit s3://emr-us-west-2-9011958100679946/files/spark-etl.py s3://emr-us-west-2-9011958100679946/input s3://emr-us-west-2-9011958100679946/output`, passando o nome do bucket do S3 utilizado nos três paths. Esse nome do bucket era listado também no parâmetro `EMRBucketName` nas instruções do lab (`emr-us-west-2-9011958100679946`). Esses argumentos especificavam:
-    - A localização do script ETL (`spark-etl.py`).
-    - A pasta de entrada contendo o arquivo de dados (`tripdata.csv`).
-    - A pasta de saída onde os arquivos Parquet transformados seriam salvos.
-- `Step action` (Etapa de Ação):
-    - `Action if step fails` (Ação em caso de falha): foi mantido o padrão, `Continue` (Continue).
-
-Ao adicionar a etapa, o trabalho (`job`) era iniciado e o status passava de `Pending` (Pendente) para `Running` (Em execução) até ser `Completed` (Concluído). O trabalho de ETL processava o arquivo `tripdata.csv` da pasta de entrada e gravava os resultados no formato Parquet na pasta de saída (`output/`) no mesmo bucket do S3, utilizando o arquivo em **PySpark** para processamento. A imagem 04 mostra que o job foi executado com sucesso.
 
 <div align="Center"><figure>
     <img src="./0-aux/img04.png" alt="img04"><br>
