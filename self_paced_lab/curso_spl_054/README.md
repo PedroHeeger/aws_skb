@@ -67,17 +67,7 @@ A estrutura do curso é formada por:
 ### Development:
 <a name="item01.1"><h4>Tarefa 1: Criar uma chave AWS KMS</h4></a>[Back to summary](#item0)
 
-A tarefa inicial consistiu em criar uma chave no **AWS Key Management Service (KMS)** que seria utilizada para criptografar objetos (criptografia do lado do cliente) durante a gravação no S3 usando o EMRFS e descriptografá-la usando a mesma chave durante a leitura dos mesmos objetos no cluster. A chave KMS foi configurada da seguinte forma:
-- `Configure key` (Configurar chave):
-    - `Key type` (Tipo de chave): `Symmetric` (Simétrico).
-    - `Key usage` (Uso da chave): `Encrypt and decrypt` (Criptografar e descriptografar).
-- `Add labels` (Adicionar rótulos):
-    - `Alias`: `emr-seclab-key`.
-    - `Description - optional` (Descrição - opcional): `EMR key for use with encrypted clusters` (Chave EMR para uso com clusters criptografados).
-- `Define key administrative permissions - optional` (Definir permissões administrativas principais - opcional): foi marcada a role do **AWS IAM** que era utilizada para se conectar ao console (`AWSLabsUser-kgzoBH8iSnoTyo9jPiKvKh`). Administradores de chaves são usuários ou funções que gerenciam o acesso à chave de criptografia.
-- `Define key usage permissions - optional` (Definir permissões de uso de chave - opcional): foi marcada a role do **AWS IAM** que era utilizada para se conectar ao console (`AWSLabsUser-kgzoBH8iSnoTyo9jPiKvKh`). Usuários-chave são os usuários ou funções que usam a chave para criptografar e descriptografar dados.
 
-A imagem 01 mostra a chave do **AWS KMS** criada com sucesso.
 
 <div align="Center"><figure>
     <img src="./0-aux/img01.png" alt="img01"><br>
@@ -86,17 +76,7 @@ A imagem 01 mostra a chave do **AWS KMS** criada com sucesso.
 
 <a name="item01.2"><h4>Tarefa 2: Criar uma configuração de segurança no Amazon EMR</h4></a>[Back to summary](#item0)
 
-Na segunda tarefa foi elaborada uma configuração de segurança no **Amazon Elastic MapReduce (EMR)** para habilitar a criptografia em repouso do lado do cliente usando uma chave gerenciada pelo **AWS KMS** para dados armazenados no **Amazon S3** com o EMRFS. A região do console tinha que ser a mesma região definida no parâmetro `Region` nas instruções do laboratório (`us-west-2` (Oregon)). O serviço EMR foi acessado, a seção `EMR on EC2` (Seção EMR no EC2) foi expandida e a opção `Security configurations` (Configurações de segurança) foi selecionada para criar a configuração de segurança com as seguintes definições:
-- `Create security configurationa` (Criar configuração de segurança):
-    - `Name` (Nome): 
-        - `Security configuration name` (Nome da configuração de segurança): `emr-cfg-NAME`.
-    - `Security configuration setup options` (Opções de configuração de segurança): `Choose custom settings` (Escolher configurações personalizadas).
-        - `Encryption` (Criptografia):
-            - Foi marcada a caixa de seleção ao lado de `Turn on at-rest encryption for data in Amazon S3` (Ativar criptografia em repouso para dados no Amazon S3):
-                - `Encryption mode` (Modo de criptografia): `CSE-KMS`.
-                - `Choose your AWS KMS key` (Escolher sua chave AWS KMS): `emr-seclab-key`, que foi a chave KMS construída na tarefa 1.
 
-A imagem 02 comprova que foi criada uma configuração de segurança no **Amazon EMR** para habilitar a criptografia em repouso do lado do cliente usando uma chave gerenciada pelo **AWS KMS** para dados armazenados no **Amazon S3** com EMRFS. O *EMR File System (EMRFS)* é um sistema de arquivos personalizado usado pelo **Amazon EMR** para ler e gravar dados diretamente no **Amazon S3** como se fosse um sistema de arquivos local.
 
 <div align="Center"><figure>
     <img src="./0-aux/img02.png" alt="img02"><br>
@@ -105,33 +85,6 @@ A imagem 02 comprova que foi criada uma configuração de segurança no **Amazon
 
 <a name="item01.3"><h4>Tarefa 3: Iniciando um cluster do Amazon EMR</h4></a>[Back to summary](#item0)
 
-Com a parte de criptografia dos dados definida, nesta terceira tarefa foi realizado o provisionamento do cluster do **Amazon EMR** com as seguintes configurações:
-- `Create cluster` (Criar cluster):
-    - `Name and applications - required` (Nome e aplicações - obrigatório):
-        - `Name` (Nome): `emr-sec`.
-    - `AWS Glue Data Catalog settings` (Configurações do AWS Glue Data Catalog): 
-        - As caixas `Use for Hive table metadata` (Usar para metadados da tabela Hive) e `Use for Spark table metadata` (Usar para metadados da tabela Spark) foram marcadas.
-    - `Cluster configuration - required` (Configuração do Cluster - obrigatório): `Uniform instance groups` (Grupos de instâncias uniformes)
-        - `Uniform instance groups` (Grupos de instâncias uniformes):
-            - `Primary` (Primário): 
-                - `Choose EC2 instance type` (Escolha o tipo de instância EC2): `m4.large`.
-            - `Core` (Núcleo):
-                - `Choose EC2 instance type` (Escolha o tipo de instância EC2): `m4.large`.
-            - `Task 1 of 1` (Tarefa 1 de 1):
-                - `Choose EC2 instance type` (Escolha o tipo de instância EC2): `m4.large`.
-    - `Networking - required` (Rede - obrigatório):
-        - `Virtual private cloud (VPC)` (Nuvem privada virtual (VPC)): foi selecionada a VPC de nome `Lab VPC`.
-    - `Cluster logs` (Logs do cluster):
-        - `Amazon S3 location` (Localização do Amazon S3): foi escolhido o bucket de nome `emr-us-west-2-9011958100679946`, que tinha sido o provisionado pelo laboratório ao iniciá-lo, adicionando o prefixo `/logs` no final. A URL completa ficou `s3://emr-us-west-2-9011958100679946/logs`.
-    - `Security configuration and EC2 key pair` (Configuração de segurança e par de chaves EC2):
-        - `Security configuration` (Configuração de segurança): foi selecionada a configuração de segurança criada na tarefa 2 que habilitava a criptografia em repouso do lado do cliente com chave gerenciada pelo **AWS KMS** (`emr-cfg-NAME`).
-    - `Identity and Access Management (IAM) roles - required ` (Funções de Gerenciamento de Identidade e Acesso (IAM) - obrigatório):
-        - `Amazon EMR service role` (Função de serviço do Amazon EMR): `Choose an existing service role` (Escolher uma função de serviço existente).
-            - `Service role` (Função de serviço): `EMR_DefaultRole`. Essa role do **AWS IAM** já tinha sido provisionada pelo laboratório ao iniciá-lo.
-        - `EC2 instance profile for Amazon EMR` (Perfil de instância do EC2 para Amazon EMR): `Choose an existing instance profile` (Escolher um perfil de instância existente).
-            - `Instance profile` (Perfil de instância): `EMR_EC2_DefaultRole`. Esse perfil de instância já tinha sido provisionado pelo laboratório ao iniciá-lo.
-
-O provisionamento do cluster durava cerca de 10 minutos. A imagem 03 exibe o cluster do **Amazon EMR** criado e com status `Waiting` (Aguardando). Dentro do cluster foi copiado, na seção `Summary` (Resumo), o valor do DNS público do nó primário do cluster (`ec2-54-201-85-186.us-west-2.compute.amazonaws.com`).
 
 <div align="Center"><figure>
     <img src="./0-aux/img03.png" alt="img03"><br>
