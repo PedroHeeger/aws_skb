@@ -258,76 +258,13 @@ Exemplos de resultados obtidos por clientes:
 
 <a name="item07"><h4>Gestão Financeira em Nuvem</h4></a>[Back to summary](#item0)
 
-Gestão Financeira na Nuvem é fundamental para que os clientes da AWS maximizem o valor obtido com seus investimentos. Na AWS, paga-se apenas pelo que se usa, o que permite reduzir custos ao evitar superprovisionamento e desligar recursos fora de uso. A gestão financeira se baseia em quatro pilares principais:
-- Medição e Responsabilização: Garante visibilidade dos custos e atribuição clara dos gastos aos responsáveis.
-- Otimização de Custos: Identifica desperdícios e aplica boas práticas de arquitetura para eficiência.
-- Planejamento e Previsão: Melhora o entendimento e a projeção dos custos atuais e futuros.
-- Operações Financeiras na Nuvem: Investe em pessoas, processos e ferramentas para gerenciar financeiramente o ambiente em nuvem.
 
-Medição e Responsabilização (1º Pilar):
-- Conceito: Esse pilar é o ponto de partida para uma gestão de custos eficaz e sustentável na nuvem. O objetivo é proporcionar visibilidade clara dos gastos e garantir que cada parte envolvida assuma a responsabilidade pelo uso de recursos.
-- Principais práticas:
-  - Mapeamento de uso por contas e tags, refletindo como as cargas de trabalho estão organizadas.
-  - Relatórios com granularidade adequada, que permitem decisões rápidas e evitam estouros de orçamento.
-  - Alocação de custos com showback ou chargeback, incentivando um consumo mais consciente.
-  - Medição de KPIs de eficiência e valor, validando se a economia esperada está sendo realmente alcançada.
-- Ferramentas e recursos: O AWS Cost Explorer permite detalhar os custos e identificar tendências, picos e anomalias. Clientes também podem usar painéis personalizados, criados com ferramentas como o Tableau, para acompanhar o progresso e comunicar resultados com clareza entre equipes.
-
-Otimização de Custos (2º Pilar):
-- Conceito: Esse pilar tem como foco garantir que os clientes paguem apenas pelo que realmente precisam na nuvem. Ele busca eliminar desperdícios e melhorar continuamente a eficiência de custos das cargas de trabalho.
-- Principais práticas:
-  - Evitar dívidas técnicas, adotando arquiteturas otimizadas desde o início.
-  - Dimensionar corretamente os recursos, evitando superprovisionamento e ociosidade.
-  - Escolher a melhor opção de compra, como:
-    - Planos de Economia (Savings Plans) para EC2, Fargate e Lambda;
-    - Instâncias Reservadas para serviços como RDS e ElastiCache;
-    - Instâncias Spot para workloads flexíveis e não críticos.
-  - Aproveitar inovações da AWS para reduzir o TCO, como novas regiões, funcionalidades e cortes de preço.
-- Abordagem recomendada: Antes de implantar cargas de trabalho, é essencial avaliar requisitos técnicos e de negócio, entender os modelos de precificação e aplicar estratégias de otimização. Isso assegura um equilíbrio saudável entre custo, desempenho, disponibilidade e escalabilidade.
-
-Planejamento e Previsão (3º Pilar): 
-- Conceito: Este pilar foca em ajudar os clientes a prever melhor os custos e a adaptar seus processos financeiros à natureza dinâmica da nuvem.
-- Principais práticas:
-  - Tornar orçamentos e previsões mais ágeis, usando unidades de previsão mais precisas e abandonando métodos baseados apenas em tendências.
-  - Estimar custos com ferramentas da AWS, como o Migration Evaluator, a Calculadora de Preços ou testes práticos com cargas de trabalho em contas de prova de conceito.
-  - Quantificar o valor esperado, considerando não só economia direta, mas também ganhos em produtividade, agilidade, resiliência e sustentabilidade.
-  - Integrar planejamento local e em nuvem, criando uma visão de custos de TI completa e alinhada com as metas do negócio.
-- Ferramentas úteis da AWS:
-  - AWS Pricing Calculator para estimativas detalhadas;
-  - API da Lista de Preços para integração com sistemas internos;
-  - AWS Cost Explorer com projeções baseadas em machine learning;
-  - Migration Portfolio Assessment para planejamento de migração com foco em economia.
-
-Operações Financeiras na Nuvem (4º Pilar):
-- Conceito: Este pilar foca em garantir que a gestão financeira na nuvem seja programática, sustentável e eficiente em larga escala, com ênfase em automação e governança.
-- Principais práticas:
-  - Patrocínio executivo para a função de CFM, garantindo uma abordagem programática e alinhada com os objetivos organizacionais.
-  - Criar uma cultura de consciência de custos, garantindo que todas as partes interessadas compreendam o custo da nuvem e contribuam para uma gestão financeira eficiente.
-  - Implementar controles de consumo, equilibrando agilidade nos negócios com governança de custos.
-  - Desenvolver automação e ferramentas, garantindo que a gestão financeira na nuvem seja escalável e eficiente.
-- Centro de Excelência em Nuvem (CoE): O CoE desempenha um papel crucial na governança de custos, ajudando a estabelecer políticas, gerar relatórios e definir KPIs para monitorar o progresso.
-- Ferramentas e automação:
-  - Automatização do uso de instâncias, identificando oportunidades para instâncias reservadas e planos de economia, e automatizando desligamentos de recursos ociosos.
-  - Armazenamento otimizado, migrando dados de Amazon S3 para S3-IA e S3 Glacier para reduzir custos.
-  - AWS Instance Scheduler, para agendar automaticamente instâncias EC2 e RDS, reduzindo custos operacionais.
-- Práticas recomendadas:
-  - Revisão e documentação contínua dos resultados, promovendo uma cultura de otimização e eficiência.
-  - Painéis interativos que permitem uma visualização clara dos resultados, para garantir que todos estejam alinhados e motivados na jornada de otimização.
-  - A automação e a governança eficazes são essenciais para garantir uma gestão financeira na nuvem que gere valor de forma contínua e sustentável.
-
-O estudo do Hackett Group revela as melhores práticas de gestão financeira em nuvem (CFM) adotadas por empresas de alto desempenho, visando melhores resultados de negócios. Os principais pontos incluem:
-- Medição e Responsabilização: O monitoramento constante e sistemático dos custos e uso da nuvem aumenta em 74% o cumprimento dos acordos de nível de serviço (SLAs), garantindo uso eficiente dos recursos.
-- Otimização de Custos: Modelos de preços flexíveis, como instâncias reservadas ou Spot, oferecem economia de até 35% nos custos contínuos da nuvem. A escolha de modelos de preços adequados ao uso real de recursos é essencial.
-- Planejamento e Previsão: A análise detalhada das variações entre previsões e gastos reais na nuvem melhora em 35% a precisão das previsões de custos, facilitando o controle dos gastos na nuvem.
-- Operações Financeiras na Nuvem: A governança centralizada das áreas de segurança, finanças e demanda resulta em uma economia de 38%, proporcionando controle mais eficiente dos custos e recursos na nuvem.
-
-KPI Principal - Economia de Custos: A principal medida de sucesso é a economia incremental nos custos ao longo do tempo. Empresas que seguem boas práticas conseguem reduzir seus custos em até 50%. As estratégias mais eficazes incluem otimização de dimensionamento e precificação.
-
-A escolha do modelo de precificação para cada carga de trabalho na nuvem é uma decisão estratégica que deve refletir como a carga será utilizada. Encontrar a combinação adequada de modelos de precificação para o portfólio de nuvem é essencial para otimizar a economia de custos. A prática recomendada é que 65% dos gastos com nuvem sejam baseados em modelos de precificação por compromisso ou excesso de capacidade do provedor, o que resulta em um aumento de 35% na economia incremental de custos. Organizações que adotam esses modelos conseguem melhorar a economia de custos em comparação com aquelas que não os utilizam ou fazem uso subótimo deles.
 
 <a name="item08"><h4>Avaliação do Portfólio de Migração</h4></a>[Back to summary](#item0)
 
-A Avaliação de Portfólio de Migração, ou Migration Portfolio Assessment (MPA), apoia o planejamento de migrações ao automatizar análises financeiras e facilitar a transição para definições arquitetônicas. A ferramenta mapeia o ambiente local para serviços equivalentes na AWS, oferecendo comparações de custo, estimativas de TCO, recomendações de dimensionamento e projeções de esforço. Esses dados permitem validar casos de negócio, estimar gastos anuais, agrupar aplicações e organizar a priorização por ondas. O acesso ao MPA ocorre pelo AWS Partner Central, disponível para parceiros dos níveis Select, Advanced e Premier. Parceiros Registrados podem solicitar acesso por meio de códigos fornecidos pelos PDMs.
+
+
+
 
 <a name="item09"><h4>Resumo do Curso</h4></a>[Back to summary](#item0)
 
