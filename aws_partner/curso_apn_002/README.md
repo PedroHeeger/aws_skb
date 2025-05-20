@@ -135,100 +135,11 @@ Exemplos de resultados obtidos por clientes:
 
 <a name="item04"><h4>Resiliência Operacional</h4></a>[Back to summary](#item0)
 
-Resiliência operacional representa o ganho obtido ao elevar os níveis de disponibilidade e segurança da infraestrutura. Reflete-se diretamente em mais tempo de atividade, menos interrupções e mitigação de riscos. Os dois conceitos centrais relacionados a esse pilar são: tempo de atividade e segurança. A construção de uma infraestrutura operacionalmente resiliente exige uma abordagem abrangente. Envolve a continuidade e o desempenho estável de diversos componentes da arquitetura:
-- Camada de rede, responsável pela conectividade constante;
-- Servidores e armazenamento, que devem operar sem falhas;
-- Banco de dados, essencial para garantir consistência, integridade e alta disponibilidade das informações.
 
-Cada parte de uma aplicação precisa estar disponível para garantir que o sistema funcione como esperado, mesmo diante de falhas, ataques ou eventos inesperados. A resiliência operacional não se limita a evitar paradas, mas também foca na capacidade de recuperação rápida, continuidade do serviço e proteção contra ameaças.
-
-O tempo de inatividade pode gerar impactos amplos e profundos nos negócios, com consequências operacionais, financeiras e de reputação. Exemplos ilustrativos incluem:
-- Cancelamento de 2.000 voos e prejuízo superior a 150 milhões de dólares devido à indisponibilidade do data center de uma companhia aérea.
-- Perda de confiança do cliente após ataque DDoS que causou inatividade prolongada em um banco.
-- Interrupção nas vendas e falhas em reportes financeiros após falha em um aplicativo de previsão de vendas, resultando na impossibilidade de fornecer diretrizes ao mercado.
-- Prejuízo de 252 milhões de dólares enfrentado por um grande varejista após uma violação de dados.
-
-A redução da resiliência operacional está associada a perdas significativas. O tempo de inatividade representa um custo elevado para as organizações. Estimativas indicam que empresas da Fortune 1000 enfrentam perdas entre 1,25 e 2,5 bilhões de dólares por ano devido a eventos de inatividade. Falhas críticas de aplicativos podem gerar custos de até 1 milhão de dólares por hora. Em 2020, a duração média de uma única interrupção foi de 79 minutos, com um custo médio de 84.650 dólares por hora. A recuperação após ataques cibernéticos apresenta custo médio de 4,6 milhões de dólares, sem considerar valores eventualmente pagos em ransomware. Esses custos de inatividade incluem: Taxas de terceiros; Substituição de equipamentos; Custos incidentais posteriores; Atividades e custos de recuperação; Custos de detecção associados à descoberta inicial e investigação subsequente; Custos improdutivos de pessoal de TI e usuário final; Receita perdida; Custos de interrupção de negócios; entre outros.
-
-Em muitos casos, a origem do tempo de inatividade não está ligada a ataques externos, mas à incapacidade da infraestrutura de lidar com picos de demanda. Esse tipo de indisponibilidade tende a ocorrer em momentos de maior uso, como durante consultas intensas ao banco de dados. Para avaliar o impacto, utilizam-se pesquisas especializadas de terceiros como base. Um dado relevante é que os prejuízos com a interrupção dos negócios superam os decorrentes da perda direta de receita. Danos à reputação da marca, rotatividade de clientes e perda de oportunidades representam um peso maior. Mesmo aplicativos de uso interno, quando indisponíveis, causam queda de produtividade que gera custos significativos. A interrupção operacional, portanto, envolve perdas econômicas indiretas adicionais.
-
-Conforme apresentado em conteúdos anteriores, o Hackett Group publicou em 2022 um estudo global de benchmarking com 1.000 clientes da AWS, visando identificar os benefícios comerciais obtidos após a migração de cargas de trabalho para a nuvem. Entre os destaques do estudo, estão os ganhos relacionados à resiliência operacional. A utilização da AWS permitiu a construção de aplicações com maior disponibilidade, menor latência, maior aderência a SLAs e melhorias expressivas em segurança. Principais resultados do estudo:
-- 69% menos horas de inatividade não planejada por ano.
-- 54% de redução nas interrupções anuais não planejadas.
-- 45% de redução em incidentes mensais relacionados à segurança.
-- 39% de redução no tempo médio de detecção de incidentes de segurança.
-- Além de segurança e disponibilidade, os benefícios se estenderam a outras áreas. Durante o início da pandemia da COVID-19, ferramentas e plataformas em nuvem demonstraram papel essencial na conexão de equipes remotas, reforçando ainda mais o valor da resiliência operacional.
-
-Organizações com alta resiliência operacional mantêm a integridade de quatro pilares fundamentais: operações, segurança, software e infraestrutura. A construção e o fortalecimento desses pilares encontram suporte direto na AWS, que oferece ferramentas e práticas projetadas para reduzir falhas e mitigar riscos. Falhas operacionais geralmente têm causas recorrentes. Entre elas estão:
-- Erros humanos, como ausência de procedimentos definidos ou atribuição incorreta de privilégios;
-- Configurações incorretas em hardware, sistemas operacionais ou scripts de inicialização;
-- Falhas de procedimento, como restaurar um backup errado ou negligenciar a reinicialização de um equipamento;
-- Acidentes físicos comuns em data centers, como desconexão involuntária de cabos, quedas de equipamentos ou manuseio inadequado de dispositivos.
-
-Um exemplo ilustra bem o impacto do fator humano: um funcionário entra no data center com uma xícara de café e a apoia sobre um servidor. A ironia é clara — quanto mais crítico o equipamento, maior a chance de o café cair exatamente ali. Esse tipo de incidente evidencia o papel decisivo da disciplina operacional, pois a entrada com bebidas no data center nem sequer deveria ter ocorrido. O excesso de confiança e a natureza humana tornam esses eventos mais comuns do que se imagina. Na AWS, incidentes operacionais como os descritos anteriormente são evitados por meio de disciplina, especialização e automação. A presença de elementos como café, servidores e humanos também existe nos data centers da AWS, mas com uma diferença essencial: gerenciar data centers é a atividade principal da AWS, não uma função secundária ou de suporte. 
-
-Clientes, em sua maioria, mantêm data centers porque a infraestrutura é um meio necessário para viabilizar o verdadeiro negócio — seja ele plataformas digitais, manufatura ou serviços. Já na AWS, o foco exclusivo está na operação de data centers com excelência. Por isso, políticas rígidas são aplicadas e cumpridas com rigor. A segurança é uma prioridade, e os profissionais envolvidos são altamente qualificados, o que permite identificar e neutralizar ameaças com antecedência, minimizando riscos. Mesmo diante de contratempos, a resiliência, disponibilidade e redundância estruturadas pela AWS garantem continuidade operacional com impacto mínimo ou imperceptível aos clientes. Essa mitigação ocorre por meio de:
-- Adoção de automação em larga escala;
-- Gerenciamento completo de serviços, de ponta a ponta;
-- Visibilidade abrangente sobre uso, desempenho e métricas operacionais;
-- Configurações consistentes de segurança e governança;
-- Monitoramento constante do acesso às APIs.
-
-Vazamentos de dados e violações de segurança podem ocorrer por diversos motivos. Entre as causas mais comuns estão: presença de malware como vírus e worms; ataques de rede explorando portas abertas ou pacotes fragmentados; ausência de patches em sistemas operacionais e aplicativos; falhas na proteção de senhas e credenciais mal armazenadas; e autenticação inadequada ou fraca. O fator humano também desempenha um papel significativo nesses incidentes. Um exemplo ilustrativo envolve novamente o funcionário. Após um incidente anterior, foi solicitado que ele alocasse espaço para armazenar dados sensíveis sujeitos a exigências rigorosas de conformidade na área da saúde. Diante da falta de armazenamento apropriado, o funcionário optou por uma solução temporária: armazenar os dados sem criptografia. A justificativa foi que o novo sistema de armazenamento, adequado para a carga de trabalho, chegaria em poucos dias. Contudo, nesse mesmo dia, uma vulnerabilidade foi explorada por um agente malicioso, que acessou e exfiltrou os dados confidenciais. A ausência de criptografia e a improvisação na gestão da infraestrutura resultaram em uma grave violação de segurança, reforçando a importância de uma postura preventiva, disciplinada e tecnicamente sólida no trato com informações sensíveis.
-
-Esse tipo de incidente dificilmente ocorreria na AWS, e o motivo principal é a automação, o acesso simplificado aos recursos e o modelo de segurança compartilhada adotado pela plataforma. Nesse modelo, a AWS assume a responsabilidade pela segurança da infraestrutura subjacente — incluindo desde o hipervisor até o sistema operacional — enquanto os clientes ficam responsáveis pela segurança na nuvem, como a configuração adequada de permissões, criptografia e gerenciamento de dados. Se o funcionário estivesse operando na AWS, ele não precisaria improvisar uma solução insegura. Em vez disso, poderia provisionar, em minutos, um armazenamento criptografado e compatível com normas regulatórias de saúde, com poucos cliques ou comandos automatizados. Esse nível de agilidade e segurança integrada reduz significativamente o risco de decisões equivocadas e exposições desnecessárias. A AWS contribui para a segurança de seus clientes de várias formas:
-- Utiliza automação e ferramentas específicas para mitigar riscos críticos, como ataques distribuídos de negação de serviço (DDoS);
-- Oferece o AWS Identity and Access Management (IAM) para controle centralizado de usuários e credenciais, promovendo práticas de privilégio mínimo;
-- Conta com mais de 30 certificações e acreditações de conformidade, fornecendo uma base sólida para que os clientes criem ambientes seguros e aderentes a requisitos regulatórios diversos.
-
-A AWS oferece uma série de serviços que ajudam os clientes a gerenciar a escalabilidade e a adaptação dos recursos de maneira eficiente, garantindo a resiliência do software. Para isso, a plataforma adota as seguintes práticas:
-- Implantações azuis/verdes: Permitindo reversões rápidas, caso seja necessário reverter uma versão ou atualização de software.
-- Automatização do fluxo de trabalho de integração contínua e entrega contínua (CI/CD), facilitando a entrega de software de maneira rápida e sem interrupções.
-- Implantações de código menores: Para minimizar os bugs de unidade, integração e sistema, reduzindo o risco de falhas ao implementar mudanças.
-- Fornecimento de recursos seguros e atualizados: Garantindo que os sistemas operacionais e serviços estejam sempre com os patches de segurança mais recentes.
-- Criação e gerenciamento de coleções de recursos relacionados da AWS: Facilitando a administração de múltiplos serviços e recursos, garantindo a integração e a resiliência.
-
-Algumas causas comuns de falhas de infraestrutura incluem:
-- Falhas de hardware: Servidores, armazenamento ou redes podem apresentar falhas que impactam a operação.
-- Desastres naturais: Como furacões, inundações e terremotos, que podem afetar fisicamente os data centers.
-- Quedas de energia: Falhas no fornecimento de energia elétrica ou nas baterias de backup.
-- Ataques volumétricos: Como ataques de DDoS e amplificação do DNS, que sobrecarregam a infraestrutura.
-
-A AWS adota diversas estratégias para reduzir o risco de falhas de infraestrutura:
-- Expansão contínua da infraestrutura: A AWS está constantemente ampliando e aprimorando seus data centers em grande escala, mantendo uma infraestrutura robusta.
-- Execução em várias zonas de disponibilidade e regiões: Os clientes podem distribuir seus aplicativos e realizar failover entre diferentes zonas de disponibilidade e regiões para garantir a continuidade dos serviços.
-- Design para alta disponibilidade e durabilidade: Os sistemas da AWS são projetados para garantir que permaneçam disponíveis e duráveis, mesmo em situações adversas.
-- Conectividade redundante: Cada Zona de Disponibilidade em cada Região é conectada a múltiplos provedores de trânsito de nível um, garantindo redundância.
-- Fontes de energia independentes: Cada instância de computação na AWS é alimentada por duas fontes de energia independentes, incluindo energia de utilidade, fonte de alimentação ininterrupta (UPS) e geradores de reserva.
-
-Exemplos de resultados obtidos por clientes:
-- Convertale: Melhorou a disponibilidade de seus serviços, alcançando uma taxa de 99,965% de uptime na AWS.
-- Trainline: Após migrar todas as suas cargas de trabalho para a AWS, a Trainline reduziu seu tempo de inatividade em 60%, resultando em uma economia anual de £ 1,2 milhão (aproximadamente US$ 1,43 milhão).
-- MedStar Health: Reconstruiu seu portal de engajamento de pacientes na AWS, oferecendo aos usuários uma maneira mais eficaz de pesquisar médicos, serviços e locais, além de agendar consultas médicas. Como resultado, o tempo de inatividade foi reduzido de 120 minutos para menos de 5 minutos por mês, e o tempo de download das páginas diminuiu de uma média de 1.500 milissegundos para 120 milissegundos.
 
 <a name="item05"><h4>Agilidade Empresarial</h4></a>[Back to summary](#item0)
 
-A agilidade empresarial se refere à capacidade de uma organização de entregar mais valor em menos tempo, respondendo rapidamente às mudanças no mercado e adaptando-se de forma eficaz às necessidades dos clientes. Ela envolve ser capaz de responder mais rapidamente, experimentar novas ideias, desenvolver produtos de forma mais eficiente e entregar melhores resultados no mesmo período de tempo ou até em um prazo mais curto. A agilidade empresarial não é apenas sobre velocidade; é sobre a capacidade de gerar valor real para os clientes, sendo mais eficaz em todas as áreas do negócio. Ela pode impulsionar a inovação em produtos, ajudar na expansão para novos mercados e melhorar a capacidade de resposta a stakeholders internos e externos. Organizações ágeis podem tomar decisões mais rápidas e adaptar-se rapidamente a novas demandas do mercado.
 
-A agilidade é essencial para responder a um ambiente de negócios em constante mudança e a uma concorrência crescente. Isso se aplica a todas as indústrias, sendo um pilar fundamental para a competitividade no cenário atual. Por exemplo, em ambientes de TI, as empresas ágeis conseguem fazer ajustes mais rápidos em suas infraestruturas, com base nas necessidades emergentes de seus clientes e da organização. Aqui estão alguns exemplos de indicadores-chave de desempenho (KPIs) que refletem a agilidade empresarial e que frequentemente são percebidos como valores importantes pelas organizações incluem:
-- Tempo de resposta a mudanças de mercado: Medição da rapidez com que uma organização pode se adaptar a mudanças nas condições do mercado ou nas necessidades dos clientes.
-- Eficiência no desenvolvimento de novos produtos: A capacidade de lançar novos produtos e inovações no mercado mais rapidamente, com ciclos de desenvolvimento mais curtos.
-- Capacidade de expandir para novos mercados: A rapidez e eficácia com que uma organização pode entrar e se estabelecer em novos mercados, respondendo rapidamente à demanda global.
-- Eficiência operacional: A capacidade de otimizar processos e recursos para maximizar a produtividade, minimizando desperdícios e retrabalho.
-- Satisfação e lealdade do cliente: Como a agilidade impacta a experiência do cliente, melhorando a satisfação, retenção e fidelidade ao longo do tempo.
-
-Essas métricas são apenas um ponto de partida para medir a agilidade empresarial. Ao adotar uma abordagem ágil, as empresas podem reagir mais rápido às mudanças do mercado, melhorar sua competitividade e gerar mais valor para os clientes, ao mesmo tempo em que aumentam sua eficiência e redução de custos.
-
-A AWS pode contribuir para a agilidade empresarial com base em três métricas principais:
-- Tempo de lançamento no mercado de novos recursos de aplicativos: A velocidade com que novos produtos e funcionalidades são lançados no mercado é essencial para o sucesso em setores digitais competitivos. Ao migrar para a AWS, os clientes conseguem acelerar o provisionamento de infraestrutura e a implementação do código do aplicativo. Isso resultou em uma redução de 43% no tempo de lançamento de novos recursos de aplicativos, em comparação com o período anterior à migração.
-- Tempo médio para lançamentos de produção (dias úteis): O tempo médio para levar mudanças para a produção também foi otimizado após a migração para a AWS. A melhoria de 34% no tempo médio de lançamento da produção demonstra como os clientes podem aumentar a eficiência no processo de desenvolvimento e implantação ao utilizar os serviços da AWS.
-- Tempo necessário para transformar dados brutos em insights acionáveis: A AWS melhora a agilidade dos negócios ao permitir que as empresas transformem dados em decisões mais rapidamente. Com maior disponibilidade de dados e a facilidade de implementar análises em tempo real, as empresas conseguiram reduzir em 60% o tempo necessário para obter insights acionáveis a partir dos dados do aplicativo.
-
-Uma empresa saudável deve realizar atividades cruciais para continuar crescendo e inovando, como definir o escopo, priorizar e assumir novas iniciativas. O processo de iniciativa pode ser comparado a um funil de projetos, onde a TI desempenha um papel de apoio. Organizações com infraestrutura local geralmente precisam avaliar cuidadosamente como e quando investir recursos limitados em cada iniciativa. A AWS oferece maior flexibilidade para as empresas. Por exemplo, uma organização pode começar com 20 boas iniciativas, mas em vez de escolher apenas uma, ela configura rapidamente um ambiente de teste e desenvolvimento. Isso permite que a organização experimente todas as iniciativas. Após a primeira rodada de testes, ela pode decidir implantar 10 dessas iniciativas, utilizando os produtos e serviços flexíveis da AWS. Com o tempo, a organização percebe que apenas duas iniciativas são bem-sucedidas a longo prazo. Durante esse processo, as iniciativas fracassadas podem ser encerradas rapidamente, sem o sofrimento e o desperdício de recursos típicos de um ambiente local inflexível. Esse processo de "falhar rapidamente" e reduzir o custo do fracasso permite que as organizações incluam mais projetos no funil para consideração. Como resultado, a velocidade de realização dos projetos aumenta, o que, por sua vez, aumenta a probabilidade de sucesso e diminui as consequências dos fracassos.
-
-Exemplos de resultados obtidos por clientes:
-- Liberty Mutual: Utilizando arquitetura sem servidor, a Liberty Mutual foi capaz de construir vários sistemas em apenas três meses, em comparação com o ano que levaria utilizando infraestrutura local.
-- Moderna: Durante a pandemia, a velocidade de entrada no mercado foi crucial. A Moderna concluiu o sequenciamento de sua vacina de mRNA contra a COVID-19 em apenas dois dias, utilizando aprendizado de máquina desenvolvido na AWS. O primeiro lote clínico foi lançado apenas 25 dias depois.
 
 <a name="item06"><h4>Sustentabilidade</h4></a>[Back to summary](#item0)
 
