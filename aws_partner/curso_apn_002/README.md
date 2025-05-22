@@ -1,9 +1,9 @@
-# AWS Partner: Cloud Economics   <img src="./0-aux/logo_course.png" alt="curso_apn_001" width="auto" height="45">
+# AWS Partner: Accreditation (Technical)   <img src="./0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="45">
 
 ### AWS <a href="../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../aws_partner/">aws_partner</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_apn_001 (AWS Partner: Cloud Economics)   <img src="./0-aux/logo_course.png" alt="curso_apn_001" width="auto" height="25"></a>
+### Course: <a href="./">curso_apn_002 (AWS Partner: Accreditation (Technical))   <img src="./0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="25"></a>
 
 #### <a href="https://www.credly.com/badges/9d6fd8e2-9d1b-4db5-b600-c37bceb8867d/public_url">Badge</a>
 
@@ -32,15 +32,12 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. <a href="#item01">Cloud Economics</a><br>
-2. <a href="#item02">Economia de Custos</a><br>
-3. <a href="#item03">Produtividade da Equipe</a><br>
-4. <a href="#item04">Resiliência Operacional</a><br>
+1. <a href="#item01">AWS Technical Essentials</a><br>
+2. <a href="#item02">Introduction to the AWS CAF</a><br>
+3. <a href="#item03">Introduction to Migration Strategies</a><br>
+4. <a href="#item04">Introduction to AWS Well-Architected Framework</a><br>
 5. <a href="#item05">Agilidade Empresarial</a><br>
-6. <a href="#item06">Sustentabilidade</a><br>
-7. <a href="#item07">Gestão Financeira em Nuvem</a><br>
-8. <a href="#item08">Avaliação do Portfólio de Migração</a><br>
-9. <a href="#item09">Resumo do Curso</a><br>
+6. <a href="#item09">Resumo do Curso</a><br>
 
 ---
 
@@ -53,7 +50,7 @@ A estrutura do curso é formada por:
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item01"><h4>Cloud Economics</h4></a>[Back to summary](#item0)
+<a name="item01"><h4>AWS Technical Essentials</h4></a>[Back to summary](#item0)
 
 A economia da nuvem aborda duas áreas inter-relacionadas, porém distintas: o valor comercial e a gestão financeira da nuvem. O valor comercial representa os elementos que influenciam diretamente o desempenho organizacional e a experiência do cliente. Essa perspectiva é considerada durante a fase pré-venda, com o objetivo de evidenciar os benefícios estratégicos da adoção da AWS. Embora o custo total de propriedade (TCO) seja um componente relevante, o valor comercial vai além, abrangendo fatores adicionais que geram impactos significativos nos resultados operacionais e no crescimento do negócio.
 
@@ -70,13 +67,13 @@ O **AWS Cloud Value Framework** foi desenvolvido com base na observação de pad
 - Agilidade Empresarial: Capacidade de lançar novos produtos, expandir para novos mercados e adicionar funcionalidades com maior rapidez.
 - Sustentabilidade: Redução do impacto ambiental das operações de TI por meio do uso eficiente de recursos e infraestrutura compartilhada.
 
-<a name="item02"><h4>Economia de Custos</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>Introduction to the AWS CAF</h4></a>[Back to summary](#item0)
 
 
-<a name="item03"><h4>Produtividade da Equipe</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>Introduction to Migration Strategies</h4></a>[Back to summary](#item0)
 
 
-<a name="item04"><h4>Resiliência Operacional</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>Introduction to AWS Well-Architected Framework</h4></a>[Back to summary](#item0)
 
 
 
@@ -84,21 +81,8 @@ O **AWS Cloud Value Framework** foi desenvolvido com base na observação de pad
 
 
 
-<a name="item06"><h4>Sustentabilidade</h4></a>[Back to summary](#item0)
+<a name="item06"><h4>Resumo do Curso</h4></a>[Back to summary](#item0)
 
-
-
-<a name="item07"><h4>Gestão Financeira em Nuvem</h4></a>[Back to summary](#item0)
-
-
-
-<a name="item08"><h4>Avaliação do Portfólio de Migração</h4></a>[Back to summary](#item0)
-
-
-
-
-
-<a name="item09"><h4>Resumo do Curso</h4></a>[Back to summary](#item0)
 
 - AWS Cloud Economics:
   - AWS Business Value:
