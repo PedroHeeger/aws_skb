@@ -53,13 +53,27 @@ A estrutura do curso é formada por:
 <a name="item01"><h4>AWS Technical Essentials</h4></a>[Back to summary](#item0)
 
 
+
+
+
+
 <a name="item02"><h4>Introduction to the AWS CAF</h4></a>[Back to summary](#item0)
+
+
+
+
 
 
 <a name="item03"><h4>Introduction to Migration Strategies</h4></a>[Back to summary](#item0)
 
 
+
+
+
 <a name="item04"><h4>Introduction to AWS Well-Architected Framework</h4></a>[Back to summary](#item0)
+
+
+
 
 
 
