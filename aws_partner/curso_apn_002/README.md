@@ -43,7 +43,7 @@
 ---
 
 ### Objective:
-
+O objetivo do curso foi
 
 O curso Cloud Economics teve como objetivo capacitar profissionais a entenderem e aplicarem os princípios que sustentam a geração de valor por meio da nuvem. A abordagem se divide em duas áreas principais: Valor Comercial e Gestão Financeira em Nuvem (CFM). O Valor Comercial é estruturado em cinco pilares — economia de custos, produtividade empresarial, resiliência operacional, agilidade empresarial e sustentabilidade — que juntos permitem demonstrar como a nuvem contribui para ganhos estratégicos e operacionais. Já a CFM é composta por quatro pilares — medição e responsabilização, otimização de custos, planejamento e previsão e operações financeiras — que orientam o controle eficiente dos investimentos em nuvem ao longo do tempo. O curso também abordou a Avaliação de Portfólio de Migração (MPA), ferramenta que facilita a análise financeira e técnica de ambientes locais, apoiando decisões iniciais de arquitetura e planejamento de migração para a AWS.
 
