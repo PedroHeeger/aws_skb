@@ -84,39 +84,9 @@ A estrutura do curso é formada por:
 
 
 
+
+
+
+
 <a name="item06"><h4>Resumo do Curso</h4></a>[Back to summary](#item0)
 
-
-- AWS Cloud Economics:
-  - AWS Business Value:
-    - Fase Teórica: Conversas Econômicas / Análises -> Business Case
-      - AWS Cloud Value Framework:
-        - Economia de Custo.
-          - Ferramenta: Análise de Economia de Custos.
-          - Pilares:
-            - Modelo baseado no consumo.
-            - Modelos de preços da AWS.
-            - Reduções frequentes de preços.
-        - Produtividade da Equipe:
-          - Categorias Principais de Funções Relacionadas a TI:
-            - Gerenciamento da Infraestrutura de Hardware:
-              - Servidor.
-              - Rede.
-              - Armazenamento.
-            - Outras:
-              - Aplicação.
-              - Instalações.
-              - Segurança.
-        - Resiliência Operacional:
-          - Operações.
-          - Segurança.
-          - Software.
-          - Infraestrutura.
-        - Agilidade Empresarial.
-        - Sustentabilidade.
-    - Fase Prática: Provas de conceito / Revisões Arquitetônicas / Migração de Carga de Trabalho
-  - AWS Cloud Financial Management:
-    - Medição e Responsabilização.
-    - Otimização de Custos.
-    - Planejamento e Previsão.
-    - Operações Financeiras na Nuvem.
