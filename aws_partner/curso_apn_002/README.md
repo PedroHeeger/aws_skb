@@ -68,7 +68,12 @@ A estrutura do curso é formada por:
 
 
 
+
+
 <a name="item03"><h4>Introduction to Migration Strategies</h4></a>[Back to summary](#item0)
+
+
+
 
 
 
