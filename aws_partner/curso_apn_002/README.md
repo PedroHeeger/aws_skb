@@ -32,12 +32,13 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
+
+
 1. <a href="#item01">AWS Technical Essentials</a><br>
 2. <a href="#item02">Introduction to the AWS CAF</a><br>
 3. <a href="#item03">Introduction to Migration Strategies</a><br>
 4. <a href="#item04">Introduction to AWS Well-Architected Framework</a><br>
 5. <a href="#item05">Agilidade Empresarial</a><br>
-
 6. <a href="#item09">Resumo do Curso</a><br>
 
 ---
