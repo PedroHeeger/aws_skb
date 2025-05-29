@@ -5,7 +5,7 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_apn_002 (AWS Partner: Accreditation (Technical))   <img src="./0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="25"></a>
 
-#### <a href="https://www.credly.com/badges/9d6fd8e2-9d1b-4db5-b600-c37bceb8867d/public_url">Badge</a>
+#### <a href="https://www.credly.com/badges/f1721e35-aafe-4f44-b05a-e4017c4a366e/public_url">Badge</a>
 
 ---
 
