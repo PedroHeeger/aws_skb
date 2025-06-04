@@ -80,34 +80,8 @@ O processo de transformação proposto pelo AWS Cloud Adoption Framework (AWS CA
 
 <a name="item03"><h4>Cloud Objection Handling</h4></a>[Back to summary](#item0)
 
-O processo de migração para a nuvem envolve a escolha entre sete abordagens distintas, conhecidas como os "7 Rs", que orientam a transição de cargas de trabalho para ambientes em nuvem, como o da AWS. Cada estratégia é adequada a diferentes cenários e necessidades organizacionais:
-- Realocação (Relocate): Transferência de aplicações para a nuvem sem alterações significativas, mantendo a infraestrutura existente.
-- Rehospedagem (Rehost): Migração direta de aplicações para a nuvem, sem modificações, visando rapidez na transição.
-- Replataforma (Replatform): Adaptação mínima das aplicações para aproveitar melhor os recursos da nuvem, como a migração de bancos de dados para serviços gerenciados.
-- Recompra (Repurchase): Substituição de aplicações existentes por soluções SaaS, eliminando a necessidade de manutenção da infraestrutura.
-- Refatoração (Refactor): Reestruturação completa das aplicações para aproveitar ao máximo as capacidades da nuvem, como escalabilidade e resiliência.
-- Descontinuação (Retire): Desativação de aplicações que não são mais necessárias, otimizando recursos e reduzindo custos.
-- Retenção (Retain): Manutenção de aplicações no ambiente atual, seja por restrições técnicas, regulatórias ou estratégicas.
 
-A seleção adequada entre essas estratégias depende de uma análise criteriosa das aplicações existentes, considerando fatores como complexidade, dependências, requisitos de desempenho e objetivos de negócios. Essa abordagem estruturada facilita a tomada de decisões informadas, promovendo uma migração eficiente e alinhada às necessidades organizacionais.
 
 <a name="item04"><h4>Co-Selling with AWS</h4></a>[Back to summary](#item0)
-<a name="item04"><h4>Co-Selling with AWS</h4></a>[Back to summary](#item0)
 
-O AWS Well-Architected Framework oferece uma abordagem sistemática para avaliar arquiteturas de sistemas na AWS, auxiliando na compreensão dos impactos das decisões de arquitetura. Seu uso permite a identificação de boas práticas voltadas ao projeto e à operação de cargas de trabalho seguras, resilientes, eficientes, sustentáveis e com bom custo-benefício. O framework fornece critérios consistentes para mensurar arquiteturas com base em princípios estabelecidos, destacando oportunidades de melhoria. A revisão da arquitetura deve ser entendida como uma conversa construtiva sobre decisões técnicas, e não como um processo de auditoria. Sistemas bem arquitetados contribuem significativamente para o sucesso dos negócios.
 
-Após a migração de cargas de trabalho para a nuvem, a aplicação do AWS Well-Architected Framework permite assegurar a aderência às práticas recomendadas de arquitetura. O conteúdo do framework é resultado da experiência acumulada por arquitetos de soluções da AWS em diversos setores e cenários de uso. Ele viabiliza o aprendizado de boas práticas para construir sistemas escaláveis, seguros, econômicos e de alto desempenho, promovendo também a sustentabilidade.
-
-O AWS Well-Architected Framework possibilita a comparação entre arquiteturas e as melhores práticas da AWS, além da identificação de pontos críticos a serem aprimorados. Sua apresentação é recomendada em contextos nos quais os objetivos de negócio envolvam: redução de custos com infraestrutura, realocação de esforços para atividades estratégicas, diminuição do tempo de inatividade não planejado ou aceleração da entrega de novos produtos ao mercado.
-
-A estrutura é organizada em seis pilares:
-- Excelência Operacional: Foca na eficiência de processos e pessoas, abrangendo automação de mudanças, resposta a eventos e definição de padrões operacionais.
-- Segurança: Envolve proteção de dados, sistemas e identidade, com ênfase em privilégios mínimos, gestão de credenciais, detecção de eventos e resposta eficaz.
-- Confiabilidade: Garante a continuidade das operações frente a falhas, considerando disponibilidade, resiliência, recuperação e gestão de mudanças.
-- Eficiência de Desempenho: Trata do uso otimizado dos recursos da AWS com base nos requisitos das cargas de trabalho, promovendo elasticidade e monitoramento contínuo.
-- Otimização de Custos: Visa maximizar o retorno financeiro, com foco em alocação eficiente de recursos e análise contínua de gastos.
-- Sustentabilidade: Minimiza o impacto ambiental das cargas de trabalho, promovendo uso consciente e eficiente dos recursos computacionais.
-
-A documentação das análises pode ser feita por meio da AWS Well-Architected Tool, que permite registrar o nível de maturidade das cargas de trabalho e gerar dados para orientar investimentos e decisões estratégicas. A ferramenta atribui pontuações de risco que ajudam a priorizar ações corretivas. Com base nas recomendações fornecidas, torna-se possível propor medidas práticas para mitigação de riscos, como a reestruturação de procedimentos operacionais ou a migração de soluções autogerenciadas para serviços gerenciados da AWS. Essa transição contribui para melhorias em escalabilidade, desempenho e disponibilidade, ao mesmo tempo que libera recursos para foco em lógica de negócios.
-
-O uso contínuo do AWS Well-Architected Framework capacita parceiros a desenvolver soluções de alta qualidade, implementar melhorias contínuas e alinhar a arquitetura dos sistemas aos resultados de negócio desejados. O processo de revisão recorrente fortalece o relacionamento com os clientes e abre espaço para identificar novas oportunidades de negócios.
