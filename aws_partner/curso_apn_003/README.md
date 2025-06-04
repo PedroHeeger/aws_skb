@@ -55,28 +55,7 @@ A estrutura do curso é formada por:
 ### Development:
 <a name="item02"><h4>Cloud Business Value</h4></a>[Back to summary](#item0)
 
-O AWS Cloud Adoption Framework (AWS CAF) constitui uma estrutura metodológica voltada à formulação e execução de estratégias de transformação digital baseadas em computação em nuvem. Sua construção é fundamentada nas melhores práticas da AWS e na experiência acumulada em milhares de projetos realizados com organizações dos mais diversos setores.
 
-Essa estrutura fornece mecanismos para mapear o estado atual de ambientes de negócios e tecnologia, identificando lacunas operacionais e técnicas que impactam a adoção da nuvem. A partir disso, permite a definição de um roteiro estruturado para orientar a evolução da arquitetura tecnológica rumo a modelos otimizados para a nuvem, com base em requisitos específicos.
-
-O AWS CAF está organizado em seis áreas temáticas denominadas perspectivas. Essas perspectivas abrangem domínios como operações, segurança, pessoas, negócios, plataforma e governança. Cada uma delas é utilizada para detectar deficiências e necessidades, gerando entradas que alimentam fluxos de trabalho e planos de ação coerentes com os objetivos organizacionais.
-
-A estrutura contempla também um modelo iterativo composto por fases de transformação. Inicialmente, realiza-se uma etapa de análise estratégica, que estabelece a conexão entre metas de negócios e tecnologias da nuvem, além de indicar métricas e iniciativas prioritárias. Na sequência, a fase de alinhamento permite consolidar um plano tático, detalhando benefícios esperados, ações necessárias e direcionamentos para a gestão da mudança organizacional.
-
-Com o plano estruturado, a fase de implementação operacionaliza os fluxos de trabalho definidos, conduzindo as cargas de trabalho ao ambiente da nuvem e promovendo entregas incrementais de valor. Posteriormente, o ciclo se completa com a avaliação de resultados e a expansão das iniciativas, garantindo a continuidade e a escalabilidade da estratégia de adoção.
-
-Ao longo de todo o processo, a aplicação do AWS CAF permite que organizações conduzam sua jornada de transformação digital de forma consistente, estruturada e alinhada aos objetivos de longo prazo, promovendo maturidade operacional e técnica no uso da nuvem.
-
-##### Fases de transformação:
-O processo de transformação proposto pelo AWS Cloud Adoption Framework (AWS CAF) é dividido em quatro fases distintas e iterativas, cada uma com objetivos estratégicos e operacionais específicos que contribuem para a consolidação da adoção da computação em nuvem por parte das organizações.
-
-- Fase de Visualização: Essa etapa inicial é conduzida pela liderança sênior da organização, responsável por estabelecer a direção estratégica da transformação digital. São definidos os objetivos empresariais centrais, os resultados esperados da migração e os indicadores que servirão para mensuração do sucesso. Paralelamente, identificam-se as tecnologias essenciais ao processo e priorizam-se as iniciativas que integrarão o plano de visão. A identificação das partes interessadas críticas também ocorre neste estágio, assegurando a articulação necessária para os próximos passos do processo.
-
-- Fase de Alinhamento: A segunda fase busca conectar a visão estratégica estabelecida anteriormente ao cenário real de prontidão da organização. Com base nas seis perspectivas do AWS CAF — Negócios, Pessoas, Governança, Plataforma, Segurança e Operações — são avaliadas lacunas de capacidade, mapeadas interdependências organizacionais e tratadas preocupações de stakeholders. Esse diagnóstico permite a elaboração de estratégias de transformação alinhadas à realidade institucional, promovendo o engajamento das partes envolvidas e preparando a organização para as mudanças subsequentes.
-
-- Fase de Lançamento: Nesta etapa, o plano de migração é colocado em prática. As primeiras cargas de trabalho são transferidas para a nuvem e os modelos operacionais são estruturados. A implantação de projetos-piloto com alto potencial de impacto permite validar abordagens e demonstrar valor de negócio, oferecendo feedback relevante para ajustes futuros. A fase de Lançamento representa o início da operacionalização da jornada, transformando planos em resultados concretos.
-
-- Fase de Escala: A última fase concentra-se na expansão dos esforços bem-sucedidos iniciados nas etapas anteriores. O ambiente em nuvem é refinado, os modelos operacionais e de governança são aprimorados, e os ganhos de eficiência são mantidos e ampliados. O foco está na consolidação dos benefícios estratégicos da nuvem e na sustentação de inovações contínuas que reforcem a competitividade e a agilidade organizacional.
 
 <a name="item03"><h4>Cloud Objection Handling</h4></a>[Back to summary](#item0)
 
