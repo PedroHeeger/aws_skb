@@ -46,7 +46,7 @@
 ---
 
 ### Objective:
-
+O objetivo desse curso foi
 
 O curso teve como objetivo apresentar os principais conceitos da computação em nuvem por meio da plataforma AWS, com ênfase no uso prático do console e na compreensão de fundamentos essenciais relacionados à infraestrutura, banco de dados, armazenamento, rede, monitoramento e segurança. Foram abordados os serviços centrais da AWS e a estrutura global da nuvem, com foco na elaboração de soluções arquitetônicas básicas para diferentes cenários e requisitos. O conteúdo incluiu a seleção adequada de serviços de computação, rede, banco de dados e armazenamento, bem como a aplicação de práticas voltadas à segurança e à automação. Também foram introduzidos conceitos estratégicos como o AWS Cloud Adoption Framework (CAF), fundamentos de estratégias de migração e os princípios do AWS Well-Architected Framework.
 
