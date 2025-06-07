@@ -36,19 +36,15 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. <a href="../../digital_course/curso_dc_001/">Cloud Concepts and AWS</a><br>
+1. <a href="#item01">Cloud Concepts and AWS</a><br>
 2. <a href="#item02">Cloud Business Value</a><br>
 3. <a href="#item03">Cloud Objection Handling</a><br>
 4. <a href="#item04">Co-Selling with AWS</a><br>
 
-5. <a href="#item05">Course Wrap-Up</a><br>
-
 ---
 
 ### Objective:
-O objetivo desse curso foi
-
-O curso teve como objetivo apresentar os principais conceitos da computação em nuvem por meio da plataforma AWS, com ênfase no uso prático do console e na compreensão de fundamentos essenciais relacionados à infraestrutura, banco de dados, armazenamento, rede, monitoramento e segurança. Foram abordados os serviços centrais da AWS e a estrutura global da nuvem, com foco na elaboração de soluções arquitetônicas básicas para diferentes cenários e requisitos. O conteúdo incluiu a seleção adequada de serviços de computação, rede, banco de dados e armazenamento, bem como a aplicação de práticas voltadas à segurança e à automação. Também foram introduzidos conceitos estratégicos como o AWS Cloud Adoption Framework (CAF), fundamentos de estratégias de migração e os princípios do AWS Well-Architected Framework.
+Este curso teve como objetivo proporcionar uma introdução aos conceitos fundamentais dos serviços em nuvem, com foco especial na proposta de valor oferecida pela AWS aos seus clientes. Além disso, buscou capacitar os participantes a lidarem com objeções comuns durante o processo de venda e a desenvolverem estratégias para iniciar parcerias comerciais e vendas em conjunto com a AWS.
 
 ### Structure:
 A estrutura do curso é formada por:
@@ -56,11 +52,25 @@ A estrutura do curso é formada por:
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
+<a name="item01"><h4>Cloud Concepts and AWS</h4></a>[Back to summary](#item0)
+
+
+
+
+
+
+
+
 <a name="item02"><h4>Cloud Business Value</h4></a>[Back to summary](#item0)
 
 
 
+
+
 <a name="item03"><h4>Cloud Objection Handling</h4></a>[Back to summary](#item0)
+
+
+
 
 
 
