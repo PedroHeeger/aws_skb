@@ -54,14 +54,15 @@ A estrutura do curso é formada por:
 ### Development:
 <a name="item01"><h4>Cloud Concepts and AWS</h4></a>[Back to summary](#item0)
 
-
-
+O Cloud Concepts
 
 
 
 
 
 <a name="item02"><h4>Cloud Business Value</h4></a>[Back to summary](#item0)
+
+
 
 
 
@@ -74,6 +75,9 @@ A estrutura do curso é formada por:
 
 
 
+
+
 <a name="item04"><h4>Co-Selling with AWS</h4></a>[Back to summary](#item0)
+
 
 
