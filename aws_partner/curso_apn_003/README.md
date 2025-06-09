@@ -54,8 +54,10 @@ A estrutura do curso é formada por:
 ### Development:
 <a name="item01"><h4>Cloud Concepts and AWS</h4></a>[Back to summary](#item0)
 
-O Cloud Concepts
+O Cloud Concepts 
 
+
+EM CONSTRUÇÃO
 
 
 
@@ -68,7 +70,11 @@ O Cloud Concepts
 
 
 
+
+
 <a name="item03"><h4>Cloud Objection Handling</h4></a>[Back to summary](#item0)
+
+
 
 
 
