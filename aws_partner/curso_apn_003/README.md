@@ -118,17 +118,11 @@ Clientes iniciam sua jornada na nuvem com casos simples, como:
 
 <a name="item01.4"><h4>Facilitating Digital Transformation</h4></a>[Back to summary](#item0)
 
+Aplicações monolíticas concentram toda a lógica em um único bloco, o que dificulta a escalabilidade, a manutenção e a adaptação. Qualquer alteração exige testes e implantações em toda a aplicação, aumentando o risco e o tempo de resposta. Já os microsserviços funcionam de forma independente, com comunicação entre si, permitindo atualizações isoladas, maior resiliência e desenvolvimento mais ágil. Dividir sistemas em partes menores torna possível operar com mais flexibilidade e controlar melhor cada componente. Essa abordagem facilita a construção de soluções escaláveis, com disponibilidade elevada e tolerância a falhas. Microsserviços são geralmente gerenciados por equipes específicas, responsáveis por seu ciclo de vida completo.
 
+A modernização arquitetônica atende à necessidade de lidar com aplicações que exigem resposta em milissegundos, alcance global e capacidade de processar grandes volumes de dados. Organizações buscam soluções mais ágeis para inovar e responder rapidamente às mudanças. A AWS oferece uma base completa para esse modelo, incluindo serviços de computação, armazenamento, rede, banco de dados, mensageria, monitoramento e práticas DevOps, apoiando toda a estrutura necessária para microsserviços.
 
-
-
-
-
-
-
-
-
-
+O aprendizado de máquina tornou-se elemento central em estratégias digitais. Com o aumento da capacidade computacional e da geração de dados, passou a ser utilizado para melhorar experiências, otimizar operações e acelerar decisões. Estima-se que grande parte dos projetos de ML e uso de frameworks como TensorFlow ocorra na AWS. A produtividade de cientistas de dados pode ser até dez vezes maior com os recursos disponíveis na plataforma. A adoção de microsserviços e de tecnologias como machine learning contribui para reduzir custos, aumentar o retorno sobre o investimento e melhorar a eficiência operacional e a agilidade dos negócios.
 
 <a name="item02"><h4>Cloud Business Value</h4></a>[Back to summary](#item0)
 
