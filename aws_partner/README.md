@@ -23,6 +23,7 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
     <ul>
         <li>curso_apn_001: <a href="./curso_apn_001/">AWS Partner: Cloud Economics   <img src="./curso_apn_001/0-aux/logo_course.png" alt="curso_apn_001" width="auto" height="25"></a></li>
         <li>curso_apn_002: <a href="./curso_apn_002/">AWS Partner: Accreditation (Technical)   <img src="./curso_apn_002/0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="25"></a></li>
+        <li>curso_apn_003: <a href="./curso_apn_003/">AWS Partner: Accreditation (Technical)   <img src="./curso_apn_003/0-aux/logo_course.png" alt="curso_apn_003" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Desenvolvimento</summary>
