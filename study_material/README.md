@@ -9,7 +9,7 @@ Esta pasta concentra materiais produzidos ao longo da minha jornada de aprendiza
 Esses materiais são continuamente atualizados e ampliados conforme novos aprendizados e práticas são explorados.
 
 ### Materiais:
-- [aws_services.xlsx](./aws_services.xlsx): Planilha com mais de 600 elementos da AWS (serviços e componentes), organizada com base em suas categorias, áreas funcionais e objetivos de uso.
+- [aws_services.xlsx](./aws_services.xlsx): Planilha com mais de 1.100 elementos da AWS (serviços e componentes), organizada com base em suas categorias, áreas funcionais e objetivos de uso.
 - [architecture_diagram](./architecture_diagram/): Diretório com diagramas de arquitetura na nuvem AWS, desenvolvidos para representar cenários reais de uso e boas práticas de design.
 - [aws_elementos.md](./aws_elementos.md): Explicações sobre elementos de suporte e recursos complementares da AWS que não fazem parte diretamente da infraestrutura da nuvem, como políticas, guias, blogs, eventos, treinamentos e ferramentas para desenvolvedores.
 - [aws_scripts_model](./aws_scripts_model/): Diretório com scripts para provisionamento de serviços na AWS. Cada script é disponibilizado em quatro versões: comandos AWS CLI via PowerShell e Bash, SDK Python (Boto3) e infraestrutura como código com o Terraform.
