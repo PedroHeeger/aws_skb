@@ -1,9 +1,9 @@
-# AWS Partner: Cloud Business Value   <img src="./0-aux/logo_course.png" alt="curso_apn_005" width="auto" height="45">
+# AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="45">
 
 ### AWS <a href="../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../aws_partner/">aws_partner</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_apn_005 (AWS Partner: Cloud Business Value)   <img src="./0-aux/logo_course.png" alt="curso_apn_005" width="auto" height="25"></a>
+### Course: <a href="./">curso_apn_006 (AWS Partner: Cloud Objection Handling)   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="25"></a>
 
 #### <a href="">Badge</a>
 
