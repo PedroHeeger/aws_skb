@@ -33,11 +33,14 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1 <a href="#item01">Business Value and Benchmarking</a><br>
-2 <a href="#item02">AWS Cloud Value Framework: Cost Saving</a><br>
-3 <a href="#item03">AWS Cloud Value Framework: Staff Productivity</a><br>
-4 <a href="#item04">AWS Cloud Value Framework: Operational Resilience</a><br>
-5 <a href="#item05">AWS Cloud Value Framework: Business Agility</a><br>
+1 <a href="#item01">Cloud Objections</a><br>
+2 <a href="#item02">Cost</a><br>
+3 <a href="#item03">Security, Compliance, and Privacy</a><br>
+4 <a href="#item04">Loss of Control or Visibility</a><br>
+5 <a href="#item05">Existing Infrastructure</a><br>
+5 <a href="#item06">Skills Gap</a><br>
+5 <a href="#item07">Vendor Lock-in</a><br>
+5 <a href="#item08">Sustainability</a><br>
 
 ---
 
@@ -50,21 +53,21 @@ A estrutura do curso é formada por:
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item01"><h4>Business Value and Benchmarking</h4></a>[Back to summary](#item0)
+<a name="item01"><h4>Cloud Objections</h4></a>[Back to summary](#item0)
 
 
 
-<a name="item02"><h4>AWS Cloud Value Framework: Cost Saving</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>Cost</h4></a>[Back to summary](#item0)
 
 
 
-<a name="item03"><h4>AWS Cloud Value Framework: Staff Productivity</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>Security, Compliance, and Privacy</h4></a>[Back to summary](#item0)
 
 
 
-<a name="item04"><h4>AWS Cloud Value Framework: Operational Resilience</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>Loss of Control or Visibility</h4></a>[Back to summary](#item0)
 
 
 
-<a name="item05"><h4>AWS Cloud Value Framework: Operational Resilience</h4></a>[Back to summary](#item0)
+<a name="item05"><h4>Existing Infrastructure</h4></a>[Back to summary](#item0)
 
