@@ -71,3 +71,11 @@ A estrutura do curso é formada por:
 
 <a name="item05"><h4>Existing Infrastructure</h4></a>[Back to summary](#item0)
 
+
+<a name="item06"><h4>Vendor Lock-in</h4></a>[Back to summary](#item0)
+
+
+<a name="item07"><h4>Vendor Lock-in</h4></a>[Back to summary](#item0)
+<a name="item08"><h4>Sustainability</h4></a>[Back to summary](#item0)
+
+
