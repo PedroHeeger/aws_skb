@@ -1,10 +1,10 @@
 # AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" style="height:45px; width:auto;">
 <!-- # AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="45"> -->
 
-### AWS <a href="../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
+### AWS <a href="../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" style="height:25px; width:auto;></a>
 ### Training Category: <a href="../../aws_partner/">aws_partner</a>
-### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_apn_006 (AWS Partner: Cloud Objection Handling)   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="25"></a>
+### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" style="height:25px; width:auto;>
+### Course: <a href="./">curso_apn_006 (AWS Partner: Cloud Objection Handling)   <img src="./0-aux/logo_course.png" alt="curso_apn_006" style="height:25px; width:auto;></a>
 
 #### <a href="">Badge</a>
 
@@ -15,12 +15,12 @@
 
 ### Used Tools:
 - Operating System (OS): 
-  - Windows 11   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/windows11.png" alt="windows11" width="auto" height="25">
+  - Windows 11   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/windows11.png" alt="windows11" style="height:25px; width:auto;>
 - Cloud:
-  - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
+  - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" style="height:25px; width:auto;>
 - Cloud Services:
-  - AWS Cloud Value Framework   <img src="" alt="aws_cloud_value_framework" width="auto" height="25">
-  - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
+  - AWS Cloud Value Framework   <img src="" alt="aws_cloud_value_framework" style="height:25px; width:auto;>
+  - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" style="height:25px; width:auto;>
 - Language:
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
   - Markdown   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" alt="markdown" width="auto" height="25">
