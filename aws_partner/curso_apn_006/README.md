@@ -1,4 +1,5 @@
-# AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="45">
+# AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" style="height:45px; width:auto;">
+<!-- # AWS Partner: Cloud Objection Handling   <img src="./0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="45"> -->
 
 ### AWS <a href="../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../aws_partner/">aws_partner</a>
