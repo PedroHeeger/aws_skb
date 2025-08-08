@@ -101,7 +101,7 @@ Estudos de benchmarking indicam os seguintes resultados após a migração para 
 
 Essas melhorias evidenciam uma operação mais confiável, com menor impacto de falhas, resposta mais ágil a incidentes e reforço nos padrões de segurança e conformidade.
 
-<a name="item05"><h4>AWS Cloud Value Framework: Operational Resilience</h4></a>[Back to summary](#item0)
+<a name="item05"><h4>AWS Cloud Value Framework: Business Agility</h4></a>[Back to summary](#item0)
 
 A agilidade empresarial representa a capacidade de adaptação rápida diante de mudanças nas condições de negócio. Com a AWS, o desenvolvimento se torna mais ágil, permitindo ciclos de experimentação mais curtos, redução de riscos e resposta mais eficiente a demandas do mercado. A nuvem permite testar ideias rapidamente, descartando projetos que não trazem resultados, evitando custos irrecuperáveis. Essa abordagem reduz falhas em fases avançadas e favorece a inovação contínua.
 
