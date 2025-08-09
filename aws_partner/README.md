@@ -24,6 +24,9 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
         <li>curso_apn_001: <a href="./curso_apn_001/">AWS Partner: Cloud Economics   <img src="./curso_apn_001/0-aux/logo_course.png" alt="curso_apn_001" width="auto" height="25"></a></li>
         <li>curso_apn_002: <a href="./curso_apn_002/">AWS Partner: Accreditation (Technical)   <img src="./curso_apn_002/0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="25"></a></li>
         <li>curso_apn_003: <a href="./curso_apn_003/">AWS Partner: Sales Accreditation (Business)   <img src="./curso_apn_003/0-aux/logo_course.png" alt="curso_apn_003" width="auto" height="25"></a></li>
+        <li>curso_apn_004: <a href="./curso_apn_004/">AWS Partner: Cloud Concepts and AWS   <img src="./curso_apn_004/0-aux/logo_course.png" alt="curso_apn_004" width="auto" height="25"></a></li>
+        <li>curso_apn_005: <a href="./curso_apn_005/">AWS Partner: Cloud Business Value   <img src="./curso_apn_005/0-aux/logo_course.png" alt="curso_apn_005" width="auto" height="25"></a></li>
+        <li>curso_apn_006: <a href="./curso_apn_006/">AWS Partner: Cloud Objection Handling   <img src="./curso_apn_006/0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Desenvolvimento</summary>

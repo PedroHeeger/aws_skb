@@ -32,7 +32,7 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1. <a href="#item01">Cloud Concepts and AWS</a><br>
+1. <a href="#item01">Cloud Computing</a><br>
 2. <a href="#item02">Why Customers Choose AWS</a><br>
 3. <a href="#item03">AWS Services</a><br>
 4. <a href="#item04">Facilitating Digital Transformation</a><br>
