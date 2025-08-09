@@ -5,7 +5,7 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_apn_004 (AWS Partner: Cloud Concepts and AWS)   <img src="./0-aux/logo_course.png" alt="curso_apn_004" width="auto" height="25"></a>
 
-#### <a href="">Badge</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/250626_APN...Cloud_Concepts...AWS_PH_ASB.pdf">Certificate</a>
 
 ---
 
@@ -32,10 +32,10 @@
 ---
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
-1 <a href="#item01">Cloud Concepts and AWS</a><br>
-2 <a href="#item02">Why Customers Choose AWS</a><br>
-3 <a href="#item03">AWS Services</a><br>
-4 <a href="#item04">Facilitating Digital Transformation</a><br>
+1. <a href="#item01">Cloud Concepts and AWS</a><br>
+2. <a href="#item02">Why Customers Choose AWS</a><br>
+3. <a href="#item03">AWS Services</a><br>
+4. <a href="#item04">Facilitating Digital Transformation</a><br>
 
 ---
 
@@ -44,11 +44,11 @@ Este curso teve como objetivo apresentar os fundamentos da computação em nuvem
 
 ### Structure:
 A estrutura do curso é formada por:
-- Este arquivo de README.
+- Este arquivo de README, abordando o assunto do curso.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item01"><h4>Cloud Computing</h4></a>[Back to summary](#item0)
+<a name="item01"><h4>1. Cloud Computing</h4></a>[Back to summary](#item0)
 
 Computação em nuvem refere-se à oferta sob demanda de recursos de TI pela internet, com pagamento baseado no uso. Em vez de adquirir e manter infraestrutura própria, serviços como armazenamento e bancos de dados podem ser acessados de provedores como a AWS, de acordo com a necessidade do momento. 
 
@@ -60,7 +60,7 @@ A adoção da nuvem ocorre em fases. Inicialmente, ocorrem testes ou migrações
 
 A computação em nuvem também pode ser dividida em três modelos de serviço: Software como Serviço (SaaS), Plataforma como Serviço (PaaS) e Infraestrutura como Serviço (IaaS), cada um com diferentes níveis de controle e responsabilidade compartilhada entre o provedor e o consumidor.
 
-<a name="item02"><h4>Why Customers Choose AWS</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>2. Why Customers Choose AWS</h4></a>[Back to summary](#item0)
 
 Ser obcecado pelo cliente significa priorizar suas necessidades e proporcionar uma experiência envolvente. Ao compreender seus problemas e entregar soluções eficazes, gera-se valor real para o negócio. A AWS destaca-se por oferecer uma ampla gama de serviços, redução de custos, foco na inovação e alcance global. Empresas com presença internacional encontram suporte escalável para suas operações. Entre os principais benefícios, estão:
 - Substituição de grandes investimentos iniciais por um modelo de pagamento conforme o uso.
@@ -80,7 +80,7 @@ A AWS também conta com a maior comunidade de parceiros e um marketplace com mil
 
 Casos de uso comuns incluem backup, arquivamento, conformidade, data lakes e aplicações modernas e críticas. A combinação entre inovação, segurança, presença global e variedade de serviços posiciona a AWS como líder no setor de computação em nuvem.
 
-<a name="item03"><h4>AWS Services</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>3. AWS Services</h4></a>[Back to summary](#item0)
 
 A AWS disponibiliza uma ampla gama de serviços em constante expansão, permitindo que clientes e parceiros desenvolvam soluções para praticamente qualquer tipo de carga de trabalho de TI. Aproximadamente 90% dos serviços e funcionalidades da AWS são desenvolvidos com base no feedback direto de clientes e parceiros. Os outros 10% resultam de inovações proativas com foco nas necessidades do cliente.
 
@@ -106,7 +106,7 @@ Clientes iniciam sua jornada na nuvem com casos simples, como:
 - Aplicações Modernas: Migração por meio de lift-and-shift (rehospedagem) ou refatoração, de acordo com o ritmo desejado pela organização.
 - Aplicações Críticas de Negócio: Sistemas ERP, bancos de dados e CMS são frequentemente migrados para a nuvem com foco em continuidade operacional e redução de custos.
 
-<a name="item04"><h4>Facilitating Digital Transformation</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>4. Facilitating Digital Transformation</h4></a>[Back to summary](#item0)
 
 Aplicações monolíticas concentram toda a lógica em um único bloco, o que dificulta a escalabilidade, a manutenção e a adaptação. Qualquer alteração exige testes e implantações em toda a aplicação, aumentando o risco e o tempo de resposta. Já os microsserviços funcionam de forma independente, com comunicação entre si, permitindo atualizações isoladas, maior resiliência e desenvolvimento mais ágil. Dividir sistemas em partes menores torna possível operar com mais flexibilidade e controlar melhor cada componente. Essa abordagem facilita a construção de soluções escaláveis, com disponibilidade elevada e tolerância a falhas. Microsserviços são geralmente gerenciados por equipes específicas, responsáveis por seu ciclo de vida completo.
 

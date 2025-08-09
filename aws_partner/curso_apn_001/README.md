@@ -6,6 +6,7 @@
 ### Course: <a href="./">curso_apn_001 (AWS Partner: Cloud Economics)   <img src="./0-aux/logo_course.png" alt="curso_apn_001" width="auto" height="25"></a>
 
 #### <a href="https://www.credly.com/badges/9d6fd8e2-9d1b-4db5-b600-c37bceb8867d/public_url">Badge</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/250505_APN_Cloud_Economics_PH_ASB.pdf">Certificate</a>
 
 ---
 
@@ -50,11 +51,11 @@ O curso Cloud Economics teve como objetivo capacitar profissionais a entenderem 
 
 ### Structure:
 A estrutura do curso é formada por:
-- Este arquivo de README.
+- Este arquivo de README, abordando o assunto do curso.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item01"><h4>Cloud Economics</h4></a>[Back to summary](#item0)
+<a name="item01"><h4>1. Cloud Economics</h4></a>[Back to summary](#item0)
 
 A economia da nuvem aborda duas áreas inter-relacionadas, porém distintas: o valor comercial e a gestão financeira da nuvem. O valor comercial representa os elementos que influenciam diretamente o desempenho organizacional e a experiência do cliente. Essa perspectiva é considerada durante a fase pré-venda, com o objetivo de evidenciar os benefícios estratégicos da adoção da AWS. Embora o custo total de propriedade (TCO) seja um componente relevante, o valor comercial vai além, abrangendo fatores adicionais que geram impactos significativos nos resultados operacionais e no crescimento do negócio.
 
@@ -71,7 +72,7 @@ O **AWS Cloud Value Framework** foi desenvolvido com base na observação de pad
 - Agilidade Empresarial: Capacidade de lançar novos produtos, expandir para novos mercados e adicionar funcionalidades com maior rapidez.
 - Sustentabilidade: Redução do impacto ambiental das operações de TI por meio do uso eficiente de recursos e infraestrutura compartilhada.
 
-<a name="item02"><h4>Economia de Custos</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>2. Economia de Custos</h4></a>[Back to summary](#item0)
 
 A economia de custos, como pilar do AWS Cloud Value Framework, representa a comparação direta entre os custos da infraestrutura de TI tradicional e os custos associados à adoção dos serviços da AWS. O objetivo é evidenciar, em termos concretos, como a migração para a nuvem pode resultar em redução de despesas. Uma das ferramentas centrais nesse processo é a análise de economia de custos, que calcula o custo total de propriedade (TCO) ao considerar todos os elementos envolvidos na aquisição e operação de um ambiente local em contraste com a execução equivalente na AWS. Essa análise contribui para a construção de um business case sólido e serve como ponto de partida para discussões estratégicas com clientes. Um dos principais obstáculos enfrentados costuma ser a identificação precisa e completa dos custos existentes no ambiente local, o que reforça a importância de uma abordagem estruturada e fundamentada.
 
@@ -103,7 +104,7 @@ O que evitar em uma análise de economia de custos:
 - Deixar a análise nas mãos de uma só pessoa: Uma única pessoa dificilmente consegue mapear todo o ambiente de TI. Envolver toda a equipe garante uma análise mais completa e confiável.
 - Adiar o início da análise: Essas análises podem levar semanas ou até meses, especialmente em grandes empresas. Por isso, é essencial iniciar o quanto antes, alinhando os prazos e processos de aprovação com o cliente.
 
-<a name="item03"><h4>Produtividade da Equipe</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>3. Produtividade da Equipe</h4></a>[Back to summary](#item0)
 
 O segundo pilar do Cloud Value Framework é a Produtividade da Equipe, que reflete a eficiência alcançada com a eliminação de tarefas desnecessárias ao adotar os serviços de nuvem. Ao migrar para a AWS, a equipe do cliente deixa de se preocupar com a gestão de infraestrutura, como a aquisição e manutenção de hardware, e pode dedicar mais tempo a projetos estratégicos. Isso não apenas aumenta a produtividade, mas também acelera a inovação ao reduzir o tempo gasto em tarefas operacionais.
 
@@ -134,7 +135,7 @@ Exemplos de resultados obtidos por clientes:
 - Acuity Knowledge Partners: Expansão da equipe de TI remota para 1.400 colaboradores, com aumento de 30% na eficiência e produtividade das equipes operacionais de TI.
 - Expedia Group: Redução do processamento manual de pagamentos a fornecedores de 17% para 0,06%.
 
-<a name="item04"><h4>Resiliência Operacional</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>4. Resiliência Operacional</h4></a>[Back to summary](#item0)
 
 Resiliência operacional representa o ganho obtido ao elevar os níveis de disponibilidade e segurança da infraestrutura. Reflete-se diretamente em mais tempo de atividade, menos interrupções e mitigação de riscos. Os dois conceitos centrais relacionados a esse pilar são: tempo de atividade e segurança. A construção de uma infraestrutura operacionalmente resiliente exige uma abordagem abrangente. Envolve a continuidade e o desempenho estável de diversos componentes da arquitetura:
 - Camada de rede, responsável pela conectividade constante;
@@ -207,7 +208,7 @@ Exemplos de resultados obtidos por clientes:
 - Trainline: Após migrar todas as suas cargas de trabalho para a AWS, a Trainline reduziu seu tempo de inatividade em 60%, resultando em uma economia anual de £ 1,2 milhão (aproximadamente US$ 1,43 milhão).
 - MedStar Health: Reconstruiu seu portal de engajamento de pacientes na AWS, oferecendo aos usuários uma maneira mais eficaz de pesquisar médicos, serviços e locais, além de agendar consultas médicas. Como resultado, o tempo de inatividade foi reduzido de 120 minutos para menos de 5 minutos por mês, e o tempo de download das páginas diminuiu de uma média de 1.500 milissegundos para 120 milissegundos.
 
-<a name="item05"><h4>Agilidade Empresarial</h4></a>[Back to summary](#item0)
+<a name="item05"><h4>5. Agilidade Empresarial</h4></a>[Back to summary](#item0)
 
 A agilidade empresarial se refere à capacidade de uma organização de entregar mais valor em menos tempo, respondendo rapidamente às mudanças no mercado e adaptando-se de forma eficaz às necessidades dos clientes. Ela envolve ser capaz de responder mais rapidamente, experimentar novas ideias, desenvolver produtos de forma mais eficiente e entregar melhores resultados no mesmo período de tempo ou até em um prazo mais curto. A agilidade empresarial não é apenas sobre velocidade; é sobre a capacidade de gerar valor real para os clientes, sendo mais eficaz em todas as áreas do negócio. Ela pode impulsionar a inovação em produtos, ajudar na expansão para novos mercados e melhorar a capacidade de resposta a stakeholders internos e externos. Organizações ágeis podem tomar decisões mais rápidas e adaptar-se rapidamente a novas demandas do mercado.
 
@@ -231,7 +232,7 @@ Exemplos de resultados obtidos por clientes:
 - Liberty Mutual: Utilizando arquitetura sem servidor, a Liberty Mutual foi capaz de construir vários sistemas em apenas três meses, em comparação com o ano que levaria utilizando infraestrutura local.
 - Moderna: Durante a pandemia, a velocidade de entrada no mercado foi crucial. A Moderna concluiu o sequenciamento de sua vacina de mRNA contra a COVID-19 em apenas dois dias, utilizando aprendizado de máquina desenvolvido na AWS. O primeiro lote clínico foi lançado apenas 25 dias depois.
 
-<a name="item06"><h4>Sustentabilidade</h4></a>[Back to summary](#item0)
+<a name="item06"><h4>6. Sustentabilidade</h4></a>[Back to summary](#item0)
 
 A sustentabilidade tornou-se um objetivo estratégico para a maioria das organizações, sendo compreendida como a prática de evitar o esgotamento de recursos naturais para manter o equilíbrio ecológico. Esse conceito abrange diversas dimensões da atividade econômica, incluindo a descarbonização das operações empresariais, a conservação da água, o emprego responsável e a promoção da economia circular — com metas como zero resíduos enviados a aterros sanitários e a ampliação da reciclagem.
 
@@ -257,7 +258,7 @@ Exemplos de resultados obtidos por clientes:
 - CropX, ao operar na infraestrutura da AWS, tem ajudado seus clientes no setor agrícola a adotarem práticas mais sustentáveis, promovendo o uso mais eficiente de energia e recursos naturais, contribuindo diretamente para a preservação ambiental.
 - Mueller utilizou tecnologia baseada na AWS para mitigar riscos relacionados à conformidade ambiental. A empresa conseguiu evitar possíveis multas de milhões de dólares ao prevenir o descarte inadequado de água clorada em corpos d’água protegidos, fortalecendo sua responsabilidade ambiental por meio de soluções tecnológicas eficientes.
 
-<a name="item07"><h4>Gestão Financeira em Nuvem</h4></a>[Back to summary](#item0)
+<a name="item07"><h4>7. Gestão Financeira em Nuvem</h4></a>[Back to summary](#item0)
 
 Gestão Financeira na Nuvem é fundamental para que os clientes da AWS maximizem o valor obtido com seus investimentos. Na AWS, paga-se apenas pelo que se usa, o que permite reduzir custos ao evitar superprovisionamento e desligar recursos fora de uso. A gestão financeira se baseia em quatro pilares principais:
 - Medição e Responsabilização: Garante visibilidade dos custos e atribuição clara dos gastos aos responsáveis.
@@ -326,11 +327,11 @@ KPI Principal - Economia de Custos: A principal medida de sucesso é a economia 
 
 A escolha do modelo de precificação para cada carga de trabalho na nuvem é uma decisão estratégica que deve refletir como a carga será utilizada. Encontrar a combinação adequada de modelos de precificação para o portfólio de nuvem é essencial para otimizar a economia de custos. A prática recomendada é que 65% dos gastos com nuvem sejam baseados em modelos de precificação por compromisso ou excesso de capacidade do provedor, o que resulta em um aumento de 35% na economia incremental de custos. Organizações que adotam esses modelos conseguem melhorar a economia de custos em comparação com aquelas que não os utilizam ou fazem uso subótimo deles.
 
-<a name="item08"><h4>Avaliação do Portfólio de Migração</h4></a>[Back to summary](#item0)
+<a name="item08"><h4>8. Avaliação do Portfólio de Migração</h4></a>[Back to summary](#item0)
 
 A Avaliação de Portfólio de Migração, ou Migration Portfolio Assessment (MPA), apoia o planejamento de migrações ao automatizar análises financeiras e facilitar a transição para definições arquitetônicas. A ferramenta mapeia o ambiente local para serviços equivalentes na AWS, oferecendo comparações de custo, estimativas de TCO, recomendações de dimensionamento e projeções de esforço. Esses dados permitem validar casos de negócio, estimar gastos anuais, agrupar aplicações e organizar a priorização por ondas. O acesso ao MPA ocorre pelo AWS Partner Central, disponível para parceiros dos níveis Select, Advanced e Premier. Parceiros Registrados podem solicitar acesso por meio de códigos fornecidos pelos PDMs.
 
-<a name="item09"><h4>Resumo do Curso</h4></a>[Back to summary](#item0)
+<a name="item09"><h4>9. Resumo do Curso</h4></a>[Back to summary](#item0)
 
 - AWS Cloud Economics:
   - AWS Business Value:

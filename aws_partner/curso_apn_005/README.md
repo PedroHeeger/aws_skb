@@ -5,7 +5,7 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_apn_005 (AWS Partner: Cloud Business Value)   <img src="./0-aux/logo_course.png" alt="curso_apn_005" width="auto" height="25"></a>
 
-#### <a href="">Badge</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/250626_APN...Cloud_Business_Value_PH_ASB.pdf">Certificate</a>
 
 ---
 
@@ -46,11 +46,11 @@ Este curso teve como objetivo apresentar o Cloud Value Framework da AWS como uma
 
 ### Structure:
 A estrutura do curso é formada por:
-- Este arquivo de README.
+- Este arquivo de README, abordando o assunto do curso.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item01"><h4>Business Value and Benchmarking</h4></a>[Back to summary](#item0)
+<a name="item01"><h4>1. Business Value and Benchmarking</h4></a>[Back to summary](#item0)
 
 O valor de negócio da nuvem está relacionado aos benefícios concretos obtidos pelas organizações ao adotarem serviços em nuvem, como redução de custos, aumento de produtividade, maior resiliência e agilidade nos negócios. A AWS define esses benefícios por meio do Cloud Value Framework, uma estrutura que organiza os principais resultados percebidos pelos clientes em quatro pilares:
 - Economia de custos: Redução de gastos com infraestrutura e diminuição de despesas operacionais após a migração.
@@ -64,7 +64,7 @@ O benchmarking permite medir os benefícios da nuvem com base em dados reais obt
 
 O conceito de valor comercial ou valor de negócio (Business Value) ajuda a compreender o impacto da nuvem na saúde da organização a longo prazo. O Cloud Value Framework da AWS orienta a construção de um caso de negócio completo e estruturado para adoção da nuvem, mensurando progressos e resultados alcançados com base nos quatro pilares centrais.
 
-<a name="item02"><h4>AWS Cloud Value Framework: Cost Saving</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>2. AWS Cloud Value Framework: Cost Saving</h4></a>[Back to summary](#item0)
 
 A redução de custos é um dos principais pilares do Cloud Value Framework. Pode ser alcançada pela eliminação de infraestrutura local com altos custos fixos e pela redução de custos variáveis, aproveitando as economias de escala da AWS.
 
@@ -74,7 +74,7 @@ Com o tempo, o uso contínuo da nuvem possibilita ganhos adicionais de eficiênc
 
 A economia de custos pode seguir dois caminhos: manter ou reduzir os gastos totais na AWS, independentemente do aumento de uso; ou permitir aumento proporcional de custos, acompanhado por crescimento na demanda e geração de valor. Em ambos os casos, observa-se maior controle financeiro e eficiência operacional ao longo da jornada na nuvem.
 
-<a name="item03"><h4>AWS Cloud Value Framework: Staff Productivity</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>3. AWS Cloud Value Framework: Staff Productivity</h4></a>[Back to summary](#item0)
 
 A produtividade da equipe é ampliada com a redução ou eliminação de tarefas operacionais que deixam de ser necessárias após a migração para a nuvem. A automação de processos e o uso de serviços gerenciados liberam tempo, permitindo foco em iniciativas estratégicas de maior valor. 
 
@@ -87,7 +87,7 @@ Dados de benchmarking revelam os seguintes impactos após a migração para a AW
 
 Essas melhorias fortalecem a capacidade organizacional, permitindo resposta mais ágil às demandas do negócio e aceleração na entrega de valor.
 
-<a name="item04"><h4>AWS Cloud Value Framework: Operational Resilience</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>4. AWS Cloud Value Framework: Operational Resilience</h4></a>[Back to summary](#item0)
 
 A resiliência operacional representa a capacidade de manter a continuidade dos serviços com alta disponibilidade, segurança reforçada e redução de interrupções não planejadas. Esse pilar do Cloud Value Framework impacta diretamente a estabilidade dos negócios e pode gerar economia significativa, apesar da dificuldade em mensurar esses ganhos de forma imediata.
 
@@ -101,7 +101,7 @@ Estudos de benchmarking indicam os seguintes resultados após a migração para 
 
 Essas melhorias evidenciam uma operação mais confiável, com menor impacto de falhas, resposta mais ágil a incidentes e reforço nos padrões de segurança e conformidade.
 
-<a name="item05"><h4>AWS Cloud Value Framework: Business Agility</h4></a>[Back to summary](#item0)
+<a name="item05"><h4>5. AWS Cloud Value Framework: Business Agility</h4></a>[Back to summary](#item0)
 
 A agilidade empresarial representa a capacidade de adaptação rápida diante de mudanças nas condições de negócio. Com a AWS, o desenvolvimento se torna mais ágil, permitindo ciclos de experimentação mais curtos, redução de riscos e resposta mais eficiente a demandas do mercado. A nuvem permite testar ideias rapidamente, descartando projetos que não trazem resultados, evitando custos irrecuperáveis. Essa abordagem reduz falhas em fases avançadas e favorece a inovação contínua.
 

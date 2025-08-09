@@ -6,6 +6,7 @@
 ### Course: <a href="./">curso_apn_002 (AWS Partner: Accreditation (Technical))   <img src="./0-aux/logo_course.png" alt="curso_apn_002" width="auto" height="25"></a>
 
 #### <a href="https://www.credly.com/badges/f1721e35-aafe-4f44-b05a-e4017c4a366e/public_url">Badge</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/250529_APN_Accreditation_Technical_PH_ASB.pdf">Certificate</a>
 
 ---
 
@@ -48,11 +49,11 @@ O curso teve como objetivo apresentar os principais conceitos da computação em
 
 ### Structure:
 A estrutura do curso é formada por:
-- Este arquivo de README.
+- Este arquivo de README, abordando o assunto do curso.
 - A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
 
 ### Development:
-<a name="item02"><h4>Introduction to the AWS CAF</h4></a>[Back to summary](#item0)
+<a name="item02"><h4>2. Introduction to the AWS CAF</h4></a>[Back to summary](#item0)
 
 O AWS Cloud Adoption Framework (AWS CAF) constitui uma estrutura metodológica voltada à formulação e execução de estratégias de transformação digital baseadas em computação em nuvem. Sua construção é fundamentada nas melhores práticas da AWS e na experiência acumulada em milhares de projetos realizados com organizações dos mais diversos setores.
 
@@ -77,7 +78,7 @@ O processo de transformação proposto pelo AWS Cloud Adoption Framework (AWS CA
 
 - Fase de Escala: A última fase concentra-se na expansão dos esforços bem-sucedidos iniciados nas etapas anteriores. O ambiente em nuvem é refinado, os modelos operacionais e de governança são aprimorados, e os ganhos de eficiência são mantidos e ampliados. O foco está na consolidação dos benefícios estratégicos da nuvem e na sustentação de inovações contínuas que reforcem a competitividade e a agilidade organizacional.
 
-<a name="item03"><h4>Introduction to Migration Strategies</h4></a>[Back to summary](#item0)
+<a name="item03"><h4>3. Introduction to Migration Strategies</h4></a>[Back to summary](#item0)
 
 O processo de migração para a nuvem envolve a escolha entre sete abordagens distintas, conhecidas como os "7 Rs", que orientam a transição de cargas de trabalho para ambientes em nuvem, como o da AWS. Cada estratégia é adequada a diferentes cenários e necessidades organizacionais:
 - Realocação (Relocate): Transferência de aplicações para a nuvem sem alterações significativas, mantendo a infraestrutura existente.
@@ -90,7 +91,7 @@ O processo de migração para a nuvem envolve a escolha entre sete abordagens di
 
 A seleção adequada entre essas estratégias depende de uma análise criteriosa das aplicações existentes, considerando fatores como complexidade, dependências, requisitos de desempenho e objetivos de negócios. Essa abordagem estruturada facilita a tomada de decisões informadas, promovendo uma migração eficiente e alinhada às necessidades organizacionais.
 
-<a name="item04"><h4>Introduction to AWS Well-Architected Framework</h4></a>[Back to summary](#item0)
+<a name="item04"><h4>4. Introduction to AWS Well-Architected Framework</h4></a>[Back to summary](#item0)
 
 O AWS Well-Architected Framework oferece uma abordagem sistemática para avaliar arquiteturas de sistemas na AWS, auxiliando na compreensão dos impactos das decisões de arquitetura. Seu uso permite a identificação de boas práticas voltadas ao projeto e à operação de cargas de trabalho seguras, resilientes, eficientes, sustentáveis e com bom custo-benefício. O framework fornece critérios consistentes para mensurar arquiteturas com base em princípios estabelecidos, destacando oportunidades de melhoria. A revisão da arquitetura deve ser entendida como uma conversa construtiva sobre decisões técnicas, e não como um processo de auditoria. Sistemas bem arquitetados contribuem significativamente para o sucesso dos negócios.
 
