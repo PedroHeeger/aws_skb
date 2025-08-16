@@ -8,9 +8,60 @@ game_based_learning
 
 
 study_material/architecture_diagram
-study_material/aws_scripts_model
+
 
 
 zoutros/*
 self_paced_lab/curso_spl_1000
 self_paced_lab/curso_spl_054-pausado
+
+
+
+# Lista AWS:
+
+study_material/aws_scripts_model/.default
+
+
+study_material/aws_scripts_model/appIntegration/sns/snsTopic/*
+!study_material/aws_scripts_model/appIntegration/sns/snsTopic/main.tf
+
+
+
+study_material/aws_scripts_model/compute/ec2/instance/ec2Instance/*
+!study_material/aws_scripts_model/compute/ec2/instance/ec2Instance/main.tf
+
+study_material/aws_scripts_model/compute/ec2/keyPair/ec2KeyPair/*
+!study_material/aws_scripts_model/compute/ec2/keyPair/ec2KeyPair/main.tf
+
+study_material/aws_scripts_model/compute/ec2/launchTemp/launchTemp/*
+!study_material/aws_scripts_model/compute/ec2/launchTemp/launchTemp/main.tf
+
+study_material/aws_scripts_model/compute/ec2/userData/ecs_agent
+study_material/aws_scripts_model/compute/ec2/transferFile
+
+
+
+study_material/aws_scripts_model/compute/as/asg/asg/*
+!study_material/aws_scripts_model/compute/as/asg/asg/main.tf
+study_material/aws_scripts_model/compute/as/policy
+
+
+
+study_material/aws_scripts_model/compute/ecs
+study_material/aws_scripts_model/compute/ecr
+study_material/aws_scripts_model/compute/eks
+
+
+study_material/aws_scripts_model/cost/budget/budget/*
+!study_material/aws_scripts_model/cost/budget/budget/main.tf
+
+
+
+
+
+
+
+
+
+
+
