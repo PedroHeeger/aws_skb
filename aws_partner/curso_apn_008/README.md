@@ -5,8 +5,8 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">curso_apn_008 (AWS Partner: Digital Sovereignty Essentials)   <img src="./0-aux/logo_course.png" alt="curso_apn_008" width="auto" height="25"></a>
 
-#### <a href="">Badge</a>
-#### <a href="">Certificate</a>
+#### <a href="https://www.credly.com/badges/57a00161-b64a-4995-9e13-beaeeb82161e/public_url">Badge</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/250924_APN...Digital_Sovereignty...PH_ASB.pdf">Certificate</a>
 
 ---
 
@@ -19,7 +19,7 @@
 - Cloud:
   - Amazon Web Services (AWS)   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 - Cloud Services:
-  - AWS Cloud Value Framework   <img src="" alt="aws_cloud_value_framework" width="auto" height="25">
+  - AWS Digital Sovereignty   <img src="" alt="aws_digital_sovereignty" width="auto" height="25">
   - Google Drive   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/software/google_drive.png" alt="google_drive" width="auto" height="25">
 - Language:
   - HTML   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html" width="auto" height="25">
@@ -45,18 +45,17 @@
 3.3 <a href="#item03.03">Who Can Access My Data?</a><br>
 3.4 <a href="#item03.04">How Can I Remain Compliant?</a><br>
 3.5 <a href="#item03.05">How Can I Achieve Continuity of Services on AWS?</a><br>
-4. MODULE 4: COURSE WRAP-UP</a><br>
-
+4. <a href="#item04">MODULE 4: COURSE WRAP-UP</a><br>
+4.1 <a href="#item04.01">AWS Support and Programs</a><br>
 
 ---
 
 ### Objective:
-Este curso teve como objetivo proporcionar uma introdução à computação em nuvem, apresentando os princípios básicos, as categorias de serviços da **AWS** e algumas de suas principais ofertas de produtos, os diferenciais da **AWS** entre os outros provedores e identificar a importância da modernização para facilitar o valor do negócio. Também foi abordado a proposta de valor oferecida pela **AWS** aos seus clientes, como lidar com objeções comuns durante o processo de venda e como desenvolver estratégias para iniciar parcerias comerciais e vendas em conjunto com a **AWS**.
+Este curso teve como objetivo apresentar o conceito de soberania digital na nuvem, mostrando como clientes e a AWS definem e aplicam esse princípio. Foram abordados os modelos de controle sem comprometimento e de soberania por design, além de explorar o portfólio de serviços da AWS que atende a diferentes requisitos de soberania digital. O curso também incluiu exemplos reais de clientes que utilizam a AWS para manter controle sobre dados e operações, fornecendo insights práticos para entender a aplicação desses conceitos em diferentes setores.
 
 ### Structure:
-A estrutura do curso é formada por:
-- Este arquivo de README, abordando o assunto do curso.
-- A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
+- [README.md](./README.md): Documento escrito em **Markdown** descrevendo todo conteúdo do curso.
+- [0-aux](./0-aux): Pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
 
 ### Development:
 <a name="item02.01"><h4>2.1 Digital Sovereignty Overview</h4></a>[Back to summary](#item0)
@@ -234,28 +233,176 @@ Assim, a AWS demonstra como a soberania digital é tratada de forma abrangente, 
 
 <a name="item03.03"><h4>3.3 Who Can Access My Data?</h4></a>[Back to summary](#item0)
 
+🔐 Segurança e Controle de Acesso   
+A confiança depositada na AWS para hospedar dados e aplicações sensíveis resulta de investimentos contínuos em práticas operacionais rigorosas e tecnologias avançadas de segurança. O objetivo central é garantir confidencialidade, integridade e disponibilidade, ao mesmo tempo em que se atende aos requisitos mais exigentes de soberania digital.
 
+Entre as principais soluções para controle e visibilidade de acesso destacam-se:
+- AWS Nitro System
+- AWS Identity and Access Management (IAM)
+- AWS Key Management Service (KMS)
+- AWS CloudHSM
+- Serviços de monitoramento e auditoria (CloudTrail, CloudWatch, Access Analyzer)
 
+🖥️ AWS Nitro System   
+Desde 2018, todas as instâncias do Amazon EC2 são executadas sobre o Nitro System, projetado para oferecer:
+- Isolamento seguro entre workloads.
+- Ausência de acesso administrativo humano (sem operador).
+- APIs administrativas limitadas, autenticadas e auditáveis.
+- Proteção contra acesso não autorizado a memória, instâncias ou volumes de armazenamento.
 
+Esse modelo de segurança foi validado de forma independente pelo NCC Group, reforçando o princípio de confiança sem concessões.
 
+👥 Identidade e Acesso   
+O AWS IAM fornece meios para definir quem ou o que pode acessar recursos, além de oferecer análises avançadas de políticas por meio do IAM Access Analyzer. Combinado ao AWS CloudTrail e Amazon CloudWatch, possibilita:
+- Registro de atividades de usuários e APIs em escala global.
+- Consolidação de auditorias em um único ponto de governança.
+- Monitoramento em tempo real de métricas e eventos de segurança.
 
+🔑 Criptografia e Gerenciamento de Chaves   
+A criptografia é tratada como pilar fundamental da soberania digital, aplicada em trânsito, repouso e memória. Para atender a esse requisito, a AWS disponibiliza:
+- AWS KMS: criação, gerenciamento e auditoria de chaves criptográficas com alta disponibilidade.
+- External Key Store (XKS): opção para armazenar chaves em módulos de segurança de hardware (HSM) externos, operados fora da nuvem AWS.
+- AWS CloudHSM: instâncias dedicadas de HSM validadas por padrões governamentais, garantindo que as chaves permaneçam sob controle exclusivo do cliente.
 
+Esses recursos asseguram conformidade regulatória e suporte a requisitos específicos de setores altamente sensíveis.
 
+🏦 Caso de Uso: ekonoo SA (Luxemburgo)   
+- Desafio: cumprir o GDPR e as diretrizes da CSSF no setor financeiro, mantendo agilidade sem gerenciar infraestrutura física.
+- Solução: adoção de serviços como Amazon Cognito (autenticação), Amazon EventBridge (comunicações internas), Amazon QLDB (livro-razão imutável) e CloudTrail (auditoria). A automação foi viabilizada com CloudFormation.
+- Resultados:
+  - Primeira fintech nativa em nuvem aprovada pela CSSF (2021).
+  - Arquitetura serverless que elevou a segurança, eficiência e escalabilidade.
+  - Inspiração para outras empresas do setor em Luxemburgo na adoção da nuvem.
 
+✔️ Conclusão   
+Assim, a AWS consolida uma abordagem soberana ao acesso e proteção de dados, baseada em isolamento técnico, criptografia robusta e governança contínua.
 
 <a name="item03.04"><h4>3.4 Who Can Access My Data?</h4></a>[Back to summary](#item0)
 
+🛡️ Conformidade e Governança na AWS   
+A conformidade em setores regulados exige controles claros, transparência e segurança reforçada. Para atender a esse cenário, a AWS reúne certificações globais, serviços especializados e programas de parceiros, estabelecendo a base para ambientes em nuvem seguros, auditáveis e aderentes a normas internacionais.
 
+⚖️ Modelo de Responsabilidade Compartilhada   
+O modelo de responsabilidade compartilhada define os limites de atuação entre provedor e cliente. A AWS mantém a segurança da infraestrutura de nuvem, incluindo datacenters, rede e camadas de virtualização. A gestão de sistemas operacionais, aplicações, dados e políticas de acesso permanece sob responsabilidade dos clientes. Essa divisão estabelece clareza sobre obrigações e possibilita maior governança em ambientes regulados.
 
+📜 Certificações e Validações   
+A AWS mantém conformidade com mais de 140 padrões e certificações globais, como CISPE, HDS, C5, ENS e IRAP. Validações independentes são realizadas periodicamente para verificar milhares de requisitos regulatórios. Esses processos garantem aderência a normas internacionais e oferecem segurança reforçada em setores como saúde, finanças, varejo e setor público.
 
+🛠️ Serviços de Conformidade   
+- AWS Artifact: portal centralizado para relatórios de segurança, certificações e contratos online, facilitando processos de auditoria.
+- Landing Zone Accelerator: solução que estabelece ambientes multicontas com governança centralizada, alinhados a estruturas globais de conformidade e princípios de soberania por design.
+- Global Security and Compliance Acceleration (GSCA): programa que apoia organizações na adequação a requisitos regulatórios em escala global, com foco em setores como saúde, serviços financeiros e setor público.
 
+🤝 Parceiros e Competência em Soberania Digital   
+A rede de Parceiros de Competência em Soberania Digital reúne especialistas validados pela AWS. Esses parceiros oferecem serviços e recursos avançados para apoiar projetos que demandam alto grau de aderência a normas de soberania digital.
 
+📊 Caso de Uso: Velliv (Dinamarca)
+- Desafio: reconstruir a infraestrutura de TI após se tornar independente em 2018, garantindo conformidade regulatória no setor financeiro.
+- Solução: migração completa para a AWS em um ano, com utilização de serviços como AWS Management Console, AWS Audit Manager e AWS Artifact.
+- Resultados:
+  - Conformidade assegurada com os padrões da Autoridade Financeira Dinamarquesa.
+  - Maior visibilidade e transparência de custos.
 
-
-
+🎯 Conclusão   
+Dessa forma, a AWS não apenas oferece infraestrutura segura, mas estabelece um ecossistema de conformidade contínua, alinhado a legislações globais e requisitos setoriais.
 
 <a name="item03.05"><h4>3.5 How Can I Achieve Continuity of Services on AWS?</h4></a>[Back to summary](#item0)
 
+🔄 Interoperabilidade, Portabilidade e Resiliência na AWS   
+A evolução dos requisitos técnicos e regulatórios torna essencial a criação de soluções flexíveis, independentes e resilientes. A arquitetura em nuvem deve contemplar interoperabilidade, portabilidade, sobrevivência e resiliência para garantir continuidade de negócios mesmo diante de cenários adversos.
 
+🌐 Interoperabilidade e Portabilidade   
+A interoperabilidade busca integração transparente entre diferentes plataformas, enquanto a portabilidade assegura a movimentação de cargas de trabalho e dados sem dependência de fornecedores. Esses princípios são alcançados por meio de:
+- Camadas de abstração em código e configurações.
+- Adoção de tecnologias e padrões de código aberto.
+- Estratégias de portabilidade de dados alinhadas a requisitos de residência e conformidade.
 
+🔓 Código aberto  
+A AWS apoia o uso de tecnologias e frameworks de código aberto, fornecendo serviços gerenciados que reduzem a sobrecarga operacional e ampliam a flexibilidade. Entre os principais serviços estão:
+- Amazon EKS Distro (Kubernetes)
+- Amazon OpenSearch Service (baseado no Elasticsearch)
+- Amazon SageMaker (com suporte a frameworks de ML abertos)
+- Amazon EMR (Hadoop, Hive e Spark)
+- Amazon Managed Service for Apache Flink
+- Amazon Managed Workflows for Apache Airflow (Amazon MWAA)
+- Amazon Keyspaces (compatível com Apache Cassandra)
+- Amazon ElastiCache para Redis OSS
+- Amazon ElastiCache para Memcached
+- Amazon RDS para MySQL
+- Amazon Aurora MySQL-Compatible Edition
+- Amazon RDS para PostgreSQL
+- Amazon Aurora PostgreSQL-Compatible Edition
+- Amazon DocumentDB (compatível com MongoDB)
+- Amazon MemoryDB para Redis OSS
+- Amazon Managed Grafana
+- Amazon Managed Service for Prometheus
+- Amazon MQ para Apache ActiveMQ Classic
+- Amazon MQ para RabbitMQ
+- AWS Distro for OpenTelemetry
+- Amazon Timestream para InfluxDB
+- Amazon Managed Streaming for Apache Kafka (Amazon MSK)
 
+📡 Padrões abertos   
+A AWS adota padrões abertos para garantir interoperabilidade com um ecossistema diverso de ferramentas e plataformas, promovendo portabilidade e independência de fornecedores. Entre os serviços baseados em padrões abertos, destacam-se:
+- Amazon API Gateway (suporte a REST, HTTP e WebSocket APIs)
+- Amazon EventBridge (baseado em CloudEvents e arquiteturas event-driven)
+- AWS Distro for OpenTelemetry
+
+📂 Formatos de dados abertos   
+Com suporte a formatos de dados abertos, a AWS garante integração e portabilidade entre serviços e sistemas externos, evitando aprisionamento tecnológico. Entre os serviços estão:
+- Amazon Athena (consultas SQL em dados no formato aberto, como Parquet, ORC, JSON, CSV e Avro)
+- Amazon MQ (mensageria baseada em padrões abertos, como AMQP, MQTT e STOMP)
+- Amazon Security Lake (compatível com OCSF – Open Cybersecurity Schema Framework)
+
+🏗️ Sobrevivência e Resiliência   
+A continuidade operacional depende de estratégias de sobrevivência e resiliência. A Infraestrutura Global da AWS, composta por Regiões e mais de 100 Zonas de Disponibilidade, oferece isolamento físico e redundância de energia, rede e conectividade. Isso reduz o risco de falhas simultâneas e possibilita o atendimento a requisitos de continuidade de negócios.
+
+Principais práticas:
+- Estratégias de recuperação de desastres alinhadas a objetivos de negócio.
+- Definição de níveis mínimos de serviço e tempos de recuperação.
+- Documentação detalhada de dependências e caminhos de recuperação.
+
+🔧 Serviços de Resiliência   
+- AWS Resilience Hub: recomendações centralizadas para aprimorar a resiliência de aplicações.
+- AWS Fault Injection Service (FIS): experimentos controlados de injeção de falhas para validação da robustez de sistemas.
+- AWS Elastic Disaster Recovery (AWS DRS): recuperação rápida de aplicações locais ou em nuvem com mínima perda de dados.
+
+📊 Caso de Uso: PrivatBank (Ucrânia)
+- Desafio: manter a continuidade de serviços bancários essenciais durante a guerra de 2022, diante do risco de perda de infraestrutura local.
+- Solução: migração do data center principal para a AWS em 43 dias com abordagem lift-and-shift, utilizando Amazon EC2, Amazon EBS, AWS Shield e AWS Application Migration Service.
+- Resultados:
+  - Continuidade assegurada para quase 20 milhões de clientes.
+  - Estabilização rápida das operações críticas.
+  - Modernização da infraestrutura com maior agilidade e transparência de custos.
+
+✅ Conclusão   
+A combinação de interoperabilidade, portabilidade e resiliência estabelece a base para arquiteturas em nuvem preparadas para o futuro. Com o apoio de serviços e padrões abertos, aliados à robustez da infraestrutura global da AWS, organizações podem manter continuidade operacional, reduzir riscos e preservar independência tecnológica mesmo em cenários adversos.
+
+<a name="item04.01"><h4>4.1 AWS Support and Programs</h4></a>[Back to summary](#item0)
+
+📡 Suporte e Oportunidades de Soberania Digital na AWS   
+O ecossistema da AWS oferece suporte estruturado para explorar oportunidades de soberania digital, permitindo que empresas mantenham controle sobre dados e cargas de trabalho enquanto aceleram a transformação digital.
+
+💼 Programas e Qualificação de Parceiros   
+- APN Customer Engagements (ACE): registro de oportunidades qualificadas no AWS Partner Central para iniciar projetos junto à AWS.
+- Benefícios de Programas APN: parceiros qualificados podem acessar incentivos financeiros, apoio para criação, marketing e vendas de soluções baseadas em AWS.
+
+🏛️ Programa de Competência em Soberania Digital   
+- Especialização em atender requisitos de soberania digital utilizando serviços e controles da AWS.
+- Parceiros validados com experiência avançada e serviços focados em soberania digital.
+
+🌐 Programa Global de Aceleração de Segurança e Conformidade (GSCA)   
+- Apoia clientes e parceiros na navegação de requisitos de segurança e conformidade durante toda a jornada de migração e operação na AWS.
+- Serviços de consultoria gratuitos e conexão com parceiros especializados, acelerando a conformidade global.
+
+🛒 AWS Marketplace   
+- Catálogo digital curado para descoberta, aquisição, provisionamento e gestão de softwares, dados e serviços profissionais de terceiros na AWS.
+- Facilita teste, assinatura e implantação de soluções terceirizadas, gerenciadas a partir de um local centralizado.
+
+📌 Tipos de ofertas no AWS Marketplace   
+- Ofertas Públicas: produtos com preços e termos contratuais disponíveis publicamente.
+- Ofertas Privadas: soluções personalizadas com preços, cronogramas de pagamento e termos de contrato adaptados ao cliente.
+- Ofertas Privadas de Parceiros de Canal (CPPOs): possibilitam que ISVs autorizem parceiros de canal a acessar preços de atacado e personalizar termos de licença e preços para clientes finais.
+
+✅ Conclusão   
+O conjunto de programas e recursos da AWS fornece aos parceiros ferramentas e incentivos para apoiar clientes em soberania digital, compliance e inovação. Por meio de ACE, APN, GSCA e AWS Marketplace, as empresas podem criar soluções seguras, escaláveis e alinhadas aos requisitos regulatórios, acelerando a adoção da nuvem e a transformação digital.
