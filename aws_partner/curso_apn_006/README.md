@@ -47,9 +47,8 @@
 Este curso teve como objetivo introduzir as objeções comuns dos clientes em relação à adoção da nuvem — incluindo custo, segurança, privacidade, perda de controle, infraestrutura existente, lacuna de habilidades, dependência de fornecedor e sustentabilidade — e capacitar a resposta a essas objeções por meio do entendimento dos desafios e das soluções oferecidas pela **AWS**.
 
 ### Structure:
-A estrutura do curso é formada por:
-- Este arquivo de README, abordando o assunto do curso.
-- A pasta `0-aux`, pasta auxiliar com imagens utilizadas na construção desse arquivo de README. 
+- [README.md](./README.md): Documento escrito em **Markdown** descrevendo todo conteúdo do curso.
+- [0-aux](./0-aux): Pasta auxiliar com imagens utilizadas na construção desse arquivo de README.
 
 ### Development:
 <a name="item01"><h4>1. Cloud Objections</h4></a>[Back to summary](#item0)

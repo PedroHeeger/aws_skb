@@ -8,7 +8,7 @@ A AWS disponibiliza conteúdos específicos para os parceiros vinculados à APN,
 
 O **AWS Training and Certification** é o programa de capacitação da AWS criado para ajudar profissionais a desenvolverem habilidades e obterem certificações reconhecidas no mercado. Dentro desse programa está o **AWS Skill Builder**, uma plataforma online que oferece cursos interativos, trilhas personalizadas e recursos voltados ao desenvolvimento prático com os serviços da AWS. Quando o login é realizado com uma conta vinculada à APN, o conteúdo apresentado se transforma em **AWS Partner Training and Certification**, disponibilizando uma série de cursos e materiais voltados especificamente aos parceiros. No Skill Builder, por exemplo, surgem cursos digitais cujo nome começa com "AWS Partner", e esses cursos não aparecem para contas comuns.
 
-Alguns desses cursos digitais voltados ao **AWS Partner** oferecem badges digitais (insígnias), que podem ser conquistadas após a conclusão do curso e aprovação em uma avaliação com aproveitamento mínimo de 80%. Essas badges são específicas para os parceiros da AWS e são emitidas pela **Credly**, uma plataforma especializada na gestão de certificações digitais. As badges disponíveis para os parceiros podem ser consultadas neste link: [https://www.credly.com/organizations/amazon-web-services/collections/aws-partner-program/badge_templates](https://www.credly.com/organizations/amazon-web-services/collections/aws-partner-program/badge_templates).
+Alguns desses cursos digitais voltados ao **AWS Partner** oferecem badges digitais (insígnias), que podem ser conquistadas após a conclusão do curso e aprovação em uma avaliação com aproveitamento mínimo de 80%. Essas badges são específicas para os parceiros da AWS e são emitidas pela **Credly**, uma plataforma especializada na gestão de certificações digitais. As badges disponíveis para os parceiros podem ser consultadas neste [link](https://www.credly.com/organizations/amazon-web-services/collections/aws-partner-training/badge_templates).
 
 Os cursos do tipo digital course disponíveis no Skill Builder, incluindo os voltados aos parceiros da AWS, são estruturados em uma plataforma específica, com o conteúdo organizado em módulos e lições. Cada lição pode conter materiais em texto e vídeo, oferecendo uma abordagem prática e interativa.
 
@@ -27,6 +27,7 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
         <li>curso_apn_004: <a href="./curso_apn_004/">AWS Partner: Cloud Concepts and AWS   <img src="./curso_apn_004/0-aux/logo_course.png" alt="curso_apn_004" width="auto" height="25"></a></li>
         <li>curso_apn_005: <a href="./curso_apn_005/">AWS Partner: Cloud Business Value   <img src="./curso_apn_005/0-aux/logo_course.png" alt="curso_apn_005" width="auto" height="25"></a></li>
         <li>curso_apn_006: <a href="./curso_apn_006/">AWS Partner: Cloud Objection Handling   <img src="./curso_apn_006/0-aux/logo_course.png" alt="curso_apn_006" width="auto" height="25"></a></li>
+        <li>curso_apn_008: <a href="./curso_apn_008/">AWS Partner: Digital Sovereignty Essentials   <img src="./curso_apn_008/0-aux/logo_course.png" alt="curso_apn_008" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Desenvolvimento</summary>

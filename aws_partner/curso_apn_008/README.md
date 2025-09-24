@@ -35,17 +35,17 @@
 
 <a name="item0"><h3>Course Strcuture:</h3></a>
 1. MODULE 1: COURSE INTRODUCTION<br>
-2. <a href="#item02">MODULE 2: INTRODUCTION TO DIGITAL SOVEREIGNTY</a><br>
+2. MODULE 2: INTRODUCTION TO DIGITAL SOVEREIGNTY<br>
 2.1 <a href="#item02.01">Digital Sovereignty Overview</a><br>
 2.2 <a href="#item02.02">Control Without Compromise</a><br>
 2.3 <a href="#item02.03">Industry Recognition</a><br>
-3. <a href="#item03">MODULE 3: WHAT CUSTOMERS ARE ASKING</a><br>
+3. MODULE 3: WHAT CUSTOMERS ARE ASKING<br>
 3.1 <a href="#item03.01">Common Customer Questions</a><br>
 3.2 <a href="#item03.02">Where is My Data?</a><br>
 3.3 <a href="#item03.03">Who Can Access My Data?</a><br>
 3.4 <a href="#item03.04">How Can I Remain Compliant?</a><br>
 3.5 <a href="#item03.05">How Can I Achieve Continuity of Services on AWS?</a><br>
-4. <a href="#item04">MODULE 4: COURSE WRAP-UP</a><br>
+4. MODULE 4: COURSE WRAP-UP<br>
 4.1 <a href="#item04.01">AWS Support and Programs</a><br>
 
 ---
