@@ -277,7 +277,7 @@ Esses recursos asseguram conformidade regulatória e suporte a requisitos espec�
 ✔️ Conclusão   
 Assim, a AWS consolida uma abordagem soberana ao acesso e proteção de dados, baseada em isolamento técnico, criptografia robusta e governança contínua.
 
-<a name="item03.04"><h4>3.4 Who Can Access My Data?</h4></a>[Back to summary](#item0)
+<a name="item03.04"><h4>3.4 How Can I Remain Compliant?</h4></a>[Back to summary](#item0)
 
 🛡️ Conformidade e Governança na AWS   
 A conformidade em setores regulados exige controles claros, transparência e segurança reforçada. Para atender a esse cenário, a AWS reúne certificações globais, serviços especializados e programas de parceiros, estabelecendo a base para ambientes em nuvem seguros, auditáveis e aderentes a normas internacionais.
