@@ -34,9 +34,9 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Cloud Computing</summary>
     <ul>
-        <li>curso_dc_008: <a href="./curso_dc_008/">Job Roles in the Cloud   <img src="./curso_dc_008/0-aux/logo_course.png" alt="curso_dc_008" width="auto" height="25"></a></li>
-        <li>curso_dc_010: <a href="./curso_dc_010/">Getting Started with Cloud Acquisition   <img src="./curso_dc_010/0-aux/logo_course.png" alt="curso_dc_010" width="auto" height="25"></a></li>
-        <li>curso_dc_012: <a href="./curso_dc_012/">Getting Started with AWS Cloud Essentials   <img src="./curso_dc_012/0-aux/logo_course.png" alt="curso_dc_012" width="auto" height="25"></a></li>
+        <li>curso_dc_008: <a href="./files/curso_dc_008/">Job Roles in the Cloud   <img src="./files/curso_dc_008/0-aux/logo_course.png" alt="curso_dc_008" width="auto" height="25"></a></li>
+        <li>curso_dc_010: <a href="./files/curso_dc_010/">Getting Started with Cloud Acquisition   <img src="./files/curso_dc_010/0-aux/logo_course.png" alt="curso_dc_010" width="auto" height="25"></a></li>
+        <li>curso_dc_012: <a href="./files/curso_dc_012/">Getting Started with AWS Cloud Essentials   <img src="./files/curso_dc_012/0-aux/logo_course.png" alt="curso_dc_012" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Computing</summary>
@@ -49,7 +49,7 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Cost Management</summary>
     <ul>
-        <li>curso_dc_007: <a href="./curso_dc_007/">AWS Billing and Cost Management   <img src="./curso_dc_007/0-aux/logo_course.png" alt="curso_dc_007" width="auto" height="25"></a></li>
+        <li>curso_dc_007: <a href="./files/curso_dc_007/">AWS Billing and Cost Management   <img src="./files/curso_dc_007/0-aux/logo_course.png" alt="curso_dc_007" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Customer Interaction</summary>
@@ -58,7 +58,7 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Database</summary>
     <ul>
-        <li>curso_dc_016: <a href="./curso_dc_016/">Amazon RDS Service Primer   <img src="./curso_dc_016/0-aux/logo_course.png" alt="curso_dc_016" width="auto" height="25"></a></li>
+        <li>curso_dc_016: <a href="./files/curso_dc_016/">Amazon RDS Service Primer   <img src="./files/curso_dc_016/0-aux/logo_course.png" alt="curso_dc_016" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Developer Tools</summary>
@@ -79,13 +79,13 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Management and Governance</summary>
     <ul>
-        <li>curso_dc_014: <a href="./curso_dc_014/">AWS Systems Manager Getting Started   <img src="./curso_dc_014/0-aux/logo_course.png" alt="curso_dc_014" width="auto" height="25"></a></li>
+        <li>curso_dc_014: <a href="./files/curso_dc_014/">AWS Systems Manager Getting Started   <img src="./files/curso_dc_014/0-aux/logo_course.png" alt="curso_dc_014" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Media Services</summary>
     <ul>
-        <li>curso_dc_017: <a href="./curso_dc_017/">AWS for Media & Entertainment Content Production Concepts and Roles   <img src="./curso_dc_017/0-aux/logo_course.png" alt="curso_dc_017" width="auto" height="25"></a></li>
-        <li>curso_dc_018: <a href="./curso_dc_018/">AWS for Media & Entertainment Post-Production Workflow Essentials   <img src="./curso_dc_018/0-aux/logo_course.png" alt="curso_dc_018" width="auto" height="25"></a></li>
+        <li>curso_dc_017: <a href="./files/curso_dc_017/">AWS for Media & Entertainment Content Production Concepts and Roles   <img src="./files/curso_dc_017/0-aux/logo_course.png" alt="curso_dc_017" width="auto" height="25"></a></li>
+        <li>curso_dc_018: <a href="./files/curso_dc_018/">AWS for Media & Entertainment Post-Production Workflow Essentials   <img src="./files/curso_dc_018/0-aux/logo_course.png" alt="curso_dc_018" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Machine Learning</summary>
@@ -98,11 +98,11 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Network and Content Delivery</summary>
     <ul>
-        <li>curso_dc_009: <a href="./curso_dc_009/">Configuring and Deploying VPCs with Multiple Subnets   <img src="./curso_dc_009/0-aux/logo_course.png" alt="curso_dc_009" width="auto" height="25"></a></li>
-        <li>curso_dc_011: <a href="./curso_dc_011/">AWS IPv6 Fundamentals and VPC Connectivity   <img src="./curso_dc_011/0-aux/logo_course.png" alt="curso_dc_011" width="auto" height="25"></a></li>
-        <li>curso_dc_013: <a href="./curso_dc_013/">Introduction to Amazon VPC Lattice   <img src="./curso_dc_013/0-aux/logo_course.png" alt="curso_dc_013" width="auto" height="25"></a></li>
-        <li>curso_dc_015: <a href="./curso_dc_015/">Introduction to AWS Cloud WAN   <img src="./curso_dc_015/0-aux/logo_course.png" alt="curso_dc_015" width="auto" height="25"></a></li>
-        <li>curso_dc_020: <a href="./curso_dc_020/">Amazon Virtual Private Cloud (Amazon VPC) - Troubleshooting   <img src="./curso_dc_020/0-aux/logo_course.png" alt="curso_dc_020" width="auto" height="25"></a></li>
+        <li>curso_dc_009: <a href="./files/curso_dc_009/">Configuring and Deploying VPCs with Multiple Subnets   <img src="./files/curso_dc_009/0-aux/logo_course.png" alt="curso_dc_009" width="auto" height="25"></a></li>
+        <li>curso_dc_011: <a href="./files/curso_dc_011/">AWS IPv6 Fundamentals and VPC Connectivity   <img src="./files/curso_dc_011/0-aux/logo_course.png" alt="curso_dc_011" width="auto" height="25"></a></li>
+        <li>curso_dc_013: <a href="./files/curso_dc_013/">Introduction to Amazon VPC Lattice   <img src="./files/curso_dc_013/0-aux/logo_course.png" alt="curso_dc_013" width="auto" height="25"></a></li>
+        <li>curso_dc_015: <a href="./files/curso_dc_015/">Introduction to AWS Cloud WAN   <img src="./files/curso_dc_015/0-aux/logo_course.png" alt="curso_dc_015" width="auto" height="25"></a></li>
+        <li>curso_dc_020: <a href="./files/curso_dc_020/">Amazon Virtual Private Cloud (Amazon VPC) - Troubleshooting   <img src="./files/curso_dc_020/0-aux/logo_course.png" alt="curso_dc_020" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Quantum Technologies</summary>
@@ -119,16 +119,16 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Security, Identity and Conformity</summary>
     <ul>
-        <li>curso_dc_002: <a href="./curso_dc_002/">AWS Identity and Access Management - Basics   <img src="./curso_dc_002/0-aux/logo_course.png" alt="curso_dc_002" width="auto" height="25"></a></li>
-        <li>curso_dc_003: <a href="./curso_dc_003/">Introduction to AWS Identity and Access Management (IAM)   <img src="./curso_dc_003/0-aux/logo_course.png" alt="curso_dc_003" width="auto" height="25"></a></li>
-        <li>curso_dc_004: <a href="./curso_dc_004/">AWS Identity and Access Management - Architecture and Terminology   <img src="./curso_dc_004/0-aux/logo_course.png" alt="curso_dc_004" width="auto" height="25"></a></li>
-        <li>curso_dc_005: <a href="./curso_dc_005/">Authentication and Authorization with AWS Identity and Access Management   <img src="./curso_dc_005/0-aux/logo_course.png" alt="curso_dc_005" width="auto" height="25"></a></li>
-        <li>curso_dc_006: <a href="./curso_dc_006/">Deep Dive with Security: AWS Identity and Access Management (IAM)   <img src="./curso_dc_006/0-aux/logo_course.png" alt="curso_dc_006" width="auto" height="25"></a></li>
+        <li>curso_dc_002: <a href="./files/curso_dc_002/">AWS Identity and Access Management - Basics   <img src="./files/curso_dc_002/0-aux/logo_course.png" alt="curso_dc_002" width="auto" height="25"></a></li>
+        <li>curso_dc_003: <a href="./files/curso_dc_003/">Introduction to AWS Identity and Access Management (IAM)   <img src="./files/curso_dc_003/0-aux/logo_course.png" alt="curso_dc_003" width="auto" height="25"></a></li>
+        <li>curso_dc_004: <a href="./files/curso_dc_004/">AWS Identity and Access Management - Architecture and Terminology   <img src="./files/curso_dc_004/0-aux/logo_course.png" alt="curso_dc_004" width="auto" height="25"></a></li>
+        <li>curso_dc_005: <a href="./files/curso_dc_005/">Authentication and Authorization with AWS Identity and Access Management   <img src="./files/curso_dc_005/0-aux/logo_course.png" alt="curso_dc_005" width="auto" height="25"></a></li>
+        <li>curso_dc_006: <a href="./files/curso_dc_006/">Deep Dive with Security: AWS Identity and Access Management (IAM)   <img src="./files/curso_dc_006/0-aux/logo_course.png" alt="curso_dc_006" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Storage</summary>
     <ul>
-        <li>curso_dc_019: <a href="./curso_dc_019/">Amazon Elastic Block Store (Amazon EBS) Primer   <img src="./curso_dc_019/0-aux/logo_course.png" alt="curso_dc_019" width="auto" height="25"></a></li>
+        <li>curso_dc_019: <a href="./files/curso_dc_019/">Amazon Elastic Block Store (Amazon EBS) Primer   <img src="./files/curso_dc_019/0-aux/logo_course.png" alt="curso_dc_019" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Web and Mobile Front-End</summary>
