@@ -1,4 +1,4 @@
-# AWS Scripts: <a href="./aws_scripts">aws_scripts</a>
+# AWS Scripts: <a href="./">aws_scripts</a>
 
 ### AWS <a href="../">aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
 
@@ -14,8 +14,30 @@ A organização do material é baseada nas tecnologias e estruturada por categor
 
 ### Tecnologias:
 
-<ul>
-    <li>AWS CLI com PowerShell: <a href="./ps1">AWS CLI com PowerShell   <img src="." alt="" width="auto" height="25"></a></li>
-    <li>Boto3 com Python: <a href="./py">Boto3 com Python   <img src="." alt="" width="auto" height="25"></a></li>
-    <li>Terraform: <a href="./tf">Terraform   <img src="." alt="" width="auto" height="25"></a></li>
-</ul>
+<details><summary>AWS CLI com PowerShell <img src="." alt="" width="auto" height="25"></summary>
+    <ul>
+        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
+        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
+        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
+        <li>Network: <a href="./ps1/network">Network   </a></li>
+        <li>Security: <a href="./ps1/security">Security   </a></li>
+    </ul>
+</details>
+<details><summary>Boto3 com Python <img src="." alt="" width="auto" height="25"></summary>
+    <ul>
+        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
+        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
+        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
+        <li>Network: <a href="./ps1/network">Network   </a></li>
+        <li>Security: <a href="./ps1/security">Security   </a></li>
+    </ul>
+</details>
+<details><summary>Terraform <img src="." alt="" width="auto" height="25"></summary>
+    <ul>
+        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
+        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
+        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
+        <li>Network: <a href="./ps1/network">Network   </a></li>
+        <li>Security: <a href="./ps1/security">Security   </a></li>
+    </ul>
+</details>
