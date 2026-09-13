@@ -20,7 +20,7 @@
 | iam | Vinculação | user_mfa | User; MFA Device | Adicionar/Remover um dispositivo de MFA para um usuário | 6 | Não | [Ver código](./iam/user_mfa.py) |
 | iam | Vinculação | user_key_access | User | Adicionar/Remover uma chave de acesso para um usuário | 6 | Não | [Ver código](./iam/user_key_access.py) |
 | iam | Vinculação | user_group | User; Group | Adicionar/Remover um usuário do IAM em um grupo | 7 | Não | [Ver código](./iam/user_group.py) |
-| iam | Vinculação | instace_profile_role | Instance Profile; Role | Adicionar/Remover uma role do IAM a um perfil de instância | 7 | Não | [Ver código](./iam/instance_profile_role.py) |
+| iam | Vinculação | instance_profile_role | Instance Profile; Role | Adicionar/Remover uma role do IAM a um perfil de instância | 7 | Não | [Ver código](./iam/instance_profile_role.py) |
 | iam | Vinculação | user_policy | User; {Policy}; {Policy Document} | Adicionar/Remover uma política (gerenciada ou em linha) de um usuário do IAM | 6 | Não | [Ver código](./iam/user_policy.py) |
 | iam | Vinculação | group_policy | Group; {Policy}; {Policy Document} | Adicionar/Remover uma política de um grupo do IAM | 6 | Não | [Ver código](./iam/group_policy.py) |
 | iam | Vinculação | role_policy | Role; {Policy}; {Policy Document} | Adicionar/Remover uma política de uma role do IAM | 6 | Não | [Ver código](./iam/role_policy.py) |
