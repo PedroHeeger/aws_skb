@@ -16,28 +16,31 @@ A organização do material é baseada nas tecnologias e estruturada por categor
 
 <details><summary>AWS CLI com PowerShell <img src="." alt="" width="auto" height="25"></summary>
     <ul>
-        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
-        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
-        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
-        <li>Network: <a href="./ps1/network">Network   </a></li>
-        <li>Security: <a href="./ps1/security">Security   </a></li>
+        <li><a href="./ps1/app_integration">App Integration   </a></li>
+        <li><a href="./ps1/compute">Compute   </a></li>
+        <li><a href="./ps1/cost">Cost   </a></li>
+        <li><a href="./ps1/identity">Identity   </a></li>
+        <li><a href="./ps1/network">Network   </a></li>
+        <li><a href="./ps1/security">Security   </a></li>
     </ul>
 </details>
 <details><summary>Boto3 com Python <img src="." alt="" width="auto" height="25"></summary>
     <ul>
-        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
-        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
-        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
-        <li>Network: <a href="./ps1/network">Network   </a></li>
-        <li>Security: <a href="./ps1/security">Security   </a></li>
+        <li><a href="./py/app_integration">App Integration   </a></li>
+        <li><a href="./py/compute">Compute   </a></li>
+        <li><a href="./py/cost">Cost   </a></li>
+        <li><a href="./py/identity">Identity   </a></li>
+        <li><a href="./py/network">Network   </a></li>
+        <li><a href="./py/security">Security   </a></li>
     </ul>
 </details>
 <details><summary>Terraform <img src="." alt="" width="auto" height="25"></summary>
     <ul>
-        <li>App Integration: <a href="./ps1/app_integration">App Integration   </a></li>
-        <li>Compute: <a href="./ps1/compute">Compute   </a></li>
-        <li>Cost: <a href="./ps1/cost">Cost   </a></li>
-        <li>Network: <a href="./ps1/network">Network   </a></li>
-        <li>Security: <a href="./ps1/security">Security   </a></li>
+        <li><a href="./tf/app_integration">App Integration   </a></li>
+        <li><a href="./tf/compute">Compute   </a></li>
+        <li><a href="./tf/cost">Cost   </a></li>
+        <li><a href="./tf/identity">Identity   </a></li>
+        <li><a href="./tf/network">Network   </a></li>
+        <li><a href="./tf/security">Security   </a></li>
     </ul>
 </details>
