@@ -1,4 +1,4 @@
-# AWS CLI com PowerShell: <a href="./ps1">AWS CLI com PowerShell</a>
+# AWS CLI com PowerShell: <a href="../">AWS CLI com PowerShell</a>
 
 ### AWS <a href="../../../">aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
 #### AWS Scripts <a href="../../">aws_scripts   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
