@@ -1,4 +1,4 @@
-# Digital Course: <a href="./digital_coruse">digital_course</a>
+# Digital Course: <a href="./digital_course">digital_course</a>
 
 ### AWS <a href="../">aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25"></a>
 
@@ -86,6 +86,8 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
     <ul>
         <li>curso_dc_017: <a href="./files/curso_dc_017/">AWS for Media & Entertainment Content Production Concepts and Roles   <img src="./files/curso_dc_017/0-aux/logo_course.png" alt="curso_dc_017" width="auto" height="25"></a></li>
         <li>curso_dc_018: <a href="./files/curso_dc_018/">AWS for Media & Entertainment Post-Production Workflow Essentials   <img src="./files/curso_dc_018/0-aux/logo_course.png" alt="curso_dc_018" width="auto" height="25"></a></li>
+        <li>curso_dc_021: <a href="./files/curso_dc_021/">AWS for Media & Entertainment Content Production Workstation Requirements   <img src="./files/curso_dc_021/0-aux/logo_course.png" alt="curso_dc_021" width="auto" height="25"></a></li>
+        <li>curso_dc_022: <a href="./files/curso_dc_022/">AWS for Media & Entertainment Content Production Storage Requirements   <img src="./files/curso_dc_022/0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Machine Learning</summary>
