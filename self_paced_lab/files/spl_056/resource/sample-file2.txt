@@ -1,0 +1,7 @@
+This sample text file is used to illustrate the use of versioning in an Amazon S3 bucket.
+
+This file has been modified.
+
+This is version 2 of the file.
+
+Have a lovely day!

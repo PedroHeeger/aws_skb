@@ -1,0 +1,18 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1604361694227",
+    "Statement": [
+        {
+            "Sid": "Stmt1604361692117",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::169594363937:role/EC2InstanceProfileRole"
+            },
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::reportbucket-169594363937/*"
+        }
+    ]
+}
