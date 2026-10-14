@@ -5,7 +5,7 @@
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
 ### Course: <a href="./">lp_001 (Cloud Essentials - Knowledge Badge Readiness Path (includes Labs))   <img src="./0-aux/logo_course.png" alt="lp_001" width="auto" height="25"></a>
 
-#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/skb/lp/261007_lp_001_en.pdf">Certificate</a>
+#### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/skb/lp/261007_lp_001.pdf">Certificate</a>
 #### <a href="https://www.credly.com/badges/bcf7e233-8ce3-42f2-802d-f22a9d6fc58f">Badge</a>
 
 ---
