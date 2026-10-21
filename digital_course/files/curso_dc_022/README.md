@@ -1,9 +1,9 @@
-# AWS for Media & Entertainment Content Production Storage Requirements   <img src="./0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="45">
+# AWS for Media & Entertainment Content Production Storage Essentials   <img src="./0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="45">
 
 ### AWS <a href="../../../">aws   <img src="https://github.com/PedroHeeger/main/blob/main/0-aux/logos/plataforma/aws_skill_builder.png" alt="aws_skill_builder" width="auto" height="25"></a>
 ### Training Category: <a href="../../">digital_course</a>
 ### Software/Subject: aws   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="auto" height="25">
-### Course: <a href="./">curso_dc_022 (AWS for Media & Entertainment Content Production Storage Requirements)   <img src="./0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="25"></a>
+### Course: <a href="./">curso_dc_022 (AWS for Media & Entertainment Content Production Storage Essentials)   <img src="./0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="25"></a>
 
 #### <a href="https://github.com/PedroHeeger/my_tech_journey/blob/main/credentials/certificates/online_courses/cloud/aws/skb/dc/260929_dc_022_en.pdf">Certificate</a>
 
