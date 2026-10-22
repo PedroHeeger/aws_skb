@@ -41,6 +41,8 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 </details>
 <details><summary>Computing</summary>
     <ul>
+        <li>curso_dc_025: <a href="./files/curso_dc_025/">Amazon EC2 Basics   <img src="./files/curso_dc_025/0-aux/logo_course.png" alt="curso_dc_025" width="auto" height="25"></a></li>
+        <li>curso_dc_028: <a href="./files/curso_dc_028/">AWS Compute Services Overview   <img src="./files/curso_dc_028/0-aux/logo_course.png" alt="curso_dc_028" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Containers</summary>
@@ -88,6 +90,8 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
         <li>curso_dc_018: <a href="./files/curso_dc_018/">AWS for Media & Entertainment Post-Production Workflow Essentials   <img src="./files/curso_dc_018/0-aux/logo_course.png" alt="curso_dc_018" width="auto" height="25"></a></li>
         <li>curso_dc_021: <a href="./files/curso_dc_021/">AWS for Media & Entertainment Content Production Workstation Requirements   <img src="./files/curso_dc_021/0-aux/logo_course.png" alt="curso_dc_021" width="auto" height="25"></a></li>
         <li>curso_dc_022: <a href="./files/curso_dc_022/">AWS for Media & Entertainment Content Production Storage Requirements   <img src="./files/curso_dc_022/0-aux/logo_course.png" alt="curso_dc_022" width="auto" height="25"></a></li>
+        <li>curso_dc_023: <a href="./files/curso_dc_023/">AWS for Media & Entertainment Content Production Workstation Design   <img src="./files/curso_dc_023/0-aux/logo_course.png" alt="curso_dc_023" width="auto" height="25"></a></li>
+        <li>curso_dc_024: <a href="./files/curso_dc_024/">AWS for Media & Entertainment Content Production Security Essentials   <img src="./files/curso_dc_024/0-aux/logo_course.png" alt="curso_dc_024" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Machine Learning</summary>
@@ -131,6 +135,8 @@ Dessa forma, com o objetivo de organizar este repositório, esta pasta foi criad
 <details><summary>Storage</summary>
     <ul>
         <li>curso_dc_019: <a href="./files/curso_dc_019/">Amazon Elastic Block Store (Amazon EBS) Primer   <img src="./files/curso_dc_019/0-aux/logo_course.png" alt="curso_dc_019" width="auto" height="25"></a></li>
+        <li>curso_dc_026: <a href="./files/curso_dc_026/">Amazon EBS Getting Started   <img src="./files/curso_dc_026/0-aux/logo_course.png" alt="curso_dc_026" width="auto" height="25"></a></li>
+        <li>curso_dc_027: <a href="./files/curso_dc_027/">Understanding Amazon EBS Volume Encryption   <img src="./files/curso_dc_027/0-aux/logo_course.png" alt="curso_dc_027" width="auto" height="25"></a></li>
     </ul>
 </details>
 <details><summary>Web and Mobile Front-End</summary>
