@@ -28,7 +28,7 @@ A seguir, é apresentada a estrutura de pastas deste repositório, com a descri�
 - [digital_course_with_lab](./digital_course_with_lab): Cursos com teoria e prática integradas. 🔒 *Conteúdo em breve.*
 - [aws_partner](./aws_partner): Cursos da categoria Digital Course do Skill Builder voltados exclusivamente para parceiros da AWS (exibidos apenas com login ativo na APN).
 - [lab_maker](./lab_maker): 🔒 *Conteúdo em breve (nenhuma atividade realizada).*
-- [aws_learning_plans](./aws_learning_plans): Trilhas de aprendizagem organizadas por função ou área. 🔒 *Conteúdo em breve.*
+- [learning_plan](./learning_plan): Trilhas de aprendizagem organizadas por função ou área. 🔒 *Conteúdo em breve.*
 - [meeting_simulator](./meeting_simulator): 🔒 *Conteúdo em breve (nenhuma atividade realizada).*
 - [microcredential](./microcredential): 🔒 *Conteúdo em breve (nenhuma atividade realizada).*
 - [recertification](./recertification): 🔒 *Conteúdo em breve (nenhuma atividade realizada).*

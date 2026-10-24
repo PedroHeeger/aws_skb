@@ -1,27 +1,61 @@
+
+# Pastas Raizes:
 aws_cloud_institute
 aws_digital_classroom
-
-
 digital_course_with_lab
 exam_preparation
 game_based_learning
 
 
+# Outras pastas:
 study_material/architecture_diagram
-
-
-
 zoutros/*
+
+
+# Cursos Self-Paced Lab (SPL):
 self_paced_lab/curso_spl_1000
 self_paced_lab/curso_spl_054-pausado
 
 
+# Nova Org AWS Scripts (22/01/26)
+aws_scripts/.default/*
+aws_scripts/0-lixo/*
+aws_scripts/bash/*
+aws_scripts/cloud_format/*
+aws_scripts/compute/*
 
-# Lista AWS:
+aws_scripts/ps1/appIntegration/*
+aws_scripts/ps1/compute/*
+aws_scripts/ps1/network/*
+
+aws_scripts/py/appIntegration/*
+aws_scripts/py/compute/*
+aws_scripts/py/network/*
+aws_scripts/py/identity/__PyCache__/
+
+aws_scripts/tf/appIntegration/*
+aws_scripts/tf/compute/*
+aws_scripts/tf/network/*
+aws_scripts/tf/cost/*
+aws_scripts/tf/identity/iam/*
+!aws_scripts/tf/identity/iam/main.tf
+!aws_scripts/tf/identity/iam/output.tf
+!aws_scripts/tf/identity/iam/provider.tf
+!aws_scripts/tf/identity/iam/variables.tf
+
+
+
+
+
+
+
+# Lista AWS (Antiga, vai sair):
 # Já passei as categorias: App Integration; Compute; Cost
 
 study_material/aws_scripts_model/.default
 
+study_material/aws_scripts_model/cost/budget/budget/*
+!study_material/aws_scripts_model/cost/budget/budget/main.tf
 
 study_material/aws_scripts_model/appIntegration/sns/snsTopic/*
 !study_material/aws_scripts_model/appIntegration/sns/snsTopic/main.tf
@@ -41,21 +75,9 @@ study_material/aws_scripts_model/compute/ec2/userData/ecs_agent
 study_material/aws_scripts_model/compute/ec2/transferFile
 
 
-
 study_material/aws_scripts_model/compute/as/asg/asg/*
 !study_material/aws_scripts_model/compute/as/asg/asg/main.tf
 study_material/aws_scripts_model/compute/as/policy
-
-
-
-study_material/aws_scripts_model/compute/ecs
-study_material/aws_scripts_model/compute/ecr
-study_material/aws_scripts_model/compute/eks
-
-
-study_material/aws_scripts_model/cost/budget/budget/*
-!study_material/aws_scripts_model/cost/budget/budget/main.tf
-
 
 
 
