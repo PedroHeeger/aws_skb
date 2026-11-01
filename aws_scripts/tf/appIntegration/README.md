@@ -9,9 +9,9 @@
 
 | Serviço | Terraform | Ação | Link |
 | :-: | :-: | :-: | :-: |
-| sns | main.tf | Arquivo principal de criação dos recursos do SNS (Tópico e Subscrição) | [Ver código](./appIntegration/sns/main.tf) |
-| sns | provider.tf | Arquivo de definição do provedor AWS para os recursos do SNS | [Ver código](./appIntegration/sns/provider.tf) |
-| sns | output.tf | Arquivo de definição das saídas de dados gerados após o provisionamento | [Ver código](./appIntegration/sns/output.tf) |
-| sns | variables.tf | Arquivo de controle e declaração das variáveis utilizadas nos módulos | [Ver código](./appIntegration/sns/variables.tf) |
+| sns | main.tf | Arquivo principal de criação dos recursos do SNS (Tópico e Subscrição) | [Ver código](./sns/main.tf) |
+| sns | provider.tf | Arquivo de definição do provedor AWS para os recursos do SNS | [Ver código](./sns/provider.tf) |
+| sns | output.tf | Arquivo de definição das saídas de dados gerados após o provisionamento | [Ver código](./sns/output.tf) |
+| sns | variables.tf | Arquivo de controle e declaração das variáveis utilizadas nos módulos | [Ver código](./sns/variables.tf) |
 
 </div>
