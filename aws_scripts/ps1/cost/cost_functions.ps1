@@ -273,7 +273,7 @@
 
 
     function Test-BudgetNotificationExists {
-        <# Verifica se existe uma notificação específica no budget (ThresholdType ausente no retorno da AWS = PERCENTAGE) #>
+        <# Verifica se existe uma notificação específica no budget #>
         param (
             [Parameter(Mandatory=$true)][string]$accountId,
             [Parameter(Mandatory=$true)][string]$budgetName,
